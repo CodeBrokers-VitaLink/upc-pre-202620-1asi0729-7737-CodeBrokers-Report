@@ -181,15 +181,81 @@ Sabremos que tenemos exito cuando se logre una reduccion del 50% en el tiempo ne
 
 
 #### 1.2.2.4. Lean UX Canvas
+```{=latex}
+\begingroup
+\centering
+\small
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.25}
 
-| 1. Business Problem | 2. Business Outcomes | 3. Users |
-|  :---               | :---                 | :---     |
-| El cuidado de adultos mayores depende de registros manuales y respuestas reactivas ante emergencias de salud, generando demoras criticas y desconexion entre el monitoreo diario del hogar y los centros de atencion medica. | - Reduccion del 50% en el tiempo para coordinar una cita ante anomalias.<br>- Tasa minima del 70% de aceptacion en citas pre-agendadas.<br>- Afiliacion de al menos 15 centros de salud a la red.<br>- Incremento del 30% en la retencion mensual de familias suscriptoras. | - Cuidadores familiares principales (hijos, tutores).<br>- Adultos mayores con enfermedades cronicas.<br>- Centros de salud y profesionales medicos independientes. |
+\begin{tabular}{|p{0.26\textwidth}|p{0.26\textwidth}|p{0.26\textwidth}|}
+\hline
+\textbf{1. Business Problem} &
+\textbf{2. Business Outcomes} &
+\textbf{3. Users} \\
+\hline
 
-| 4. User Outcomes & Benefits | 5. Solutions | 6. Hypotheses |
-| :--- | :--- | :--- |
-| - Deteccion temprana de anomalias biometricas y tranquilidad familiar continua.<br>- Atencion medica rapida sin busqueda manual de proveedores en crisis.<br>- Historial clinico y triaje previo disponible para el medico antes de la consulta.<br>- Acceso a consultas a tarifa social para adultos mayores sin seguro. | - Plataforma SaaS con tablero de telemetria IoT simulada en tiempo real.<br>- Sistema inteligente de triaje y pre-agendamiento automatico de consultas.<br>- Historial biometrico centralizado y ficha de triaje exportable.<br>- Modulo de atencion a tarifa social conectado con policlinicos y ONGs.<br>- Notificaciones automatizadas via SMS y mensajeria de emergencia. | - Creemos que el monitoreo IoT en tiempo real lograra un 30% mas de retencion mensual al brindar tranquilidad continua a los cuidadores.<br>- Creemos que el auto-agendamiento inteligente reducira en 50% el tiempo de coordinacion de citas de urgencia.<br>- Creemos que el historial y triaje previo aumentara un 40% los convenios con clinicas.<br>- Creemos que las alertas SMS lograran un 75% de confirmacion en los primeros 5 minutos.<br>- Creemos que la tarifa social lograra un 35% de adopcion en hogares sin seguro privado. |
+El cuidado de adultos mayores depende de registros manuales y respuestas reactivas ante emergencias de salud, generando demoras críticas y desconexión entre el monitoreo diario del hogar y los centros de atención médica.
+&
+- Reducción del 50\% en el tiempo para coordinar una cita ante anomalías.\newline
+- Tasa mínima del 70\% de aceptación en citas pre-agendadas.\newline
+- Afiliación de al menos 15 centros de salud a la red.\newline
+- Incremento del 30\% en la retención mensual de familias suscriptoras.
+&
+- Cuidadores familiares principales (hijos, tutores).\newline
+- Adultos mayores con enfermedades crónicas.\newline
+- Centros de salud y profesionales médicos independientes.
+\\
+\hline
+\end{tabular}
 
-| 7. What is the most important thing we need to learn first? | 8. What is the least amount of work we need to do to learn the next most important thing? |
-| :--- | :--- |
-| - Validar si los cuidadores familiares aceptan y confian en el auto-agendamiento ante una anomalia detectada.<br>- Confirmar la disposicion de las clinicas para publicar y gestionar sus cupos de atencion dentro del SaaS.<br>- Identificar el rango de precio mensual aceptable para los planes familiares de suscripcion. | - Desplegar la Landing Page con la propuesta de valor y medir el interes de registro de cuidadores y clinicas.<br>- Probar prototipos interactivos en Figma con cuidadores para validar el flujo de confirmacion de citas en un clic.<br>- Ejecutar simulaciones del flujo de datos IoT y pre-agendamiento en el MVP inicial. |
+\par\vspace{0.6cm}
+
+\begin{tabular}{|p{0.26\textwidth}|p{0.26\textwidth}|p{0.26\textwidth}|}
+\hline
+\textbf{4. User Outcomes \& Benefits} &
+\textbf{5. Solutions} &
+\textbf{6. Hypotheses} \\
+\hline
+
+- Detección temprana de anomalías biométricas y tranquilidad familiar continua.\newline
+- Atención médica rápida sin búsqueda manual de proveedores en crisis.\newline
+- Historial clínico y triaje previo disponible para el médico antes de la consulta.\newline
+- Acceso a consultas a tarifa social para adultos mayores sin seguro.
+&
+- Plataforma SaaS con tablero de telemetría IoT simulada en tiempo real.\newline
+- Sistema inteligente de triaje y pre-agendamiento automático de consultas.\newline
+- Historial biométrico centralizado y ficha de triaje exportable.\newline
+- Módulo de atención a tarifa social conectado con policlínicos y ONGs.\newline
+- Notificaciones automatizadas vía SMS y mensajería de emergencia.
+&
+- Creemos que el monitoreo IoT en tiempo real logrará un 30\% más de retención mensual al brindar tranquilidad continua a los cuidadores.\newline
+- Creemos que el auto-agendamiento inteligente reducirá en 50\% el tiempo de coordinación de citas de urgencia.\newline
+- Creemos que el historial y triaje previo aumentará un 40\% los convenios con clínicas.\newline
+- Creemos que las alertas SMS lograrán un 75\% de confirmación en los primeros 5 minutos.\newline
+- Creemos que la tarifa social logrará un 35\% de adopción en hogares sin seguro privado.
+\\
+\hline
+\end{tabular}
+
+\par\vspace{0.6cm}
+
+\begin{tabular}{|p{0.39\textwidth}|p{0.39\textwidth}|}
+\hline
+\textbf{7. What is the most important thing we need to learn first?} &
+\textbf{8. What is the least amount of work we need to do to learn the next most important thing?} \\
+\hline
+
+- Validar si los cuidadores familiares aceptan y confían en el auto-agendamiento ante una anomalía detectada.\newline
+- Confirmar la disposición de las clínicas para publicar y gestionar sus cupos de atención dentro del SaaS.\newline
+- Identificar el rango de precio mensual aceptable para los planes familiares de suscripción.
+&
+- Desplegar la Landing Page con la propuesta de valor y medir el interés de registro de cuidadores y clínicas.\newline
+- Probar prototipos interactivos en Figma con cuidadores para validar el flujo de confirmación de citas en un clic.\newline
+- Ejecutar simulaciones del flujo de datos IoT y pre-agendamiento en el MVP inicial.
+\\
+\hline
+\end{tabular}
+
+\endgroup
+```
