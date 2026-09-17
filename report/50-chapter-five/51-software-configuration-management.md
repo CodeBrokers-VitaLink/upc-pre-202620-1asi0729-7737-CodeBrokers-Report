@@ -397,8 +397,8 @@ Los componentes considerados para la configuración de despliegue son los siguie
 | Component | Repository | Deployment platform | Main purpose |
 | --- | --- | --- | --- |
 | Landing Page | CodeBrokers Landing Page | GitHub Pages | Presentar la propuesta de valor de VitaLink y comunicar las principales funcionalidades del producto a los usuarios. |
-| Frontend Web Application | Pendiente | Pendiente | Permitir la interacción de usuarios con la plataforma mediante una aplicación web funcional. |
-| RESTful Web Services | Pendiente | Pendiente | Proporcionar servicios backend mediante APIs REST para la comunicación con la aplicación web. |
+| Frontend Web Application | CodeBrokers-webapp | Render | Permitir la interacción de usuarios con la plataforma mediante una aplicación web funcional. |
+| RESTful Web Services | CodeBrokers-platform | Render | Proporcionar servicios backend mediante APIs REST para la comunicación con la aplicación web. |
 | Report | CodeBrokers Report | GitHub | Mantener la documentación técnica, evidencias y avances del proyecto. |
 
 La Landing Page fue desplegada mediante GitHub Pages utilizando la rama configurada para publicación del repositorio. El servicio permite generar una URL pública accesible desde cualquier navegador, facilitando la validación y demostración del avance desarrollado.
