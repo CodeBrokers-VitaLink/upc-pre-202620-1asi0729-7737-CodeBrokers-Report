@@ -129,29 +129,30 @@ Imagenes del landing page:
 -Incios:
 
 
-<img width="1903" height="1011" alt="image" src="https://github.com/user-attachments/assets/05b1cd01-7ade-4ae5-8af9-c205cedf1af7" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/de26183e-d214-43eb-855c-34bb1142a822" />
+
 
 Descripción:
 
-<img width="1872" height="870" alt="image" src="https://github.com/user-attachments/assets/6103073c-4e08-4406-90af-3be5dbcab3c8" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/6103073c-4e08-4406-90af-3be5dbcab3c8" />
 
 
 Pagos:
 
 
-<img width="1904" height="749" alt="image" src="https://github.com/user-attachments/assets/b01dfa62-8047-4ee8-b642-b126f6cc40e0" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/b01dfa62-8047-4ee8-b642-b126f6cc40e0" />
 
 
 - Seguridad:
 
 
-<img width="1904" height="870" alt="image" src="https://github.com/user-attachments/assets/8d6f8dbd-dc0e-4a51-baaf-72b248f644b3" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/8d6f8dbd-dc0e-4a51-baaf-72b248f644b3" />
 
 
 - Soporte:
 
 
-<img width="1905" height="756" alt="image" src="https://github.com/user-attachments/assets/6b69010d-b255-4d6c-9f47-eb413af8d2db" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/6b69010d-b255-4d6c-9f47-eb413af8d2db" />
 
 
 **Familiares
