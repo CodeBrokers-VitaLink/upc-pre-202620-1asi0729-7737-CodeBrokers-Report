@@ -59,6 +59,8 @@ Para la gestión y seguimiento de las actividades del Sprint se utilizará Trell
 **Sprint Board:** Trello
 
 **Enlace de Seguimiento:** [Tablero del Sprint 1 en Trello ](https://trello.com/b/uWEShiCR/sprint-codebrokers)
+
+
 <img width="1311" height="784" alt="image" src="https://github.com/user-attachments/assets/d5c34fa8-1f8b-4c56-8ae9-b1a5b8b02717" />
 
 
@@ -95,11 +97,16 @@ La siguiente tabla registra los principales cambios relacionados con la implemen
 **Link de commits del repositorio del landing page:**
 [https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/commits/develop]
 
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
-|---|---|---|---|---|---|
-| upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page | develop | 389e581 | chore: add the logo. | Incorporación del logotipo del proyecto dentro de la Landing Page de VitaLink. | 2026-09-10 |
-| upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page | develop | 8fd9a4c | feat: add navigation bar and hero section | Implementación de la barra de navegación y sección Hero de la Landing Page. | 2026-09-10 |
-| upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page | develop | d55fc4a | feat: add navigation bar and hero section | Desarrollo de los componentes principales de navegación y presentación inicial del producto. | 2026-09-10 |
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| --- | --- | --- | --- | --- | --- |
+| Landing Page | main | 6cb31e5 | add institutional and patient pricing tiers, and testimonials section | Added institutional and patient pricing tiers, and testimonials section | 13/09/2026 |
+| Landing Page | main | 72e7fab | add institutional and patient pricing tiers, and testimonials section | Added institutional and patient pricing tiers, and testimonials section | 13/09/2026 |
+| Landing Page | main | bcbc2d | add institutional and patient pricing tiers, and testimonials section | Added institutional and patient pricing tiers, and testimonials section | 13/09/2026 |
+| Landing Page | main | baae70f | feat/pricing tiers and testimonials | Implemented pricing tiers and testimonials section | 13/09/2026 |
+| Landing Page | main | 2bed8ff | feat(footer): fix the structure and add the footer | Fixed footer structure and added footer section | 15/09/2026 |
+| Landing Page | main | abf9be7 | Merge pull request #5 from CodeBrokers-VitaLink/feature/footer | Integrated footer changes into the main branch | 15/09/2026 |
+| Landing Page | main | 91ffa24 | Merge pull request #6 from CodeBrokers-VitaLink/develop | Integrated development branch changes into main | 15/09/2026 |
+
 
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
@@ -114,6 +121,73 @@ Las principales funcionalidades verificadas fueron:
 - Correcto funcionamiento en dispositivos móviles.
 - Navegación entre las diferentes secciones.
 
+Imagenes del landing page:
+
+**Medicos**
+
+
+-Incios:
+
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/de26183e-d214-43eb-855c-34bb1142a822" />
+
+
+Descripción:
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/6103073c-4e08-4406-90af-3be5dbcab3c8" />
+
+
+Pagos:
+
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/b01dfa62-8047-4ee8-b642-b126f6cc40e0" />
+
+
+- Seguridad:
+
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/8d6f8dbd-dc0e-4a51-baaf-72b248f644b3" />
+
+
+- Soporte:
+
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/6b69010d-b255-4d6c-9f47-eb413af8d2db" />
+
+
+**Familiares**
+
+- Incio:
+
+  
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/4ea3b1e8-ebe7-4881-a3d5-1bf56ce99618" />
+
+
+- Descripción:
+
+  
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/ab0f85bc-daef-49ef-8eec-5dd8fe2c7070" />
+
+
+- Objetivos:
+
+  
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/25d63c22-78e4-4871-bdce-049597b8d926" />
+
+
+- Planes:
+
+  
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/d638748d-3218-4181-b816-ed2fbb325cc0" />
+
+
+- Soporte:
+
+  
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/9c4fdabf-0a1f-4904-be7d-788d2092f61c" />
+
+
+
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
@@ -127,6 +201,10 @@ La documentación de endpoints, Swagger/OpenAPI y pruebas mediante Postman será
 Durante el Sprint 1 se realizó el despliegue de la primera versión funcional de la Landing Page de VitaLink. El objetivo de esta actividad fue publicar el sitio web en un entorno accesible públicamente, permitiendo validar su funcionamiento fuera del entorno local de desarrollo.
 
 Para el despliegue se utilizará **GitHub Pages**, aprovechando su integración directa con el repositorio de la Landing Page y su capacidad para publicar sitios web estáticos desarrollados con HTML, CSS y JavaScript.
+
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/8fc24562-7d9f-4a72-b364-92015514e330" />
+
 
 #### Proceso de despliegue
 
@@ -178,18 +256,25 @@ Durante el desarrollo del proyecto VitaLink, todos los integrantes del equipo pa
 
 Las contribuciones del equipo no se limitan únicamente a los commits visibles en la sección de Contributors de GitHub, ya que algunos aportes fueron realizados mediante la organización de tareas, revisión de documentación, planificación de Sprints, diseño UX/UI, validación de entregables y coordinación del desarrollo.
 
+Report:
 
 
-<img width="1817" height="935" alt="image" src="https://github.com/user-attachments/assets/4ed2dac3-f88c-480f-bda4-1f0ec673da43" />
-<img width="1135" height="946" alt="image" src="https://github.com/user-attachments/assets/5722e07a-916d-4d3b-8e4e-7f96016c16fd" />
-<img width="1696" height="878" alt="image" src="https://github.com/user-attachments/assets/3d301926-0a54-4b1f-8bde-2eee99f9e4a1" />
-<img width="1578" height="903" alt="image" src="https://github.com/user-attachments/assets/58a90baf-3eb1-4291-a1ef-3481a7ebafff" />
-<img width="1871" height="933" alt="image" src="https://github.com/user-attachments/assets/cd4445d8-b95a-4d82-b700-5f52e67d5065" />
-<img width="1806" height="910" alt="image" src="https://github.com/user-attachments/assets/72322c36-e9b7-4cf3-89b2-e352208edd84" />
-<img width="1729" height="888" alt="image" src="https://github.com/user-attachments/assets/1a8e2747-266f-46aa-8a4d-5e9173228305" />
-<img width="1637" height="764" alt="image" src="https://github.com/user-attachments/assets/296b1690-d39a-4bf9-a07b-9fa1fd474c83" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/75cb0925-8cb5-488c-a456-901cf1dc6c8d" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/f94d5864-7c0a-4518-8b8d-7615390a0d57" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/a33fec15-a3ff-4f29-b64d-6818616b9c82" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/341dabe8-b61b-4c9d-9592-6e00fb219b7e" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/1388511b-9263-4cbf-8b1b-c824ab8cec1c" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/767ba4fc-aee1-492a-af96-2c59a7461318" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/bb16ed5d-b23b-40b9-9495-169ee67222b9" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/c9ee272f-96e9-4e85-82d4-9ddb3439d4f6" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/1c31c7f1-b182-44f6-9bb0-a36f0c1cba17" />
 
 
-<img width="1837" height="644" alt="image" src="https://github.com/user-attachments/assets/a7ab456d-0942-413f-8609-8f3e66d9f866" />
+Landing page:
+
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/a7ab456d-0942-413f-8609-8f3e66d9f866" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/fed9acec-0dc0-43c3-b1d1-974aa4301178" />
+
 
 

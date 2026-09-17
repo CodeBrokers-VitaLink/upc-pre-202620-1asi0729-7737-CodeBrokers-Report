@@ -141,207 +141,279 @@ El equipo utilizará **GitFlow Workflow** para organizar las ramas de desarrollo
 
 ## 5.1.2. Source Code Management
 
-Para el seguimiento de modificaciones y el trabajo colaborativo durante el desarrollo de VitaLink se utilizará **Git** como sistema de control de versiones y **GitHub** como plataforma para almacenar y administrar los repositorios del proyecto.
+Para la gestión del código fuente y el seguimiento de modificaciones durante el desarrollo de VitaLink, se utilizará **Git como sistema de control de versiones** y **GitHub como plataforma colaborativa para almacenar, administrar y revisar los repositorios del proyecto**.
 
-Cada producto de software contará con su propio repositorio, permitiendo mantener separados los diferentes componentes de la solución y facilitando su desarrollo, mantenimiento y despliegue.
+El equipo aplicará una estrategia basada en **Git Flow Workflow**, permitiendo organizar el desarrollo mediante el uso de ramas según el propósito de cada modificación realizada. Esta metodología permite mantener una rama principal con una versión estable del proyecto, mientras que las ramas de desarrollo permiten implementar nuevas funcionalidades y realizar pruebas antes de integrar los cambios al producto final.
 
-| Producto | Repositorio | Enlace |
-|----------|-------------|--------|
-| Landing Page | CodeBrokers Landing Page | https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page |
-| Frontend Web Application | Pendiente | Pendiente |
-| RESTful Web Services | Pendiente | Pendiente |
+La estructura de ramas utilizada para el desarrollo de la Landing Page de VitaLink es la siguiente:
 
-El repositorio correspondiente a los RESTful Web Services almacenará el código fuente del backend junto con los archivos correspondientes a las pruebas unitarias, pruebas de integración y pruebas de aceptación necesarias para comprobar el correcto funcionamiento de los servicios implementados.
+- **main:** Rama principal que contiene la versión estable del proyecto y representa el estado preparado para despliegue.
+
+- **develop:** Rama utilizada para integrar, validar y probar los cambios desarrollados antes de incorporarlos a la versión estable.
+
+- **feat/family-and-clinical-sections:** Rama creada para desarrollar las secciones relacionadas con familiares y contenido clínico de la Landing Page.
+
+- **feat/pricing-tiers-and-testimonials:** Rama creada para implementar las secciones relacionadas con planes de precios y testimonios de usuarios.
+
+El uso de ramas independientes permite que los integrantes del equipo puedan trabajar de manera paralela sobre funcionalidades específicas sin afectar directamente la versión estable del proyecto. Una vez finalizada y validada una funcionalidad, los cambios son integrados mediante procesos de **merge** hacia la rama correspondiente.
+
+Además, GitHub permite mantener la trazabilidad del desarrollo mediante el historial de commits, facilitando la identificación de los cambios realizados durante la implementación del proyecto. Para la descripción de modificaciones se utilizaron mensajes de commit siguiendo una estructura basada en **Conventional Commits**, permitiendo reconocer fácilmente el propósito de cada actualización.
+
+Los principales tipos de commits utilizados fueron:
+
+- **feat:** Utilizado para la incorporación de nuevas funcionalidades o componentes dentro del proyecto.
+
+
+Enlace de la Landing Page desplegada mediante GitHub Pages: [https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/]
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/87b3ec15-9caa-4c99-a88b-d61961d2e89c" />
+
+Repositorio GitHub de la Landing Page: [https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page]
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/58229ef4-7fb6-4070-b245-ce89d18eedf0" />
+
+Repositorio GitHub de los archivos feature
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/d1c5bd44-d8aa-45b5-9120-ea35d56b9945" />
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/db69ab32-a093-4110-88ee-683fa27a2888" />
+
 
 ---
-
-### GitFlow Workflow
-
-Para organizar el desarrollo colaborativo se utilizará **GitFlow Workflow**, permitiendo separar las versiones estables del producto de los cambios que todavía se encuentran en desarrollo.
-
-Las principales ramas utilizadas serán:
-
-- `main`: contendrá las versiones estables y aprobadas de los productos.
-- `develop`: será utilizada como rama principal de integración durante el desarrollo.
-- `feature`: permitirá desarrollar nuevas funcionalidades o modificaciones de manera independiente.
-- `release`: permitirá preparar nuevas versiones antes de incorporarlas a la rama principal.
-- `hotfix`: permitirá realizar correcciones urgentes sobre versiones existentes.
-
-Las ramas de funcionalidades serán creadas a partir de `develop`. Una vez finalizados y revisados los cambios, estos serán integrados nuevamente a `develop` mediante Pull Requests.
-
-Cuando se alcance una versión estable del producto, los cambios correspondientes serán preparados mediante una rama `release` antes de ser incorporados a `main`.
-
----
-
-### Branch Naming Convention
-
-Para mantener una nomenclatura uniforme durante el desarrollo, las ramas utilizarán nombres descriptivos utilizando **kebab-case**.
-
-Las ramas serán organizadas según el propósito de cada modificación utilizando las siguientes estructuras:
-
-- `feature/<nombre-funcionalidad>` para nuevas funcionalidades.
-- `release/<version>` para preparación de nuevas versiones.
-- `hotfix/<version>` para correcciones urgentes.
-
-Esta convención permitirá identificar fácilmente el propósito de cada rama y mantener organizado el flujo de trabajo del equipo.
-
----
-
-#### Software Architecture and Database Design
-
-Para la documentación de la arquitectura del software se utilizará **Structurizr**, permitiendo elaborar los diagramas correspondientes al C4 Model y representar la estructura de los diferentes componentes que conforman VitaLink.
-
-Para la elaboración de diagramas UML y otros modelos visuales se utilizará **Lucidchart**, permitiendo representar componentes, relaciones y procesos del sistema.
-
-Para el diseño y modelado de la base de datos se utilizará **MySQL Workbench**, permitiendo representar tablas, atributos, claves primarias, claves foráneas, restricciones y relaciones correspondientes al modelo de datos de VitaLink.
-
-**Enlaces:**
-
-- [Structurizr](https://structurizr.com/)
-- [Lucidchart](https://www.lucidchart.com/)
-- [MySQL Workbench](https://www.mysql.com/products/workbench/)
-
----
-
-#### Software Documentation
-
-La documentación general del proyecto será elaborada mediante archivos **Markdown** almacenados dentro del repositorio público del Project Report en GitHub.
-
-Para la documentación de los RESTful Web Services se utilizará **OpenAPI Specification mediante Swagger**, permitiendo documentar los endpoints disponibles, métodos HTTP, parámetros, requests y responses correspondientes a los servicios implementados.
-
-**Repositorios actuales del proyecto:**
-
-- Project Report Repository:  
-https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Report
-
-- Landing Page Repository:  
-https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page
-
-**Enlaces:**
-
-- [Markdown Guide](https://www.markdownguide.org/)
-- [OpenAPI Specification](https://swagger.io/specification/)
-- [Swagger](https://swagger.io/)
-
----
-
-#### Software Version Control
-
-Para el control de versiones y trabajo colaborativo se utilizarán **Git** y **GitHub**.
-
-Git será utilizado como sistema distribuido de control de versiones, mientras que GitHub permitirá almacenar y administrar los diferentes repositorios del proyecto.
-
-El equipo utilizará **GitFlow Workflow** para organizar las ramas de desarrollo, **Conventional Commits** para mantener un historial de modificaciones ordenado y **Semantic Versioning** para identificar las versiones liberadas de los productos de VitaLink.
-
-**Enlaces:**
-
-- [Git](https://git-scm.com/)
-- [GitHub](https://github.com/)
-
----
-
-### Semantic Versioning
-
-Para identificar las versiones liberadas de VitaLink se utilizará **Semantic Versioning**, siguiendo la estructura:
-
-
-
-El componente **MAJOR** representa cambios importantes que pueden generar incompatibilidad con versiones anteriores del producto.
-
-El componente **MINOR** representa la incorporación de nuevas funcionalidades manteniendo compatibilidad con versiones existentes.
-
-El componente **PATCH** representa correcciones de errores o mejoras menores que no modifican la compatibilidad del sistema.
-
-Ejemplos:
-
-- `v1.0.0`: Primera versión estable del producto.
-- `v1.1.0`: Incorporación de nuevas funcionalidades compatibles.
-- `v1.1.1`: Corrección de errores sobre una versión existente.
-
----
-
-### Conventional Commits
-
-Para mantener un historial de cambios organizado y comprensible, los commits seguirán la especificación **Conventional Commits**.
-
-La estructura utilizada será:
-
-
-Los principales tipos utilizados serán:
-
-| Tipo | Descripción |
-|------|-------------|
-| `feat` | Incorporación de nuevas funcionalidades. |
-| `fix` | Corrección de errores. |
-| `docs` | Cambios relacionados con documentación. |
-| `style` | Cambios de formato que no modifican la funcionalidad. |
-| `refactor` | Reestructuración del código sin modificar su comportamiento. |
-| `test` | Incorporación o modificación de pruebas. |
-| `chore` | Tareas de mantenimiento o configuración. |
-
-Ejemplos:
-
-
-feat(landing): add hero section
-
-fix(auth): correct user authentication
-
-docs(report): update sprint documentation
-
-test(service): add service unit tests
 
 ### 5.1.3. Source Code Style Guide & Conventions
 
-Para mantener uniformidad, legibilidad y facilidad de mantenimiento en el código fuente de VitaLink se establecerán convenciones comunes para los diferentes lenguajes y tecnologías utilizados durante el desarrollo.
+Para mantener uniformidad, legibilidad y facilidad de mantenimiento en el código fuente de VitaLink, se establecieron convenciones de desarrollo para los diferentes lenguajes y tecnologías utilizados durante la implementación del proyecto.
 
 La nomenclatura utilizada en el código será escrita en **inglés**, independientemente del lenguaje de programación empleado. Asimismo, se utilizarán nombres descriptivos que permitan identificar claramente la responsabilidad de variables, funciones, métodos, clases y componentes.
 
-Para **HTML** se utilizarán elementos semánticos siempre que sea posible, manteniendo una estructura ordenada y una indentación consistente. Los identificadores y nombres de clases serán descriptivos y estarán escritos en inglés.
+Estas convenciones tienen como objetivo asegurar una estructura organizada del código, facilitar la colaboración entre los integrantes del equipo y permitir un mantenimiento eficiente durante las diferentes etapas del desarrollo.
 
-Para **CSS** se mantendrá una organización consistente de los estilos y se utilizarán nombres descriptivos para las clases. Se buscará evitar la duplicación innecesaria de estilos y mantener una separación clara entre estilos generales y específicos de cada componente.
+#### HTML
 
-Para **JavaScript** se utilizarán nombres claros para las variables y funciones, manteniendo una estructura organizada que facilite la comprensión y mantenimiento del código.
+Para el desarrollo de interfaces web utilizando HTML se seguirán las siguientes convenciones:
 
-Para el desarrollo de la Frontend Web Application con **Angular y TypeScript** se seguirán las convenciones recomendadas por Angular y Google TypeScript Style Guide. Los componentes, servicios, clases, interfaces, variables y métodos utilizarán nombres descriptivos en inglés y estarán organizados de forma modular.
+- Se utilizarán nombres descriptivos en inglés para clases, identificadores y elementos personalizados.
+- Se emplearán etiquetas semánticas de HTML5 para mantener una estructura clara y organizada del contenido.
+- Se mantendrá una correcta jerarquía de encabezados utilizando etiquetas como `<h1>`, `<h2>` y `<h3>`.
+- Se evitará el uso de nombres genéricos que no permitan identificar la finalidad del elemento.
 
-Para el desarrollo de los RESTful Web Services con **Java y Spring Boot** se seguirá Google Java Style Guide y las convenciones recomendadas para proyectos desarrollados con Spring Boot. Se mantendrá una separación adecuada entre controladores, servicios, repositorios, entidades y demás componentes de la aplicación.
+Ejemplo:
 
-Los criterios de aceptación correspondientes a User Stories y Technical Stories serán redactados utilizando **Gherkin**, siguiendo la estructura Given-When-Then y procurando que cada escenario represente un comportamiento verificable del sistema.
+```html
+<section class="pricing-section">
+```
 
-Asimismo, durante el desarrollo se mantendrán las siguientes convenciones generales:
+En lugar de:
 
-- Utilizar nomenclatura en inglés.
-- Utilizar nombres descriptivos.
-- Evitar abreviaciones innecesarias.
-- Mantener una indentación consistente.
-- Evitar duplicación innecesaria de código.
-- Mantener una estructura modular.
-- Separar adecuadamente las responsabilidades entre componentes.
-- Mantener consistencia entre los diferentes repositorios de VitaLink.
+```html
+<section class="section1">
+```
 
-Estas convenciones permitirán mantener una estructura uniforme en el código desarrollado y facilitarán la colaboración, comprensión y mantenimiento de VitaLink durante las diferentes etapas del proyecto.
+Además, la estructura del documento HTML mantendrá una organización adecuada separando correctamente las diferentes secciones de la interfaz.
 
+#### CSS
+
+Para la definición de estilos mediante CSS se aplicarán las siguientes convenciones:
+
+- Se utilizarán nombres descriptivos en inglés para clases y selectores.
+- Se mantendrá una organización consistente de estilos según componentes o secciones de la aplicación.
+- Se evitará la duplicación innecesaria de reglas CSS.
+- Los nombres de clases deberán representar claramente la función del componente visual.
+
+Ejemplo:
+
+```css
+.family-card
+
+.pricing-container
+
+.testimonial-section
+```
+
+En lugar de:
+
+```css
+.box1
+
+.container2
+```
+
+Asimismo, se mantendrá una separación adecuada entre estilos generales, componentes y reglas responsive para facilitar futuras modificaciones.
+
+#### JavaScript
+
+Para el desarrollo con JavaScript se seguirán las siguientes convenciones:
+
+- Se utilizarán nombres descriptivos en inglés para variables, funciones y objetos.
+- Las funciones deberán representar claramente la acción que realizan.
+- Se evitará la repetición de código mediante la reutilización de funciones.
+- Se mantendrá una estructura organizada y modular.
+- Se utilizarán comentarios únicamente cuando sean necesarios para explicar una lógica específica.
+
+Ejemplo:
+
+```javascript
+toggleMenu()
+
+validateForm()
+
+calculateTotal()
+```
+
+En lugar de:
+
+```javascript
+function1()
+
+data()
+```
+
+#### TypeScript
+
+Para el desarrollo utilizando TypeScript se seguirán las siguientes convenciones:
+
+- Se utilizarán nombres en inglés para interfaces, clases, tipos, variables y funciones.
+- Las clases e interfaces utilizarán la nomenclatura PascalCase.
+- Las variables y funciones utilizarán la nomenclatura camelCase.
+- Se definirán correctamente los tipos de datos para mejorar la seguridad y comprensión del código.
+
+Ejemplo:
+
+```typescript
+interface UserProfile {
+}
+
+class HealthRecord {
+}
+
+const userInformation = {};
+```
+
+Además, se mantendrá una estructura modular que facilite la escalabilidad y mantenimiento del sistema.
+
+#### Java
+
+Para el desarrollo de servicios backend utilizando Java se seguirán las convenciones recomendadas por Java Style Guide.
+
+Las principales reglas serán:
+
+- Utilizar PascalCase para nombres de clases.
+
+Ejemplo:
+
+```java
+HealthService
+
+UserController
+```
+
+- Utilizar camelCase para variables y métodos.
+
+Ejemplo:
+
+```java
+getUserProfile()
+
+calculateAppointment()
+```
+
+- Utilizar nombres descriptivos en inglés.
+- Mantener una separación adecuada entre controladores, servicios, repositorios y entidades.
+- Organizar los paquetes según la responsabilidad de cada componente.
+
+Ejemplo:
+
+```text
+controller/
+
+service/
+
+repository/
+
+entity/
+```
+
+Estas convenciones permitirán mantener una arquitectura organizada y facilitarán el mantenimiento del código backend durante las siguientes etapas del proyecto.
+
+#### Convenciones de commits
+
+Para mantener un historial organizado de modificaciones, los mensajes de commit seguirán una estructura basada en **Conventional Commits**.
+
+Los principales tipos utilizados serán:
+
+- **feat:** Utilizado para la incorporación de nuevas funcionalidades o componentes dentro del proyecto.
+
+Ejemplo:
+
+```text
+feat: add pricing section
+```
+
+- **fix:** Utilizado para la corrección de errores o mejoras sobre funcionalidades existentes.
+
+Ejemplo:
+
+```text
+fix: improve responsive layout
+```
+
+- **style:** Utilizado para cambios relacionados con estilos visuales y formato del código.
+
+Ejemplo:
+
+```text
+style: update landing page styles
+```
+
+- **docs:** Utilizado para modificaciones relacionadas con documentación.
+
+Ejemplo:
+
+```text
+docs: update project documentation
+```
+
+- **refactor:** Utilizado para reorganización o mejora del código sin modificar su comportamiento.
+
+Ejemplo:
+
+```text
+refactor: improve component structure
+```
+
+La aplicación de estas convenciones permitirá mantener una estructura uniforme del código desarrollado, facilitando la colaboración entre integrantes, la revisión de cambios y el mantenimiento del proyecto VitaLink durante las diferentes etapas de implementación.
 
 ### 5.1.4. Software Deployment Configuration
 
-En esta sección se detalla la configuración requerida para desplegar la Landing Page del proyecto. El propósito es asegurar que, a partir del código fuente disponible en los repositorios, se pueda realizar una publicación funcional y accesible para los usuarios.
+La configuración de despliegue de VitaLink se organiza según los diferentes componentes que conforman la solución, separando la Landing Page, la aplicación web y los servicios backend. Esta distribución permite mantener una separación clara de responsabilidades entre la interfaz pública, la aplicación de usuario y los servicios internos del sistema.
 
-#### Despliegue de Landing Page
+Cada componente contará con su propio repositorio y configuración de despliegue, permitiendo administrar de manera independiente su ciclo de desarrollo, pruebas y publicación.
 
-La Landing Page de VitaLink será desarrollada utilizando **HTML, CSS y JavaScript**, y será publicada mediante **GitHub Pages**, un servicio gratuito proporcionado por GitHub para alojar sitios web estáticos.
+Actualmente, la primera versión desplegada corresponde a la Landing Page del proyecto, la cual fue publicada utilizando GitHub Pages debido a que está compuesta por archivos estáticos desarrollados con HTML, CSS y JavaScript.
 
-Pasos para el despliegue:
+Los componentes considerados para la configuración de despliegue son los siguientes:
 
-1. Se creará un repositorio independiente en GitHub para almacenar el código fuente correspondiente a la Landing Page.
+| Component | Repository | Deployment platform | Main purpose |
+| --- | --- | --- | --- |
+| Landing Page | CodeBrokers Landing Page | GitHub Pages | Presentar la propuesta de valor de VitaLink y comunicar las principales funcionalidades del producto a los usuarios. |
+| Frontend Web Application | CodeBrokers-webapp | Render | Permitir la interacción de usuarios con la plataforma mediante una aplicación web funcional. |
+| RESTful Web Services | CodeBrokers-platform | Render | Proporcionar servicios backend mediante APIs REST para la comunicación con la aplicación web. |
+| Report | CodeBrokers Report | GitHub | Mantener la documentación técnica, evidencias y avances del proyecto. |
 
-2. Se subirán los archivos del proyecto, incluyendo código HTML, CSS, JavaScript y los recursos estáticos necesarios para el funcionamiento del sitio.
+La Landing Page fue desplegada mediante GitHub Pages utilizando la rama configurada para publicación del repositorio. El servicio permite generar una URL pública accesible desde cualquier navegador, facilitando la validación y demostración del avance desarrollado.
 
-3. En la configuración del repositorio se habilitará GitHub Pages, seleccionando la rama `main` y la carpeta raíz `/` como fuente de publicación.
+Enlace de despliegue:
 
-4. GitHub Pages generará automáticamente una URL pública mediante la cual la Landing Page podrá ser visualizada y utilizada por los usuarios.
+https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/
 
-**Repositorio:** [https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page]
-.
+Para la gestión del código desplegado se mantiene una separación entre desarrollo y publicación, permitiendo realizar modificaciones mediante ramas independientes antes de integrarlas a la versión estable.
 
-**URL desplegada:** Pendiente de completar.
+El proceso general de despliegue considera las siguientes etapas:
 
+- Desarrollo de nuevas funcionalidades dentro de ramas específicas.
+- Validación de los cambios realizados.
+- Integración mediante procesos de merge hacia la rama correspondiente.
+- Publicación del contenido actualizado mediante la plataforma de despliegue definida.
+
+La configuración actual permite mantener una estructura organizada del proyecto, facilitando futuras integraciones de la Web Application y los RESTful Web Services durante las siguientes etapas de implementación de VitaLink.
