@@ -59,6 +59,8 @@ Para la gestión y seguimiento de las actividades del Sprint se utilizará Trell
 **Sprint Board:** Trello
 
 **Enlace de Seguimiento:** [Tablero del Sprint 1 en Trello ](https://trello.com/b/uWEShiCR/sprint-codebrokers)
+
+
 <img width="1311" height="784" alt="image" src="https://github.com/user-attachments/assets/d5c34fa8-1f8b-4c56-8ae9-b1a5b8b02717" />
 
 
@@ -121,14 +123,32 @@ Las principales funcionalidades verificadas fueron:
 
 Imagenes del landing page:
 - Home:
+
+  
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/4ea3b1e8-ebe7-4881-a3d5-1bf56ce99618" />
-- Descripción: 
+
+
+- Descripción:
+
+  
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/ab0f85bc-daef-49ef-8eec-5dd8fe2c7070" />
+
+
 - Objetivos:
+
+  
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/25d63c22-78e4-4871-bdce-049597b8d926" />
+
+
 - Planes:
+
+  
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/d638748d-3218-4181-b816-ed2fbb325cc0" />
-- Soporte
+
+
+- Soporte:
+
+  
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/9c4fdabf-0a1f-4904-be7d-788d2092f61c" />
 
 
@@ -146,6 +166,8 @@ La documentación de endpoints, Swagger/OpenAPI y pruebas mediante Postman será
 Durante el Sprint 1 se realizó el despliegue de la primera versión funcional de la Landing Page de VitaLink. El objetivo de esta actividad fue publicar el sitio web en un entorno accesible públicamente, permitiendo validar su funcionamiento fuera del entorno local de desarrollo.
 
 Para el despliegue se utilizará **GitHub Pages**, aprovechando su integración directa con el repositorio de la Landing Page y su capacidad para publicar sitios web estáticos desarrollados con HTML, CSS y JavaScript.
+
+
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/8fc24562-7d9f-4a72-b364-92015514e330" />
 
 
@@ -200,6 +222,8 @@ Durante el desarrollo del proyecto VitaLink, todos los integrantes del equipo pa
 Las contribuciones del equipo no se limitan únicamente a los commits visibles en la sección de Contributors de GitHub, ya que algunos aportes fueron realizados mediante la organización de tareas, revisión de documentación, planificación de Sprints, diseño UX/UI, validación de entregables y coordinación del desarrollo.
 
 Report:
+
+
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/75cb0925-8cb5-488c-a456-901cf1dc6c8d" />
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/f94d5864-7c0a-4518-8b8d-7615390a0d57" />
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/a33fec15-a3ff-4f29-b64d-6818616b9c82" />
@@ -212,6 +236,8 @@ Report:
 
 
 Landing page:
+
+
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/a7ab456d-0942-413f-8609-8f3e66d9f866" />
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/fed9acec-0dc0-43c3-b1d1-974aa4301178" />
 
