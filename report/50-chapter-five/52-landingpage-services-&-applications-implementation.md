@@ -123,7 +123,7 @@ Las principales funcionalidades verificadas fueron:
 
 Imagenes del landing page:
 
-**Medicos
+**Medicos**
 
 
 -Incios:
@@ -155,7 +155,7 @@ Pagos:
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/6b69010d-b255-4d6c-9f47-eb413af8d2db" />
 
 
-**Familiares
+**Familiares**
 
 - Incio:
 
