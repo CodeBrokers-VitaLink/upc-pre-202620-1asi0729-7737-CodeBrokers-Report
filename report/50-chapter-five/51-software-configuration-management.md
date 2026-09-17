@@ -175,7 +175,8 @@ Repositorio GitHub de la Landing Page: [https://github.com/CodeBrokers-VitaLink/
 Repositorio GitHub de los archivos feature
 
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/d1c5bd44-d8aa-45b5-9120-ea35d56b9945" />
-<img width="900" alt="image" src="image" src="https://github.com/user-attachments/assets/db69ab32-a093-4110-88ee-683fa27a2888" />
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/db69ab32-a093-4110-88ee-683fa27a2888" />
 
 
 ---
