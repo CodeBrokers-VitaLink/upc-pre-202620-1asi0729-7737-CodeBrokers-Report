@@ -6,14 +6,14 @@ VitaLink se desarrolla dentro del mercado de soluciones digitales orientadas al 
 
 Para el análisis competitivo se seleccionaron **iDUAM, CarePredict y Doctoralia Perú**. Los dos primeros presentan una competencia más directa debido a sus soluciones de monitoreo remoto y asistencia para adultos mayores, mientras que Doctoralia representa una competencia indirecta relacionada principalmente con la búsqueda de profesionales, gestión de citas y atención médica a distancia.
 
-### iDUAM / iDUAMTata
+#### iDUAM / iDUAMTata
 
 **iDUAM** es una plataforma de telemedicina y monitoreo biométrico desarrollada por NATURALPHONE S.A. Su propuesta integra dispositivos inteligentes con una plataforma digital para obtener información relacionada con frecuencia cardíaca, presión arterial, oxigenación, temperatura y electrocardiograma, además de ofrecer videollamadas médicas y mecanismos de asistencia ante emergencias.
 
 Dentro de su ecosistema se encuentra **iDUAMTata**, una solución dirigida específicamente al adulto mayor. Esta incorpora monitoreo biométrico, detección de caídas, geolocalización, acompañamiento mediante asistentes virtuales y una red familiar que recibe alertas cuando se identifica una situación relevante.
 
 
-### CarePredict
+#### CarePredict
 
 **CarePredict** es una plataforma especializada en el cuidado y monitoreo de adultos mayores. Su solución utiliza un dispositivo wearable denominado **Tempo**, capaz de recopilar información relacionada con movimiento, actividad, ubicación y patrones cotidianos del usuario.
 
@@ -22,7 +22,7 @@ La plataforma utiliza estos datos para identificar cambios en el comportamiento 
 CarePredict cuenta además con una propuesta para personas que envejecen en sus hogares mediante **CarePredict @Home**, permitiendo a los familiares recibir información y notificaciones relacionadas con cambios detectados en la actividad del adulto mayor.
 
 
-### Doctoralia Perú
+#### Doctoralia Perú
 
 **Doctoralia Perú** es una plataforma digital que permite a los usuarios encontrar profesionales de salud, consultar su disponibilidad y solicitar citas presenciales o en línea. La plataforma conecta a pacientes con una amplia variedad de profesionales y especialidades médicas.
 

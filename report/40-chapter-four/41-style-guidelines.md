@@ -34,7 +34,7 @@ Información auxiliar: 0.875rem (14px), utilizada para etiquetas, fechas, inform
 
 La tipografía y los colores serán utilizados manteniendo un contraste adecuado entre el texto y el fondo, buscando cumplir con un ratio mínimo de 4.5:1, de acuerdo con las recomendaciones de accesibilidad WCAG 2.1 AA.
 
-### Paleta de Colores y Jerarquía Visual
+#### Paleta de Colores y Jerarquía Visual
 
 #### 1. Paleta Principal
 * **Verde Vitalink (#1D9E75):** Funciona como color principal de la marca y se utiliza en botones, elementos interactivos, indicadores y componentes destacados.
@@ -52,7 +52,7 @@ La tipografía y los colores serán utilizados manteniendo un contraste adecuado
 \includegraphics[width=0.7\linewidth]{assets/colors.png}
 
 
-### Spacing
+#### Spacing
 El sistema de spacing mantiene una estructura consistente para conseguir una interfaz ordenada, profesional y fácil de utilizar:
 
 * **Spacing base de 0.5 rem (8 px)** para mantener consistencia y ritmo visual entre los diferentes elementos de la aplicación.
@@ -61,7 +61,7 @@ El sistema de spacing mantiene una estructura consistente para conseguir una int
 * **Spacing entre elementos relacionados de 0.5 rem a 1.875 rem (8–30 px)**, dependiendo de su nivel de relación y jerarquía.
 * **Componentes interactivos:** Mantienen un espacio suficiente alrededor de ellos para facilitar la navegación y mejorar la experiencia de usuario.
 
-### Tono de Comunicación
+#### Tono de Comunicación
 La comunicación de Vitalink Professional busca transmitir profesionalismo, confianza y cercanía, utilizando un lenguaje sencillo que permita al usuario comprender rápidamente la información proporcionada.
 
 * **Equilibrio:** Profesional pero accesible (75% formal, 25% cercano), proyectando una imagen confiable sin generar una comunicación excesivamente rígida.
@@ -74,7 +74,7 @@ La comunicación de Vitalink Professional busca transmitir profesionalismo, conf
 
 Esta sección describe los lineamientos visuales comunes aplicados a las diferentes vistas de la landing page de VitaLink, manteniendo una identidad visual coherente independientemente del tipo de usuario al que esté dirigida cada vista. Aunque el contenido y algunos elementos pueden adaptarse según el perfil del usuario, ambas mantienen los mismos principios de diseño en cuanto a colores, tipografía, estructura, componentes, iconografía, espaciado y tono comunicacional. La propuesta busca transmitir una imagen de tecnología aplicada a la salud, confianza, seguridad y facilidad de uso.
 
-### Botones y Elementos de Acción
+#### Botones y Elementos de Acción
 * **Color principal:** Verde médico (#00694C), utilizado como color predominante para las acciones principales.
 * **Estados de interacción:** Se utiliza el verde secundario (#008560) para estados hover y elementos destacados.
 * **Tipografía:** Inter, con peso semibold o bold, favoreciendo una lectura clara.
@@ -83,14 +83,14 @@ Esta sección describe los lineamientos visuales comunes aplicados a las diferen
 * **Estilo:** Los botones principales pueden incorporar sombras sutiles y transiciones para reforzar su jerarquía.
 * **Tono comunicacional:** Directo, profesional y orientado a la acción, utilizando textos claros que indican al usuario qué puede realizar.
 
-### Enlaces de Navegación
+#### Enlaces de Navegación
 * **Color:** Los enlaces utilizan tonos gris verdoso (#3D4943) y cambian al verde principal (#00694C) durante la interacción.
 * **Tipografía:** Inter, principalmente con peso semibold.
 * **Estilo:** Sin subrayado, con espaciado suficiente entre elementos para facilitar la navegación.
 * **Jerarquía:** La navegación diferencia claramente los elementos principales de los secundarios.
 * **Tono:** Claro, profesional y sencillo, permitiendo al usuario identificar rápidamente las diferentes secciones de la plataforma.
 
-### Header
+#### Header
 * **Estructura:** Ambas vistas mantienen un encabezado superior como elemento principal de navegación e identificación de la plataforma.
 * **Identidad:** El logotipo y el nombre de VitaLink se mantienen como elementos fundamentales de reconocimiento de marca.
 * **Fondo:** Predominio de superficies claras, principalmente blanco (#FFFFFF) o tonos neutros muy claros.
@@ -99,7 +99,7 @@ Esta sección describe los lineamientos visuales comunes aplicados a las diferen
 * **Estilo:** Limpio, minimalista y organizado, evitando una sobrecarga de elementos.
 * **Tono:** Confiable, profesional y accesible.
 
-### Estructura de las Secciones
+#### Estructura de las Secciones
 * **Distribución:** Las diferentes vistas mantienen una estructura organizada mediante bloques de contenido claramente diferenciados.
 * **Fondos:** Se combinan superficies blancas (#FFFFFF) con fondos neutros claros como #F8FAFB, #F2F4F5 y #ECEEEF para establecer separación entre secciones.
 * **Espaciado:** Se utiliza un espaciado amplio entre bloques, proporcionando una experiencia visual limpia y evitando la saturación de información.
@@ -107,7 +107,7 @@ Esta sección describe los lineamientos visuales comunes aplicados a las diferen
 * **Jerarquía:** Cada sección presenta títulos, textos descriptivos, elementos visuales o componentes interactivos claramente diferenciados.
 * **Tono:** Ordenado, profesional y fácil de comprender.
 
-### Tarjetas y Contenedores
+#### Tarjetas y Contenedores
 * **Fondo:** Blanco (#FFFFFF), principalmente sobre superficies neutras.
 * **Bordes:** Gris claro (#E1E3E4) para delimitar los componentes.
 * **Forma:** Esquinas redondeadas, generalmente de 16px.
@@ -116,7 +116,7 @@ Esta sección describe los lineamientos visuales comunes aplicados a las diferen
 * **Estilo:** Minimalista, evitando decoraciones innecesarias y priorizando la información.
 * **Tono:** Profesional, limpio y confiable.
 
-### Tipografía
+#### Tipografía
 * **Familia:** Inter, utilizada como tipografía principal en las diferentes vistas.
 * **Títulos principales:** Tamaños grandes, aproximadamente 48px, con peso bold.
 * **Títulos de sección:** Aproximadamente 32px, con peso semibold.
@@ -126,7 +126,7 @@ Esta sección describe los lineamientos visuales comunes aplicados a las diferen
 * **Etiquetas:** Entre 11px y 14px, utilizando pesos medium o semibold.
 * **Características:** La tipografía mantiene una jerarquía visual clara y una buena legibilidad tanto para contenidos informativos como para elementos interactivos.
 
-### Iconografía
+#### Iconografía
 * **Estilo:** Lineal, minimalista y funcional.
 * **Sistema:** Material Symbols.
 * **Uso:** Los iconos acompañan botones, tarjetas, alertas, funcionalidades y elementos de navegación.
@@ -134,21 +134,21 @@ Esta sección describe los lineamientos visuales comunes aplicados a las diferen
 * **Colores:** Predominan el verde principal (#00694C), azul secundario (#416089), verde terciario (#026951) y rojo (#BA1A1A) para situaciones de alerta.
 * **Tono:** Funcional y fácil de interpretar, complementando el contenido textual sin sustituirlo.
 
-### Elementos Visuales e Imágenes
+#### Elementos Visuales e Imágenes
 * **Estilo:** Las imágenes utilizadas buscan representar el contexto tecnológico y sanitario de VitaLink.
 * **Presentación:** Las imágenes se integran dentro de contenedores con bordes redondeados y sombras sutiles.
 * **Composición:** Se utilizan elementos visuales junto al contenido textual para facilitar la comprensión de la propuesta de valor.
 * **Interacción:** Algunos elementos visuales incorporan transiciones o movimientos sutiles para aportar dinamismo.
 * **Tono:** Moderno, tecnológico y profesional, reforzando la relación entre salud y tecnología.
 
-### Alertas y Estados
+#### Alertas y Estados
 * **Color de alerta:** Rojo (#BA1A1A), utilizado para representar situaciones que requieren atención.
 * **Fondo:** Rojo claro (#FFDAD6) en los componentes que requieren destacar una situación crítica.
 * **Iconografía:** Se emplean símbolos relacionados con notificaciones, signos vitales o situaciones de atención.
 * **Uso:** Las alertas se presentan como elementos visualmente diferenciados para facilitar su identificación.
 * **Tono:** Claro, preventivo e inmediato, evitando elementos visuales excesivamente agresivos.
 
-### Paleta de Colores Común
+#### Paleta de Colores Común
 * **Verde principal (#00694C):** Identidad principal de VitaLink y acciones importantes.
 * **Verde secundario (#008560):** Estados de interacción y elementos destacados.
 * **Verdes claros (#68DBAE y #86F8C9):** Acentos y elementos decorativos.
@@ -161,7 +161,7 @@ Esta sección describe los lineamientos visuales comunes aplicados a las diferen
 * **Gris oscuro (#191C1D):** Títulos y textos principales.
 * **Rojo (#BA1A1A):** Alertas y situaciones críticas.
 
-### Espaciado y Bordes
+#### Espaciado y Bordes
 * **Unidad base:** 8px como referencia para mantener consistencia en márgenes y separaciones.
 * **Separación entre secciones:** Espacios amplios, aproximadamente 80px en secciones principales.
 * **Márgenes:** Adaptados según el dispositivo, utilizando aproximadamente 40px en escritorio y 20px en dispositivos móviles.
@@ -169,14 +169,14 @@ Esta sección describe los lineamientos visuales comunes aplicados a las diferen
 * **Radios:** Se utilizan esquinas redondeadas en botones, tarjetas, imágenes y contenedores.
 * **Objetivo:** Mantener una apariencia uniforme y facilitar la lectura visual de los contenidos.
 
-### Diseño Responsivo
+#### Diseño Responsivo
 * **Adaptabilidad:** Las dos vistas mantienen los mismos principios visuales independientemente del tamaño de pantalla.
 * **Escritorio:** Se aprovechan distribuciones de varias columnas para organizar contenido, imágenes y componentes.
 * **Dispositivos móviles:** Los elementos se reorganizan verticalmente, priorizando la legibilidad y las acciones principales.
 * **Navegación:** Algunos elementos secundarios pueden ocultarse o reorganizarse para evitar saturación.
 * **Objetivo:** Garantizar una experiencia consistente y funcional en diferentes dispositivos.
 
-### Tono Comunicacional General
+#### Tono Comunicacional General
 Profesional, claro, confiable y empático. Ambas vistas utilizan un lenguaje orientado a la salud y la tecnología, buscando transmitir seguridad y confianza sin generar una percepción excesivamente técnica o compleja. La comunicación prioriza mensajes directos, beneficios concretos y llamados a la acción fácilmente identificables.
 
 En conjunto, los elementos comunes permiten que las diferentes vistas sean reconocidas como parte de un mismo producto digital. La consistencia en la paleta de colores, tipografía, botones, iconografía, espaciado, tarjetas, bordes y estructura visual permite que VitaLink mantenga una identidad unificada, aun cuando el contenido y las funcionalidades presentadas puedan variar según el tipo de usuario.
