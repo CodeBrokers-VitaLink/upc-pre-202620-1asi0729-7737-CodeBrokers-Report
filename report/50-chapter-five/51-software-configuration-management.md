@@ -390,12 +390,36 @@ Actualmente, la primera versión desplegada corresponde a la Landing Page del pr
 
 Los componentes considerados para la configuración de despliegue son los siguientes:
 
-| Component | Repository | Deployment platform | Main purpose |
-| --- | --- | --- | --- |
-| Landing Page | CodeBrokers Landing Page | GitHub Pages | Presentar la propuesta de valor de VitaLink y comunicar las principales funcionalidades del producto a los usuarios. |
-| Frontend Web Application | CodeBrokers-webapp | Render | Permitir la interacción de usuarios con la plataforma mediante una aplicación web funcional. |
-| RESTful Web Services | CodeBrokers-platform | Render | Proporcionar servicios backend mediante APIs REST para la comunicación con la aplicación web. |
-| Report | CodeBrokers Report | GitHub | Mantener la documentación técnica, evidencias y avances del proyecto. |
+\begin{longtable}{|p{0.18\textwidth}|p{0.22\textwidth}|p{0.20\textwidth}|p{0.30\textwidth}|}
+\hline
+\textbf{Component} & \textbf{Repository} & \textbf{Deployment platform} & \textbf{Main purpose} \\
+\hline
+
+Landing Page &
+CodeBrokers Landing Page &
+GitHub Pages &
+Presentar la propuesta de valor de VitaLink y comunicar las principales funcionalidades del producto a los usuarios. \\
+\hline
+
+Frontend Web Application &
+CodeBrokers-webapp &
+Render &
+Permitir la interacción de usuarios con la plataforma mediante una aplicación web funcional. \\
+\hline
+
+RESTful Web Services &
+CodeBrokers-platform &
+Render &
+Proporcionar servicios backend mediante APIs REST para la comunicación con la aplicación web. \\
+\hline
+
+Report &
+CodeBrokers Report &
+GitHub &
+Mantener la documentación técnica, evidencias y avances del proyecto. \\
+\hline
+
+\end{longtable}
 
 La Landing Page fue desplegada mediante GitHub Pages utilizando la rama configurada para publicación del repositorio. El servicio permite generar una URL pública accesible desde cualquier navegador, facilitando la validación y demostración del avance desarrollado.
 
