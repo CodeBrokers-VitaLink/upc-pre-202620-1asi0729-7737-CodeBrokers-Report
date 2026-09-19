@@ -1,6 +1,6 @@
 ## 1.3 Segmentos objetivo
 
-### 1. Adultos mayores y sus familias que requieren acompañamiento preventivo
+#### 1. Adultos mayores y sus familias que requieren acompañamiento preventivo
 
 Este segmento está conformado por adultos mayores de 60 años y sus familiares, especialmente aquellos que desean mantener un sistema de acompañamiento y monitoreo preventivo para mejorar la seguridad del adulto mayor.
 
@@ -17,7 +17,7 @@ A diferencia del primer segmento, este grupo puede estar compuesto por familias 
 
 ---
 
-### 2. Clínicas y hospitales
+#### 2. Clínicas y hospitales
 
 Este segmento representa a los proveedores de atención que forman parte del ecosistema de VitaLink.
 

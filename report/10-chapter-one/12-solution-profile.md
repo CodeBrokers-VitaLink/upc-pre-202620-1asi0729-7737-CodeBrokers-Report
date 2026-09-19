@@ -2,7 +2,7 @@
 
 ### 1.2.1 Antecedentes y problemática
 
-## Antecedentes
+#### Antecedentes
 
 El envejecimiento de la población representa un desafío cada vez más importante para los sistemas de salud y las familias. La Organización Mundial de la Salud señala que la población mundial de 60 años o más está aumentando rápidamente y estima que para 2030 una de cada seis personas en el mundo tendrá 60 años o más. Este proceso genera nuevos desafíos para los sistemas de salud y asistencia social, especialmente en la atención y cuidado de las personas mayores (Organización Mundial de la Salud [OMS], 2025).
 
@@ -10,7 +10,7 @@ Frente a esta realidad surge **SeniorCare**,  orientada al monitoreo preventivo 
 
 ---
 
-## Problemática
+#### Problemática
 
 Entre las principales problemáticas identificadas se encuentran:
 
@@ -25,30 +25,30 @@ Estas dificultades pueden generar preocupación en los familiares, retrasos en l
 
 ---
 
-## 5W y 2H
+#### 5W y 2H
 
-### What? (¿Cuál es el problema?)
+#### What? (¿Cuál es el problema?)
 Los familiares y cuidadores de adultos mayores no siempre cuentan con una herramienta que les permita conocer oportunamente el estado de salud de la persona a su cargo y detectar posibles situaciones de riesgo cuando no se encuentran físicamente con ella.
 
 Actualmente, el seguimiento suele depender de llamadas telefónicas, mensajes, visitas presenciales o de que el propio adulto mayor comunique que presenta algún problema. Esto puede generar detección tardía de situaciones de riesgo, especialmente cuando el adulto mayor vive solo, permanece varias horas sin compañía o presenta dificultades para comunicar oportunamente un cambio en su estado.
 
 Además, la información relacionada con su salud puede encontrarse dispersa entre familiares, documentos o diferentes proveedores de atención, dificultando el seguimiento y la toma de decisiones.
 
-### When? (¿Cuándo sucede el problema?)
+#### When? (¿Cuándo sucede el problema?)
 El problema puede presentarse de manera recurrente durante las actividades cotidianas del adulto mayor, especialmente cuando los familiares o cuidadores no se encuentran cerca para supervisarlo.
 
 La situación se vuelve más crítica cuando ocurre un evento inesperado, como una caída, una alteración de determinados indicadores de salud o cualquier otra condición que pueda representar un riesgo. En estos casos, el tiempo transcurrido entre la aparición del problema y la comunicación con un familiar o proveedor de atención puede ser determinante.
 
 También se presenta cuando los familiares desean conocer el estado del adulto mayor, pero no cuentan con información actualizada y deben depender de una comunicación manual para obtenerla.
 
-### Where? (¿Dónde ocurre el problema?)
+#### Where? (¿Dónde ocurre el problema?)
 El problema se presenta principalmente en hogares y entornos donde los adultos mayores desarrollan sus actividades cotidianas, especialmente cuando permanecen solos o tienen un nivel reducido de supervisión presencial.
 
 En el contexto inicial de VitaLink, la problemática se plantea principalmente en **Lima Metropolitana** y otras ciudades del Perú, donde existe una creciente población adulta mayor y una necesidad de fortalecer los mecanismos de acompañamiento y prevención.
 
 Asimismo, el problema involucra la relación entre los hogares de los adultos mayores y los establecimientos y profesionales de salud, debido a la dificultad de conectar oportunamente a ambas partes cuando se presenta una situación que requiere atención.
 
-### Why? (¿Por qué ocurre el problema?)
+#### Why? (¿Por qué ocurre el problema?)
 El problema ocurre principalmente porque el acompañamiento de los adultos mayores continúa dependiendo, en gran medida, de la supervisión presencial y de mecanismos de comunicación manuales.
 
 A pesar de la disponibilidad de tecnologías de monitoreo y dispositivos inteligentes, no siempre existe una plataforma accesible que integre la información del adulto mayor con un sistema de alertas y una red de familiares y proveedores de atención.
@@ -57,12 +57,12 @@ Además, la información puede encontrarse fragmentada y no necesariamente exist
 
 Esta situación dificulta pasar de un modelo de atención principalmente reactivo a uno más preventivo y basado en información.
 
-### Who? (¿Quiénes están involucrados?)
+#### Who? (¿Quiénes están involucrados?)
 * **Adultos mayores:** quienes son los principales beneficiarios de una solución que permita brindarles mayor seguridad y acompañamiento durante sus actividades cotidianas.
 * **Familiares y cuidadores:** quienes tienen la responsabilidad de acompañar y supervisar al adulto mayor, pero pueden tener dificultades para hacerlo de manera permanente debido a sus actividades laborales, distancia geográfica u otras responsabilidades.
 * **Clínicas y hospitales:** que pueden participar como proveedores de atención asociados al adulto mayor y recibir alertas cuando sea necesario gestionar una atención.
 
-### How? (¿Cómo se presenta el problema?)
+#### How? (¿Cómo se presenta el problema?)
 El proceso actual puede desarrollarse de la siguiente manera:
 
 > Adulto mayor presenta una situación de riesgo $\rightarrow$ no existe monitoreo o alerta automática $\rightarrow$ el familiar desconoce la situación $\rightarrow$ el problema continúa o se agrava $\rightarrow$ el adulto mayor o una tercera persona comunica el incidente $\rightarrow$ el familiar intenta determinar qué hacer $\rightarrow$ busca contactar a un establecimiento o profesional de salud $\rightarrow$ se inicia la gestión de atención.
@@ -71,7 +71,7 @@ Este proceso puede generar retrasos en la comunicación y en la respuesta, espec
 
 En otros casos, el familiar puede realizar llamadas o comunicarse constantemente con el adulto mayor para verificar que se encuentre bien, lo que genera una dependencia de la supervisión manual.
 
-### How much? (¿Qué tan severo es el problema?)
+#### How much? (¿Qué tan severo es el problema?)
 La severidad del problema no se limita a un costo económico directo, sino que está relacionada principalmente con el tiempo de respuesta, la seguridad del adulto mayor y la tranquilidad de sus familiares.
 
 Por ello, el impacto del problema puede observarse en tres dimensiones principales:
@@ -181,15 +181,81 @@ Sabremos que tenemos exito cuando se logre una reduccion del 50% en el tiempo ne
 
 
 #### 1.2.2.4. Lean UX Canvas
+```{=latex}
+\begingroup
+\centering
+\small
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.25}
 
-| 1. Business Problem | 2. Business Outcomes | 3. Users |
-|  :---               | :---                 | :---     |
-| El cuidado de adultos mayores depende de registros manuales y respuestas reactivas ante emergencias de salud, generando demoras criticas y desconexion entre el monitoreo diario del hogar y los centros de atencion medica. | - Reduccion del 50% en el tiempo para coordinar una cita ante anomalias.<br>- Tasa minima del 70% de aceptacion en citas pre-agendadas.<br>- Afiliacion de al menos 15 centros de salud a la red.<br>- Incremento del 30% en la retencion mensual de familias suscriptoras. | - Cuidadores familiares principales (hijos, tutores).<br>- Adultos mayores con enfermedades cronicas.<br>- Centros de salud y profesionales medicos independientes. |
+\begin{tabular}{|p{0.26\textwidth}|p{0.26\textwidth}|p{0.26\textwidth}|}
+\hline
+\textbf{1. Business Problem} &
+\textbf{2. Business Outcomes} &
+\textbf{3. Users} \\
+\hline
 
-| 4. User Outcomes & Benefits | 5. Solutions | 6. Hypotheses |
-| :--- | :--- | :--- |
-| - Deteccion temprana de anomalias biometricas y tranquilidad familiar continua.<br>- Atencion medica rapida sin busqueda manual de proveedores en crisis.<br>- Historial clinico y triaje previo disponible para el medico antes de la consulta.<br>- Acceso a consultas a tarifa social para adultos mayores sin seguro. | - Plataforma SaaS con tablero de telemetria IoT simulada en tiempo real.<br>- Sistema inteligente de triaje y pre-agendamiento automatico de consultas.<br>- Historial biometrico centralizado y ficha de triaje exportable.<br>- Modulo de atencion a tarifa social conectado con policlinicos y ONGs.<br>- Notificaciones automatizadas via SMS y mensajeria de emergencia. | - Creemos que el monitoreo IoT en tiempo real lograra un 30% mas de retencion mensual al brindar tranquilidad continua a los cuidadores.<br>- Creemos que el auto-agendamiento inteligente reducira en 50% el tiempo de coordinacion de citas de urgencia.<br>- Creemos que el historial y triaje previo aumentara un 40% los convenios con clinicas.<br>- Creemos que las alertas SMS lograran un 75% de confirmacion en los primeros 5 minutos.<br>- Creemos que la tarifa social lograra un 35% de adopcion en hogares sin seguro privado. |
+El cuidado de adultos mayores depende de registros manuales y respuestas reactivas ante emergencias de salud, generando demoras críticas y desconexión entre el monitoreo diario del hogar y los centros de atención médica.
+&
+- Reducción del 50\% en el tiempo para coordinar una cita ante anomalías.\newline
+- Tasa mínima del 70\% de aceptación en citas pre-agendadas.\newline
+- Afiliación de al menos 15 centros de salud a la red.\newline
+- Incremento del 30\% en la retención mensual de familias suscriptoras.
+&
+- Cuidadores familiares principales (hijos, tutores).\newline
+- Adultos mayores con enfermedades crónicas.\newline
+- Centros de salud y profesionales médicos independientes.
+\\
+\hline
+\end{tabular}
 
-| 7. What is the most important thing we need to learn first? | 8. What is the least amount of work we need to do to learn the next most important thing? |
-| :--- | :--- |
-| - Validar si los cuidadores familiares aceptan y confian en el auto-agendamiento ante una anomalia detectada.<br>- Confirmar la disposicion de las clinicas para publicar y gestionar sus cupos de atencion dentro del SaaS.<br>- Identificar el rango de precio mensual aceptable para los planes familiares de suscripcion. | - Desplegar la Landing Page con la propuesta de valor y medir el interes de registro de cuidadores y clinicas.<br>- Probar prototipos interactivos en Figma con cuidadores para validar el flujo de confirmacion de citas en un clic.<br>- Ejecutar simulaciones del flujo de datos IoT y pre-agendamiento en el MVP inicial. |
+\par\vspace{0.6cm}
+
+\begin{tabular}{|p{0.26\textwidth}|p{0.26\textwidth}|p{0.26\textwidth}|}
+\hline
+\textbf{4. User Outcomes \& Benefits} &
+\textbf{5. Solutions} &
+\textbf{6. Hypotheses} \\
+\hline
+
+- Detección temprana de anomalías biométricas y tranquilidad familiar continua.\newline
+- Atención médica rápida sin búsqueda manual de proveedores en crisis.\newline
+- Historial clínico y triaje previo disponible para el médico antes de la consulta.\newline
+- Acceso a consultas a tarifa social para adultos mayores sin seguro.
+&
+- Plataforma SaaS con tablero de telemetría IoT simulada en tiempo real.\newline
+- Sistema inteligente de triaje y pre-agendamiento automático de consultas.\newline
+- Historial biométrico centralizado y ficha de triaje exportable.\newline
+- Módulo de atención a tarifa social conectado con policlínicos y ONGs.\newline
+- Notificaciones automatizadas vía SMS y mensajería de emergencia.
+&
+- Creemos que el monitoreo IoT en tiempo real logrará un 30\% más de retención mensual al brindar tranquilidad continua a los cuidadores.\newline
+- Creemos que el auto-agendamiento inteligente reducirá en 50\% el tiempo de coordinación de citas de urgencia.\newline
+- Creemos que el historial y triaje previo aumentará un 40\% los convenios con clínicas.\newline
+- Creemos que las alertas SMS lograrán un 75\% de confirmación en los primeros 5 minutos.\newline
+- Creemos que la tarifa social logrará un 35\% de adopción en hogares sin seguro privado.
+\\
+\hline
+\end{tabular}
+
+\par\vspace{0.6cm}
+
+\begin{tabular}{|p{0.39\textwidth}|p{0.39\textwidth}|}
+\hline
+\textbf{7. What is the most important thing we need to learn first?} &
+\textbf{8. What is the least amount of work we need to do to learn the next most important thing?} \\
+\hline
+
+- Validar si los cuidadores familiares aceptan y confían en el auto-agendamiento ante una anomalía detectada.\newline
+- Confirmar la disposición de las clínicas para publicar y gestionar sus cupos de atención dentro del SaaS.\newline
+- Identificar el rango de precio mensual aceptable para los planes familiares de suscripción.
+&
+- Desplegar la Landing Page con la propuesta de valor y medir el interés de registro de cuidadores y clínicas.\newline
+- Probar prototipos interactivos en Figma con cuidadores para validar el flujo de confirmación de citas en un clic.\newline
+- Ejecutar simulaciones del flujo de datos IoT y pre-agendamiento en el MVP inicial.
+\\
+\hline
+\end{tabular}
+
+\endgroup
+```

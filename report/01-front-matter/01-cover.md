@@ -20,11 +20,11 @@
 {\large \textbf {VitaLkink} } \\[0.5cm]
 
 {\large \textbf {Código - Apellidos y Nombres} } \\[0.2cm]
-{\large \text codigo - integrante } \\[0.2cm]
+{\large \text U202418623 - Contreras Panuera, Fernando Fabrizio } \\[0.2cm]
+{\large \text U202120011 - Martinez Gaona, Pablo } \\[0.2cm]
+{\large \text U202411378 - Quiliano Motta, Kirk Douglas } \\[0.2cm]
 {\large \text U202312348 - Said Conde, Yazid } \\[0.2cm]
-{\large \text codigo - integrante } \\[0.2cm]
-{\large \text codigo - integrante } \\[0.2cm]
-{\large \text codigo - integrante } \\[0.5cm]
+{\large \text U20211F962 - Vargas Manchinelli, Deiby Juan } \\[0.5cm]
 
 {\large \textbf{Período 202620}} \\[1cm]
 
