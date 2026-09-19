@@ -6,7 +6,7 @@ En esta seccion se formaliza la arquitectura de software de VitaLink bajo los pr
 
 A partir del Big Picture preliminar, se desarrollo la sesion de Design-Level Event Storming para refinar el modelo del dominio. Se definieron cuatro Bounded Contexts principales con sus respectivos comandos, eventos de dominio, agregados y modelos de lectura (queries):
 
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/Chapter-Four/event-brainstorming.png} \end{center}
+\begin{center} \includegraphics[width=0.5\linewidth]{assets/event-brainstorming.png} \end{center}
 
 #### 1. Monitoring Bounded Context
 * **Proposito:** Administrar la telemetria fisiologica en tiempo real, evaluando lecturas frente a rangos clinicos predefinidos.
@@ -15,7 +15,7 @@ A partir del Big Picture preliminar, se desarrollo la sesion de Design-Level Eve
 * **Domain Events:** `VitalSignsRecorded`, `ThresholdExceeded`, `FallPatternDetected`.
 * **Read Models (Queries):** `GetLatestVitalSignsQuery`, `GetBiometricHistoryQuery`.
 
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/Chapter-Four/Monitoring_BC.png} \end{center}
+\begin{center} \includegraphics[width=0.5\linewidth]{assets/Monitoring_BC.png} \end{center}
 
 #### 2. Emergency & Notification Bounded Context
 * **Proposito:** Orquestar el despacho de alertas de emergencia y controlar el escalamiento multicanal hacia la red de apoyo familiar.
@@ -24,7 +24,7 @@ A partir del Big Picture preliminar, se desarrollo la sesion de Design-Level Eve
 * **Domain Events:** `EmergencyAlertTriggered`, `AlertAcknowledgedByCaregiver`, `AlertEscalated`.
 * **Read Models (Queries):** `GetActiveAlertsQuery`, `GetAlertAuditTrailQuery`.
 
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/Chapter-Four/E&N_BC.png} \end{center}
+\begin{center} \includegraphics[width=0.5\linewidth]{assets/E&N_BC.png} \end{center}
 
 #### 3. Triage & Clinical Scheduling Bounded Context
 * **Proposito:** Clasificar el nivel de gravedad clinica del paciente y pre-agendar de manera reactiva citas en la red de centros de salud aliados.
@@ -33,7 +33,7 @@ A partir del Big Picture preliminar, se desarrollo la sesion de Design-Level Eve
 * **Domain Events:** `RiskEvaluated`, `AppointmentPreScheduled`, `AppointmentConfirmed`.
 * **Read Models (Queries):** `SearchAvailableMedicalSlotsQuery`, `ExportTriageSummaryQuery`.
 
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/Chapter-Four/T&C_Scheduling_BC.png} \end{center}
+\begin{center} \includegraphics[width=0.5\linewidth]{assets/T&C_Scheduling_BC.png} \end{center}
 
 #### 4. IAM & Profile Bounded Context
 * **Proposito:** Gestionar la identidad, control de accesos, roles y vinculaciones familiares entre el paciente y sus tutores legales.
@@ -42,13 +42,13 @@ A partir del Big Picture preliminar, se desarrollo la sesion de Design-Level Eve
 * **Domain Events:** `UserRegistered`, `UserAuthenticated`, `CaregiverLinked`.
 * **Read Models (Queries):** `GetUserProfileQuery`, `GetAffiliatedPatientsQuery`.
 
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/Chapter-Four/IAM_BC.png} \end{center}
+\begin{center} \includegraphics[width=0.5\linewidth]{assets/IAM_BC.png} \end{center}
 
 ### 4.6.2. Software Architecture Context Diagram
 
 El diagrama de contexto representa el Nivel 1 del modelo C4 para VitaLink Platform. Este modelo delimita las fronteras del sistema, identificando a los usuarios que interactuan con la plataforma y los sistemas externos con los que se integra para el envio de alertas y coordinacion clinica.
 
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/Chapter-Four/Software_Architecture_Context_Diagram.png} \end{center}
+\begin{center} \includegraphics[width=0.5\linewidth]{assets/Software_Architecture_Context_Diagram.png} \end{center}
 
 #### 1. Elemento Central
 
@@ -84,7 +84,7 @@ Para mantener una representacion visual limpia y estructurada segun los roles de
 
 #### Container Diagram elaborado para Cuidadores y Adultos Mayores:
 
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/Chapter-Four/Diagram_Para_Familias.jpeg} \end{center}
+\begin{center} \includegraphics[width=0.5\linewidth]{assets/Diagram_Para_Familias.jpeg} \end{center}
 
 Este diagrama modela la interaccion de los cuidadores y adultos mayores a traves de la aplicacion web, canalizando las peticiones hacia la API central y distribuyendo la logica en los siguientes contenedores y modulos:
 
@@ -97,7 +97,7 @@ Este diagrama modela la interaccion de los cuidadores y adultos mayores a traves
 
 #### Container Diagram elaborado para Personal Medico y Clinicas:
 
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/Chapter-Four/Diagram_Para_Personal_Medico.jpeg} \end{center}
+\begin{center} \includegraphics[width=0.5\linewidth]{assets/Diagram_Para_Personal_Medico.jpeg} \end{center}
 
 Este diagrama representa el flujo de trabajo del personal facultativo y de recepcion medica frente al sistema central de VitaLink:
 
@@ -112,7 +112,7 @@ Este diagrama representa el flujo de trabajo del personal facultativo y de recep
 
 El diagrama de componentes representa el Nivel 3 del modelo C4 para el contenedor central Backend API de VitaLink. En este nivel se expone la estructura interna de la aplicacion desarrollada en Spring Boot, delimitando los modulos logicos que procesan las reglas de negocio segun los Bounded Contexts y organizando el acceso a datos mediante Spring Data JPA.
 
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/Chapter-Four/Software_Architecture_Component_Diagram.png} \end{center}
+\begin{center} \includegraphics[width=0.5\linewidth]{assets/Software_Architecture_Component_Diagram.png} \end{center}
 
 #### 1. Componentes Internos del Backend API (Spring Boot)
 
