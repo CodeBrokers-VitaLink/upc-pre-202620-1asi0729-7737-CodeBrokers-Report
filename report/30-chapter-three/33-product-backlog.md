@@ -48,7 +48,9 @@ El orden del Product Backlog responde al valor de negocio, no a la conveniencia 
 
 ### 3.3.2. Tablero público del Backlog
 
-**Herramienta:** `[completar — Trello / Jira / YouTrack / Pivotal Tracker]`
-**URL pública:** `[completar]`
+**Herramienta:** Trello
+**URL pública del tablero:** https://trello.com/b/2CSflHnr
 
-<!-- \includegraphics[width=0.9\linewidth]{assets/product-backlog.png} -->
+El tablero contiene las 37 historias en el mismo orden de la tabla anterior, dentro de la lista *Product Backlog (priorizado)*. Cada tarjeta lleva el identificador de la historia, su descripción completa y dos etiquetas: los Story Points estimados y el tipo de historia (User Story o Technical Story). Las listas *To-Do*, *In-Process*, *To-Review* y *Done* sostienen el ciclo de trabajo de cada Sprint.
+
+\includegraphics[width=\linewidth]{assets/ProductBacklog-Trello.png}
