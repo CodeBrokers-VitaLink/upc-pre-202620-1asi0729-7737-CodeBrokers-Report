@@ -4,7 +4,7 @@
 
 El almacenamiento de VitaLink es relacional y deriva directamente de los Aggregates del diagrama de clases ([4.7.1](47-software-object-oriented-design.md)). Se elaboró como Diagram-as-Code con Mermaid, especificando tipo de dato, llave primaria (PK) y llaves foráneas (FK) por tabla.
 
-![Database Diagram VitaLink](../../assets/database-diagram.png)
+\begin{center} \includegraphics[width=0.5\linewidth]{assets/database-diagram.png} \end{center}
 
 * `user_accounts` centraliza a pacientes, cuidadores y proveedores en una sola tabla diferenciada por `role`, en lugar de una tabla por tipo de actor, siguiendo el Aggregate `UserAccount` de IAM & Profile Context.
 * `caregiver_affiliations` es la tabla de unión entre un cuidador y un paciente (ambos referencian `user_accounts`), y guarda el rol de la relación (principal/secundario).
