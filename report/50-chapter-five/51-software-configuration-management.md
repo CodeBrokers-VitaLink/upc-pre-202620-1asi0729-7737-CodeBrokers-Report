@@ -57,72 +57,68 @@ La Frontend Web Application seguirá los principios de Material Design y utiliza
 - [Angular Material](https://material.angular.io/)
 - [Material Design](https://m3.material.io/)
 
----
 
 #### Software Development
 
 La solución VitaLink estará compuesta por una Landing Page, una Frontend Web Application y RESTful Web Services.
 
-La Landing Page será desarrollada utilizando **HTML5, CSS3 y JavaScript**, permitiendo construir una interfaz web responsive orientada a comunicar la propuesta de valor de VitaLink.
+La Landing Page será desarrollada utilizando HTML5, CSS3 y JavaScript, permitiendo construir una interfaz web responsive orientada a comunicar la propuesta de valor de VitaLink.
 
-La Frontend Web Application será desarrollada utilizando **Angular Framework** junto con **TypeScript**, además de HTML5 y CSS3 para la estructura y presentación de las interfaces.
+La Frontend Web Application será desarrollada utilizando Angular Framework junto con TypeScript, además de HTML5 y CSS3 para la estructura y presentación de las interfaces.
 
-Los RESTful Web Services serán desarrollados utilizando **Java**, **Spring Boot Framework** y **Spring Data JPA**, permitiendo implementar la lógica de negocio y gestionar la persistencia de información de VitaLink.
+Los RESTful Web Services serán desarrollados utilizando Java, Spring Boot Framework y Spring Data JPA, permitiendo implementar la lógica de negocio y gestionar la persistencia de información de VitaLink.
 
-Como entornos de desarrollo se utilizarán **Visual Studio Code** para el desarrollo de componentes frontend, Landing Page y documentación, e **IntelliJ IDEA** para el desarrollo de los RESTful Web Services.
+Como entornos de desarrollo se utilizarán Visual Studio Code para el desarrollo de componentes frontend, Landing Page y documentación, e IntelliJ IDEA para el desarrollo de los RESTful Web Services.
 
-Para la gestión de dependencias de la Frontend Web Application se utilizarán **Node.js** y **NPM**.
+Para la gestión de dependencias de la Frontend Web Application se utilizarán Node.js y NPM.
 
-**Enlaces:**
+Enlaces:
 
-- [Angular](https://angular.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Java](https://www.java.com/)
-- [Spring Boot](https://spring.io/projects/spring-boot)
-- [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [IntelliJ IDEA](https://www.jetbrains.com/idea/)
-- [Node.js](https://nodejs.org/)
-- [NPM](https://www.npmjs.com/)
+- https://angular.dev/
+- https://www.typescriptlang.org/
+- https://www.java.com/
+- https://spring.io/projects/spring-boot
+- https://spring.io/projects/spring-data-jpa
+- https://code.visualstudio.com/
+- https://www.jetbrains.com/idea/
+- https://nodejs.org/
+- https://www.npmjs.com/
 
----
+
 #### Software Architecture and Database Design
 
-Para la documentación de la arquitectura del software se utilizará **Structurizr**, permitiendo elaborar los diagramas correspondientes al C4 Model y representar la estructura de los diferentes componentes que conforman VitaLink.
+Para la documentación de la arquitectura del software se utilizará Structurizr, permitiendo elaborar los diagramas correspondientes al C4 Model y representar la estructura de los diferentes componentes que conforman VitaLink.
 
-Para la elaboración de diagramas UML y otros modelos visuales se utilizará **Lucidchart**, permitiendo representar componentes, relaciones y procesos del sistema.
+Para la elaboración de diagramas UML y otros modelos visuales se utilizará Lucidchart, permitiendo representar componentes, relaciones y procesos del sistema.
 
-Para el diseño y modelado de la base de datos se utilizará **MySQL Workbench**, permitiendo representar tablas, atributos, claves primarias, claves foráneas, restricciones y relaciones correspondientes al modelo de datos de VitaLink.
+Para el diseño y modelado de la base de datos se utilizará MySQL Workbench, permitiendo representar tablas, atributos, claves primarias, claves foráneas, restricciones y relaciones correspondientes al modelo de datos de VitaLink.
 
-**Enlaces:**
+Enlaces:
 
-- [Structurizr](https://structurizr.com/)
-- [Lucidchart](https://www.lucidchart.com/)
-- [MySQL Workbench](https://www.mysql.com/products/workbench/)
+- https://structurizr.com/
+- https://www.lucidchart.com/
+- https://www.mysql.com/products/workbench/
 
----
 
 #### Software Documentation
 
-La documentación general del proyecto será elaborada mediante archivos **Markdown** almacenados dentro del repositorio público del Project Report en GitHub.
+La documentación general del proyecto será elaborada mediante archivos Markdown almacenados dentro del repositorio público del Project Report en GitHub.
 
-Para la documentación de los RESTful Web Services se utilizará **OpenAPI Specification mediante Swagger**, permitiendo documentar los endpoints disponibles, métodos HTTP, parámetros, requests y responses correspondientes a los servicios implementados.
+Para la documentación de los RESTful Web Services se utilizará OpenAPI Specification mediante Swagger, permitiendo documentar los endpoints disponibles, métodos HTTP, parámetros, requests y responses correspondientes a los servicios implementados.
 
-**Repositorios actuales del proyecto:**
+Repositorios actuales del proyecto:
 
-- Project Report Repository:  
-https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Report
+- Project Report Repository:
+  https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Report
 
-- Landing Page Repository:  
-https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page
+- Landing Page Repository:
+  https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page
 
-**Enlaces:**
+Enlaces:
 
-- [Markdown Guide](https://www.markdownguide.org/)
-- [OpenAPI Specification](https://swagger.io/specification/)
-- [Swagger](https://swagger.io/)
-
----
+- https://www.markdownguide.org/
+- https://swagger.io/specification/
+- https://swagger.io/
 
 #### Software Version Control
 
