@@ -1,326 +1,75 @@
-## 3.3. Product Backlog.
+## 3.3. Product Backlog
 
-El orden del Product Backlog responde al valor de negocio, no a la conveniencia técnica: las historias de Landing Page se consideran desde el primer sprint, y ninguna historia de seguridad, autenticación o control de acceso se ubica al inicio del backlog — se posicionan una vez que la funcionalidad que protegen ya tiene valor entregado.
+El orden del Product Backlog responde al valor de negocio, no a la conveniencia técnica: las historias de Landing Page se consideran desde el primer sprint, y ninguna historia de seguridad, autenticación o control de acceso se ubica al inicio del backlog; se posicionan una vez que la funcionalidad que protegen ya tiene valor entregado. Las descripciones completas y los criterios de aceptación de cada historia se mantienen únicamente en [3.1. User Stories](31-user-stories.md), de modo que exista una sola fuente de verdad. Las historias de Landing Page (US-01 a US-10, Sprint 1) suman 10 Story Points, coincidiendo con la velocidad planificada para el Sprint 1.
 
 ### 3.3.1. Tabla de Backlog
 
-\begin{longtable}{|p{0.07\textwidth}|p{0.10\textwidth}|p{0.25\textwidth}|p{0.46\textwidth}|p{0.10\textwidth}|}
-
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{|p{0.07\textwidth}|p{0.09\textwidth}|p{0.40\textwidth}|p{0.08\textwidth}|p{0.09\textwidth}|p{0.08\textwidth}|}
+\caption{Product Backlog priorizado de VitaLink}\\
 \hline
-
-\textbf{\# Orden} &
-\textbf{User Story ID} &
-\textbf{Título} &
-\textbf{Descripción} &
-\textbf{Story Points (1/2/3/5/8)} \\
-
+\textbf{Orden} & \textbf{ID} & \textbf{Título} & \textbf{Épica} & \textbf{BG} & \textbf{SP} \\
 \hline
-
-1 &
-US-01 &
-Entender la propuesta de valor en segundos &
-Como visitante médico, quiero entender en segundos qué problema resuelve VitaLink, para decidir si me interesa conocer más. &
-1 \\
-
+\endfirsthead
 \hline
-
-2 &
-US-06 &
-Entender el beneficio sin llamadas constantes &
-Como familiar, quiero entender en segundos cómo la app me ayuda a saber del estado de mi padre/madre sin llamarlo constantemente, para decidir si me interesa registrarme. &
-1 \\
-
+\textbf{Orden} & \textbf{ID} & \textbf{Título} & \textbf{Épica} & \textbf{BG} & \textbf{SP} \\
 \hline
-
-3 &
-US-07 &
-Confiar en quién ve los datos de salud &
-Como familiar, quiero ver una sección clara de privacidad que explique quién puede ver los datos de salud de mi familiar, para confiar en registrar su información. &
-1 \\
-
-\hline
-
-4 &
-US-02 &
-Confiar antes de registrar datos de pacientes &
-Como profesional de salud, quiero ver una sección de privacidad/seguridad de datos, para confiar en registrar información de mis pacientes. &
-1 \\
-
-\hline
-
-5 &
-US-09 &
-Entender la app sin tecnicismos &
-Como adulto mayor o su cuidador, quiero ver un mensaje simple (sin tecnicismos) que explique qué hace la app, para entender rápido si me sirve. &
-1 \\
-
-\hline
-
-6 &
-US-10 &
-Ver qué esperar antes de registrarse &
-Como visitante, quiero ver un ejemplo visual de cómo se ve una alerta o el dashboard, para saber qué esperar antes de registrarme. &
-2 \\
-
-\hline
-
-7 &
-US-05 &
-Ver un ejemplo visual de una alerta &
-Como profesional de salud, quiero ver un ejemplo visual simple de cómo se ve una alerta, para entender rápido cómo funciona el seguimiento. &
-2 \\
-
-\hline
-
-8 &
-US-08 &
-Conocer cómo funciona antes de crear cuenta &
-Como familiar, quiero un botón para ``conocer cómo funciona'' antes de crear una cuenta, para entender el proceso sin comprometerme aún. &
-2 \\
-
-\hline
-
-9 &
-US-04 &
-Unirme como proveedor de salud &
-Como profesional de salud, quiero un botón específico para ``unirme como proveedor de salud'', para iniciar mi registro directamente. &
-2 \\
-
-\hline
-
-10 &
-US-03 &
-Solicitar información antes de registrarse &
-Como profesional de salud, quiero un botón claro para ``solicitar información'' antes de registrarme, para evaluar la herramienta sin compromiso. &
-2 \\
-
-\hline
-
-11 &
-TS-01 &
-Ingesta de Telemetría Biométrica &
-Como sistema, quiero registrar un evento o Telemetría Biométrica capturada y generar automáticamente una alerta cuando el valor esté fuera de rango, para iniciar el flujo de atención sin depender de revisión manual. &
-5 \\
-
-\hline
-
-12 &
-TS-02 &
-Listado de alertas &
-Como sistema, quiero exponer un listado de alertas filtrable por estado y prioridad, para alimentar el dashboard médico y familiar. &
-3 \\
-
-\hline
-
-13 &
-US-18 &
-Estado general al abrir la app &
-Como familiar y adulto mayor, quiero ver un estado general simple (``todo bien'' / ``necesita atención'') al abrir la app, para saber de inmediato si debo actuar. &
-2 \\
-
-\hline
-
-14 &
-US-19 &
-Recibir una alerta comprensible &
-Como familiar y adulto mayor, quiero recibir una alerta que indique qué pasó, qué tan grave es y si ya alguien está atendiendo la situación, para decidir si debo intervenir. &
-3 \\
-
-\hline
-
-15 &
-US-20 &
-Confirmar atención con un solo botón &
-Como familiar y adulto mayor, quiero confirmar con un solo botón que ya contacté o atendí a mi familiar, para que el resto de la familia sepa que el caso está cubierto. &
-2 \\
-
-\hline
-
-16 &
-US-11 &
-Resumen inicial de alertas pendientes &
-Como médico, quiero ver un resumen inicial con la cantidad de pacientes con alertas pendientes, para priorizar mi atención al iniciar el día. &
-3 \\
-
-\hline
-
-17 &
-US-12 &
-Nivel de urgencia visual &
-Como médico, quiero ver el nivel de urgencia de cada alerta de forma visual (color/etiqueta), para decidir rápido qué revisar primero. &
-2 \\
-
-\hline
-
-18 &
-US-15 &
-Marcar una alerta como revisada o atendida &
-Como médico, quiero marcar una alerta como ``en revisión'' o ``atendida'', para que otros sepan el estado del caso. &
-3 \\
-
-\hline
-
-19 &
-TS-04 &
-Transición de estado de una alerta &
-Como sistema, quiero cambiar el estado de una alerta (pendiente/en revisión/atendida/cerrada) sin eliminarla, registrando quién la atendió y cuándo, para conservar el historial completo. &
-3 \\
-
-\hline
-
-20 &
-TS-10 &
-Notificaciones diferenciadas por rol &
-Como sistema, quiero enviar notificaciones diferenciadas según el destinatario (familiar vs. médico), para que cada uno reciba solo la información relevante a su rol. &
-5 \\
-
-\hline
-
-21 &
-US-23 &
-Evitar duplicar esfuerzos entre familiares &
-Como familiar y adulto mayor, quiero saber si otro miembro de la familia ya revisó o atendió una alerta, para no duplicar esfuerzos ni generar confusión. &
-2 \\
-
-\hline
-
-22 &
-US-17 &
-Evitar revisiones duplicadas &
-Como médico, quiero ver si un caso ya fue revisado por otra persona, para evitar duplicar esfuerzos. &
-2 \\
-
-\hline
-
-23 &
-US-13 &
-Acceder al detalle de un paciente &
-Como médico, quiero acceder al detalle de un paciente desde el resumen, para revisar contexto sin buscar en varias pantallas. &
-2 \\
-
-\hline
-
-24 &
-US-14 &
-Historial ordenado por fecha &
-Como médico, quiero ver el historial de registros de un paciente ordenado por fecha, para entender su evolución sin papeles dispersos. &
-3 \\
-
-\hline
-
-25 &
-TS-03 &
-Historial Clínico Digital de paciente o adulto mayor &
-Como sistema, quiero almacenar y exponer el Historial Clínico Digital de un paciente, para permitir consultas posteriores desde el frontend médico y familiar. &
-3 \\
-
-\hline
-
-26 &
-US-16 &
-Agregar una observación breve &
-Como médico, quiero agregar una observación breve al atender una alerta, para dejar registro rápido de lo ocurrido. &
-2 \\
-
-\hline
-
-27 &
-TS-05 &
-Observaciones sobre una alerta &
-Como sistema, quiero registrar observaciones breves asociadas a una alerta, para dejar trazabilidad de lo ocurrido durante su atención. &
-2 \\
-
-\hline
-
-28 &
-US-21 &
-Historial simple sin preguntar directamente &
-Como familiar y adulto mayor, quiero ver un historial simple de días anteriores, para revisar el bienestar de mi familiar sin tener que preguntarle directamente. &
-3 \\
-
-\hline
-
-29 &
-US-22 &
-Ver el dato que originó una alerta &
-Como familiar y adulto mayor, quiero ver el dato específico que originó una alerta (ej. presión alta), para entender la gravedad real. &
-2 \\
-
-\hline
-
-30 &
-US-24 &
-Mantener actualizada la red familiar &
-Como familiar y adulto mayor, quiero actualizar mis datos de contacto y ver quiénes más forman parte de la red familiar autorizada, para mantener la información al día. &
-3 \\
-
-\hline
-
-31 &
-US-26 &
-Pedir ayuda rápido en una urgencia &
-Como familiar y adulto mayor, quiero poder avisar rápido que necesito ayuda sin tener que explicar mucho, para pedir asistencia en momentos de urgencia. &
-2 \\
-
-\hline
-
-32 &
-US-25 &
-Modo de uso extremadamente simple &
-Como familiar y adulto mayor, quiero un modo de uso extremadamente simple (botones grandes, pocos pasos), para poder usarlo sin depender siempre de ayuda. &
-5 \\
-
-\hline
-
-33 &
-TS-09 &
-Registro en modo asistido &
-Como sistema, quiero registrar un modo ``asistido'' donde un cuidador ingresa datos en nombre del adulto mayor, para cubrir los casos donde el usuario final no puede operar la tecnología directamente. &
-2 \\
-
-\hline
-
-34 &
-TS-08 &
-Red familiar con roles &
-Como sistema, quiero permitir múltiples familiares autorizados por adulto mayor con roles diferenciados (principal/secundario), para reflejar cómo se distribuyen las responsabilidades de cuidado. &
-3 \\
-
-\hline
-
-35 &
-TS-06 &
-Asociación paciente--proveedor de salud &
-Como sistema, quiero asociar a cada paciente un proveedor de salud (si existe), para vincular la información clínica correspondiente. &
-2 \\
-
-\hline
-
-36 &
-TS-07 &
-Validación de datos mínimos &
-Como sistema, quiero validar que los datos básicos de un paciente estén completos antes de activar su seguimiento, para asegurar información mínima confiable. &
-2 \\
-
-\hline
-
-37 &
-TS-11 &
-Control de acceso a datos de salud (RBAC) &
-Como sistema, quiero registrar el nivel de acceso de cada usuario a los datos de salud del adulto mayor, para cumplir con las expectativas de privacidad expresadas por los entrevistados. &
-5 \\
-
-\hline
+\endhead
+
+1 & US-01 & Entender la propuesta de valor en segundos & EP-01 & BG-01 & 1 \\ \hline
+2 & US-06 & Entender el beneficio sin llamadas constantes & EP-01 & BG-03 & 1 \\ \hline
+3 & US-07 & Confiar en quién ve los datos de salud & EP-01 & BG-02 & 1 \\ \hline
+4 & US-02 & Confiar antes de registrar datos de pacientes & EP-01 & BG-01 & 1 \\ \hline
+5 & US-09 & Entender la plataforma sin tecnicismos & EP-01 & BG-03 & 1 \\ \hline
+6 & US-10 & Ver qué esperar antes de registrarse & EP-01 & BG-03 & 1 \\ \hline
+7 & US-05 & Ver un ejemplo de cómo funciona una alerta & EP-01 & BG-01 & 1 \\ \hline
+8 & US-08 & Conocer cómo funciona antes de crear cuenta & EP-01 & BG-03 & 1 \\ \hline
+9 & US-04 & Unirme como proveedor de salud & EP-01 & BG-01 & 1 \\ \hline
+10 & US-03 & Solicitar información antes de registrarse & EP-01 & BG-01 & 1 \\ \hline
+11 & TS-01 & Ingesta de Telemetría Biométrica & EP-04 & BG-03 & 5 \\ \hline
+12 & TS-02 & Listado de alertas & EP-04 & BG-01 \newline BG-03 & 3 \\ \hline
+13 & US-18 & Estado general al abrir la app & EP-03 & BG-03 & 2 \\ \hline
+14 & US-19 & Recibir una alerta comprensible & EP-03 & BG-03 & 3 \\ \hline
+15 & US-20 & Confirmar atención con una acción simple & EP-03 & BG-03 & 2 \\ \hline
+16 & US-11 & Resumen inicial de alertas pendientes & EP-02 & BG-01 & 3 \\ \hline
+17 & US-12 & Nivel de urgencia diferenciado & EP-02 & BG-01 & 2 \\ \hline
+18 & US-15 & Marcar una alerta como revisada o atendida & EP-02 & BG-01 & 3 \\ \hline
+19 & TS-04 & Transición de estado de una alerta & EP-04 & BG-01 & 3 \\ \hline
+20 & TS-10 & Notificaciones diferenciadas por rol & EP-04 & BG-03 & 5 \\ \hline
+21 & US-23 & Evitar duplicar esfuerzos entre familiares & EP-03 & BG-03 & 2 \\ \hline
+22 & US-17 & Evitar revisiones duplicadas & EP-02 & BG-01 & 2 \\ \hline
+23 & US-13 & Acceder al detalle de un paciente & EP-02 & BG-01 & 2 \\ \hline
+24 & US-14 & Historial ordenado por fecha & EP-02 & BG-01 & 3 \\ \hline
+25 & TS-03 & Historial Clínico Digital & EP-04 & BG-01 & 3 \\ \hline
+26 & US-16 & Agregar una observación a una alerta & EP-02 & BG-01 & 2 \\ \hline
+27 & TS-05 & Observaciones sobre una alerta & EP-04 & BG-01 & 2 \\ \hline
+28 & US-21 & Historial simple sin preguntar directamente & EP-03 & BG-03 & 3 \\ \hline
+29 & US-22 & Ver el dato que originó una alerta & EP-03 & BG-03 & 2 \\ \hline
+30 & US-24 & Mantener actualizada la red familiar & EP-03 & BG-03 & 3 \\ \hline
+31 & US-26 & Pedir ayuda rápido en una urgencia & EP-03 & BG-03 & 2 \\ \hline
+32 & US-25 & Modo de uso extremadamente simple & EP-03 & BG-03 & 5 \\ \hline
+33 & TS-09 & Registro en modo asistido & EP-04 & BG-03 & 2 \\ \hline
+34 & TS-08 & Red familiar con roles & EP-04 & BG-02 & 3 \\ \hline
+35 & TS-06 & Asociación paciente--proveedor de salud & EP-04 & BG-02 & 2 \\ \hline
+36 & TS-07 & Validación de datos mínimos & EP-04 & BG-02 & 2 \\ \hline
+37 & TS-11 & Control de acceso a datos de salud (RBAC) & EP-04 & BG-02 & 5 \\ \hline
 
 \end{longtable}
+\endgroup
 
-**Total:** 37 historias · 91 Story Points.
+**Total:** 37 historias (26 User Stories y 11 Technical Stories) · 86 Story Points. Sprint 1 (US-01 a US-10): 10 Story Points.
 
 ### 3.3.2. Tablero público del Backlog
 
-**Herramienta:** Trello
-**URL pública del tablero:** https://trello.com/b/2CSflHnr
+**Herramienta:** Trello  
+**URL pública del tablero:** <https://trello.com/b/2CSflHnr>
 
 El tablero contiene las 37 historias en el mismo orden de la tabla anterior, dentro de la lista *Product Backlog (priorizado)*. Cada tarjeta lleva el identificador de la historia, su descripción completa y dos etiquetas: los Story Points estimados y el tipo de historia (User Story o Technical Story). Las listas *To-Do*, *In-Process*, *To-Review* y *Done* sostienen el ciclo de trabajo de cada Sprint.
 
-\includegraphics[width=\linewidth]{assets/ProductBacklog-Trello.png}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth,height=0.8\textheight,keepaspectratio]{assets/ProductBacklog-Trello.png}
+\caption{Tablero público del Product Backlog en Trello}
+\end{figure}

@@ -2,418 +2,142 @@
 
 ### 5.2.1. Sprint 1
 
-Durante el Sprint 1, el equipo CodeBrokers se enfocó en desarrollar la primera versión funcional de la Landing Page de VitaLink.
+Durante el Sprint 1, el equipo CodeBrokers se enfocó en desarrollar la primera versión funcional de la Landing Page de VitaLink y su integración inicial con el frontend en Angular.
 
 El objetivo principal fue comunicar la propuesta de valor del producto, mostrando cómo VitaLink permite realizar un monitoreo preventivo del adulto mayor mediante alertas inteligentes y facilitar la comunicación entre familiares y profesionales de salud.
 
-Durante este Sprint se desarrollaron las primeras secciones visuales del producto, aplicando los criterios definidos durante la etapa de diseño UX/UI y preparando la primera versión desplegada de la Landing Page.
+Durante este Sprint se desarrollaron las primeras secciones visuales del producto, aplicando los criterios definidos durante la etapa de diseño UX/UI y preparando la primera versión desplegada de la Landing Page en un entorno público.
 
 #### 5.2.1.1. Sprint Planning 1
 
-Durante el Sprint Planning 1, el equipo definió como objetivo principal desarrollar y desplegar la primera versión funcional de la Landing Page de VitaLink. Para ello, se seleccionaron las User Stories pertenecientes a la épica EP-01 Captación y Confianza, orientadas a comunicar la propuesta de valor del producto, generar confianza en los visitantes y explicar de manera clara el funcionamiento general de VitaLink.
+Durante el Sprint Planning 1, el equipo definió como objetivo principal desarrollar y desplegar la primera versión funcional de la Landing Page de VitaLink. Para ello, se seleccionaron las User Stories US-01 a US-10 de la épica EP-01 Captación y Confianza, que suman **10 Story Points**, igual a la velocidad definida para el inicio del proyecto.
 
-\begin{longtable}{|p{0.28\textwidth}|p{0.66\textwidth}|}
-\hline
-\textbf{Sprint \#} & \textbf{Sprint 1} \\
-\hline
+*Criterio de estimación.* Las historias de EP-01 son secciones estáticas de la Landing Page, de complejidad y riesgo similares y sin dependencias de backend. Por ello se estimaron de forma relativa con 1 Story Point cada una (aproximadamente 3 horas de trabajo por historia). Las cinco tareas habilitadoras T11 a T15 (diseño responsivo, revisión UX/UI, documentación, integración y despliegue) suman 14 horas adicionales y se ejecutan en apoyo del Sprint Goal. Esta estimación se refinó durante el Sprint Planning y se registra en el historial de versiones del informe.
 
-\textbf{Sprint Planning Background} & \\
+\begingroup
+\footnotesize
+\begin{longtable}{|p{0.26\textwidth}|p{0.64\textwidth}|}
+\caption{Sprint Planning 1}\\
 \hline
-
-\textbf{Date} & 2026-09-01 \\
-\hline
-
-\textbf{Time} & 7:00 PM \\
-\hline
-
-\textbf{Location} & Reunión virtual mediante Discord \\
-\hline
-
-\textbf{Prepared By} & Deiby Vargas \\
-\hline
-
-\textbf{Attendees (to planning meeting)} &
-Fernando Contreras, Pablo Martinez, Yazid Said, Kirk Quiliano, Kirk Quiliano \\
-\hline
-
-\textbf{Sprint 0 Review Summary} &
-Al tratarse del primer Sprint del proyecto, no existe un Sprint anterior para realizar una revisión de resultados. El equipo inicia tomando como base los artefactos desarrollados durante Requirements Elicitation, Requirements Specification y Product Design. \\
-\hline
-
-\textbf{Sprint 0 Retrospective Summary} &
-Al no existir un Sprint previo, no se cuenta con una retrospectiva anterior. Como punto inicial, el equipo acordó utilizar GitFlow para el trabajo colaborativo, Trello para el seguimiento de tareas y GitHub para el control de versiones y revisión de cambios. \\
-\hline
-
-\textbf{Sprint Goal \& User Stories} & \\
-\hline
-
-\textbf{Sprint 1 Goal} &
-Nuestro enfoque está en desarrollar y publicar una primera versión funcional, responsive y accesible de la Landing Page de VitaLink. Creemos que esto permitirá que profesionales de salud, familiares y adultos mayores comprendan la propuesta de valor del producto, conozcan cómo funciona y tengan mayor confianza antes de registrarse. Esto se confirmará cuando la Landing Page se encuentre desplegada públicamente e incluya las funcionalidades y contenidos definidos en las User Stories US-01 hasta US-10 de la épica EP-01. \\
-\hline
-
-\textbf{Sprint 1 Velocity} & 10 Story Points \\
-\hline
-
-\textbf{Sum of Story Points} & 10 Story Points \\
-\hline
-
+\textbf{Sprint \#} & \textbf{Sprint 1} \\ \hline
+\endhead
+\textbf{Sprint Planning Background} & \\ \hline
+\textbf{Date} & 2026-09-01 \\ \hline
+\textbf{Time} & 7:00 PM \\ \hline
+\textbf{Location} & Reunión virtual mediante Discord \\ \hline
+\textbf{Prepared By} & Deiby Vargas \\ \hline
+\textbf{Attendees (to planning meeting)} & Fernando Contreras, Pablo Martinez, Yazid Said, Kirk Quiliano, Deiby Vargas \\ \hline
+\textbf{Sprint 0 Review Summary} & Al tratarse del primer Sprint del proyecto, no existe un Sprint anterior para realizar una revisión de resultados. El equipo inicia tomando como base los artefactos desarrollados durante Requirements Elicitation, Requirements Specification y Product Design. \\ \hline
+\textbf{Sprint 0 Retrospective Summary} & Al no existir un Sprint previo, no se cuenta con una retrospectiva anterior. Como punto inicial, el equipo acordó utilizar GitFlow para el trabajo colaborativo, Trello para el seguimiento de tareas y GitHub para el control de versiones y la revisión de cambios. \\ \hline
+\textbf{Sprint Goal \& User Stories} & \\ \hline
+\textbf{Sprint 1 Goal} & Nuestro enfoque está en desarrollar y publicar una primera versión funcional, responsive y accesible de la Landing Page de VitaLink. Creemos que esto permitirá que profesionales de salud, familiares y adultos mayores comprendan la propuesta de valor del producto. Esto se confirmará cuando la Landing Page se encuentre desplegada públicamente e incluya las funcionalidades definidas en las User Stories US-01 a US-10 de la épica EP-01. \\ \hline
+\textbf{Sprint 1 Velocity} & 10 Story Points \\ \hline
+\textbf{Sum of Story Points} & 10 Story Points (US-01 a US-10) \\ \hline
 \end{longtable}
+\endgroup
 
-#### 5.2.1.2. Aspect Leaders and Collaborrators
+#### 5.2.1.2. Aspect Leaders and Collaborators
 
-### 5.2.1.2 Aspect Leaders and Collaborators
+Durante el Sprint 1 se definieron los principales aspectos del desarrollo de la primera versión funcional de la Landing Page de VitaLink. Para cada aspecto se asignó un integrante como **Leader (L)**, responsable principal de dirigir y supervisar su desarrollo, mientras que los demás participaron como **Collaborators (C)**.
 
-Durante el Sprint 1 se definieron los principales aspectos relacionados con el desarrollo de la primera versión funcional de la Landing Page de VitaLink. Para cada aspecto se asignó un integrante como **Leader (L)**, responsable principal de dirigir y supervisar su desarrollo, mientras que los demás integrantes participaron como **Collaborators (C)**.
-
-Los aspectos considerados están relacionados directamente con las tareas seleccionadas posteriormente en el Sprint Backlog, incluyendo la estructura principal de la Landing Page, contenido informativo, diseño responsive, documentación y despliegue.
-
-\begin{longtable}{|p{0.16\textwidth}|p{0.13\textwidth}|p{0.14\textwidth}|p{0.14\textwidth}|p{0.12\textwidth}|p{0.13\textwidth}|p{0.13\textwidth}|}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{|p{0.15\textwidth}|p{0.13\textwidth}|p{0.13\textwidth}|p{0.14\textwidth}|p{0.11\textwidth}|p{0.12\textwidth}|p{0.13\textwidth}|}
+\caption{Aspect Leaders and Collaborators del Sprint 1}\\
 \hline
-\textbf{Team Member} &
-\textbf{GitHub Username} &
-\textbf{Landing Page Structure \& Hero} &
-\textbf{Benefits, Alerts \& Privacy Content} &
-\textbf{Responsive UI} &
-\textbf{Sprint Documentation} &
-\textbf{Deployment \& Integration} \\
-\hline
-
-Fernando Contreras &
-FernSkibidi69 &
-C &
-C &
-C &
- &
-C \\
-\hline
-
-Pablo Martinez &
-Delzekl &
-C &
-C &
-C &
-C &
- \\
-\hline
-
-Yazid Said &
-BL4Z3K4D &
-L &
-L &
-L &
- &
-C \\
-\hline
-
-Kirk Quiliano &
-Kirkcito &
- &
-C &
- &
-L &
-C \\
-\hline
-
-Deiby Vargas &
-poluxbinPe &
-C &
- &
-C &
-C &
-L \\
-\hline
-
+\textbf{Team Member} & \textbf{GitHub Username} & \textbf{Structure \& Hero} & \textbf{Benefits, Alerts \& Privacy} & \textbf{Responsive UI} & \textbf{Sprint Docs} & \textbf{Deployment \& Integration} \\ \hline
+\endhead
+Fernando Contreras & FernSkibidi69 & C & C & C & & C \\ \hline
+Pablo Martinez & Delzekl & C & C & C & C & \\ \hline
+Yazid Said & BL4Z3K4D & L & L & L & & C \\ \hline
+Kirk Quiliano & Kirkcito & & C & & L & C \\ \hline
+Deiby Vargas & poluxbinPe & C & & C & C & L \\ \hline
 \end{longtable}
+\endgroup
 
-**L:** Leader  
-**C:** Collaborator
-
-La distribución de líderes y colaboradores permite organizar las responsabilidades del Sprint y mantener una comunicación clara entre los integrantes. Asimismo, los aspectos definidos se relacionan con las tareas del Sprint Backlog, de manera que cada actividad cuenta con un responsable principal y con el apoyo de otros miembros cuando sea necesario.
+**L:** Leader | **C:** Collaborator
 
 #### 5.2.1.3. Sprint Backlog 1
 
-Durante el Sprint 1, el equipo se enfocará en desarrollar la primera versión funcional de la Landing Page de VitaLink, tomando como base las User Stories pertenecientes a la épica EP-01 Captación y Confianza.
+Las 15 tareas del Sprint 1 (T01 a T15) se encuentran en estado **Done**, completadas y desplegadas. Las tareas T01 a T10 desarrollan cada una la User Story indicada. Las tareas T11 a T15 son habilitadoras: apoyan de forma transversal a US-01 a US-10 y al Sprint Goal.
 
-El objetivo será comunicar de forma clara la propuesta de valor de VitaLink a profesionales de salud, familiares y adultos mayores, además de presentar información relacionada con privacidad, funcionamiento de alertas, beneficios del monitoreo remoto y proceso general de uso de la plataforma.
+**Sprint Board:** Trello  
+**URL pública:** <https://trello.com/b/uWEShiCR/sprint-codebrokers>
 
-Para la gestión y seguimiento de las actividades del Sprint se utilizará Trello, donde las User Stories y sus respectivos Work-items/Tasks serán organizados según su estado de avance.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth,height=0.8\textheight,keepaspectratio]{assets/SprintBoard-Trello-Done.png}
+\caption{Sprint Board 1 en Trello con las tareas T01 a T15 en estado Done}
+\end{figure}
 
-**Sprint Board:** Trello
-
-**Enlace de Seguimiento:** [Tablero del Sprint 1 en Trello ](https://trello.com/b/uWEShiCR/sprint-codebrokers)
-
-
-<img width="1311" height="784" alt="image" src="https://github.com/user-attachments/assets/d5c34fa8-1f8b-4c56-8ae9-b1a5b8b02717" />
-
-
-
-\setlength{\tabcolsep}{3pt}
-
-\begin{longtable}{|p{0.06\textwidth}|p{0.06\textwidth}|p{0.10\textwidth}|p{0.055\textwidth}|p{0.11\textwidth}|p{0.29\textwidth}|p{0.07\textwidth}|p{0.09\textwidth}|p{0.065\textwidth}|}
+\begin{landscape}
+\begingroup
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{|p{0.05\textwidth}|p{0.05\textwidth}|p{0.16\textwidth}|p{0.045\textwidth}|p{0.12\textwidth}|p{0.27\textwidth}|p{0.05\textwidth}|p{0.07\textwidth}|p{0.05\textwidth}|}
+\caption{Sprint Backlog 1}\\
 \hline
-\textbf{Sprint \#} &
-\textbf{Story Id} &
-\textbf{Story Title} &
-\textbf{Task Id} &
-\textbf{Task Title} &
-\textbf{Task Description} &
-\textbf{Estimation (Hours)} &
-\textbf{Assigned To} &
-\textbf{Status} \\
+\textbf{Sprint \#} & \textbf{Story Id} & \textbf{Story Title} & \textbf{Task Id} & \textbf{Task Title} & \textbf{Task Description} & \textbf{Est. (h)} & \textbf{Assigned To} & \textbf{Status} \\ \hline
+\endfirsthead
 \hline
+\textbf{Sprint \#} & \textbf{Story Id} & \textbf{Story Title} & \textbf{Task Id} & \textbf{Task Title} & \textbf{Task Description} & \textbf{Est. (h)} & \textbf{Assigned To} & \textbf{Status} \\ \hline
+\endhead
 
-Sprint 1 &
-US-01 &
-Entender la propuesta de valor en segundos &
-T01 &
-Implement Hero section &
-Implementar la sección inicial de VitaLink mostrando claramente el problema que resuelve y su propuesta de valor para profesionales de salud. &
-3 &
-Yazid Said &
-To-do \\
-\hline
-
-Sprint 1 &
-US-02 &
-Confiar antes de registrar datos de pacientes &
-T02 &
-Implement security and privacy section &
-Desarrollar contenido relacionado con cifrado, privacidad, cumplimiento y control de acceso a los datos de pacientes. &
-3 &
-Pablo Martinez &
-To-do \\
-\hline
-
-Sprint 1 &
-US-03 &
-Solicitar información antes de registrarse &
-T03 &
-Implement contact request section &
-Implementar una sección o formulario que permita a un visitante solicitar información antes de crear una cuenta. &
-3 &
-Fernando Contreras &
-To-do \\
-\hline
-
-Sprint 1 &
-US-04 &
-Unirme como proveedor de salud &
-T04 &
-Implement healthcare provider CTA &
-Crear el llamado a la acción para que los profesionales de salud puedan iniciar el flujo de registro como proveedores de VitaLink. &
-3 &
-Yazid Said &
-To-do \\
-\hline
-
-Sprint 1 &
-US-05 &
-Ver un ejemplo de cómo funciona una alerta &
-T05 &
-Implement alert example &
-Diseñar una representación visual de una alerta mostrando nivel de urgencia, paciente asociado y acción disponible. &
-3 &
-Pablo Martinez &
-To-do \\
-\hline
-
-Sprint 1 &
-US-06 &
-Entender el beneficio sin llamadas constantes &
-T06 &
-Implement family benefits section &
-Desarrollar una sección que explique cómo VitaLink permite conocer el estado de un familiar mediante monitoreo remoto sin depender de llamadas constantes. &
-3 &
-Fernando Contreras &
-To-do \\
-\hline
-
-Sprint 1 &
-US-07 &
-Confiar en quién ve los datos de salud &
-T07 &
-Implement family privacy section &
-Desarrollar contenido que explique qué usuarios pueden acceder a los datos de salud del adulto mayor y cómo se controla dicho acceso. &
-3 &
-Pablo Martinez &
-To-do \\
-\hline
-
-Sprint 1 &
-US-08 &
-Conocer cómo funciona antes de crear cuenta &
-T08 &
-Implement how-it-works section &
-Implementar una sección explicativa del flujo Sentir $\rightarrow$ Analizar $\rightarrow$ Actuar sin solicitar información personal al visitante. &
-3 &
-Yazid Said &
-To-do \\
-\hline
-
-Sprint 1 &
-US-09 &
-Entender la plataforma sin tecnicismos &
-T09 &
-Adapt content for simple language &
-Revisar y adaptar los textos principales de la Landing Page para utilizar un lenguaje sencillo, directo y comprensible para adultos mayores. &
-2 &
-Kirk Quiliano &
-To-do \\
-\hline
-
-Sprint 1 &
-US-10 &
-Ver qué esperar antes de registrarse &
-T10 &
-Implement dashboard preview &
-Crear una representación visual del panel familiar o de una alerta para mostrar al visitante qué puede esperar de la aplicación antes de registrarse. &
-3 &
-Yazid Said &
-To-do \\
-\hline
-
-Sprint 1 &
-- &
-- &
-T11 &
-Implement responsive design &
-Adaptar la Landing Page para garantizar una correcta visualización en dispositivos móviles, tablets y computadoras. &
-4 &
-Fernando Contreras &
-To-do \\
-\hline
-
-Sprint 1 &
-- &
-- &
-T12 &
-Review UX/UI consistency &
-Verificar que la implementación respete los Wireframes, Mock-ups, Style Guidelines y criterios de accesibilidad definidos para VitaLink. &
-3 &
-Pablo Martinez &
-To-do \\
-\hline
-
-Sprint 1 &
-- &
-- &
-T13 &
-Review Sprint documentation &
-Revisar y actualizar la documentación correspondiente al Sprint 1 dentro del Project Report. &
-2 &
-Kirk Quiliano &
-To-do \\
-\hline
-
-Sprint 1 &
-- &
-- &
-T14 &
-Integrate Landing Page features &
-Integrar las funcionalidades desarrolladas mediante Pull Requests hacia la rama develop y verificar el funcionamiento conjunto. &
-3 &
-Deiby Vargas &
-To-do \\
-\hline
-
-Sprint 1 &
-- &
-- &
-T15 &
-Deploy Landing Page &
-Configurar GitHub Pages y publicar la primera versión funcional de la Landing Page de VitaLink. &
-2 &
-Deiby Vargas &
-To-do \\
-\hline
+1 & US-01 & Entender la propuesta de valor en segundos & T01 & Implement Hero section & Implementar la sección inicial mostrando la propuesta de valor. & 3 & Yazid Said & \textbf{Done} \\ \hline
+1 & US-02 & Confiar antes de registrar datos de pacientes & T02 & Implement security section & Contenido sobre cifrado y privacidad de datos. & 3 & Pablo Martinez & \textbf{Done} \\ \hline
+1 & US-03 & Solicitar información antes de registrarse & T03 & Implement contact section & Formulario para solicitar información corporativa. & 3 & Fernando Contreras & \textbf{Done} \\ \hline
+1 & US-04 & Unirme como proveedor de salud & T04 & Implement healthcare CTA & Call to Action para el registro clínico de proveedores. & 3 & Yazid Said & \textbf{Done} \\ \hline
+1 & US-05 & Ver un ejemplo de cómo funciona una alerta & T05 & Implement alert example & Diseño visual simulado de una alerta y su paciente. & 3 & Pablo Martinez & \textbf{Done} \\ \hline
+1 & US-06 & Entender el beneficio sin llamadas constantes & T06 & Implement family benefits & Sección sobre el monitoreo remoto automático. & 3 & Fernando Contreras & \textbf{Done} \\ \hline
+1 & US-07 & Confiar en quién ve los datos de salud & T07 & Implement family privacy & Explicación de acceso por roles y visibilidad de los datos de salud. & 3 & Pablo Martinez & \textbf{Done} \\ \hline
+1 & US-08 & Conocer cómo funciona antes de crear cuenta & T08 & Implement how-it-works & Sección explicativa de los pasos de captura de datos. & 3 & Yazid Said & \textbf{Done} \\ \hline
+1 & US-09 & Entender la plataforma sin tecnicismos & T09 & Adapt content & Redacción de textos en lenguaje accesible. & 2 & Kirk Quiliano & \textbf{Done} \\ \hline
+1 & US-10 & Ver qué esperar antes de registrarse & T10 & Implement dashboard preview & Imágenes previas de las interfaces familiares. & 3 & Yazid Said & \textbf{Done} \\ \hline
+1 & US-01 a US-10 (transversal) & Habilitadora & T11 & Responsive design & CSS y Media Queries para dispositivos móviles. & 4 & Fernando Contreras & \textbf{Done} \\ \hline
+1 & US-01 a US-10 (transversal) & Habilitadora & T12 & Review UX/UI consistency & Verificación WCAG y coherencia con Figma. & 3 & Pablo Martinez & \textbf{Done} \\ \hline
+1 & Sprint Goal & Habilitadora & T13 & Review Sprint docs & Actualización del reporte en Markdown. & 2 & Kirk Quiliano & \textbf{Done} \\ \hline
+1 & US-01 a US-10 (transversal) & Habilitadora & T14 & Integrate Landing & Resolución de conflictos de merge en Git e integración de ramas. & 3 & Deiby Vargas & \textbf{Done} \\ \hline
+1 & Sprint Goal & Habilitadora & T15 & Deploy Landing Page & Configuración de GitHub Pages y Actions. & 2 & Deiby Vargas & \textbf{Done} \\ \hline
 
 \end{longtable}
+\endgroup
+\end{landscape}
 
-**Sprint Velocity:** 10 Story Points
+#### 5.2.1.4. Development Evidence for Sprint Review
 
-**Sum of Story Points:** 10 Story Points
-### 5.2.1.4. Development Evidence for Sprint Review
+La siguiente matriz documenta la cadena completa de ejecución del Sprint con una fila por tarea: integrante, rama (GitFlow), commit y Pull Request, tarea, User Story y resultado.
 
-Durante el Sprint 1 se desarrollará la primera versión funcional de la Landing Page de VitaLink, considerando las funcionalidades y contenidos definidos en las User Stories correspondientes a la épica EP-01 Captación y Confianza.
+**Ruta de trazabilidad:** Integrante $\rightarrow$ Branch $\rightarrow$ Commit / Pull Request $\rightarrow$ Task / US $\rightarrow$ Resultado.
 
-Para mantener la trazabilidad del desarrollo, los integrantes trabajarán utilizando ramas independientes siguiendo GitFlow y registrarán los cambios mediante Conventional Commits. Una vez finalizadas y revisadas las funcionalidades, estas serán integradas mediante Pull Requests.
-
-La siguiente tabla registra los principales cambios relacionados con la implementación del Sprint 1.
-
-**Link de commits del repositorio del landing page:**
-[https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/commits/develop]
-
-\setlength{\tabcolsep}{3pt}
-
-\begin{longtable}{|p{0.12\textwidth}|p{0.08\textwidth}|p{0.10\textwidth}|p{0.24\textwidth}|p{0.28\textwidth}|p{0.12\textwidth}|}
+\begin{landscape}
+\begingroup
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{|p{0.11\textwidth}|p{0.16\textwidth}|p{0.14\textwidth}|p{0.07\textwidth}|p{0.09\textwidth}|p{0.30\textwidth}|}
+\caption{Matriz de trazabilidad del Sprint 1: integrante, rama, commit/PR, tarea, historia y resultado}\\
 \hline
-\textbf{Repository} &
-\textbf{Branch} &
-\textbf{Commit Id} &
-\textbf{Commit Message} &
-\textbf{Commit Message Body} &
-\textbf{Committed on (Date)} \\
+\textbf{Integrante} & \textbf{Branch (GitFlow)} & \textbf{Commit / PR} & \textbf{Task} & \textbf{US} & \textbf{Resultado} \\ \hline
+\endfirsthead
 \hline
+\textbf{Integrante} & \textbf{Branch (GitFlow)} & \textbf{Commit / PR} & \textbf{Task} & \textbf{US} & \textbf{Resultado} \\ \hline
+\endhead
 
-Landing Page &
-main &
-6cb31e5 &
-add institutional and patient pricing tiers, and testimonials section &
-Added institutional and patient pricing tiers, and testimonials section &
-13/09/2026 \\
-\hline
-
-Landing Page &
-main &
-72e7fab &
-add institutional and patient pricing tiers, and testimonials section &
-Added institutional and patient pricing tiers, and testimonials section &
-13/09/2026 \\
-\hline
-
-Landing Page &
-main &
-bcbc2d &
-add institutional and patient pricing tiers, and testimonials section &
-Added institutional and patient pricing tiers, and testimonials section &
-13/09/2026 \\
-\hline
-
-Landing Page &
-main &
-baae70f &
-feat/pricing tiers and testimonials &
-Implemented pricing tiers and testimonials section &
-13/09/2026 \\
-\hline
-
-Landing Page &
-main &
-2bed8ff &
-feat(footer): fix the structure and add the footer &
-Fixed footer structure and added footer section &
-15/09/2026 \\
-\hline
-
-Landing Page &
-main &
-abf9be7 &
-Merge pull request \#5 from CodeBrokers-VitaLink/feature/footer &
-Integrated footer changes into the main branch &
-15/09/2026 \\
-\hline
-
-Landing Page &
-main &
-91ffa24 &
-Merge pull request \#6 from CodeBrokers-VitaLink/develop &
-Integrated development branch changes into main &
-15/09/2026 \\
-\hline
+Yazid Said & \texttt{develop} & PR \#6 / \texttt{91ffa24} & T01 & US-01 & Integración de componentes y propuesta de valor en la rama develop. \\ \hline
+Yazid Said & \texttt{feature/footer} & PR \#5 / \texttt{abf9be7} & T08 & US-08 & Estructura del footer, enlaces informativos y cómo funciona. \\ \hline
+Yazid Said & \texttt{chore/logo} & Commit \texttt{389e581} & T04 & US-04 & Adición del logotipo oficial y assets base del CTA institucional. \\ \hline
+Pablo Martinez & \texttt{feat/navbar-hero} & PR \#1 / \texttt{db20de2} & T02 \newline T05 & US-02 \newline US-05 & Barra de navegación, Hero section y estructura base de seguridad y alertas. \\ \hline
+Pablo Martinez & \texttt{feat/navbar-hero} & Commit \texttt{d55fc4a} & T07 \newline T12 & US-07 \newline - & Navegación a secciones de privacidad, consistencia UX/UI y accesibilidad. \\ \hline
+Fernando Contreras & \texttt{feat/pricing} & Commit \texttt{baae70f} & T03 \newline T06 & US-03 \newline US-06 & Secciones institucionales, pricing tiers, testimonios y beneficios familiares. \\ \hline
+Fernando Contreras & \texttt{feat/pricing} & Commit \texttt{bcbcc2d} & T11 & - & Ajustes CSS, testimonios y Media Queries para dispositivos móviles. \\ \hline
+Kirk Quiliano & \texttt{docs/report} & Commit \texttt{15b22e8} & T09 \newline T13 & US-09 \newline - & Textos revisados en lenguaje accesible y actualización del repositorio del informe. \\ \hline
+Deiby Vargas & \texttt{main} & PR \#32 / \texttt{f2d7652} & T14 \newline T15 & - & Orquestación de ramas, resolución de conflictos en Git y despliegue final. \\ \hline
 
 \end{longtable}
+\endgroup
+\end{landscape}
 
-
+Los Pull Requests y commits citados pueden verificarse en el repositorio de la organización. Los mensajes de commit siguen la convención Conventional Commits e incluyen trazabilidad directa hacia la funcionalidad implementada: **[GitHub-Url](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Report)** (sección *Pull requests*, filtro *Merged*). Los mensajes de commit siguen la convención Conventional Commits e incluyen el identificador de la User Story cuando aplica.
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
@@ -581,6 +305,4 @@ Landing page:
 
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/a7ab456d-0942-413f-8609-8f3e66d9f866" />
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/fed9acec-0dc0-43c3-b1d1-974aa4301178" />
-
-
 

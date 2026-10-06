@@ -1,182 +1,105 @@
-# 4. Capítulo IV: Product Design
+# Capítulo IV: Product Design
 
-## 4.1. Style Guidelines 
+## 4.1. Style Guidelines
 
-El diseño visual de la aplicación VitaLink sigue una estética entre lo clínico y lo confiable, esto porque va relacionado a la identidad que tiene el startup BrokerCodes y el compromiso que tenemos por ofrecer soluciones de calidad hacia el sector salud, enfocadas en el cuidado y acompañamiento de adultos mayores.
+El diseño visual de la aplicación VitaLink sigue una estética entre lo clínico y lo confiable. Esto se relaciona con la identidad de nuestro equipo **CodeBrokers** y con el compromiso de ofrecer soluciones de software de alta calidad al sector salud, enfocadas en el monitoreo, cuidado y acompañamiento preventivo de adultos mayores.
 
-Es por esto que, en este capítulo, describiremos cada uno de los detalles y estilos que estaremos utilizando al momento de desarrollar la aplicación (siguiendo los principios UX y UI).
+En este capítulo se describen los estilos que se utilizan en el desarrollo de la aplicación web responsiva, siguiendo los principios de UX y UI definidos por el equipo.
 
 ### 4.1.1. General Style Guidelines
 
 **Branding**
 
-El logo principal representa a Vitalink, una plataforma orientada al monitoreo y seguimiento de la salud de los adultos mayores. El nombre surge de la combinación de “Vital”, relacionado con los signos vitales, la salud y el bienestar, y “Link”, que representa la conexión constante entre el adulto mayor, sus familiares y los profesionales o centros de salud.
+El logo principal representa a VitaLink, una plataforma orientada al monitoreo y seguimiento de la salud de los adultos mayores. El nombre surge de la combinación de "Vital", relacionado con los signos vitales, la salud y el bienestar, y "Link", que representa la conexión constante entre el adulto mayor, sus familiares y los profesionales o centros de salud.
 
-La identidad visual incorpora un ícono minimalista que combina elementos relacionados con la salud, el monitoreo y la conexión. El símbolo representa una figura humana protegida dentro de una forma inspirada en un corazón, integrando además una línea de pulso o electrocardiograma. Este recurso visual comunica de manera directa el propósito de Vitalink: cuidar, monitorear y mantener conectadas a las personas involucradas en el bienestar del adulto mayor.
+La identidad visual incorpora un ícono minimalista que combina elementos relacionados con la salud, el monitoreo y la conexión. El símbolo representa una figura humana protegida dentro de una forma inspirada en un corazón, integrando además una línea de pulso o electrocardiograma. Este recurso visual comunica de manera directa el propósito de VitaLink: cuidar, monitorear y mantener conectadas a las personas involucradas en el bienestar del adulto mayor.
 
-\includegraphics[width=0.7\linewidth]{assets/logo-vitalink.png}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{assets/logo-vitalink.png}
+\caption{Logotipo de VitaLink}
+\end{figure}
 
 **Typography**
 
-La tipografía principal empleada será Arial, utilizando sus variantes Regular, SemiBold y Bold.
+Para garantizar consistencia en toda la plataforma (Landing Page y aplicación), la única familia tipográfica empleada es **Arial**, en sus variantes Regular (400) y Bold (700).
 
-La elección de esta tipografía se debe principalmente a su alta legibilidad, simplicidad y compatibilidad con diferentes dispositivos tecnológicos, como ordenadores, tabletas y teléfonos móviles. Esto resulta especialmente importante para Vitalink, ya que la plataforma puede ser utilizada por adultos mayores, familiares y profesionales de la salud.
+Arial se elige por su alta legibilidad, su simplicidad geométrica y su disponibilidad nativa en ordenadores clínicos, tabletas hospitalarias y teléfonos móviles antiguos. Esto es especialmente importante en VitaLink: los adultos mayores no deben depender de la descarga de web fonts, y los familiares y médicos deben leer datos vitales sin márgenes de error. En el informe técnico, los fragmentos de código se muestran con una fuente monoespaciada; la interfaz de usuario utiliza exclusivamente Arial.
 
-El uso de una tipografía clara y fácil de leer permitirá que la información relacionada con signos vitales, alertas, estados de salud y otros datos importantes pueda ser comprendida rápidamente.
+El tamaño de letra de la aplicación sigue esta distribución:
 
-El tamaño de letra utilizado en la aplicación seguirá la siguiente distribución:
+* **Títulos principales:** 2.25rem (36 px), para encabezados de dashboards y secciones importantes.
+* **Subtítulos:** entre 1.5rem (24 px) y 1.75rem (28 px), para organizar la ficha del paciente.
+* **Texto secundario:** entre 1.125rem (18 px) y 1.25rem (20 px), recomendado para métricas vitales que requieran gran visibilidad.
+* **Cuerpo del texto:** 1rem (16 px), con interlineado de 1.5 a 1.6.
+* **Información auxiliar:** 0.875rem (14 px), para marcas de tiempo, etiquetas de UI y datos complementarios.
 
-Títulos principales: 2.25rem (36px), utilizados para encabezados principales y secciones importantes.
-Subtítulos: entre 1.5rem (24px) y 1.75rem (28px), utilizados para organizar las diferentes secciones de información.
-Texto secundario: entre 1.125rem (18px) y 1.25rem (20px), especialmente recomendado para información relevante o elementos que requieran mayor visibilidad.
-Cuerpo del texto: 1rem (16px), acompañado de un interlineado aproximado de 1.5 a 1.6 para facilitar la lectura.
-Información auxiliar: 0.875rem (14px), utilizada para etiquetas, fechas, información complementaria o textos secundarios.
+La tipografía y los colores mantienen un contraste mínimo de 4.5:1 para texto normal, en cumplimiento de las recomendaciones de accesibilidad WCAG 2.1 AA.
 
-La tipografía y los colores serán utilizados manteniendo un contraste adecuado entre el texto y el fondo, buscando cumplir con un ratio mínimo de 4.5:1, de acuerdo con las recomendaciones de accesibilidad WCAG 2.1 AA.
+**Paleta de colores y jerarquía visual**
 
-#### Paleta de Colores y Jerarquía Visual
+La paleta distingue entre el color de marca y el color de acción. Los ratios de contraste se calcularon según la fórmula de luminancia relativa de WCAG.
 
-#### 1. Paleta Principal
-* **Verde Vitalink (#1D9E75):** Funciona como color principal de la marca y se utiliza en botones, elementos interactivos, indicadores y componentes destacados.
+| Rol | Color | Uso | Contraste |
+|:--------------------|:---------------|:---------------------------------------------|:-----------------------------------|
+| Primario de marca | Verde VitaLink `#1D9E75` | Logotipo, íconos, ilustraciones e indicadores de estabilidad (elementos no textuales) | 3.39:1 sobre blanco. Cumple el mínimo de 3:1 para componentes gráficos. No se usa como fondo de texto normal |
+| Primario de acción | Verde médico `#00694C` | Botones primarios, enlaces y elementos interactivos con texto | 6.72:1 con texto blanco |
+| Secundario | Verde oscuro `#0F6E56` | App Bars, Sidebars y refuerzo corporativo | 6.20:1 con texto blanco |
+| Superficie | Neutro claro `#F8FAFB` | Fondo de pantallas y superficies | --- |
+| Error / alerta crítica | Rojo alerta `#BA1A1A` sobre `#FFDAD6` | Métricas fuera de la línea base y acciones destructivas | 5.00:1 (sobre `#FFDAD6`) y 6.46:1 (sobre blanco) |
+| Neutros | Tonos grises | Bordes de tarjetas, separadores y jerarquía de texto secundario | --- |
 
-#### 2. Paleta Secundaria
-* **Verde Oscuro (#0F6E56):** Se utiliza como color complementario para reforzar elementos de la interfaz y generar diferentes niveles de jerarquía visual.
-* **Neutro Claro (#F8FAFB):** Funciona como base para fondos y superficies, permitiendo mantener una interfaz limpia y facilitar la lectura del contenido.
+: Paleta de colores de VitaLink
 
-#### 3. Colores Funcionales
-* **Tonos verdes:** Se utilizan principalmente para representar estados positivos, información correcta, bienestar y confirmaciones dentro de la aplicación. Estos colores permiten comunicar visualmente información relevante sin sobrecargar la interfaz.
+Los estados de severidad de las alertas (Low, Medium, High) y el estado biométrico del paciente se representan siempre con color **y** con ícono o etiqueta textual, de modo que el significado nunca dependa únicamente del color (WCAG 1.4.1).
 
-#### 4. Neutrales
-* **Tonos neutros:** Se utilizan para fondos, tarjetas, separadores y elementos secundarios, creando contraste con los colores principales y manteniendo una apariencia limpia y profesional.
-
+\begin{figure}[H]
+\centering
 \includegraphics[width=0.7\linewidth]{assets/colors.png}
+\caption{Paleta de colores de VitaLink}
+\end{figure}
 
+**Spacing**
 
-#### Spacing
-El sistema de spacing mantiene una estructura consistente para conseguir una interfaz ordenada, profesional y fácil de utilizar:
+El sistema de espaciado se basa en una cuadrícula de 8 px:
 
-* **Spacing base de 0.5 rem (8 px)** para mantener consistencia y ritmo visual entre los diferentes elementos de la aplicación.
-* **Padding interno de 1.5 rem a 3.75 rem (24–60 px)** en tarjetas, contenedores y secciones principales, proporcionando suficiente espacio para evitar una apariencia sobrecargada.
-* **Separación entre secciones de 3.75 rem a 5 rem (60–80 px)** para establecer una jerarquía clara entre los diferentes bloques de contenido.
-* **Spacing entre elementos relacionados de 0.5 rem a 1.875 rem (8–30 px)**, dependiendo de su nivel de relación y jerarquía.
-* **Componentes interactivos:** Mantienen un espacio suficiente alrededor de ellos para facilitar la navegación y mejorar la experiencia de usuario.
+* **Espaciado base de 0.5rem (8 px)** para la consistencia entre elementos pequeños.
+* **Padding interno de 1.5rem a 4rem (24--64 px)** en tarjetas de pacientes y contenedores de métricas.
+* **Separación de 4rem a 5rem (64--80 px)** entre secciones macro de la Landing Page.
 
-#### Tono de Comunicación
-La comunicación de Vitalink Professional busca transmitir profesionalismo, confianza y cercanía, utilizando un lenguaje sencillo que permita al usuario comprender rápidamente la información proporcionada.
+**Tono de comunicación**
 
-* **Equilibrio:** Profesional pero accesible (75% formal, 25% cercano), proyectando una imagen confiable sin generar una comunicación excesivamente rígida.
-* **Actitud:** Segura, clara y positiva (85% profesional, 15% entusiasta), especialmente en mensajes relacionados con acciones, resultados y mejoras.
-* **Lenguaje:** Directo, claro y orientado a beneficios, evitando términos técnicos innecesarios y priorizando información que pueda ser comprendida rápidamente.
-* **Voz:** Profesional, confiable y orientada al bienestar, posicionando Vitalink Professional como una herramienta que facilita la gestión y permite tomar decisiones basadas en información clara.
+La comunicación de VitaLink busca transmitir profesionalismo clínico, confianza y empatía humana.
+
+* **Equilibrio:** profesional pero accesible (75 % formal, 25 % humano).
+* **Lenguaje:** directo, orientado a la acción y libre de jerga médica compleja cuando el rol activo es Familiar o Adulto Mayor. En el rol Profesional, el tono es técnico y preciso.
 
 ### 4.1.2. Web Style Guidelines
 
+Esta sección describe cómo los lineamientos generales se implementan en el código web de la plataforma, unificando la Landing Page estática y la Single Page Application (SPA) en Angular. El diseño web es responsivo con enfoque *Mobile First*.
 
-Esta sección describe los lineamientos visuales comunes aplicados a las diferentes vistas de la landing page de VitaLink, manteniendo una identidad visual coherente independientemente del tipo de usuario al que esté dirigida cada vista. Aunque el contenido y algunos elementos pueden adaptarse según el perfil del usuario, ambas mantienen los mismos principios de diseño en cuanto a colores, tipografía, estructura, componentes, iconografía, espaciado y tono comunicacional. La propuesta busca transmitir una imagen de tecnología aplicada a la salud, confianza, seguridad y facilidad de uso.
+**Tipografía web unificada**
 
-#### Botones y Elementos de Acción
-* **Color principal:** Verde médico (#00694C), utilizado como color predominante para las acciones principales.
-* **Estados de interacción:** Se utiliza el verde secundario (#008560) para estados hover y elementos destacados.
-* **Tipografía:** Inter, con peso semibold o bold, favoreciendo una lectura clara.
-* **Color del texto:** Blanco (#FFFFFF) sobre botones de color verde y gris oscuro (#191C1D) sobre botones secundarios.
-* **Forma:** Esquinas redondeadas, principalmente entre 12px y 16px, manteniendo una apariencia moderna y amigable.
-* **Estilo:** Los botones principales pueden incorporar sombras sutiles y transiciones para reforzar su jerarquía.
-* **Tono comunicacional:** Directo, profesional y orientado a la acción, utilizando textos claros que indican al usuario qué puede realizar.
+* Toda la plataforma declara `font-family: Arial, Helvetica, sans-serif;` en el `body`, de modo que no existan discrepancias tipográficas entre la Landing Page y la aplicación. No se cargan fuentes externas, lo que reduce los tiempos de carga.
+* Los pesos permitidos en CSS son `400` (Regular) y `700` (Bold).
 
-#### Enlaces de Navegación
-* **Color:** Los enlaces utilizan tonos gris verdoso (#3D4943) y cambian al verde principal (#00694C) durante la interacción.
-* **Tipografía:** Inter, principalmente con peso semibold.
-* **Estilo:** Sin subrayado, con espaciado suficiente entre elementos para facilitar la navegación.
-* **Jerarquía:** La navegación diferencia claramente los elementos principales de los secundarios.
-* **Tono:** Claro, profesional y sencillo, permitiendo al usuario identificar rápidamente las diferentes secciones de la plataforma.
+**Botones y elementos de acción**
 
-#### Header
-* **Estructura:** Ambas vistas mantienen un encabezado superior como elemento principal de navegación e identificación de la plataforma.
-* **Identidad:** El logotipo y el nombre de VitaLink se mantienen como elementos fundamentales de reconocimiento de marca.
-* **Fondo:** Predominio de superficies claras, principalmente blanco (#FFFFFF) o tonos neutros muy claros.
-* **Posición:** El encabezado se mantiene en la parte superior y presenta una separación visual respecto al contenido.
-* **Navegación:** Incluye accesos a las principales secciones y acciones relevantes para el usuario.
-* **Estilo:** Limpio, minimalista y organizado, evitando una sobrecarga de elementos.
-* **Tono:** Confiable, profesional y accesible.
+* **Botones primarios (Call to Action):** `background-color: #00694C` (verde médico) y `color: #FFFFFF`, con `border-radius: 12px`. En la SPA, el tema de Angular Material 3 define su color primario con `#00694C`, de modo que `<button mat-flat-button>` hereda este estilo.
+* **Tono de los botones:** textos cortos con verbos de acción ("Iniciar sesión", "Registrar paciente").
 
-#### Estructura de las Secciones
-* **Distribución:** Las diferentes vistas mantienen una estructura organizada mediante bloques de contenido claramente diferenciados.
-* **Fondos:** Se combinan superficies blancas (#FFFFFF) con fondos neutros claros como #F8FAFB, #F2F4F5 y #ECEEEF para establecer separación entre secciones.
-* **Espaciado:** Se utiliza un espaciado amplio entre bloques, proporcionando una experiencia visual limpia y evitando la saturación de información.
-* **Contenedores:** El contenido se organiza dentro de áreas de ancho limitado para mejorar la legibilidad y mantener una composición equilibrada.
-* **Jerarquía:** Cada sección presenta títulos, textos descriptivos, elementos visuales o componentes interactivos claramente diferenciados.
-* **Tono:** Ordenado, profesional y fácil de comprender.
+**Tarjetas y contenedores**
 
-#### Tarjetas y Contenedores
-* **Fondo:** Blanco (#FFFFFF), principalmente sobre superficies neutras.
-* **Bordes:** Gris claro (#E1E3E4) para delimitar los componentes.
-* **Forma:** Esquinas redondeadas, generalmente de 16px.
-* **Sombras:** Sombras suaves utilizadas para generar profundidad y separar visualmente las tarjetas del fondo.
-* **Contenido:** Permiten organizar información, funcionalidades, beneficios o elementos relacionados con la plataforma.
-* **Estilo:** Minimalista, evitando decoraciones innecesarias y priorizando la información.
-* **Tono:** Profesional, limpio y confiable.
+* Las tarjetas (cards) son el componente base para presentar pacientes y alertas.
+* **CSS base:** `background: #FFFFFF; border: 1px solid #E1E3E4; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);`.
+* En la SPA se renderizan con `MatCardModule`.
 
-#### Tipografía
-* **Familia:** Inter, utilizada como tipografía principal en las diferentes vistas.
-* **Títulos principales:** Tamaños grandes, aproximadamente 48px, con peso bold.
-* **Títulos de sección:** Aproximadamente 32px, con peso semibold.
-* **Subtítulos:** Aproximadamente 24px, con peso semibold.
-* **Texto principal:** 16px, con peso regular.
-* **Texto destacado:** 18px para descripciones o mensajes de mayor importancia.
-* **Etiquetas:** Entre 11px y 14px, utilizando pesos medium o semibold.
-* **Características:** La tipografía mantiene una jerarquía visual clara y una buena legibilidad tanto para contenidos informativos como para elementos interactivos.
+**Iconografía y estado de componentes**
 
-#### Iconografía
-* **Estilo:** Lineal, minimalista y funcional.
-* **Sistema:** Material Symbols.
-* **Uso:** Los iconos acompañan botones, tarjetas, alertas, funcionalidades y elementos de navegación.
-* **Tamaño:** Se adapta según la jerarquía del componente, desde aproximadamente 18px en elementos pequeños hasta 40px o más en elementos destacados.
-* **Colores:** Predominan el verde principal (#00694C), azul secundario (#416089), verde terciario (#026951) y rojo (#BA1A1A) para situaciones de alerta.
-* **Tono:** Funcional y fácil de interpretar, complementando el contenido textual sin sustituirlo.
+* Se emplea la iconografía Google Material Symbols (variante Outlined), mediante `<mat-icon>` en la SPA y clases de ícono en la Landing Page.
+* Los estados de alerta cambian el contenedor completo del componente. Por ejemplo, `<div class="alert-critical">` aplica `background: #FFDAD6; color: #BA1A1A;`.
 
-#### Elementos Visuales e Imágenes
-* **Estilo:** Las imágenes utilizadas buscan representar el contexto tecnológico y sanitario de VitaLink.
-* **Presentación:** Las imágenes se integran dentro de contenedores con bordes redondeados y sombras sutiles.
-* **Composición:** Se utilizan elementos visuales junto al contenido textual para facilitar la comprensión de la propuesta de valor.
-* **Interacción:** Algunos elementos visuales incorporan transiciones o movimientos sutiles para aportar dinamismo.
-* **Tono:** Moderno, tecnológico y profesional, reforzando la relación entre salud y tecnología.
+**Diseño responsivo**
 
-#### Alertas y Estados
-* **Color de alerta:** Rojo (#BA1A1A), utilizado para representar situaciones que requieren atención.
-* **Fondo:** Rojo claro (#FFDAD6) en los componentes que requieren destacar una situación crítica.
-* **Iconografía:** Se emplean símbolos relacionados con notificaciones, signos vitales o situaciones de atención.
-* **Uso:** Las alertas se presentan como elementos visualmente diferenciados para facilitar su identificación.
-* **Tono:** Claro, preventivo e inmediato, evitando elementos visuales excesivamente agresivos.
-
-#### Paleta de Colores Común
-* **Verde principal (#00694C):** Identidad principal de VitaLink y acciones importantes.
-* **Verde secundario (#008560):** Estados de interacción y elementos destacados.
-* **Verdes claros (#68DBAE y #86F8C9):** Acentos y elementos decorativos.
-* **Azul secundario (#416089):** Elementos complementarios y tecnológicos.
-* **Verde terciario (#026951 y #2D8269):** Elementos asociados a salud y seguridad.
-* **Blanco (#FFFFFF):** Fondos, tarjetas y superficies principales.
-* **Fondo neutro (#F8FAFB, #F2F4F5 y #ECEEEF):** Diferenciación entre secciones.
-* **Gris claro (#E1E3E4):** Bordes y separadores.
-* **Gris verdoso (#3D4943):** Textos secundarios.
-* **Gris oscuro (#191C1D):** Títulos y textos principales.
-* **Rojo (#BA1A1A):** Alertas y situaciones críticas.
-
-#### Espaciado y Bordes
-* **Unidad base:** 8px como referencia para mantener consistencia en márgenes y separaciones.
-* **Separación entre secciones:** Espacios amplios, aproximadamente 80px en secciones principales.
-* **Márgenes:** Adaptados según el dispositivo, utilizando aproximadamente 40px en escritorio y 20px en dispositivos móviles.
-* **Bordes:** Predominan bordes suaves y discretos.
-* **Radios:** Se utilizan esquinas redondeadas en botones, tarjetas, imágenes y contenedores.
-* **Objetivo:** Mantener una apariencia uniforme y facilitar la lectura visual de los contenidos.
-
-#### Diseño Responsivo
-* **Adaptabilidad:** Las dos vistas mantienen los mismos principios visuales independientemente del tamaño de pantalla.
-* **Escritorio:** Se aprovechan distribuciones de varias columnas para organizar contenido, imágenes y componentes.
-* **Dispositivos móviles:** Los elementos se reorganizan verticalmente, priorizando la legibilidad y las acciones principales.
-* **Navegación:** Algunos elementos secundarios pueden ocultarse o reorganizarse para evitar saturación.
-* **Objetivo:** Garantizar una experiencia consistente y funcional en diferentes dispositivos.
-
-#### Tono Comunicacional General
-Profesional, claro, confiable y empático. Ambas vistas utilizan un lenguaje orientado a la salud y la tecnología, buscando transmitir seguridad y confianza sin generar una percepción excesivamente técnica o compleja. La comunicación prioriza mensajes directos, beneficios concretos y llamados a la acción fácilmente identificables.
-
-En conjunto, los elementos comunes permiten que las diferentes vistas sean reconocidas como parte de un mismo producto digital. La consistencia en la paleta de colores, tipografía, botones, iconografía, espaciado, tarjetas, bordes y estructura visual permite que VitaLink mantenga una identidad unificada, aun cuando el contenido y las funcionalidades presentadas puedan variar según el tipo de usuario.
+* **Escritorio (>1024 px):** layout de varias columnas con CSS Grid (`grid-template-columns`) y menú lateral fijo (Sidebar).
+* **Móviles (<768 px):** Grid y Flexbox pasan a `flex-direction: column`, las tarjetas ocupan el 100 % del ancho y la navegación lateral colapsa en un menú hamburguesa.
