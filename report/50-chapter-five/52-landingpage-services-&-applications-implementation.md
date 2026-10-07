@@ -306,3 +306,50 @@ Landing page:
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/a7ab456d-0942-413f-8609-8f3e66d9f866" />
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/fed9acec-0dc0-43c3-b1d1-974aa4301178" />
 
+### 5.2.2. Sprint 2
+
+Durante el Sprint 2, el equipo se enfocará en desarrollar y desplegar la primera versión de la **Frontend Web Application de VitaLink utilizando Angular**.
+
+El alcance estará orientado a implementar las primeras interfaces destinadas a profesionales de salud y familiares/adultos mayores, permitiendo visualizar alertas, identificar su nivel de urgencia, acceder al detalle de pacientes y realizar acciones básicas ante una alerta.
+
+Asimismo, durante este Sprint se realizará una actualización de la Landing Page desarrollada previamente.
+
+Durante el Sprint Planning 2, el equipo definió como objetivo principal desarrollar la primera versión funcional y desplegable de la Frontend Web Application de VitaLink.
+
+Para ello, se seleccionaron User Stories correspondientes a las épicas **EP-02 Monitoreo Clínico y Gestión de Alertas** y **EP-03 Acompañamiento Familiar y Autocuidado**.
+
+| Sprint # | Sprint 2 |
+|---|---|
+| **Sprint Planning Background** | |
+| **Date** | 2026-09-15 |
+| **Time** | 7:00 PM |
+| **Location** | Reunión virtual mediante Discord |
+| **Prepared By** | Yazid Said |
+| **Attendees (to planning meeting)** | Fernando Contreras, Pablo Martinez, Yazid Said, Kirk Quiliano, Deiby Vargas |
+| **Sprint 1 Review Summary** | Durante el Sprint 1 se desarrolló la primera versión de la Landing Page de VitaLink, incluyendo las secciones asociadas a la épica EP-01 Captación y Confianza. Asimismo, se realizó su despliegue inicial y se estableció el flujo de trabajo mediante GitHub y Git Flow. |
+| **Sprint 1 Retrospective Summary** | El equipo identificó la necesidad de mantener una distribución clara de tareas, realizar integraciones progresivas mediante Pull Requests y verificar continuamente la consistencia entre los diseños UX/UI y la implementación. Para el Sprint 2 se priorizará una mejor coordinación entre diseño, desarrollo e integración. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 2 Goal** | Nuestro enfoque está en desarrollar y publicar la primera versión funcional de la Frontend Web Application de VitaLink. Creemos que esto permitirá que profesionales de salud, familiares y adultos mayores puedan visualizar información relevante sobre el estado de salud y las alertas de una manera simple y comprensible. Esto se confirmará cuando las principales interfaces correspondientes a las User Stories seleccionadas puedan ejecutarse correctamente desde la aplicación web desplegada. |
+| **Sprint 2 Velocity** | 18 Story Points |
+| **Sum of Story Points** | 18 Story Points |
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+Durante el Sprint 2 se identificaron los principales aspectos relacionados con el desarrollo de la primera versión de la Frontend Web Application.
+
+Cada aspecto cuenta con un **Leader (L)**, responsable de orientar su desarrollo, y **Collaborators (C)**, quienes apoyarán las actividades correspondientes.
+
+| Team Member | GitHub Username | Medical Frontend | Family Frontend | UX/UI & Accessibility | Sprint Documentation | Integration & Deployment |
+|---|---|---|---|---|---|---|
+| Fernando Contreras | FernSkibidi69 | C | L | C |  | C |
+| Pablo Martinez | Delzekl | C | C | L | C |  |
+| Yazid Said | BL4Z3K4D | L | C | C | C | C |
+| Kirk Quiliano | Kirkcito |  | C |  | L | C |
+| Deiby Vargas | poluxbinPe | C | C | C | C | L |
+
+**L:** Leader  
+**C:** Collaborator
+
+La distribución planteada permite relacionar los aspectos del Sprint con las tareas seleccionadas posteriormente en el Sprint Backlog.
+
+Yazid Said liderará principalmente las interfaces dirigidas a profesionales de salud, Fernando Contreras las interfaces dirigidas a familiares y adultos mayores, Pablo Martinez la consistencia UX/UI y accesibilidad, Kirk Quiliano la documentación del Sprint y Deiby Vargas la integración y despliegue.
