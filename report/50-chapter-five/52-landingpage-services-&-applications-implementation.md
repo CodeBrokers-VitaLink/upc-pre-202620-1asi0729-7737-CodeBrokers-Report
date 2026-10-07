@@ -353,3 +353,57 @@ Cada aspecto cuenta con un **Leader (L)**, responsable de orientar su desarrollo
 La distribución planteada permite relacionar los aspectos del Sprint con las tareas seleccionadas posteriormente en el Sprint Backlog.
 
 Yazid Said liderará principalmente las interfaces dirigidas a profesionales de salud, Fernando Contreras las interfaces dirigidas a familiares y adultos mayores, Pablo Martinez la consistencia UX/UI y accesibilidad, Kirk Quiliano la documentación del Sprint y Deiby Vargas la integración y despliegue.
+
+#### 5.2.2.3. Sprint Backlog 2
+
+Durante el Sprint 2, el equipo se enfocará en implementar las principales interfaces de la primera versión de la Frontend Web Application de VitaLink.
+
+Las User Stories seleccionadas permitirán desarrollar vistas iniciales para profesionales de salud, familiares y adultos mayores. Para la gestión de las actividades se utilizará **Trello**, donde cada Work-item/Task será organizado de acuerdo con su estado de avance.
+
+**Sprint Board:** Trello
+
+**URL del Sprint Board:** Pendiente de completar.
+
+> Insertar aquí screenshot del Board correspondiente al Sprint 2.
+
+| Sprint # | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
+|---|---|---|---|---|---|---:|---|---|
+| Sprint 2 | US-11 | Resumen inicial de alertas pendientes | T11 | Implement medical alert dashboard | Desarrollar el panel principal del médico mostrando la cantidad de alertas pendientes agrupadas según su nivel de urgencia. | 5 | Yazid Said | To-do |
+| Sprint 2 | US-12 | Nivel de urgencia diferenciado | T12 | Implement urgency indicators | Implementar elementos visuales que permitan distinguir rápidamente el nivel de urgencia de cada alerta sin abrir su detalle. | 3 | Pablo Martinez | To-do |
+| Sprint 2 | US-13 | Acceder al detalle de un paciente | T13 | Implement patient detail view | Desarrollar la vista que permita acceder al detalle del paciente directamente desde una alerta seleccionada. | 5 | Yazid Said | To-do |
+| Sprint 2 | US-18 | Estado general al abrir la app | T14 | Implement family status dashboard | Desarrollar la pantalla principal para familiares y adultos mayores mostrando un indicador simple del estado general. | 5 | Fernando Contreras | To-do |
+| Sprint 2 | US-19 | Recibir una alerta comprensible | T15 | Implement family alert view | Implementar una alerta que presente de forma clara qué ocurrió, su gravedad y el estado actual de atención. | 4 | Fernando Contreras | To-do |
+| Sprint 2 | US-20 | Confirmar atención con una acción simple | T16 | Implement alert confirmation | Implementar una acción sencilla que permita confirmar la atención de una alerta y reflejar visualmente su nuevo estado. | 3 | Deiby Vargas | To-do |
+| Sprint 2 | US-25 | Modo de uso extremadamente simple | T17 | Simplify primary interactions | Adaptar las principales interacciones de la aplicación para que puedan completarse utilizando un máximo de dos pasos. | 4 | Pablo Martinez | To-do |
+
+**Sprint Velocity:** 18 Story Points
+
+**Sum of Story Points:** 18 Story Points
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+Durante el Sprint 2 se realizará la implementación de la primera versión de la **Frontend Web Application de VitaLink utilizando Angular, TypeScript, HTML y CSS**.
+
+El desarrollo se organizará mediante ramas feature creadas a partir de `develop`. Una vez finalizada cada funcionalidad, los cambios serán revisados e integrados mediante Pull Requests.
+
+La siguiente tabla será completada utilizando los commits reales realizados durante el Sprint.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
+|---|---|---|---|---|---|
+| vitalink-frontend | feature/medical-dashboard | Pendiente | feat: add medical alerts dashboard | Implement initial alert summary dashboard for healthcare professionals. | Pendiente |
+| vitalink-frontend | feature/urgency-indicators | Pendiente | feat: add urgency indicators | Add visual differentiation for alert urgency levels. | Pendiente |
+| vitalink-frontend | feature/patient-detail | Pendiente | feat: add patient detail view | Implement patient information view accessible from an alert. | Pendiente |
+| vitalink-frontend | feature/family-dashboard | Pendiente | feat: add family status dashboard | Implement general health status interface for relatives and older adults. | Pendiente |
+| vitalink-frontend | feature/family-alerts | Pendiente | feat: add family alert interface | Add understandable alert information for family users. | Pendiente |
+| vitalink-frontend | feature/alert-confirmation | Pendiente | feat: add alert confirmation | Implement simple alert attention confirmation interaction. | Pendiente |
+| vitalink-frontend | feature/accessibility | Pendiente | feat: simplify primary interactions | Improve navigation and reduce the number of steps in primary actions. | Pendiente |
+
+> Los Commit Id, fechas y datos definitivos serán reemplazados con información real obtenida desde GitHub.
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+Durante el Sprint 2 se validará la ejecución de las principales interfaces desarrolladas para la primera versión de la Frontend Web Application.
+
+Las evidencias deberán demostrar el funcionamiento de las User Stories seleccionadas y permitir comprobar que las interfaces implementadas cumplen con los objetivos definidos durante el Sprint Planning.
+
+> Insertar capturas de las interfaces ejecutándose correctamente.
