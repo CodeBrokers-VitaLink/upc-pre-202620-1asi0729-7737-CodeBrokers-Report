@@ -306,3 +306,190 @@ Landing page:
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/a7ab456d-0942-413f-8609-8f3e66d9f866" />
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/fed9acec-0dc0-43c3-b1d1-974aa4301178" />
 
+### 5.2.2. Sprint 2
+
+Durante el Sprint 2, el equipo se enfocará en desarrollar y desplegar la primera versión de la **Frontend Web Application de VitaLink utilizando Angular**.
+
+El alcance estará orientado a implementar las primeras interfaces destinadas a profesionales de salud y familiares/adultos mayores, permitiendo visualizar alertas, identificar su nivel de urgencia, acceder al detalle de pacientes y realizar acciones básicas ante una alerta.
+
+Asimismo, durante este Sprint se realizará una actualización de la Landing Page desarrollada previamente.
+
+Durante el Sprint Planning 2, el equipo definió como objetivo principal desarrollar la primera versión funcional y desplegable de la Frontend Web Application de VitaLink.
+
+Para ello, se seleccionaron User Stories correspondientes a las épicas **EP-02 Monitoreo Clínico y Gestión de Alertas** y **EP-03 Acompañamiento Familiar y Autocuidado**.
+
+| Sprint # | Sprint 2 |
+|---|---|
+| **Sprint Planning Background** | |
+| **Date** | 2026-09-15 |
+| **Time** | 7:00 PM |
+| **Location** | Reunión virtual mediante Discord |
+| **Prepared By** | Yazid Said |
+| **Attendees (to planning meeting)** | Fernando Contreras, Pablo Martinez, Yazid Said, Kirk Quiliano, Deiby Vargas |
+| **Sprint 1 Review Summary** | Durante el Sprint 1 se desarrolló la primera versión de la Landing Page de VitaLink, incluyendo las secciones asociadas a la épica EP-01 Captación y Confianza. Asimismo, se realizó su despliegue inicial y se estableció el flujo de trabajo mediante GitHub y Git Flow. |
+| **Sprint 1 Retrospective Summary** | El equipo identificó la necesidad de mantener una distribución clara de tareas, realizar integraciones progresivas mediante Pull Requests y verificar continuamente la consistencia entre los diseños UX/UI y la implementación. Para el Sprint 2 se priorizará una mejor coordinación entre diseño, desarrollo e integración. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 2 Goal** | Nuestro enfoque está en desarrollar y publicar la primera versión funcional de la Frontend Web Application de VitaLink. Creemos que esto permitirá que profesionales de salud, familiares y adultos mayores puedan visualizar información relevante sobre el estado de salud y las alertas de una manera simple y comprensible. Esto se confirmará cuando las principales interfaces correspondientes a las User Stories seleccionadas puedan ejecutarse correctamente desde la aplicación web desplegada. |
+| **Sprint 2 Velocity** | 18 Story Points |
+| **Sum of Story Points** | 18 Story Points |
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+Durante el Sprint 2 se identificaron los principales aspectos relacionados con el desarrollo de la primera versión de la Frontend Web Application.
+
+Cada aspecto cuenta con un **Leader (L)**, responsable de orientar su desarrollo, y **Collaborators (C)**, quienes apoyarán las actividades correspondientes.
+
+| Team Member | GitHub Username | Medical Frontend | Family Frontend | UX/UI & Accessibility | Sprint Documentation | Integration & Deployment |
+|---|---|---|---|---|---|---|
+| Fernando Contreras | FernSkibidi69 | C | L | C |  | C |
+| Pablo Martinez | Delzekl | C | C | L | C |  |
+| Yazid Said | BL4Z3K4D | L | C | C | C | C |
+| Kirk Quiliano | Kirkcito |  | C |  | L | C |
+| Deiby Vargas | poluxbinPe | C | C | C | C | L |
+
+**L:** Leader  
+**C:** Collaborator
+
+La distribución planteada permite relacionar los aspectos del Sprint con las tareas seleccionadas posteriormente en el Sprint Backlog.
+
+Yazid Said liderará principalmente las interfaces dirigidas a profesionales de salud, Fernando Contreras las interfaces dirigidas a familiares y adultos mayores, Pablo Martinez la consistencia UX/UI y accesibilidad, Kirk Quiliano la documentación del Sprint y Deiby Vargas la integración y despliegue.
+
+#### 5.2.2.3. Sprint Backlog 2
+
+Durante el Sprint 2, el equipo se enfocará en implementar las principales interfaces de la primera versión de la Frontend Web Application de VitaLink.
+
+Las User Stories seleccionadas permitirán desarrollar vistas iniciales para profesionales de salud, familiares y adultos mayores. Para la gestión de las actividades se utilizará **Trello**, donde cada Work-item/Task será organizado de acuerdo con su estado de avance.
+
+**Sprint Board:** Trello
+
+**URL del Sprint Board:** Pendiente de completar.
+
+> Insertar aquí screenshot del Board correspondiente al Sprint 2.
+
+| Sprint # | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
+|---|---|---|---|---|---|---:|---|---|
+| Sprint 2 | US-11 | Resumen inicial de alertas pendientes | T11 | Implement medical alert dashboard | Desarrollar el panel principal del médico mostrando la cantidad de alertas pendientes agrupadas según su nivel de urgencia. | 5 | Yazid Said | To-do |
+| Sprint 2 | US-12 | Nivel de urgencia diferenciado | T12 | Implement urgency indicators | Implementar elementos visuales que permitan distinguir rápidamente el nivel de urgencia de cada alerta sin abrir su detalle. | 3 | Pablo Martinez | To-do |
+| Sprint 2 | US-13 | Acceder al detalle de un paciente | T13 | Implement patient detail view | Desarrollar la vista que permita acceder al detalle del paciente directamente desde una alerta seleccionada. | 5 | Yazid Said | To-do |
+| Sprint 2 | US-18 | Estado general al abrir la app | T14 | Implement family status dashboard | Desarrollar la pantalla principal para familiares y adultos mayores mostrando un indicador simple del estado general. | 5 | Fernando Contreras | To-do |
+| Sprint 2 | US-19 | Recibir una alerta comprensible | T15 | Implement family alert view | Implementar una alerta que presente de forma clara qué ocurrió, su gravedad y el estado actual de atención. | 4 | Fernando Contreras | To-do |
+| Sprint 2 | US-20 | Confirmar atención con una acción simple | T16 | Implement alert confirmation | Implementar una acción sencilla que permita confirmar la atención de una alerta y reflejar visualmente su nuevo estado. | 3 | Deiby Vargas | To-do |
+| Sprint 2 | US-25 | Modo de uso extremadamente simple | T17 | Simplify primary interactions | Adaptar las principales interacciones de la aplicación para que puedan completarse utilizando un máximo de dos pasos. | 4 | Pablo Martinez | To-do |
+
+**Sprint Velocity:** 18 Story Points
+
+**Sum of Story Points:** 18 Story Points
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+Durante el Sprint 2 se realizará la implementación de la primera versión de la **Frontend Web Application de VitaLink utilizando Angular, TypeScript, HTML y CSS**.
+
+El desarrollo se organizará mediante ramas feature creadas a partir de `develop`. Una vez finalizada cada funcionalidad, los cambios serán revisados e integrados mediante Pull Requests.
+
+La siguiente tabla será completada utilizando los commits reales realizados durante el Sprint.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
+|---|---|---|---|---|---|
+| vitalink-frontend | feature/medical-dashboard | Pendiente | feat: add medical alerts dashboard | Implement initial alert summary dashboard for healthcare professionals. | Pendiente |
+| vitalink-frontend | feature/urgency-indicators | Pendiente | feat: add urgency indicators | Add visual differentiation for alert urgency levels. | Pendiente |
+| vitalink-frontend | feature/patient-detail | Pendiente | feat: add patient detail view | Implement patient information view accessible from an alert. | Pendiente |
+| vitalink-frontend | feature/family-dashboard | Pendiente | feat: add family status dashboard | Implement general health status interface for relatives and older adults. | Pendiente |
+| vitalink-frontend | feature/family-alerts | Pendiente | feat: add family alert interface | Add understandable alert information for family users. | Pendiente |
+| vitalink-frontend | feature/alert-confirmation | Pendiente | feat: add alert confirmation | Implement simple alert attention confirmation interaction. | Pendiente |
+| vitalink-frontend | feature/accessibility | Pendiente | feat: simplify primary interactions | Improve navigation and reduce the number of steps in primary actions. | Pendiente |
+
+> Los Commit Id, fechas y datos definitivos serán reemplazados con información real obtenida desde GitHub.
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+Durante el Sprint 2 se validará la ejecución de las principales interfaces desarrolladas para la primera versión de la Frontend Web Application.
+
+Las evidencias deberán demostrar el funcionamiento de las User Stories seleccionadas y permitir comprobar que las interfaces implementadas cumplen con los objetivos definidos durante el Sprint Planning.
+
+> Insertar capturas de las interfaces ejecutándose correctamente.
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 2 no se contempla todavía la implementación de los **RESTful Web Services de VitaLink**.
+
+El alcance de este Sprint está enfocado principalmente en la implementación y despliegue de la primera versión de la Frontend Web Application.
+
+Las interfaces utilizarán información simulada o datos temporales para representar los diferentes estados y escenarios necesarios para validar la experiencia de usuario.
+
+La implementación de los RESTful Web Services mediante **Java, Spring Boot y Spring Data JPA**, junto con su documentación mediante **OpenAPI y Swagger**, será desarrollada en el siguiente Sprint.
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 2 se realizará el despliegue de una nueva versión de la Landing Page y de la primera versión de la Frontend Web Application de VitaLink.
+
+##### Nueva versión de Landing Page
+
+La Landing Page será actualizada considerando los ajustes o mejoras identificados después del Sprint 1.
+
+**Repositorio:** Pendiente de completar.
+
+**URL desplegada:** Pendiente de completar.
+
+> Insertar captura de la nueva versión de la Landing Page publicada.
+
+##### Primera versión de Frontend Web Application
+
+La Frontend Web Application desarrollada con Angular será publicada para permitir el acceso público a las principales interfaces implementadas durante el Sprint.
+
+El proceso de despliegue comprenderá:
+
+1. Integrar las funcionalidades completadas en la rama correspondiente.
+2. Generar el build de producción de la aplicación Angular.
+3. Configurar el repositorio para el despliegue.
+4. Publicar la aplicación mediante GitHub Pages.
+5. Verificar el funcionamiento de las interfaces desde la URL pública.
+
+**Repositorio de Frontend Web Application:** Pendiente de completar.
+
+**URL desplegada:** Pendiente de completar.
+
+##### Evidencias
+
+> Insertar captura del repositorio utilizado para el despliegue.
+
+> Insertar captura de la Frontend Web Application desplegada.
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 2, los integrantes colaborarán en el desarrollo de la primera versión de la Frontend Web Application utilizando GitHub como plataforma de control de versiones y colaboración.
+
+Los integrantes y sus usuarios de GitHub son:
+
+| Team Member | GitHub Username |
+|---|---|
+| Fernando Contreras | FernSkibidi69 |
+| Pablo Martinez | Delzekl |
+| Yazid Said | BL4Z3K4D |
+| Kirk Quiliano | Kirkcito |
+| Deiby Vargas | poluxbinPe |
+
+Las funcionalidades serán implementadas mediante ramas feature y posteriormente integradas hacia `develop` mediante Pull Requests.
+
+Las evidencias de colaboración correspondientes al Sprint 2 incluirán:
+
+**Evidencia 1: Contributors**
+
+> Insertar captura de GitHub Insights mostrando la participación de los integrantes.
+
+**Evidencia 2: Commits**
+
+> Insertar captura del historial de commits correspondientes al Sprint 2.
+
+**Evidencia 3: Branches**
+
+> Insertar captura de las ramas utilizadas para desarrollar las funcionalidades del Frontend Web Application.
+
+**Evidencia 4: Pull Requests**
+
+> Insertar captura de los Pull Requests realizados durante la integración.
+
+**Evidencia 5: Network Graph**
+
+> Insertar captura de GitHub Insights > Network mostrando las ramas e integraciones realizadas.
+
+Estas evidencias permitirán identificar los aportes realizados por cada integrante y mantener trazabilidad sobre el trabajo colaborativo desarrollado durante el Sprint 2.
