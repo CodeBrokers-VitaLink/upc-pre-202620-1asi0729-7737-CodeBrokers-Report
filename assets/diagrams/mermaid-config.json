@@ -1,0 +1,25 @@
+{
+  "theme": "base",
+  "layout": "dagre",
+  "fontFamily": "Arial",
+  "securityLevel": "strict",
+  "themeVariables": {
+    "fontFamily": "Arial",
+    "fontSize": "18px",
+    "primaryColor": "#f8fafc",
+    "primaryTextColor": "#0f172a",
+    "primaryBorderColor": "#475569",
+    "lineColor": "#475569",
+    "secondaryColor": "#eef2ff",
+    "tertiaryColor": "#f8fafc"
+  },
+  "flowchart": {
+    "htmlLabels": false,
+    "curve": "linear",
+    "nodeSpacing": 35,
+    "rankSpacing": 45
+  },
+  "class": {
+    "hideEmptyMembersBox": true
+  }
+}

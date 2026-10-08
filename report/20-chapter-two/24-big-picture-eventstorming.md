@@ -1,40 +1,24 @@
 ## 2.4. Big Picture Event Storming
 
-#### Introduccion
-En esta seccion se presenta el resultado de la sesion colaborativa de Big Picture Event Storming para VitaLink. Esta dinamica permitio al equipo modelar visualmente el flujo de negocio de telemonitoreo geriatrico de extremo a extremo, estructurando los eventos de dominio, los comandos de activacion, los actores clave, los sistemas externos y las politicas de respuesta ante emergencias medicas.
+El Big Picture identifica el recorrido de negocio de VitaLink: registrar identidad y red de cuidado, recibir lecturas, detectar desviaciones, coordinar alertas y confirmar su atención. El refinamiento táctico de [4.6.1](../40-chapter-four/46-domain-driven-software-architecture.md) conserva cuatro Bounded Contexts y diferencia el piloto de la evolución futura de triaje y citas.
 
-#### Resumen del Proceso Realizado
-La sesion se desarrollo en Miro, organizando los elementos mediante una linea de tiempo interactiva estructurada en cuatro Bounded Contexts preliminares y zonas de soporte operacional:
+| Bounded Context canónico | Recorrido | Eventos principales | Alcance |
+|---|---|---|---|
+| IAM & Profile | Registro, afiliación a proveedor y red de cuidado | UserRegistered, CaregiverNetworkUpdated | Diseño del piloto |
+| Monitoring | Registro y evaluación de lecturas | VitalSignsRecorded, ThresholdExceeded | Diseño del piloto |
+| Emergency & Notification | Crear alerta o SOS, revisar, atender y coordinar avisos | EmergencyAlertTriggered, AlertStatusChanged | Diseño del piloto |
+| Triage & Scheduling | Evaluación y propuesta/confirmación de cita | RiskEvaluated, AppointmentPreScheduled, AppointmentConfirmed | Futuro, sin historias comprometidas en el backlog actual |
 
-1. **Monitoring Context:**
-   * **Eventos de Dominio:** SignosVitalesCapturados, TelemetriaProcesada, UmbralCriticoSuperado, CaidaDetectada.
-   * **Comando:** CapturarSignosVitales.
-   * **Sistema Externo:** Simulador de Sensores IoT.
-   * **Proposito:** Gestionar la ingesta continua de parametros fisiologicos y detectar anomalias biometricas en tiempo real.
+Las denominaciones preliminares Notification, Scheduling & Triage e IAM & Users se consolidan respectivamente como Emergency & Notification, Triage & Scheduling e IAM & Profile. «Confirmar recepción» es una acción, mientras AlertStatusChanged es el hecho que deja esa transición; la detección de caídas y el escalamiento automático por tiempo quedan como hipótesis pendientes de historias y validación. No se presentan como comportamiento ya implementado.
 
-2. **Notification Context:**
-   * **Eventos de Dominio:** AlertaEmergenciaEmitida, AlertaConfirmadaPorFamiliar, ConfirmarRecepcionAlerta.
-   * **Comando:** DespacharNotificacionEmergencia.
-   * **Sistema Externo:** Proveedor SMS / Mensajeria (Twilio).
-   * **Proposito:** Distribuir alertas criticas multicanal a la red de cuidadores de forma inmediata.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{assets/Big_Picture_Event_Storming.png}
+\caption{Big Picture refinado: recorrido del piloto y evolución futura}
+\end{figure}
 
-3. **Scheduling & Triage Context:**
-   * **Eventos de Dominio:** CupoMedicoLocalizado, CitaPreAgendada, CitaConfirmadaPorClinica, ReporteTriajeGenerado.
-   * **Comandos:** EvaluarRiesgoBiometrico, BuscarDisponibilidadMedica, PreAgendarCita, ValidarCitaClinica, ExportarFichaTriaje.
-   * **Sistema Externo:** Sistema de Agenda Clinica Externa.
-   * **Proposito:** Evaluar el nivel de riesgo clinico y pre-agendar consultas de urgencia en centros de salud aliados.
+**Actores:** familiares, adultos mayores y profesionales de salud. **Sistemas externos propuestos:** simulador de dispositivos, proveedor de notificaciones y agenda clínica. Los destinatarios y permisos se resuelven con la afiliación del paciente y la red de cuidado, mediante identificadores.
 
-4. **IAM & Users Context:**
-   * **Actores Principales:** Cuidador Familiar, Adulto Mayor y Personal Medico.
-   * **Proposito:** Delimitar los roles, responsabilidades y niveles de acceso dentro del sistema.
+**Políticas y hotspots:** selección de avisos por rol, lecturas fuera de la línea base, competencia por revisar una alerta, cambios de contacto y fallos de entrega. La disponibilidad y confirmación de citas constituyen un hotspot futuro. Las reglas e invariantes se formalizan en 4.7; la publicación de eventos y los efectos externos pertenecen a aplicación e infraestructura.
 
-5. **Politicas Reactivas y Hotspots:**
-   * **Politicas (Lila):** Reglas automatizadas que disparan alertas maximas ante deteccion de caidas, escalan avisos si no hay confirmacion en 5 minutos y pre-agendan consultas ante anomalias sostenidas.
-   * **Hotspots (Rojo/Verde):** Identificacion de riesgos criticos como falsos positivos en caidas, sincronizacion de agendas clinicas en tiempo real y tiempos de respuesta de los familiares.
-
-#### Diagrama de Big Picture Event Storming
-
-\begin{center}
-    \includegraphics[width=0.7\linewidth]{assets/Big_Picture_Event_Storming.jpg}
-\end{center}
-
+El diagrama representa el diseño del dominio, no un flujo ejecutado por la fake API. Los fuentes Mermaid y las ampliaciones SVG están disponibles en [8.1](../80-annexes/81-annexes.md).

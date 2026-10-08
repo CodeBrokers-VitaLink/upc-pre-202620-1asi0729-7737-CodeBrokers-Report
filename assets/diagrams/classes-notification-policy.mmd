@@ -1,0 +1,16 @@
+---
+config:
+  layout: elk
+---
+classDiagram
+  direction LR
+  class RoleBasedNotificationPolicy {
+    <<DomainService>>
+    +selectChannel() NotificationChannel
+  }
+  class NotificationChannel {
+    <<VO>>
+    -String type
+    -String destination
+  }
+  RoleBasedNotificationPolicy ..> NotificationChannel : selects without I/O

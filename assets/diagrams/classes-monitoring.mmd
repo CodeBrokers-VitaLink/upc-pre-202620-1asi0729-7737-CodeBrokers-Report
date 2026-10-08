@@ -1,0 +1,40 @@
+---
+config:
+  layout: elk
+---
+classDiagram
+  direction TB
+  namespace VitalSignsTracker_Aggregate {
+    class VitalSignsTracker {
+      <<AR>>
+      -UUID patientId
+      -BiometricRecord[] recentRecords
+      +recordReading() void
+      +updateBaseline() void
+    }
+    class BiometricRecord {
+      <<Entity>>
+      -UUID recordId
+      -UUID patientId
+      -Instant recordedAt
+      -ReadingOrigin origin
+    }
+    class BiometricReading {
+      <<VO>>
+      -ReadingType type
+      -BigDecimal value
+      -String unit
+    }
+    class Baseline {
+      <<VO>>
+      -ReadingType type
+      -BigDecimal minimum
+      -BigDecimal maximum
+      -String unit
+      +contains() Boolean
+    }
+  }
+  VitalSignsTracker "1" *-- "0..*" BiometricRecord : recent window
+  VitalSignsTracker "1" *-- "1..*" Baseline : by reading type
+  BiometricRecord "1" *-- "1" BiometricReading : immutable reading
+  note for VitalSignsTracker "Invariants M-01 to M-04"

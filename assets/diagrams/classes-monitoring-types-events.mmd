@@ -1,0 +1,42 @@
+---
+config:
+  layout: elk
+---
+classDiagram
+  direction LR
+  class VitalSignsTracker {
+    <<AR>>
+  }
+  class ReadingType {
+    <<Enum>>
+    HEART_RATE
+    SPO2
+    TEMPERATURE
+  }
+  class ReadingOrigin {
+    <<Enum>>
+    DEVICE
+    ASSISTED
+  }
+  class VitalSignsRecorded {
+    <<DE>>
+    -UUID eventId
+    -UUID patientId
+    -UUID recordId
+    -Instant occurredAt
+  }
+  class ThresholdExceeded {
+    <<DE>>
+    -UUID eventId
+    -UUID patientId
+    -ReadingType readingType
+    -String unit
+    -BigDecimal observedValue
+    -BigDecimal minimum
+    -BigDecimal maximum
+    -Instant occurredAt
+  }
+  VitalSignsTracker ..> ReadingType : classifies reading
+  VitalSignsTracker ..> ReadingOrigin : validates origin
+  VitalSignsTracker ..> VitalSignsRecorded : emits
+  VitalSignsTracker ..> ThresholdExceeded : emits on breach

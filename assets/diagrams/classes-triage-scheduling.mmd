@@ -1,0 +1,32 @@
+---
+config:
+  layout: elk
+---
+classDiagram
+  direction TB
+  namespace TriageAssessment_Aggregate_Future {
+    class TriageAssessment {
+      <<AR>>
+      -UUID assessmentId
+      -UUID alertId
+      -TriageOutcome outcome
+      +evaluateRisk() void
+      +proposeAppointment() void
+      +confirmAppointment() void
+    }
+    class MedicalAppointmentReservation {
+      <<Entity>>
+      -UUID reservationId
+      -String externalReference
+      -Boolean confirmed
+    }
+    class TimeSlot {
+      <<VO>>
+      -Instant startsAt
+      -Instant endsAt
+      -UUID providerId
+    }
+  }
+  TriageAssessment "1" *-- "0..1" MedicalAppointmentReservation
+  MedicalAppointmentReservation "1" *-- "1" TimeSlot
+  note for TriageAssessment "Invariants T-01 to T-03"

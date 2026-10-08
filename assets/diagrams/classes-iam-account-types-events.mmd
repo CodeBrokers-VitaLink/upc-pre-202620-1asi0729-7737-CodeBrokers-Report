@@ -1,0 +1,45 @@
+---
+config:
+  layout: elk
+---
+classDiagram
+  direction LR
+  class PatientProfile {
+    <<AR>>
+  }
+  class UserAccount {
+    <<AR>>
+    -UUID userId
+    -UserRole role
+    -Boolean active
+    +changeRole() void
+    +deactivate() void
+  }
+  class UserRole {
+    <<Enum>>
+    OLDER_ADULT
+    FAMILY_MEMBER
+    PHYSICIAN
+  }
+  class CaregiverRole {
+    <<Enum>>
+    PRIMARY
+    SECONDARY
+  }
+  class UserRegistered {
+    <<DE>>
+    -UUID eventId
+    -UUID userId
+    -Instant occurredAt
+  }
+  class CaregiverNetworkUpdated {
+    <<DE>>
+    -UUID eventId
+    -UUID patientId
+    -Instant occurredAt
+  }
+  PatientProfile ..> UserAccount : userId only
+  PatientProfile ..> CaregiverRole : classifies affiliation
+  PatientProfile ..> CaregiverNetworkUpdated : emits network update
+  UserAccount ..> UserRole : unique role
+  UserAccount ..> UserRegistered : emits on registration

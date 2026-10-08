@@ -1,0 +1,34 @@
+---
+config:
+  layout: elk
+---
+classDiagram
+  direction TB
+  namespace PatientProfile_Aggregate {
+    class PatientProfile {
+      <<AR>>
+      -UUID patientId
+      -String documentNumber
+      -Boolean monitoringActive
+      +activateMonitoring() void
+      +linkCaregiver() void
+      +updateCaregiverContact() void
+      +assignProvider() void
+    }
+    class CaregiverAffiliation {
+      <<Entity>>
+      -UUID affiliationId
+      -UUID userId
+      -CaregiverRole role
+      -String contact
+      -Boolean active
+    }
+    class ProviderAffiliation {
+      <<VO>>
+      -UUID providerId
+      -Instant startsAt
+    }
+  }
+  PatientProfile "1" *-- "0..*" CaregiverAffiliation
+  PatientProfile "1" *-- "0..1" ProviderAffiliation
+  note for PatientProfile "Invariants I-01 to I-03, I-05"

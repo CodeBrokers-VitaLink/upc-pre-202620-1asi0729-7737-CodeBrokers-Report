@@ -1,0 +1,97 @@
+[
+  {
+    "source": "assets/diagrams/classes-overview.mmd",
+    "png": "assets/class-diagram.png",
+    "svg": "assets/diagrams/classes-overview.svg"
+  },
+  {
+    "source": "assets/diagrams/classes-monitoring.mmd",
+    "png": "assets/class-monitoring.png",
+    "svg": "assets/diagrams/classes-monitoring.svg"
+  },
+  {
+    "source": "assets/diagrams/classes-emergency-notification.mmd",
+    "png": "assets/class-emergency-notification.png",
+    "svg": "assets/diagrams/classes-emergency-notification.svg"
+  },
+  {
+    "source": "assets/diagrams/classes-triage-scheduling.mmd",
+    "png": "assets/class-triage-scheduling.png",
+    "svg": "assets/diagrams/classes-triage-scheduling.svg"
+  },
+  {
+    "source": "assets/diagrams/classes-iam-profile.mmd",
+    "png": "assets/class-iam-profile.png",
+    "svg": "assets/diagrams/classes-iam-profile.svg"
+  },
+  {
+    "source": "assets/diagrams/eventstorming-overview.mmd",
+    "png": "assets/event-brainstorming.png",
+    "svg": "assets/diagrams/eventstorming-overview.svg"
+  },
+  {
+    "source": "assets/diagrams/eventstorming-monitoring.mmd",
+    "png": "assets/Monitoring_BC.png",
+    "svg": "assets/diagrams/eventstorming-monitoring.svg"
+  },
+  {
+    "source": "assets/diagrams/eventstorming-emergency-notification.mmd",
+    "png": "assets/E&N_BC.png",
+    "svg": "assets/diagrams/eventstorming-emergency-notification.svg"
+  },
+  {
+    "source": "assets/diagrams/eventstorming-triage-scheduling.mmd",
+    "png": "assets/T&C_Scheduling_BC.png",
+    "svg": "assets/diagrams/eventstorming-triage-scheduling.svg"
+  },
+  {
+    "source": "assets/diagrams/eventstorming-iam-profile.mmd",
+    "png": "assets/IAM_BC.png",
+    "svg": "assets/diagrams/eventstorming-iam-profile.svg"
+  },
+  {
+    "source": "assets/diagrams/big-picture-eventstorming.mmd",
+    "png": "assets/Big_Picture_Event_Storming.png",
+    "svg": "assets/diagrams/big-picture-eventstorming.svg"
+  },
+  {
+    "source": "assets/diagrams/c4-context.mmd",
+    "png": "assets/Software_Architecture_Context_Diagram.png",
+    "svg": "assets/diagrams/c4-context.svg"
+  },
+  {
+    "source": "assets/diagrams/c4-container.mmd",
+    "png": "assets/Software_Architecture_Container_Diagram.png",
+    "svg": "assets/diagrams/c4-container.svg"
+  },
+  {
+    "source": "assets/diagrams/c4-component.mmd",
+    "png": "assets/Software_Architecture_Component_Diagram.png",
+    "svg": "assets/diagrams/c4-component.svg"
+  },
+  {
+    "source": "assets/diagrams/classes-monitoring-types-events.mmd",
+    "png": "assets/class-monitoring-types-events.png",
+    "svg": "assets/diagrams/classes-monitoring-types-events.svg"
+  },
+  {
+    "source": "assets/diagrams/classes-emergency-types-events.mmd",
+    "png": "assets/class-emergency-types-events.png",
+    "svg": "assets/diagrams/classes-emergency-types-events.svg"
+  },
+  {
+    "source": "assets/diagrams/classes-notification-policy.mmd",
+    "png": "assets/class-notification-policy.png",
+    "svg": "assets/diagrams/classes-notification-policy.svg"
+  },
+  {
+    "source": "assets/diagrams/classes-triage-types-events.mmd",
+    "png": "assets/class-triage-types-events.png",
+    "svg": "assets/diagrams/classes-triage-types-events.svg"
+  },
+  {
+    "source": "assets/diagrams/classes-iam-account-types-events.mmd",
+    "png": "assets/class-iam-account-types-events.png",
+    "svg": "assets/diagrams/classes-iam-account-types-events.svg"
+  }
+]

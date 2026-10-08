@@ -1,0 +1,38 @@
+---
+config:
+  flowchart:
+    wrappingWidth: 340
+---
+flowchart TB
+  W["VitaLink WebApp<br/>Container: Angular"]
+  subgraph VitaLink_Backend_API_Target_Design
+    I["IAM & Profile<br/>Component: Spring Security<br/>Identity / affiliations"]
+    M["Monitoring<br/>Component: Spring REST<br/>Readings / history"]
+    E["Emergency & Notification<br/>Component: Spring Services<br/>Alerts / notification policy"]
+    T["Triage & Scheduling — future<br/>Component: Spring Services<br/>Risk / appointments"]
+    R["Persistence adapters<br/>Component: Spring Data JPA"]
+    M -->|"ThresholdExceeded<br/>integration contract"| E
+    I -. "identifier-based queries" .-> M
+    I -. "recipient and provider queries" .-> E
+    E -. "future alert contract" .-> T
+    I --> R
+    M --> R
+    E --> R
+    T -.-> R
+  end
+  D[("Database<br/>Container: MySQL")]
+  N["Notification provider — planned<br/>External Software System"]
+  A["Clinical agenda — future<br/>External Software System"]
+  W -->|"JSON/HTTPS"| I
+  W -->|"JSON/HTTPS"| M
+  W -->|"JSON/HTTPS"| E
+  R -->|"JDBC / TCP"| D
+  E -. "output adapter" .-> N
+  T -. "future output adapter" .-> A
+
+  classDef command fill:#dbeafe,stroke:#1e40af,color:#172554;
+  classDef aggregate fill:#fef3c7,stroke:#92400e,color:#451a03;
+  classDef event fill:#ffedd5,stroke:#c2410c,color:#431407;
+  classDef query fill:#dcfce7,stroke:#166534,color:#052e16;
+  classDef policy fill:#f3e8ff,stroke:#7e22ce,color:#3b0764;
+  classDef external fill:#f1f5f9,stroke:#475569,color:#0f172a;
