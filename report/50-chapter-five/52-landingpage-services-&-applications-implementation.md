@@ -407,3 +407,89 @@ Durante el Sprint 2 se validará la ejecución de las principales interfaces des
 Las evidencias deberán demostrar el funcionamiento de las User Stories seleccionadas y permitir comprobar que las interfaces implementadas cumplen con los objetivos definidos durante el Sprint Planning.
 
 > Insertar capturas de las interfaces ejecutándose correctamente.
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 2 no se contempla todavía la implementación de los **RESTful Web Services de VitaLink**.
+
+El alcance de este Sprint está enfocado principalmente en la implementación y despliegue de la primera versión de la Frontend Web Application.
+
+Las interfaces utilizarán información simulada o datos temporales para representar los diferentes estados y escenarios necesarios para validar la experiencia de usuario.
+
+La implementación de los RESTful Web Services mediante **Java, Spring Boot y Spring Data JPA**, junto con su documentación mediante **OpenAPI y Swagger**, será desarrollada en el siguiente Sprint.
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 2 se realizará el despliegue de una nueva versión de la Landing Page y de la primera versión de la Frontend Web Application de VitaLink.
+
+##### Nueva versión de Landing Page
+
+La Landing Page será actualizada considerando los ajustes o mejoras identificados después del Sprint 1.
+
+**Repositorio:** Pendiente de completar.
+
+**URL desplegada:** Pendiente de completar.
+
+> Insertar captura de la nueva versión de la Landing Page publicada.
+
+##### Primera versión de Frontend Web Application
+
+La Frontend Web Application desarrollada con Angular será publicada para permitir el acceso público a las principales interfaces implementadas durante el Sprint.
+
+El proceso de despliegue comprenderá:
+
+1. Integrar las funcionalidades completadas en la rama correspondiente.
+2. Generar el build de producción de la aplicación Angular.
+3. Configurar el repositorio para el despliegue.
+4. Publicar la aplicación mediante GitHub Pages.
+5. Verificar el funcionamiento de las interfaces desde la URL pública.
+
+**Repositorio de Frontend Web Application:** Pendiente de completar.
+
+**URL desplegada:** Pendiente de completar.
+
+##### Evidencias
+
+> Insertar captura del repositorio utilizado para el despliegue.
+
+> Insertar captura de la Frontend Web Application desplegada.
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 2, los integrantes colaborarán en el desarrollo de la primera versión de la Frontend Web Application utilizando GitHub como plataforma de control de versiones y colaboración.
+
+Los integrantes y sus usuarios de GitHub son:
+
+| Team Member | GitHub Username |
+|---|---|
+| Fernando Contreras | FernSkibidi69 |
+| Pablo Martinez | Delzekl |
+| Yazid Said | BL4Z3K4D |
+| Kirk Quiliano | Kirkcito |
+| Deiby Vargas | poluxbinPe |
+
+Las funcionalidades serán implementadas mediante ramas feature y posteriormente integradas hacia `develop` mediante Pull Requests.
+
+Las evidencias de colaboración correspondientes al Sprint 2 incluirán:
+
+**Evidencia 1: Contributors**
+
+> Insertar captura de GitHub Insights mostrando la participación de los integrantes.
+
+**Evidencia 2: Commits**
+
+> Insertar captura del historial de commits correspondientes al Sprint 2.
+
+**Evidencia 3: Branches**
+
+> Insertar captura de las ramas utilizadas para desarrollar las funcionalidades del Frontend Web Application.
+
+**Evidencia 4: Pull Requests**
+
+> Insertar captura de los Pull Requests realizados durante la integración.
+
+**Evidencia 5: Network Graph**
+
+> Insertar captura de GitHub Insights > Network mostrando las ramas e integraciones realizadas.
+
+Estas evidencias permitirán identificar los aportes realizados por cada integrante y mantener trazabilidad sobre el trabajo colaborativo desarrollado durante el Sprint 2.
