@@ -394,7 +394,9 @@ La siguiente tabla será completada utilizando los commits reales realizados dur
 | vitalink-frontend | feature/base-shared | b18ed75a4618864607c8279aee40b67c966e6ae3 | chore(base): actualizar configuracion y traducciones.  | 07/10/2026 |
 | vitalink-frontend | feature/auth-user-management | d2fc8b01a79bd6ecade92cb8d14b3546d95bce82| feat: implement user authentication, role guards and profile management| 08/10/2026 |
 | vitalink-frontend | feature/patient-care-services | 1f747baf1b61b1c36c6b77444989ead57d87bd12 | feat: add patient care models, data mappers and care services| 08/10/2026 |
-| vitalink-frontend | feature/patient-alert-components | 520e605cb790ddd86203d722a56507864f92d248 | feat: implement care workspace and patient care state management| 08/10/2026 |
+| vitalink-frontend | feature/care-workspace | 520e605cb790ddd86203d722a56507864f92d248 | feat: implement care workspace and patient care state management| 08/10/2026 |
+| vitalink-frontend | feature/patient-alert-components | ec7a0249330bf3b721cb18dbf659cbf44fa279d7 | feature(upload)/patient-alert-components| 08/10/2026 |
+| vitalink-frontend | main| a51b67c1d15cbf34c73d83d85e6c1c73675c4b20 | Merge pull request #5 from CodeBrokers-VitaLink/develop| 08/10/2026 |
 
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
@@ -403,18 +405,25 @@ Durante el Sprint 2 se validará la ejecución de las principales interfaces des
 
 Las evidencias deberán demostrar el funcionamiento de las User Stories seleccionadas y permitir comprobar que las interfaces implementadas cumplen con los objetivos definidos durante el Sprint Planning.
 
+**Pagina de login**
 ![Vitalink_login.png](../../assets/Vitalink_login.png)
 
+**Dashboard de usuario y familiar/adulto mayor**
 ![Vitalink_user_dashboard.png](../../assets/Vitalink_user_dashboard.png)
 
+**Vista de familia/adulto mayor con alertas pendientes y nivel de urgencia diferenciado*
 ![Vitalink_user_family.png](../../assets/Vitalink_user_family.png)
 
+**Vista del perfil del usuario familiar/adulto mayor**
 ![Vitalink_user_profile.png](../../assets/Vitalink_user_profile.png)
 
+**Dashboard de usuario profesional de salud**
 ![Vitalink_doctor_dashboard.png](../../assets/Vitalink_doctor_dashboard.png)
 
+**Vista de profesional de salud con alertas pendientes y nivel de urgencia diferenciado**
 ![Vitalink_doctor_pacients.png](../../assets/Vitalink_doctor_pacients.png)
 
+**Vista del perfil del usuario profesional de salud** 
 ![Vitalink_doctor_profile.png](../../assets/Vitalink_doctor_profile.png)
 
 
@@ -441,7 +450,7 @@ La Landing Page será actualizada considerando los ajustes o mejoras identificad
 
 **URL desplegada:** [Vitalink LandingPage](https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/)
 
-> Insertar captura de la nueva versión de la Landing Page publicada.
+![Vitalink_landing.png](../../assets/Vitalink_landing.png)
 
 ##### Primera versión de Frontend Web Application
 
@@ -457,13 +466,15 @@ El proceso de despliegue comprenderá:
 
 **Repositorio de Frontend Web Application:** [Frontend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend)
 
-**URL desplegada:** Pendiente de completar.
+**URL desplegada:** [Vitalink](https://vitalink-frontend.vercel.app/)
 
 ##### Evidencias
 
-> Insertar captura del repositorio utilizado para el despliegue.
+**Repositorio de Frontend Web Application:**
+![Vitalink_front_repo.png](../../assets/Vitalink_front_repo.png)
 
-> Insertar captura de la Frontend Web Application desplegada.
+**Aplicación desplegada:**
+![Vitalink_deploy.png](../../assets/Vitalink_deploy.png)
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
@@ -485,22 +496,22 @@ Las evidencias de colaboración correspondientes al Sprint 2 incluirán:
 
 **Evidencia 1: Contributors**
 
-> Insertar captura de GitHub Insights mostrando la participación de los integrantes.
+![Vitalink_front_contributors.png](../../assets/Vitalink_front_contributors.png)
 
 **Evidencia 2: Commits**
 
-> Insertar captura del historial de commits correspondientes al Sprint 2.
+![Vitalink_front_commits.png](../../assets/Vitalink_front_commits.png)
 
 **Evidencia 3: Branches**
 
-> Insertar captura de las ramas utilizadas para desarrollar las funcionalidades del Frontend Web Application.
+![Vitalink_front_branches.png](../../assets/Vitalink_front_branches.png)
 
 **Evidencia 4: Pull Requests**
 
-> Insertar captura de los Pull Requests realizados durante la integración.
+![Vitalink_front_PR.png](../../assets/Vitalink_front_PR.png)
 
 **Evidencia 5: Network Graph**
 
-> Insertar captura de GitHub Insights > Network mostrando las ramas e integraciones realizadas.
+![Vitalink_front_network.png](../../assets/Vitalink_front_network.png)
 
 Estas evidencias permitirán identificar los aportes realizados por cada integrante y mantener trazabilidad sobre el trabajo colaborativo desarrollado durante el Sprint 2.
