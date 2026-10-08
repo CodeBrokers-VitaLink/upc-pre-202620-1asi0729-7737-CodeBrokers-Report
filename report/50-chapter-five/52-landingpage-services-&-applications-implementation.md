@@ -388,17 +388,14 @@ El desarrollo se organizará mediante ramas feature creadas a partir de `develop
 
 La siguiente tabla será completada utilizando los commits reales realizados durante el Sprint.
 
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
-|---|---|---|---|---|---|
-| vitalink-frontend | feature/medical-dashboard | Pendiente | feat: add medical alerts dashboard | Implement initial alert summary dashboard for healthcare professionals. | Pendiente |
-| vitalink-frontend | feature/urgency-indicators | Pendiente | feat: add urgency indicators | Add visual differentiation for alert urgency levels. | Pendiente |
-| vitalink-frontend | feature/patient-detail | Pendiente | feat: add patient detail view | Implement patient information view accessible from an alert. | Pendiente |
-| vitalink-frontend | feature/family-dashboard | Pendiente | feat: add family status dashboard | Implement general health status interface for relatives and older adults. | Pendiente |
-| vitalink-frontend | feature/family-alerts | Pendiente | feat: add family alert interface | Add understandable alert information for family users. | Pendiente |
-| vitalink-frontend | feature/alert-confirmation | Pendiente | feat: add alert confirmation | Implement simple alert attention confirmation interaction. | Pendiente |
-| vitalink-frontend | feature/accessibility | Pendiente | feat: simplify primary interactions | Improve navigation and reduce the number of steps in primary actions. | Pendiente |
+| Repository | Branch | Commit Id | Commit Message  | Committed on |
+|---|---|---|---|---|
+| vitalink-frontend | main | 7301ab42b3b14be1a0910009cf5eb0fad4cc04e1 | first commit | 07/10/2026 |
+| vitalink-frontend | feature/base-shared | b18ed75a4618864607c8279aee40b67c966e6ae3 | chore(base): actualizar configuracion y traducciones.  | 07/10/2026 |
+| vitalink-frontend | feature/auth-user-management | d2fc8b01a79bd6ecade92cb8d14b3546d95bce82| feat: implement user authentication, role guards and profile management| 08/10/2026 |
+| vitalink-frontend | feature/patient-care-services | 1f747baf1b61b1c36c6b77444989ead57d87bd12 | feat: add patient care models, data mappers and care services| 08/10/2026 |
+| vitalink-frontend | feature/patient-alert-components | 520e605cb790ddd86203d722a56507864f92d248 | feat: implement care workspace and patient care state management| 08/10/2026 |
 
-> Los Commit Id, fechas y datos definitivos serán reemplazados con información real obtenida desde GitHub.
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
@@ -406,7 +403,21 @@ Durante el Sprint 2 se validará la ejecución de las principales interfaces des
 
 Las evidencias deberán demostrar el funcionamiento de las User Stories seleccionadas y permitir comprobar que las interfaces implementadas cumplen con los objetivos definidos durante el Sprint Planning.
 
-> Insertar capturas de las interfaces ejecutándose correctamente.
+![Vitalink_login.png](../../assets/Vitalink_login.png)
+
+![Vitalink_user_dashboard.png](../../assets/Vitalink_user_dashboard.png)
+
+![Vitalink_user_family.png](../../assets/Vitalink_user_family.png)
+
+![Vitalink_user_profile.png](../../assets/Vitalink_user_profile.png)
+
+![Vitalink_doctor_dashboard.png](../../assets/Vitalink_doctor_dashboard.png)
+
+![Vitalink_doctor_pacients.png](../../assets/Vitalink_doctor_pacients.png)
+
+![Vitalink_doctor_profile.png](../../assets/Vitalink_doctor_profile.png)
+
+
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
@@ -426,9 +437,9 @@ Durante el Sprint 2 se realizará el despliegue de una nueva versión de la Land
 
 La Landing Page será actualizada considerando los ajustes o mejoras identificados después del Sprint 1.
 
-**Repositorio:** Pendiente de completar.
+**Repositorio:** [Landing repository](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page)
 
-**URL desplegada:** Pendiente de completar.
+**URL desplegada:** [Vitalink LandingPage](https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/)
 
 > Insertar captura de la nueva versión de la Landing Page publicada.
 
@@ -444,7 +455,7 @@ El proceso de despliegue comprenderá:
 4. Publicar la aplicación mediante GitHub Pages.
 5. Verificar el funcionamiento de las interfaces desde la URL pública.
 
-**Repositorio de Frontend Web Application:** Pendiente de completar.
+**Repositorio de Frontend Web Application:** [Frontend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend)
 
 **URL desplegada:** Pendiente de completar.
 
