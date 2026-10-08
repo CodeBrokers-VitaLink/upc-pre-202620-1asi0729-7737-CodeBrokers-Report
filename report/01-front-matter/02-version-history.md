@@ -40,5 +40,6 @@ v1.0.1 & 2026-09-17 & Quiliano Motta, Kirk Douglas & Agrupación e inclusión de
 v1.0.2 & 2026-09-17 & Contreras Panuera, Fernando Fabrizio & Resolución de conflictos de integración (merge) y refinamiento de la estructura de tablas y alineación de imágenes en LaTeX. \\ \hline 
 v1.0.3 & 2026-09-17 & Martinez Gaona, Pablo & Redacción de conclusiones y recomendaciones. Sincronización del backlog del Sprint 1 con las evidencias de Jira y arreglos en los bloques de imágenes multilinea que rompían el PDF. \\ \hline 
 v1.0.4 & 2026-10-08 & Vargas Manchinelli, Deiby Juan & Alineación de Bounded Contexts, EventStorming, modelo C4 y UML táctico. Clasificación de raíces, entidades, VOs, enums, eventos e invariantes; incorporación de fuentes Mermaid y SVG. Diseño futuro separado de la demostración TB1. \\ \hline
+v1.0.5 & 2026-10-08 & Vargas Manchinelli, Deiby Juan & Reconciliación de Story Points: Sprint 1, 10 SP; Sprint 2, 19 SP. Student Outcome corregido y horas separadas de puntos. Se documenta la reestimación de US-01 a US-10 realizada por Kirk el 6 de octubre, sin declarar aceptación total. \\ \hline
 \end{longtable} \endgroup
 \newpage

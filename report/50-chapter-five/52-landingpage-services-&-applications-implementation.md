@@ -12,7 +12,7 @@ Durante este Sprint se desarrollaron las primeras secciones visuales del product
 
 Durante el Sprint Planning 1, el equipo definió como objetivo principal desarrollar y desplegar la primera versión funcional de la Landing Page de VitaLink. Para ello, se seleccionaron las User Stories US-01 a US-10 de la épica EP-01 Captación y Confianza, que suman **10 Story Points**, igual a la velocidad definida para el inicio del proyecto.
 
-*Criterio de estimación.* Las historias de EP-01 son secciones estáticas de la Landing Page, de complejidad y riesgo similares y sin dependencias de backend. Por ello se estimaron de forma relativa con 1 Story Point cada una (aproximadamente 3 horas de trabajo por historia). Las cinco tareas habilitadoras T11 a T15 (diseño responsivo, revisión UX/UI, documentación, integración y despliegue) suman 14 horas adicionales y se ejecutan en apoyo del Sprint Goal. Esta estimación se refinó durante el Sprint Planning y se registra en el historial de versiones del informe.
+*Criterio de estimación.* El Product Backlog revisado asigna 1 Story Point a cada historia US-01 a US-10, para un alcance de 10 SP. Los Story Points expresan complejidad relativa; no equivalen a horas ni prueban aceptación. Las tareas T01 a T10 estiman 29 horas y las habilitadoras T11 a T15, 14 horas adicionales: 43 horas en total. La corrección del backlog realizada el 6 de octubre y esta reconciliación se registran en el historial de versiones.
 
 \begingroup
 \footnotesize
@@ -314,6 +314,8 @@ El alcance estará orientado a implementar las primeras interfaces destinadas a 
 
 Asimismo, durante este Sprint se realizará una actualización de la Landing Page desarrollada previamente.
 
+#### 5.2.2.1. Sprint Planning 2
+
 Durante el Sprint Planning 2, el equipo definió como objetivo principal desarrollar la primera versión funcional y desplegable de la Frontend Web Application de VitaLink.
 
 Para ello, se seleccionaron User Stories correspondientes a las épicas **EP-02 Monitoreo Clínico y Gestión de Alertas** y **EP-03 Acompañamiento Familiar y Autocuidado**.
@@ -330,8 +332,24 @@ Para ello, se seleccionaron User Stories correspondientes a las épicas **EP-02 
 | **Sprint 1 Retrospective Summary** | El equipo identificó la necesidad de mantener una distribución clara de tareas, realizar integraciones progresivas mediante Pull Requests y verificar continuamente la consistencia entre los diseños UX/UI y la implementación. Para el Sprint 2 se priorizará una mejor coordinación entre diseño, desarrollo e integración. |
 | **Sprint Goal & User Stories** | |
 | **Sprint 2 Goal** | Nuestro enfoque está en desarrollar y publicar la primera versión funcional de la Frontend Web Application de VitaLink. Creemos que esto permitirá que profesionales de salud, familiares y adultos mayores puedan visualizar información relevante sobre el estado de salud y las alertas de una manera simple y comprensible. Esto se confirmará cuando las principales interfaces correspondientes a las User Stories seleccionadas puedan ejecutarse correctamente desde la aplicación web desplegada. |
-| **Sprint 2 Velocity** | 18 Story Points |
-| **Sum of Story Points** | 18 Story Points |
+| **Sprint 2 Velocity** | 19 Story Points |
+| **Sum of Story Points** | 19 Story Points |
+
+**Reconciliación del alcance seleccionado.** Las siete historias conservan las estimaciones del Product Backlog; no se cambian historias ni tareas. El valor 18 del borrador no coincide con esa selección y se corrige a 19 SP. La velocidad indicada aquí es la referencia planificada para este alcance, no una velocidad observada ni puntos aceptados.
+
+| Historia seleccionada | Story Points en Product Backlog |
+|---|---:|
+| US-11 | 3 |
+| US-12 | 2 |
+| US-13 | 2 |
+| US-18 | 2 |
+| US-19 | 3 |
+| US-20 | 2 |
+| US-25 | 5 |
+| **Total del Sprint 2** | **19** |
+
+Fuente: [3.3. Product Backlog](../30-chapter-three/33-product-backlog.md). Las horas de las siete tareas del Sprint 2 suman 29 y se mantienen independientes de los Story Points.
+
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
@@ -376,9 +394,9 @@ Las User Stories seleccionadas permitirán desarrollar vistas iniciales para pro
 | Sprint 2 | US-20 | Confirmar atención con una acción simple | T16 | Implement alert confirmation | Implementar una acción sencilla que permita confirmar la atención de una alerta y reflejar visualmente su nuevo estado. | 3 | Deiby Vargas | To-do |
 | Sprint 2 | US-25 | Modo de uso extremadamente simple | T17 | Simplify primary interactions | Adaptar las principales interacciones de la aplicación para que puedan completarse utilizando un máximo de dos pasos. | 4 | Pablo Martinez | To-do |
 
-**Sprint Velocity:** 18 Story Points
+**Sprint Velocity:** 19 Story Points
 
-**Sum of Story Points:** 18 Story Points
+**Sum of Story Points:** 19 Story Points
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
