@@ -1,0 +1,31 @@
+flowchart TB
+  X["ThresholdExceeded<br/>integration contract"]:::event
+  subgraph Emergency_Notification_Bounded_Context
+    H["Threshold event handler"]:::policy
+    C["TriggerEmergencyAlert / RequestHelp<br/>StartReview / MarkAttended"]:::command
+    A["EmergencyAlert — AR<br/>AlertObservation — Entity<br/>ObservedValue — VO"]:::aggregate
+    T["EmergencyAlertTriggered — DE"]:::event
+    S["AlertStatusChanged — DE"]:::event
+    N["Application notification handler"]:::policy
+    P["RoleBasedNotificationPolicy<br/>NotificationChannel — VO"]:::policy
+    Q["GetActiveAlertsQuery<br/>GetAlertAuditTrailQuery"]:::query
+    R["Alert read model"]:::query
+    H --> A
+    C --> A
+    A --> T
+    A --> S
+    T --> N
+    S --> N
+    N --> P
+    Q --> R
+    S -.-> R
+  end
+  X --> H
+  P -. "output port" .-> O["Notification adapter — planned"]:::external
+
+  classDef command fill:#dbeafe,stroke:#1e40af,color:#172554;
+  classDef aggregate fill:#fef3c7,stroke:#92400e,color:#451a03;
+  classDef event fill:#ffedd5,stroke:#c2410c,color:#431407;
+  classDef query fill:#dcfce7,stroke:#166534,color:#052e16;
+  classDef policy fill:#f3e8ff,stroke:#7e22ce,color:#3b0764;
+  classDef external fill:#f1f5f9,stroke:#475569,color:#0f172a;

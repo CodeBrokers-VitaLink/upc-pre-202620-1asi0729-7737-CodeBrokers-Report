@@ -1,0 +1,19 @@
+flowchart TB
+  U["Family caregiver / older adult<br/>Person"]
+  M["Healthcare professional<br/>Person"]
+  V["VitaLink Platform<br/>Software System<br/>Monitoring and alert coordination"]
+  I["Device simulator<br/>External Software System"]
+  S["Notification provider — planned<br/>External Software System"]
+  A["Clinical agenda — future<br/>External Software System"]
+  U -->|"monitor status / request help — HTTPS"| V
+  M -->|"review patients / attend alerts — HTTPS"| V
+  I -->|"measurements — JSON/HTTPS"| V
+  V -. "notification delivery — REST/HTTPS" .-> S
+  V -. "future appointment integration — REST/HTTPS" .-> A
+
+  classDef command fill:#dbeafe,stroke:#1e40af,color:#172554;
+  classDef aggregate fill:#fef3c7,stroke:#92400e,color:#451a03;
+  classDef event fill:#ffedd5,stroke:#c2410c,color:#431407;
+  classDef query fill:#dcfce7,stroke:#166534,color:#052e16;
+  classDef policy fill:#f3e8ff,stroke:#7e22ce,color:#3b0764;
+  classDef external fill:#f1f5f9,stroke:#475569,color:#0f172a;

@@ -1,0 +1,44 @@
+---
+config:
+  layout: elk
+---
+classDiagram
+  direction LR
+  class TriageAssessment {
+    <<AR>>
+  }
+  class TriageOutcome {
+    <<Enum>>
+    SCHEDULED_ATTENTION
+    IMMEDIATE_ATTENTION
+    NO_APPOINTMENT
+  }
+  class RiskEvaluated {
+    <<DE>>
+    -UUID eventId
+    -UUID assessmentId
+    -TriageOutcome outcome
+    -Instant occurredAt
+  }
+  class AppointmentPreScheduled {
+    <<DE>>
+    -UUID eventId
+    -UUID assessmentId
+    -UUID reservationId
+    -Instant occurredAt
+  }
+  class AppointmentConfirmed {
+    <<DE>>
+    -UUID eventId
+    -UUID assessmentId
+    -UUID reservationId
+    -Instant occurredAt
+  }
+  class SchedulingPolicy {
+    <<DomainService>>
+    +selectSlot() TimeSlot
+  }
+  TriageAssessment ..> TriageOutcome : records outcome
+  TriageAssessment ..> RiskEvaluated : emits
+  TriageAssessment ..> AppointmentPreScheduled : emits proposal
+  TriageAssessment ..> AppointmentConfirmed : emits confirmation

@@ -1,0 +1,39 @@
+---
+config:
+  layout: elk
+---
+classDiagram
+  direction TB
+  namespace EmergencyAlert_Aggregate {
+    class EmergencyAlert {
+      <<AR>>
+      -UUID alertId
+      -UUID patientId
+      -UUID activeReviewerId
+      -AlertStatus status
+      -PriorityLevel priority
+      -AlertOrigin origin
+      +startReview() void
+      +markAttended() void
+      +addObservation() void
+    }
+    class AlertObservation {
+      <<Entity>>
+      -UUID observationId
+      -UUID authorId
+      -String text
+      -Instant createdAt
+    }
+    class ObservedValue {
+      <<VO>>
+      -ReadingType readingType
+      -String unit
+      -BigDecimal value
+      -BigDecimal minimum
+      -BigDecimal maximum
+      -Instant occurredAt
+    }
+  }
+  EmergencyAlert "1" *-- "0..*" AlertObservation : append only
+  EmergencyAlert "1" *-- "0..1" ObservedValue : TELEMETRY only
+  note for EmergencyAlert "Invariants E-01 to E-05"

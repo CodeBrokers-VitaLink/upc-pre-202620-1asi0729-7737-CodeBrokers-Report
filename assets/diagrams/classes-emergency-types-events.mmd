@@ -1,0 +1,46 @@
+---
+config:
+  layout: elk
+---
+classDiagram
+  direction LR
+  class EmergencyAlert {
+    <<AR>>
+  }
+  class AlertStatus {
+    <<Enum>>
+    PENDING
+    IN_REVIEW
+    ATTENDED
+  }
+  class AlertOrigin {
+    <<Enum>>
+    TELEMETRY
+    SOS
+  }
+  class PriorityLevel {
+    <<Enum>>
+    CRITICAL
+    HIGH
+    NORMAL
+  }
+  class EmergencyAlertTriggered {
+    <<DE>>
+    -UUID eventId
+    -UUID alertId
+    -UUID patientId
+    -Instant occurredAt
+  }
+  class AlertStatusChanged {
+    <<DE>>
+    -UUID eventId
+    -UUID alertId
+    -AlertStatus status
+    -UUID actorId
+    -Instant occurredAt
+  }
+  EmergencyAlert ..> AlertStatus : forward-only lifecycle
+  EmergencyAlert ..> AlertOrigin : TELEMETRY or SOS
+  EmergencyAlert ..> PriorityLevel : mandatory priority
+  EmergencyAlert ..> EmergencyAlertTriggered : emits on creation
+  EmergencyAlert ..> AlertStatusChanged : emits on transition

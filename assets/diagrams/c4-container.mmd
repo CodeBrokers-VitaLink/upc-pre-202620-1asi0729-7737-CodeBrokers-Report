@@ -1,0 +1,23 @@
+flowchart TB
+  U["Family / older adult / medical staff<br/>Person"]
+  subgraph VitaLink_Platform
+    W["VitaLink WebApp<br/>Container: Angular / TypeScript<br/>Role-specific interface"]
+    B["VitaLink Backend API — planned<br/>Container: Spring Boot<br/>Four domain modules"]
+    D[("Database — target design<br/>Container: MySQL<br/>Profiles, readings and alerts")]
+    W -->|"JSON/HTTPS"| B
+    B -->|"JPA / JDBC"| D
+  end
+  I["Device simulator<br/>External Software System"]
+  N["Notification provider — planned<br/>External Software System"]
+  A["Clinical agenda — future<br/>External Software System"]
+  U -->|"HTTPS"| W
+  I -->|"JSON/HTTPS"| B
+  B -. "REST/HTTPS" .-> N
+  B -. "future REST/HTTPS" .-> A
+
+  classDef command fill:#dbeafe,stroke:#1e40af,color:#172554;
+  classDef aggregate fill:#fef3c7,stroke:#92400e,color:#451a03;
+  classDef event fill:#ffedd5,stroke:#c2410c,color:#431407;
+  classDef query fill:#dcfce7,stroke:#166534,color:#052e16;
+  classDef policy fill:#f3e8ff,stroke:#7e22ce,color:#3b0764;
+  classDef external fill:#f1f5f9,stroke:#475569,color:#0f172a;

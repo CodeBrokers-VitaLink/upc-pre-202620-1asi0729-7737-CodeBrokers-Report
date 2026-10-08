@@ -1,0 +1,65 @@
+{
+  "observedOn": "2026-10-08",
+  "board": {
+    "name": "Sprint-CodeBrokers",
+    "url": "https://trello.com/b/uWEShiCR/sprint-codebrokers"
+  },
+  "lists": [
+    {
+      "name": "TO-DO",
+      "cardCount": 0
+    },
+    {
+      "name": "IN PROGRESS",
+      "cardCount": 0
+    },
+    {
+      "name": "DONE",
+      "cardCount": 8
+    }
+  ],
+  "cards": [
+    {
+      "name": "Landing Page Structure",
+      "list": "DONE",
+      "url": "https://trello.com/c/QrKfEhj3"
+    },
+    {
+      "name": "Diseño de ejemplo de alerta",
+      "list": "DONE",
+      "url": "https://trello.com/c/lxAjoQyt"
+    },
+    {
+      "name": "Implementación de formulario de contacto",
+      "list": "DONE",
+      "url": "https://trello.com/c/EDWpN9ZY"
+    },
+    {
+      "name": "Diseño de sección de privacidad",
+      "list": "DONE",
+      "url": "https://trello.com/c/hjuHnzlp"
+    },
+    {
+      "name": "Hero Section de VitaLink",
+      "list": "DONE",
+      "url": "https://trello.com/c/yXvU61NK"
+    },
+    {
+      "name": "Sección de beneficios familiares",
+      "list": "DONE",
+      "url": "https://trello.com/c/VzUlEOBQ"
+    },
+    {
+      "name": "Revisión de contenido y lenguaje",
+      "list": "DONE",
+      "url": "https://trello.com/c/TaGkkgqY"
+    },
+    {
+      "name": "Diseño responsive Landing Page",
+      "list": "DONE",
+      "url": "https://trello.com/c/aPlQ6wjK"
+    }
+  ],
+  "taskIdsDetected": [],
+  "checklistCount": 0
+}

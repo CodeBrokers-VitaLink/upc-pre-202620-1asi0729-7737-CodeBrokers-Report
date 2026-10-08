@@ -1,0 +1,29 @@
+flowchart TB
+  I["IAM & Profile<br/>Register user and link caregiver"]:::command
+  U["UserRegistered<br/>CaregiverNetworkUpdated"]:::event
+  M["Monitoring<br/>Record vital signs"]:::command
+  V["VitalSignsRecorded"]:::event
+  X["ThresholdExceeded"]:::event
+  H["Emergency & Notification<br/>Create alert / receive SOS"]:::command
+  A["EmergencyAlertTriggered"]:::event
+  R["Review or attend alert"]:::command
+  S["AlertStatusChanged"]:::event
+  P["RoleBasedNotificationPolicy<br/>select recipient and channel"]:::policy
+  N["Notification adapter — planned"]:::external
+  T["Triage & Scheduling — FUTURE<br/>Risk evaluation / appointment proposal"]:::command
+  D["RiskEvaluated / AppointmentPreScheduled<br/>AppointmentConfirmed — future"]:::event
+  I --> U -. "patient and caregiver identifiers" .-> M
+  M --> V
+  M --> X --> H --> A
+  A --> R --> S
+  A --> P
+  S --> P
+  P -.-> N
+  A -.-> T -.-> D
+
+  classDef command fill:#dbeafe,stroke:#1e40af,color:#172554;
+  classDef aggregate fill:#fef3c7,stroke:#92400e,color:#451a03;
+  classDef event fill:#ffedd5,stroke:#c2410c,color:#431407;
+  classDef query fill:#dcfce7,stroke:#166534,color:#052e16;
+  classDef policy fill:#f3e8ff,stroke:#7e22ce,color:#3b0764;
+  classDef external fill:#f1f5f9,stroke:#475569,color:#0f172a;

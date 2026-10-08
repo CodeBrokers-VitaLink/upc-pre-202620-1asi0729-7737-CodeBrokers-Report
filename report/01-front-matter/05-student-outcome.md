@@ -56,7 +56,7 @@ Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cu
 
 Se establecieron objetivos y plazos claros para el diseño, la arquitectura, la documentación y la investigación, asignando responsabilidades según las habilidades de cada integrante y registrándolas como actividades trazables en el tablero del proyecto. \newline
 
-Los 17 Story Points comprometidos en el Sprint 1 fueron entregados en su totalidad y los integrantes registraron contribuciones en ambos repositorios, lo que confirma que la planificación acordada se tradujo en objetivos efectivamente cumplidos. \\
+El alcance comprometido del Sprint 1 comprende US-01 a US-10 y suma 10 Story Points, conforme al Product Backlog y al Sprint Planning 1. Los puntos comprometidos no equivalen a puntos aceptados: el cierre por tarea y los resultados verificables se registran en 5.2.1.3. \\
 \end{longtable}
 \endgroup
 

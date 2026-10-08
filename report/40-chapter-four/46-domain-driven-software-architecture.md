@@ -1,151 +1,138 @@
 ## 4.6. Domain-Driven Software Architecture
 
-En esta seccion se formaliza la arquitectura de software de VitaLink bajo los principios de Domain-Driven Design (DDD) y el modelo C4. Se descompone la complejidad del dominio de telemonitoreo geriatrico en limites contextuales claros y se estructuran los niveles de abstraccion del sistema (Contexto, Contenedores y Componentes) para garantizar escalabilidad, mantenibilidad y alta disponibilidad ante incidentes criticos.
+El diseño de VitaLink se organiza en cuatro Bounded Contexts: Monitoring, Emergency & Notification, IAM & Profile y Triage & Scheduling. Los tres primeros sustentan las historias del piloto; Triage & Scheduling representa una evolución futura, fuera de las 37 historias del backlog actual. Estos límites son los mismos en el Big Picture, el Design-Level Event Storming, el modelo táctico de 4.7 y los diagramas C4 de esta sección.
+
+Los diagramas especifican el diseño objetivo del backend en Java y Spring Boot. En TB1 se demuestra el frontend con una fake API; el diseño no acredita implementación de seguridad, envío de SMS ni integración con agendas clínicas. Esos adaptadores deben comprobarse en el hito de implementación que corresponda.
 
 ### 4.6.1. Design-Level Event Storming
 
-A partir del Big Picture preliminar, se desarrollo la sesion de Design-Level Event Storming para refinar el modelo del dominio. Se definieron cuatro Bounded Contexts principales con sus respectivos comandos, eventos de dominio, agregados y modelos de lectura (queries):
+Se refinan los conceptos del Big Picture de [2.4](../20-chapter-two/24-big-picture-eventstorming.md) distinguiendo comandos, Aggregate Roots, objetos internos, eventos, políticas y consultas. La raíz es el límite de consistencia: BiometricRecord, CaregiverAffiliation y MedicalAppointmentReservation son entidades internas; NotificationChannel es un Value Object, no un aggregate con envío propio.
 
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/event-brainstorming.png} \end{center}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{assets/event-brainstorming.png}
+\caption{Design-Level Event Storming: límites contextuales y eventos de integración}
+\end{figure}
 
-#### 1. Monitoring Bounded Context
-* **Proposito:** Administrar la telemetria fisiologica en tiempo real, evaluando lecturas frente a rangos clinicos predefinidos.
-* **Aggregates:** `BiometricRecord`, `VitalSignsTracker`.
-* **Commands:** `RecordVitalSigns`, `ProcessTelemetryStream`, `VerifyThresholds`.
-* **Domain Events:** `VitalSignsRecorded`, `ThresholdExceeded`, `FallPatternDetected`.
-* **Read Models (Queries):** `GetLatestVitalSignsQuery`, `GetBiometricHistoryQuery`.
+| Bounded Context | Aggregate Roots | Entidades internas | Value Objects principales |
+|---|---|---|---|
+| Monitoring | VitalSignsTracker | BiometricRecord | BiometricReading, Baseline |
+| Emergency & Notification | EmergencyAlert | AlertObservation | ObservedValue, NotificationChannel |
+| IAM & Profile | UserAccount, PatientProfile | CaregiverAffiliation | ProviderAffiliation |
+| Triage & Scheduling, futuro | TriageAssessment | MedicalAppointmentReservation | TimeSlot |
 
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/Monitoring_BC.png} \end{center}
+NotificationChannel es un valor seleccionado por la política de notificación y queda fuera del aggregate EmergencyAlert. El adaptador de envío tampoco forma parte de ese aggregate.
 
-#### 2. Emergency & Notification Bounded Context
-* **Proposito:** Orquestar el despacho de alertas de emergencia y controlar el escalamiento multicanal hacia la red de apoyo familiar.
-* **Aggregates:** `EmergencyAlert`, `NotificationChannel`.
-* **Commands:** `TriggerEmergencyAlert`, `AcknowledgeAlert`, `EscalateNotification`.
-* **Domain Events:** `EmergencyAlertTriggered`, `AlertAcknowledgedByCaregiver`, `AlertEscalated`.
-* **Read Models (Queries):** `GetActiveAlertsQuery`, `GetAlertAuditTrailQuery`.
+#### 4.6.1.1. Monitoring Bounded Context
 
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/E&N_BC.png} \end{center}
+- **Propósito:** registrar lecturas de dispositivos o de modo asistido, evaluarlas contra la línea base y consultar su historial.
+- **Aggregate Root:** VitalSignsTracker, identificado por patientId; contiene BiometricRecord, BiometricReading y Baseline.
+- **Comandos:** RecordVitalSigns y UpdateBaseline.
+- **Domain Events:** VitalSignsRecorded y ThresholdExceeded.
+- **Consultas:** GetLatestVitalSignsQuery y GetBiometricHistoryQuery, sobre modelos de lectura; no requieren cargar el historial completo en el aggregate.
+- **Invariantes:** pertenencia al paciente, línea base del tipo de lectura, origen obligatorio y emisión de ThresholdExceeded al aceptar una desviación. Se detallan como M-01 a M-04 en 4.7.
 
-#### 3. Triage & Clinical Scheduling Bounded Context
-* **Proposito:** Clasificar el nivel de gravedad clinica del paciente y pre-agendar de manera reactiva citas en la red de centros de salud aliados.
-* **Aggregates:** `TriageAssessment`, `MedicalAppointmentReservation`.
-* **Commands:** `EvaluateClinicalRisk`, `PreScheduleAppointment`, `ConfirmAppointment`.
-* **Domain Events:** `RiskEvaluated`, `AppointmentPreScheduled`, `AppointmentConfirmed`.
-* **Read Models (Queries):** `SearchAvailableMedicalSlotsQuery`, `ExportTriageSummaryQuery`.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{assets/Monitoring_BC.png}
+\caption{Monitoring: comandos, raíz, eventos y consultas}
+\end{figure}
 
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/T&C_Scheduling_BC.png} \end{center}
+La detección de patrones de caída y el procesamiento continuo del simulador son hipótesis de evolución del Big Picture. No se presentan como comportamiento ya implementado ni como eventos emitidos por el modelo táctico del piloto.
 
-#### 4. IAM & Profile Bounded Context
-* **Proposito:** Gestionar la identidad, control de accesos, roles y vinculaciones familiares entre el paciente y sus tutores legales.
-* **Aggregates:** `UserAccount`, `CaregiverAffiliation`.
-* **Commands:** `RegisterUser`, `AuthenticateUser`, `LinkCaregiverToPatient`.
-* **Domain Events:** `UserRegistered`, `UserAuthenticated`, `CaregiverLinked`.
-* **Read Models (Queries):** `GetUserProfileQuery`, `GetAffiliatedPatientsQuery`.
+#### 4.6.1.2. Emergency & Notification Bounded Context
 
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/IAM_BC.png} \end{center}
+- **Propósito:** mantener el ciclo de vida de alertas y coordinar los avisos a la red de apoyo.
+- **Aggregate Root:** EmergencyAlert; contiene AlertObservation y, cuando la causa es biométrica, ObservedValue.
+- **Comandos:** TriggerEmergencyAlert, RequestHelp, StartReview, MarkAttended y AddObservation.
+- **Domain Events:** EmergencyAlertTriggered y AlertStatusChanged.
+- **Integración de entrada:** un handler traduce ThresholdExceeded y crea la alerta; el aggregate no importa ni modifica VitalSignsTracker.
+- **Consultas:** GetActiveAlertsQuery y GetAlertAuditTrailQuery.
+- **Notificación:** RoleBasedNotificationPolicy selecciona destinatario/canal sin I/O; un handler de aplicación invoca el puerto de envío. NotificationChannel es un VO sin identidad ni método dispatch().
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{assets/E&N_BC.png}
+\caption{Emergency \& Notification: ciclo de alerta y política de notificación}
+\end{figure}
+
+#### 4.6.1.3. Triage & Scheduling Bounded Context, evolución futura
+
+- **Propósito propuesto:** evaluar el riesgo y coordinar propuestas y confirmaciones de citas.
+- **Aggregate Root:** TriageAssessment, asociado por alertId; MedicalAppointmentReservation es una entidad interna y TimeSlot es un VO.
+- **Comandos previstos:** EvaluateClinicalRisk, PreScheduleAppointment y ConfirmAppointment.
+- **Domain Events previstos:** RiskEvaluated, AppointmentPreScheduled y AppointmentConfirmed.
+- **Integración futura:** EmergencyAlertTriggered inicia la evaluación. SchedulingPolicy decide sobre disponibilidad suministrada por un adaptador; consultar una agenda externa no es una invariante interna.
+- **Consultas previstas:** SearchAvailableMedicalSlotsQuery y ExportTriageSummaryQuery.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{assets/T&C_Scheduling_BC.png}
+\caption{Triage \& Scheduling: diseño futuro, fuera del alcance del piloto}
+\end{figure}
+
+#### 4.6.1.4. IAM & Profile Bounded Context
+
+- **Propósito:** identidad, roles, afiliación del paciente a un proveedor y red de cuidado.
+- **Aggregate Roots:** UserAccount y PatientProfile. CaregiverAffiliation pertenece a PatientProfile; no es una raíz independiente.
+- **Comandos:** RegisterUser, LinkCaregiverToPatient, UpdateCaregiverContact, AssignProvider y ActivateMonitoring.
+- **Domain Events:** UserRegistered y CaregiverNetworkUpdated.
+- **Consultas:** GetUserProfileQuery y GetAffiliatedPatientsQuery.
+- **Acceso:** la aplicación verifica identidad, rol y afiliación antes de ejecutar una operación; JWT y sus filtros son mecanismos del adaptador de seguridad, no comportamiento de un VO o entidad.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{assets/IAM_BC.png}
+\caption{IAM \& Profile: raíces independientes, afiliaciones y acceso por identificador}
+\end{figure}
+
+#### 4.6.1.5. Fronteras y contratos de integración
+
+Cada transacción modifica una raíz y sus objetos internos. Los demás aggregates se referencian por identificador. Al cruzar un Bounded Context, los eventos de dominio se traducen a contratos de integración con IDs, valores y fecha del suceso; no se comparten entidades ni Value Objects del dominio emisor.
+
+| Origen | Contrato / consulta | Destino | Responsabilidad |
+|---|---|---|---|
+| Monitoring | ThresholdExceeded | Emergency & Notification | Crear la alerta a partir de la lectura y el rango observados |
+| IAM & Profile | Consulta por patientId/userId | Monitoring y Emergency & Notification | Resolver afiliación, autorización y destinatarios |
+| Emergency & Notification | EmergencyAlertTriggered / AlertStatusChanged | Handler de notificación del mismo contexto | Seleccionar canal y ejecutar el adaptador |
+| Emergency & Notification | EmergencyAlertTriggered, futuro | Triage & Scheduling | Iniciar evaluación y coordinación de cita |
+
+La emisión del evento forma parte de la transición del aggregate. La entrega a consumidores es una responsabilidad distinta de aplicación e infraestructura. Un bus en memoria no garantiza entrega tras una caída; la persistencia, los reintentos y la idempotencia deben resolverse y verificarse cuando se implemente el backend. El diseño no afirma que la fake API entregue estos eventos.
 
 ### 4.6.2. Software Architecture Context Diagram
 
-El diagrama de contexto representa el Nivel 1 del modelo C4 para VitaLink Platform. Este modelo delimita las fronteras del sistema, identificando a los usuarios que interactuan con la plataforma y los sistemas externos con los que se integra para el envio de alertas y coordinacion clinica.
+El nivel 1 de C4 muestra un sistema VitaLink y sus usuarios: familiares, adultos mayores y profesionales de salud. El simulador de dispositivos, el proveedor de notificaciones y la agenda clínica son sistemas externos; estos dos últimos son integraciones propuestas o futuras.
 
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/Software_Architecture_Context_Diagram.png} \end{center}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{assets/Software_Architecture_Context_Diagram.png}
+\caption{C4 nivel 1: sistema, usuarios e integraciones externas}
+\end{figure}
 
-#### 1. Elemento Central
+### 4.6.3. Software Architecture Container Diagram
 
-* **VitaLink Platform [Software System]:** Plataforma de telemonitoreo geriatrico y gestion de alertas medicas. Procesa la telemetria biometrica en tiempo real, clasifica incidentes de riesgo fisiologico y orquesta la respuesta ante emergencias.
+El nivel 2 distingue unidades de despliegue del diseño objetivo: WebApp Angular/TypeScript, Backend API Java/Spring Boot y base de datos MySQL. Los cuatro Bounded Contexts son módulos internos del Backend API, no Software Systems adicionales ni contenedores desplegados por separado. Ambos segmentos usan vistas de la misma WebApp.
 
-#### 2. Usuarios (Person)
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{assets/Software_Architecture_Container_Diagram.png}
+\caption{C4 nivel 2: contenedores del diseño objetivo de VitaLink}
+\end{figure}
 
-* **Cuidador Familiar [Person]:** Monitorea metricas de salud y atiende alertas urgentes del adulto mayor a su cargo.
-* **Personal Medico [Person]:** Consulta reportes clinicos y valida citas de atencion derivadas por el sistema de triaje.
-* **Adulto Mayor [Person]:** Paciente monitoreado con boton de solicitud de auxilio rapido ante incidentes en el hogar.
+La fake API de TB1 sustituye temporalmente al backend para la demostración del frontend. El diagrama describe la arquitectura objetivo; no presenta la base MySQL o los adaptadores externos como desplegados en TB1.
 
-#### 3. Sistemas Externos (External Software Systems)
+### 4.6.4. Software Architecture Component Diagram
 
-* **SMS [Software System]:** Servicio externo de mensajeria que envia alertas criticas de emergencia via SMS hacia la red de apoyo familiar.
-* **Agenda Clinica Externa [Software System]:** Sistema hospitalario que provee disponibilidad y reserva de citas medicas ambulatorias y de urgencia.
-* **Simulador IoT [Software System]:** Entorno que emite mediciones fisiologicas continuas y deteccion de caidas hacia la plataforma.
+El nivel 3 descompone el Backend API propuesto en los componentes IAM & Profile, Monitoring y Emergency & Notification, con Triage & Scheduling identificado como futuro. El historial clínico es un modelo de lectura de Monitoring, no un quinto Bounded Context.
 
-#### 4. Relaciones y Protocolos de Comunicacion
+Los controladores y handlers de aplicación coordinan operaciones; los aggregates protegen invariantes; los adaptadores Spring Data JPA implementan persistencia. Los puertos de notificación y agenda mantienen los efectos externos fuera del dominio. La autorización se aplica en servidor antes de atender consultas u operaciones.
 
-* **Cuidador Familiar -> VitaLink Platform:** Monitorea signos y alertas mediante peticiones seguras utilizando el protocolo `HTTPS`.
-* **Personal Medico -> VitaLink Platform:** Revisa triajes y valida citas medicas mediante `HTTPS`.
-* **Adulto Mayor -> VitaLink Platform:** Emite solicitud de auxilio ante urgencias a traves de `HTTPS`.
-* **Simulador IoT -> VitaLink Platform:** Envia telemetria biometrica empaquetada en formato estructurado mediante `JSON/HTTPS`.
-* **VitaLink Platform -> SMS:** Despacha alertas SMS prioritarias mediante servicios web `REST/HTTPS`.
-* **VitaLink Platform -> Agenda Clinica Externa:** Pre-agenda citas medicas conectandose via `REST/HTTPS`.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{assets/Software_Architecture_Component_Diagram.png}
+\caption{C4 nivel 3: componentes internos y adaptadores del backend propuesto}
+\end{figure}
 
+La WebApp consume JSON/HTTPS; la persistencia objetivo usa Spring Data JPA/Hibernate sobre JDBC/TCP. Los vínculos de eventos entre componentes no representan llamadas directas a entidades de otro contexto.
 
-### 4.6.3. Software Architecture Container Diagrams
-
-El diagrama de contenedores describe la arquitectura tecnica de alto nivel de VitaLink Platform, detallando las unidades de despliegue independientes, sus responsabilidades tecnicas, la persistencia relacional y su distribucion segun los Bounded Contexts identificados en el modelado del dominio.
-
-Para mantener una representacion visual limpia y estructurada segun los roles del negocio, se especifican dos diagramas de contenedores: uno orientado al ecosistema familiar y de monitoreo del adulto mayor, y otro enfocado en los procesos de triaje y coordinacion clinica.
-
-#### Container Diagram elaborado para Cuidadores y Adultos Mayores:
-
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/Diagram_Para_Familias.jpeg} \end{center}
-
-Este diagrama modela la interaccion de los cuidadores y adultos mayores a traves de la aplicacion web, canalizando las peticiones hacia la API central y distribuyendo la logica en los siguientes contenedores y modulos:
-
-* **VitaLink WebApp [Container: Angular, TypeScript]:** Aplicacion SPA responsiva que renderiza el tablero de signos vitales, las notificaciones y los botones de solicitud de auxilio.
-* **VitaLink Backend API [Container: Java, Spring Boot]:** Servidor de aplicaciones principal que expone servicios RESTful y orquesta los flujos de telemetria y seguridad.
-* **Database [Container: MySQL]:** Base de datos relacional encargada del almacenamiento persistente de lecturas biometricas, perfiles e incidentes.
-* **IAM Context [Software System]:** Modulo de dominio responsable del registro, autenticacion y asociacion entre tutores y pacientes.
-* **Monitoring Context [Software System]:** Modulo central encargado de la ingesta de telemetria desde el Simulador IoT y la evaluacion de umbrales criticos.
-* **Notification Context [Software System]:** Modulo que orquesta el despacho de alertas de emergencia y se conecta con el servicio externo de SMS.
-
-#### Container Diagram elaborado para Personal Medico y Clinicas:
-
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/Diagram_Para_Personal_Medico.jpeg} \end{center}
-
-Este diagrama representa el flujo de trabajo del personal facultativo y de recepcion medica frente al sistema central de VitaLink:
-
-* **Personal Medico y Clinicas [Person]:** Medicos geriatras y administrativos hospitalarios que revisan las derivaciones y confirman disponibilidad.
-* **VitaLink WebApp [Container: Angular, TypeScript]:** Modulo web especializado en la visualizacion de listas de triaje y expedientes historicos.
-* **VitaLink Backend API [Container: Java, Spring Boot]:** Punto de integracion transaccional que valida la atencion y procesa la logica de derivacion.
-* **Triage & Scheduling Context [Software System]:** Modulo encargado de clasificar la severidad clinica segun parametros vitales y gestionar el pre-agendamiento asistido.
-* **Clinical Records Context [Software System]:** Modulo de soporte que consolida las metricas historicas del paciente para el analisis medico.
-* **Agenda Clinica Externa [Software System]:** Plataforma externa de los centros de salud asociados empleada para reservar turnos medicos oficiales.
-
-### 4.6.4. Software Architecture Component Diagrams
-
-El diagrama de componentes representa el Nivel 3 del modelo C4 para el contenedor central Backend API de VitaLink. En este nivel se expone la estructura interna de la aplicacion desarrollada en Spring Boot, delimitando los modulos logicos que procesan las reglas de negocio segun los Bounded Contexts y organizando el acceso a datos mediante Spring Data JPA.
-
-\begin{center} \includegraphics[width=0.5\linewidth]{assets/Software_Architecture_Component_Diagram.png} \end{center}
-
-#### 1. Componentes Internos del Backend API (Spring Boot)
-
-* **IAM Component [Spring Security, JWT]:**
-  * Responsable del registro seguro de cuidadores, medicos y pacientes.
-  * Implementa filtros de autenticacion stateless mediante tokens JWT y autorizacion basada en roles para proteger los endpoints del sistema.
-
-* **Monitoring Component [Spring REST & Service]:**
-  * Provee controladores REST para la recepcion continua de telemetria biometrica (pulso, saturacion de oxigeno SpO2 y datos del acelerometro) remitida por el simulador IoT.
-  * Evalua cada medicion entrante respecto a la linea base del adulto mayor para detectar anomalias fisiologicas.
-
-* **Emergency Notification Component [Spring Service & WebClient]:**
-  * Se activa de forma reactiva al registrar incidentes criticos como caidas confirmadas o descompensaciones severas.
-  * Gestiona la cola de alertas y realiza peticiones HTTP asincronas hacia la API externa de SMS para notificar a la red familiar.
-
-* **Triage & Scheduling Component [Spring Service & REST Client]:**
-  * Ejecuta algoritmos de clasificacion de severidad clinica a partir de las anomalias detectadas.
-  * Se integra con el sistema externo de agendas medicas para ubicar cupos disponibles y pre-agendar consultas ambulatorias o de urgencia.
-
-#### 2. Elementos Externos y Persistencia
-
-* **VitaLink WebApp [Container: Angular]:** Aplicacion cliente que consume los servicios expuestos por los componentes de seguridad, monitoreo y triaje.
-* **Simulador IoT [Software System]:** Servicio emisor que transmite paquetes periodicos de telemetria hacia el controlador de monitoreo.
-* **Database [Container: MySQL]:** Sistema gestor de base de datos relacional que almacena las tablas de usuarios, historiales biometricos, incidentes de caidas y pre-agendamientos.
-* **SMS [Software System]:** Pasarela externa (Twilio) encargada del envio masivo e inmediato de mensajes de texto a dispositivos moviles.
-* **Agenda Clinica Externa [Software System]:** Plataforma hospitalaria de terceros para la reserva y formalizacion de cupos medicos.
-
-#### 3. Protocolos e Interacciones Tecnicas
-
-* **VitaLink WebApp -> Componentes Internos:** Invocacion de endpoints REST protegidos mediante transferencias de payloads en formato `JSON/HTTPS`.
-* **Simulador IoT -> Monitoring Component:** Ingestion masiva de telemetria empaquetada mediante peticiones POST `JSON/HTTPS`.
-* **Monitoring Component -> Emergency Notification Component:** Comunicacion interna desacoplada mediante publicacion de eventos de aplicacion (`In-Memory Event`).
-* **Emergency Notification Component -> SMS:** Invocacion de webhooks y servicios externos bajo protocolo `REST/HTTPS`.
-* **Triage & Scheduling Component -> Agenda Clinica Externa:** Peticiones de consulta y bloqueo de cupos medicos mediante `REST/HTTPS`.
-* **Componentes Internos -> Database:** Intercambio transaccional y persistencia de entidades mediante la capa ORM `Spring Data JPA / Hibernate` sobre conexion `JDBC (TC`.
-
+Los fuentes Mermaid y sus SVG se incluyen en [8.1](../80-annexes/81-annexes.md). Las invariantes, estereotipos, multiplicidades y trazabilidad a historias se detallan en [4.7](47-software-object-oriented-design.md).

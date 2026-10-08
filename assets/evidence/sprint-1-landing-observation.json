@@ -1,0 +1,33 @@
+{
+  "observedOn": "2026-10-08",
+  "contactInputs": 0,
+  "ctas": [
+    {
+      "href": "#unirse",
+      "label": "Unirme como proveedor",
+      "targetExists": true
+    },
+    {
+      "href": "#unirse",
+      "label": "Unirme como proveedor\narrow_forward",
+      "targetExists": true
+    },
+    {
+      "href": "#ventajas-clinicas",
+      "label": "Solicitar información técnica",
+      "targetExists": true
+    },
+    {
+      "href": "#planes",
+      "label": "stethoscope\nUnirme como proveedor de salud\narrow_forward",
+      "targetExists": true
+    },
+    {
+      "href": "#ventajas-clinicas",
+      "label": "Solicitar información técnica",
+      "targetExists": true
+    }
+  ],
+  "formCount": 0,
+  "url": "https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/"
+}

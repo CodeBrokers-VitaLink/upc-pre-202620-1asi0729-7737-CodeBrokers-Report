@@ -1,0 +1,26 @@
+flowchart TB
+  X["EmergencyAlertTriggered<br/>future integration"]:::event
+  subgraph Triage_Scheduling_Bounded_Context_Future
+    C["EvaluateClinicalRisk<br/>PreScheduleAppointment / ConfirmAppointment"]:::command
+    A["TriageAssessment — AR<br/>MedicalAppointmentReservation — Entity<br/>TimeSlot — VO"]:::aggregate
+    R["RiskEvaluated — DE"]:::event
+    P["AppointmentPreScheduled — DE"]:::event
+    F["AppointmentConfirmed — DE"]:::event
+    S["SchedulingPolicy<br/>select from supplied availability"]:::policy
+    Q["SearchAvailableMedicalSlotsQuery<br/>ExportTriageSummaryQuery"]:::query
+    C --> A
+    A --> R
+    A --> P
+    A --> F
+    S --> C
+  end
+  X -.-> C
+  E["Clinical agenda adapter — planned"]:::external -. "availability / confirmation" .-> S
+  Q -.-> E
+
+  classDef command fill:#dbeafe,stroke:#1e40af,color:#172554;
+  classDef aggregate fill:#fef3c7,stroke:#92400e,color:#451a03;
+  classDef event fill:#ffedd5,stroke:#c2410c,color:#431407;
+  classDef query fill:#dcfce7,stroke:#166534,color:#052e16;
+  classDef policy fill:#f3e8ff,stroke:#7e22ce,color:#3b0764;
+  classDef external fill:#f1f5f9,stroke:#475569,color:#0f172a;

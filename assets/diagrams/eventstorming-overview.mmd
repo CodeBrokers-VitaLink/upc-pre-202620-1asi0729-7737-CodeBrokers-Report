@@ -1,0 +1,26 @@
+flowchart TB
+  I["IAM & Profile<br/>UserAccount / PatientProfile — AR"]:::aggregate
+  M["Monitoring<br/>VitalSignsTracker — AR"]:::aggregate
+  E["Emergency & Notification<br/>EmergencyAlert — AR"]:::aggregate
+  T["Triage & Scheduling — FUTURE<br/>TriageAssessment — AR"]:::aggregate
+  X["ThresholdExceeded"]:::event
+  A["EmergencyAlertTriggered"]:::event
+  C["AlertStatusChanged"]:::event
+  N["Application notification handler<br/>RoleBasedNotificationPolicy"]:::policy
+  S["Notification adapter — planned"]:::external
+  I -. "patientId / userId queries" .-> M
+  I -. "recipient and provider queries" .-> E
+  M --> X --> E
+  E --> A
+  E --> C
+  A --> N
+  C --> N
+  N -.-> S
+  A -. "future integration" .-> T
+
+  classDef command fill:#dbeafe,stroke:#1e40af,color:#172554;
+  classDef aggregate fill:#fef3c7,stroke:#92400e,color:#451a03;
+  classDef event fill:#ffedd5,stroke:#c2410c,color:#431407;
+  classDef query fill:#dcfce7,stroke:#166534,color:#052e16;
+  classDef policy fill:#f3e8ff,stroke:#7e22ce,color:#3b0764;
+  classDef external fill:#f1f5f9,stroke:#475569,color:#0f172a;

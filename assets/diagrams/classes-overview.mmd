@@ -1,0 +1,40 @@
+---
+config:
+  layout: elk
+---
+classDiagram
+  direction TB
+  namespace Monitoring {
+    class VitalSignsTracker {
+      <<AR>>
+      -UUID patientId
+    }
+  }
+  namespace Emergency_Notification {
+    class EmergencyAlert {
+      <<AR>>
+      -UUID alertId
+      -UUID patientId
+    }
+  }
+  namespace IAM_Profile {
+    class UserAccount {
+      <<AR>>
+      -UUID userId
+    }
+    class PatientProfile {
+      <<AR>>
+      -UUID patientId
+    }
+  }
+  namespace Triage_Scheduling_Future {
+    class TriageAssessment {
+      <<AR>>
+      -UUID assessmentId
+      -UUID alertId
+    }
+  }
+  VitalSignsTracker ..> PatientProfile : patientId only
+  EmergencyAlert ..> PatientProfile : patientId only
+  PatientProfile ..> UserAccount : caregiver userId only
+  TriageAssessment ..> EmergencyAlert : alertId only

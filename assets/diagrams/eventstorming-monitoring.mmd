@@ -1,0 +1,24 @@
+flowchart TB
+  subgraph Monitoring_Bounded_Context
+    C["RecordVitalSigns / UpdateBaseline<br/>Commands"]:::command
+    A["VitalSignsTracker — AR<br/>BiometricRecord — Entity<br/>BiometricReading / Baseline — VO"]:::aggregate
+    P["Validate patient, baseline and origin<br/>Evaluate threshold"]:::policy
+    V["VitalSignsRecorded — DE"]:::event
+    T["ThresholdExceeded — DE"]:::event
+    Q["GetLatestVitalSignsQuery<br/>GetBiometricHistoryQuery"]:::query
+    R["History read model<br/>outside the aggregate window"]:::query
+    C --> A --> P
+    P --> V
+    P --> T
+    V -.-> R
+    Q --> R
+  end
+  S["Device simulator / assisted entry"]:::external --> C
+  T --> E["Emergency & Notification<br/>integration handler"]:::policy
+
+  classDef command fill:#dbeafe,stroke:#1e40af,color:#172554;
+  classDef aggregate fill:#fef3c7,stroke:#92400e,color:#451a03;
+  classDef event fill:#ffedd5,stroke:#c2410c,color:#431407;
+  classDef query fill:#dcfce7,stroke:#166534,color:#052e16;
+  classDef policy fill:#f3e8ff,stroke:#7e22ce,color:#3b0764;
+  classDef external fill:#f1f5f9,stroke:#475569,color:#0f172a;

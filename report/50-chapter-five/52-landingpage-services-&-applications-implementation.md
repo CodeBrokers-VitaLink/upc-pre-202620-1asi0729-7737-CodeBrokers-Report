@@ -12,7 +12,7 @@ Durante este Sprint se desarrollaron las primeras secciones visuales del product
 
 Durante el Sprint Planning 1, el equipo definió como objetivo principal desarrollar y desplegar la primera versión funcional de la Landing Page de VitaLink. Para ello, se seleccionaron las User Stories US-01 a US-10 de la épica EP-01 Captación y Confianza, que suman **10 Story Points**, igual a la velocidad definida para el inicio del proyecto.
 
-*Criterio de estimación.* Las historias de EP-01 son secciones estáticas de la Landing Page, de complejidad y riesgo similares y sin dependencias de backend. Por ello se estimaron de forma relativa con 1 Story Point cada una (aproximadamente 3 horas de trabajo por historia). Las cinco tareas habilitadoras T11 a T15 (diseño responsivo, revisión UX/UI, documentación, integración y despliegue) suman 14 horas adicionales y se ejecutan en apoyo del Sprint Goal. Esta estimación se refinó durante el Sprint Planning y se registra en el historial de versiones del informe.
+*Criterio de estimación.* El Product Backlog revisado asigna 1 Story Point a cada historia US-01 a US-10, para un alcance de 10 SP. Los Story Points expresan complejidad relativa; no equivalen a horas ni prueban aceptación. Las tareas T01 a T10 estiman 29 horas y las habilitadoras T11 a T15, 14 horas adicionales: 43 horas en total. La corrección del backlog realizada el 6 de octubre y esta reconciliación se registran en el historial de versiones.
 
 \begingroup
 \footnotesize
@@ -60,15 +60,19 @@ Deiby Vargas & poluxbinPe & C & & C & C & L \\ \hline
 
 #### 5.2.1.3. Sprint Backlog 1
 
-Las 15 tareas del Sprint 1 (T01 a T15) se encuentran en estado **Done**, completadas y desplegadas. Las tareas T01 a T10 desarrollan cada una la User Story indicada. Las tareas T11 a T15 son habilitadoras: apoyan de forma transversal a US-01 a US-10 y al Sprint Goal.
+La revisión del 8 de octubre de 2026 contrasta T01 a T15 con los criterios de las historias, la landing publicada, su código y el tablero público. Las tareas T01 a T10 desarrollan la User Story indicada; T11 a T15 son habilitadoras del Sprint Goal. Se conservan responsables y horas de la planificación; estos campos no prueban autoría de commits ni aceptación.
+
+**Estados de esta revisión:** Done indica un criterio observable o artefacto comprobado; To-review, evidencia parcial o una revisión pendiente; To-do, un criterio que la publicación consultada no cumple. El resultado es 6 Done, 5 To-review y 4 To-do. Esta verificación no reemplaza un acta de aceptación ni modifica el tablero.
+
+El tablero contiene 8 tarjetas en DONE, sin identificadores T01–T15 ni checklists que permitan confirmar una correspondencia completa. Su estado no acredita automáticamente las 15 tareas del informe. En particular, la tarjeta de formulario de contacto está en DONE, pero la publicación revisada no contiene un formulario que registre solicitudes. El responsable del tablero debe vincular cada tarea con su evidencia y conciliar estos resultados antes de declarar el Sprint totalmente cerrado.
 
 **Sprint Board:** Trello  
 **URL pública:** <https://trello.com/b/uWEShiCR/sprint-codebrokers>
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth,height=0.8\textheight,keepaspectratio]{assets/SprintBoard-Trello-Done.png}
-\caption{Sprint Board 1 en Trello con las tareas T01 a T15 en estado Done}
+\includegraphics[width=\linewidth,height=0.8\textheight,keepaspectratio]{assets/SprintBoard-Trello.jpg}
+\caption{Captura real del Sprint Board, 8 de octubre de 2026: 8 tarjetas en DONE, sin IDs de las 15 tareas}
 \end{figure}
 
 \begin{landscape}
@@ -86,17 +90,17 @@ Las 15 tareas del Sprint 1 (T01 a T15) se encuentran en estado **Done**, complet
 
 1 & US-01 & Entender la propuesta de valor en segundos & T01 & Implement Hero section & Implementar la sección inicial mostrando la propuesta de valor. & 3 & Yazid Said & \textbf{Done} \\ \hline
 1 & US-02 & Confiar antes de registrar datos de pacientes & T02 & Implement security section & Contenido sobre cifrado y privacidad de datos. & 3 & Pablo Martinez & \textbf{Done} \\ \hline
-1 & US-03 & Solicitar información antes de registrarse & T03 & Implement contact section & Formulario para solicitar información corporativa. & 3 & Fernando Contreras & \textbf{Done} \\ \hline
-1 & US-04 & Unirme como proveedor de salud & T04 & Implement healthcare CTA & Call to Action para el registro clínico de proveedores. & 3 & Yazid Said & \textbf{Done} \\ \hline
-1 & US-05 & Ver un ejemplo de cómo funciona una alerta & T05 & Implement alert example & Diseño visual simulado de una alerta y su paciente. & 3 & Pablo Martinez & \textbf{Done} \\ \hline
+1 & US-03 & Solicitar información antes de registrarse & T03 & Implement contact section & Formulario para solicitar información corporativa. & 3 & Fernando Contreras & \textbf{To-do} \\ \hline
+1 & US-04 & Unirme como proveedor de salud & T04 & Implement healthcare CTA & Call to Action para el registro clínico de proveedores. & 3 & Yazid Said & \textbf{To-do} \\ \hline
+1 & US-05 & Ver un ejemplo de cómo funciona una alerta & T05 & Implement alert example & Diseño visual simulado de una alerta y su paciente. & 3 & Pablo Martinez & \textbf{To-do} \\ \hline
 1 & US-06 & Entender el beneficio sin llamadas constantes & T06 & Implement family benefits & Sección sobre el monitoreo remoto automático. & 3 & Fernando Contreras & \textbf{Done} \\ \hline
-1 & US-07 & Confiar en quién ve los datos de salud & T07 & Implement family privacy & Explicación de acceso por roles y visibilidad de los datos de salud. & 3 & Pablo Martinez & \textbf{Done} \\ \hline
+1 & US-07 & Confiar en quién ve los datos de salud & T07 & Implement family privacy & Explicación de acceso por roles y visibilidad de los datos de salud. & 3 & Pablo Martinez & \textbf{To-review} \\ \hline
 1 & US-08 & Conocer cómo funciona antes de crear cuenta & T08 & Implement how-it-works & Sección explicativa de los pasos de captura de datos. & 3 & Yazid Said & \textbf{Done} \\ \hline
-1 & US-09 & Entender la plataforma sin tecnicismos & T09 & Adapt content & Redacción de textos en lenguaje accesible. & 2 & Kirk Quiliano & \textbf{Done} \\ \hline
-1 & US-10 & Ver qué esperar antes de registrarse & T10 & Implement dashboard preview & Imágenes previas de las interfaces familiares. & 3 & Yazid Said & \textbf{Done} \\ \hline
-1 & US-01 a US-10 (transversal) & Habilitadora & T11 & Responsive design & CSS y Media Queries para dispositivos móviles. & 4 & Fernando Contreras & \textbf{Done} \\ \hline
-1 & US-01 a US-10 (transversal) & Habilitadora & T12 & Review UX/UI consistency & Verificación WCAG y coherencia con Figma. & 3 & Pablo Martinez & \textbf{Done} \\ \hline
-1 & Sprint Goal & Habilitadora & T13 & Review Sprint docs & Actualización del reporte en Markdown. & 2 & Kirk Quiliano & \textbf{Done} \\ \hline
+1 & US-09 & Entender la plataforma sin tecnicismos & T09 & Adapt content & Redacción de textos en lenguaje accesible. & 2 & Kirk Quiliano & \textbf{To-review} \\ \hline
+1 & US-10 & Ver qué esperar antes de registrarse & T10 & Implement dashboard preview & Imágenes previas de las interfaces familiares. & 3 & Yazid Said & \textbf{To-do} \\ \hline
+1 & US-01 a US-10 (transversal) & Habilitadora & T11 & Responsive design & CSS y Media Queries para dispositivos móviles. & 4 & Fernando Contreras & \textbf{To-review} \\ \hline
+1 & US-01 a US-10 (transversal) & Habilitadora & T12 & Review UX/UI consistency & Verificación WCAG y coherencia con Figma. & 3 & Pablo Martinez & \textbf{To-review} \\ \hline
+1 & Sprint Goal & Habilitadora & T13 & Review Sprint docs & Actualización del reporte en Markdown. & 2 & Kirk Quiliano & \textbf{To-review} \\ \hline
 1 & US-01 a US-10 (transversal) & Habilitadora & T14 & Integrate Landing & Resolución de conflictos de merge en Git e integración de ramas. & 3 & Deiby Vargas & \textbf{Done} \\ \hline
 1 & Sprint Goal & Habilitadora & T15 & Deploy Landing Page & Configuración de GitHub Pages y Actions. & 2 & Deiby Vargas & \textbf{Done} \\ \hline
 
@@ -104,9 +108,46 @@ Las 15 tareas del Sprint 1 (T01 a T15) se encuentran en estado **Done**, complet
 \endgroup
 \end{landscape}
 
+
+**Verificación por tarea y criterio de cierre**
+
+La publicación consultada corresponde a `main`, commit `91ffa24f1bff259a36e2158be5d98385a41bd972`, del repositorio de la Landing Page. Las evidencias registran ese corte; una modificación posterior requiere repetir la comprobación.
+
+| Task / historia | Criterio contrastado y resultado observable | Evidencia |
+|---|---|---|
+| T01 / US-01 | El Hero clínico comunica el problema y la propuesta de valor en el contenido inicial. Done. | E-01, E-02 |
+| T02 / US-02 | La sección de seguridad menciona cifrado, normativa y RBAC. Done para el criterio de contenido; no certifica seguridad implementada ni cumplimiento legal. | E-01 |
+| T03 / US-03 | Solicitar información debe registrar una solicitud sin cuenta. El CTA apunta a `#ventajas-clinicas`; se observaron 0 formularios y 0 campos de contacto. To-do. | E-01, E-04; tarjeta E-06 |
+| T04 / US-04 | El CTA debe abrir un registro clínico diferenciado. Los enlaces llevan a secciones locales como `#unirse` o `#planes`; no se comprobó ese flujo. To-do. | E-01, E-04 |
+| T05 / US-05 | El ejemplo debe identificar urgencia, paciente y acción. La sección usa una foto de una profesional con una tableta; no muestra un ejemplo de alerta legible con esos tres elementos. To-do. | E-01, E-09 |
+| T06 / US-06 | El Hero familiar explica monitoreo remoto y tranquilidad sin llamadas constantes. Done. | E-01, E-03 |
+| T07 / US-07 | Debe indicar qué roles clínicos/familiares acceden a qué datos. El texto genérico de RBAC menciona roles, pero no detalla la correspondencia rol–dato. To-review. | E-01 |
+| T08 / US-08 | El contenido familiar explica sensor, análisis, alerta y estado compartido antes de crear una cuenta y sin pedir datos personales. Done. | E-01, E-04 |
+| T09 / US-09 | El mensaje debe comunicar acompañamiento sin jerga para adultos mayores. La vista familiar comunica el beneficio, pero conserva textos como «Telemetría Continua»; falta cerrar la revisión de lenguaje. To-review. | E-01, E-05 |
+| T10 / US-10 | Debe verse una representación del dashboard familiar. La imagen de monitoreo familiar es la misma fotografía y no acredita ese panel. To-do. | E-01, E-09 |
+| T11 / transversal | Existen media queries. A 375 × 812 el menú abre y no se detectó desbordamiento horizontal del documento, pero el selector Familiares queda recortado. To-review. | E-01, E-05 |
+| T12 / transversal | Debe comprobarse coherencia con Figma y accesibilidad. La captura y la presencia de atributos ARIA no bastan para acreditar la revisión WCAG completa. To-review. | E-01, E-05 |
+| T13 / Sprint Goal | El informe incorpora puntos y evidencias corregidos; aún requiere revisión de la atribución individual y de la exportación final. To-review. | Secciones 5.2.1.3 y 5.2.1.4 |
+| T14 / transversal | La landing está integrada en `main` mediante PR #6, commit `91ffa24`. Done para el artefacto de integración; la atribución individual se verifica aparte. | E-07 |
+| T15 / Sprint Goal | GitHub Pages publica la landing; el workflow del commit `91ffa24` finalizó correctamente y la URL abre. Done. | E-04, E-08 |
+
+**Fuentes verificables del Sprint 1**
+
+| ID | Fuente |
+|---|---|
+| E-01 | [Código de la landing en el commit verificado](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/tree/91ffa24f1bff259a36e2158be5d98385a41bd972) |
+| E-02 | [Captura de escritorio, segmento clínico](../../assets/Sprint1-Landing-Desktop.jpg) |
+| E-03 | [Captura del segmento familiar](../../assets/Sprint1-Landing-Family.jpg) |
+| E-04 | [Observación de formularios y CTA](../../assets/evidence/sprint-1-landing-observation.json) y [landing publicada](https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/) |
+| E-05 | [Captura móvil](../../assets/Sprint1-Landing-Mobile.jpg) y [resultado de la comprobación](../../assets/evidence/sprint-1-mobile-observation.json) |
+| E-06 | [Captura real de Trello](../../assets/SprintBoard-Trello.jpg), [listado observado de sus 8 tarjetas](../../assets/evidence/sprint-1-board-observation.json) y [tarjeta de contacto](https://trello.com/c/EDWpN9ZY) |
+| E-07 | [PR #6 de integración de la landing](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/pull/6) |
+| E-08 | [Workflow exitoso de GitHub Pages](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/actions/runs/34932280482) |
+| E-09 | [Imagen utilizada en alertas y monitoreo familiar](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/blob/91ffa24f1bff259a36e2158be5d98385a41bd972/assets/screen.png) |
+
 #### 5.2.1.4. Development Evidence for Sprint Review
 
-La siguiente matriz documenta la cadena completa de ejecución del Sprint con una fila por tarea: integrante, rama (GitFlow), commit y Pull Request, tarea, User Story y resultado.
+La siguiente matriz conserva las referencias de atribución individual del borrador para su contraste. Sus asociaciones entre integrantes, tareas y commits aún requieren revisión; no se utilizan como prueba de aceptación. Los criterios y artefactos comprobados se registran en 5.2.1.3.
 
 **Ruta de trazabilidad:** Integrante $\rightarrow$ Branch $\rightarrow$ Commit / Pull Request $\rightarrow$ Task / US $\rightarrow$ Resultado.
 
@@ -115,7 +156,7 @@ La siguiente matriz documenta la cadena completa de ejecución del Sprint con un
 \small
 \setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.11\textwidth}|p{0.16\textwidth}|p{0.14\textwidth}|p{0.07\textwidth}|p{0.09\textwidth}|p{0.30\textwidth}|}
-\caption{Matriz de trazabilidad del Sprint 1: integrante, rama, commit/PR, tarea, historia y resultado}\\
+\caption{Referencias previas de atribución individual del Sprint 1, pendientes de conciliación}\\
 \hline
 \textbf{Integrante} & \textbf{Branch (GitFlow)} & \textbf{Commit / PR} & \textbf{Task} & \textbf{US} & \textbf{Resultado} \\ \hline
 \endfirsthead
@@ -137,21 +178,33 @@ Deiby Vargas & \texttt{main} & PR \#32 / \texttt{f2d7652} & T14 \newline T15 & -
 \endgroup
 \end{landscape}
 
-Los Pull Requests y commits citados pueden verificarse en el repositorio de la organización. Los mensajes de commit siguen la convención Conventional Commits e incluyen trazabilidad directa hacia la funcionalidad implementada: **[GitHub-Url](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Report)** (sección *Pull requests*, filtro *Merged*). Los mensajes de commit siguen la convención Conventional Commits e incluyen el identificador de la User Story cuando aplica.
+La atribución debe contrastar cada hash y PR con su repositorio, autor y diff. El PR #6 y el workflow de E-07/E-08 pertenecen a la Landing Page; un commit del Report no demuestra por sí solo implementación o despliegue de esa landing. Las referencias pendientes no se contabilizan como aportes individuales aceptados.
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
-La ejecución del Sprint fue validada mediante la revisión funcional de la Landing Page implementada.
+La observación del 8 de octubre de 2026 comprobó la landing publicada del commit `91ffa24`: contenido inicial de ambos segmentos, explicación familiar sin registro previo y disponibilidad pública del sitio. Los resultados por historia están en 5.2.1.3, junto con los criterios pendientes. No se declara que las 15 tareas estén aceptadas.
 
-Las principales funcionalidades verificadas fueron:
+En la vista móvil de 375 × 812 se comprobó la apertura del menú y se registró un recorte del selector de segmento. Esa comprobación no equivale a una auditoría completa de accesibilidad o de todos los dispositivos.
 
-- Visualización correcta de la propuesta de valor de VitaLink.
-- Presentación de beneficios para familiares y profesionales de salud.
-- Visualización de la sección de alertas automáticas.
-- Correcto funcionamiento en dispositivos móviles.
-- Navegación entre las diferentes secciones.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth,height=0.75\textheight,keepaspectratio]{assets/Sprint1-Landing-Desktop.jpg}
+\caption{Observación de la landing publicada: Hero clínico, 8 de octubre de 2026}
+\end{figure}
 
-Imagenes del landing page:
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth,height=0.75\textheight,keepaspectratio]{assets/Sprint1-Landing-Family.jpg}
+\caption{Observación de la landing publicada: Hero familiar, 8 de octubre de 2026}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.45\linewidth,height=0.75\textheight,keepaspectratio]{assets/Sprint1-Landing-Mobile.jpg}
+\caption{Comprobación a 375 por 812 píxeles: el selector Familiares queda recortado}
+\end{figure}
+
+Las capturas previas siguientes se conservan como evidencia visual del contenido; su presencia no reemplaza la comprobación de criterios ni acredita funcionalidades ausentes.
 
 **Medicos**
 
@@ -230,7 +283,7 @@ La documentación de endpoints, Swagger/OpenAPI y pruebas mediante Postman será
 
 Durante el Sprint 1 se realizó el despliegue de la primera versión funcional de la Landing Page de VitaLink. El objetivo de esta actividad fue publicar el sitio web en un entorno accesible públicamente, permitiendo validar su funcionamiento fuera del entorno local de desarrollo.
 
-Para el despliegue se utilizará **GitHub Pages**, aprovechando su integración directa con el repositorio de la Landing Page y su capacidad para publicar sitios web estáticos desarrollados con HTML, CSS y JavaScript.
+Para el despliegue se utilizó **GitHub Pages**, aprovechando su integración directa con el repositorio de la Landing Page y su capacidad para publicar sitios web estáticos desarrollados con HTML, CSS y JavaScript.
 
 
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/8fc24562-7d9f-4a72-b364-92015514e330" />
@@ -238,7 +291,7 @@ Para el despliegue se utilizará **GitHub Pages**, aprovechando su integración 
 
 #### Proceso de despliegue
 
-El proceso de despliegue de la Landing Page se realizará mediante los siguientes pasos:
+Los pasos de configuración se describen a continuación como guía de reproducción. La evidencia del despliegue realizado es el workflow exitoso E-08 y la URL pública observada E-04; no se infiere que cada paso de esta guía tenga una captura histórica propia.
 
 1. Crear el repositorio correspondiente a la Landing Page de VitaLink dentro de GitHub.
 
@@ -314,6 +367,8 @@ El alcance estará orientado a implementar las primeras interfaces destinadas a 
 
 Asimismo, durante este Sprint se realizará una actualización de la Landing Page desarrollada previamente.
 
+#### 5.2.2.1. Sprint Planning 2
+
 Durante el Sprint Planning 2, el equipo definió como objetivo principal desarrollar la primera versión funcional y desplegable de la Frontend Web Application de VitaLink.
 
 Para ello, se seleccionaron User Stories correspondientes a las épicas **EP-02 Monitoreo Clínico y Gestión de Alertas** y **EP-03 Acompañamiento Familiar y Autocuidado**.
@@ -330,8 +385,24 @@ Para ello, se seleccionaron User Stories correspondientes a las épicas **EP-02 
 | **Sprint 1 Retrospective Summary** | El equipo identificó la necesidad de mantener una distribución clara de tareas, realizar integraciones progresivas mediante Pull Requests y verificar continuamente la consistencia entre los diseños UX/UI y la implementación. Para el Sprint 2 se priorizará una mejor coordinación entre diseño, desarrollo e integración. |
 | **Sprint Goal & User Stories** | |
 | **Sprint 2 Goal** | Nuestro enfoque está en desarrollar y publicar la primera versión funcional de la Frontend Web Application de VitaLink. Creemos que esto permitirá que profesionales de salud, familiares y adultos mayores puedan visualizar información relevante sobre el estado de salud y las alertas de una manera simple y comprensible. Esto se confirmará cuando las principales interfaces correspondientes a las User Stories seleccionadas puedan ejecutarse correctamente desde la aplicación web desplegada. |
-| **Sprint 2 Velocity** | 18 Story Points |
-| **Sum of Story Points** | 18 Story Points |
+| **Sprint 2 Velocity** | 19 Story Points |
+| **Sum of Story Points** | 19 Story Points |
+
+**Reconciliación del alcance seleccionado.** Las siete historias conservan las estimaciones del Product Backlog; no se cambian historias ni tareas. El valor 18 del borrador no coincide con esa selección y se corrige a 19 SP. La velocidad indicada aquí es la referencia planificada para este alcance, no una velocidad observada ni puntos aceptados.
+
+| Historia seleccionada | Story Points en Product Backlog |
+|---|---:|
+| US-11 | 3 |
+| US-12 | 2 |
+| US-13 | 2 |
+| US-18 | 2 |
+| US-19 | 3 |
+| US-20 | 2 |
+| US-25 | 5 |
+| **Total del Sprint 2** | **19** |
+
+Fuente: [3.3. Product Backlog](../30-chapter-three/33-product-backlog.md). Las horas de las siete tareas del Sprint 2 suman 29 y se mantienen independientes de los Story Points.
+
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
@@ -376,9 +447,9 @@ Las User Stories seleccionadas permitirán desarrollar vistas iniciales para pro
 | Sprint 2 | US-20 | Confirmar atención con una acción simple | T16 | Implement alert confirmation | Implementar una acción sencilla que permita confirmar la atención de una alerta y reflejar visualmente su nuevo estado. | 3 | Deiby Vargas | To-do |
 | Sprint 2 | US-25 | Modo de uso extremadamente simple | T17 | Simplify primary interactions | Adaptar las principales interacciones de la aplicación para que puedan completarse utilizando un máximo de dos pasos. | 4 | Pablo Martinez | To-do |
 
-**Sprint Velocity:** 18 Story Points
+**Sprint Velocity:** 19 Story Points
 
-**Sum of Story Points:** 18 Story Points
+**Sum of Story Points:** 19 Story Points
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
