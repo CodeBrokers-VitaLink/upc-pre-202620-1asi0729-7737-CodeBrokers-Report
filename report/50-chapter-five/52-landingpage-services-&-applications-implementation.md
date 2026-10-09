@@ -1,3 +1,4 @@
+<img width="1905" height="708" alt="Médicos – Inicio" src="https://github.com/user-attachments/assets/d3afc870-9dca-4be6-881a-826182d462ab" />
 ## 5.2. Landing Page, Services & Applications Implementation
 
 ### 5.2.1. Sprint 1
@@ -159,18 +160,20 @@ Imagenes del landing page:
 -Incios:
 
 
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/de26183e-d214-43eb-855c-34bb1142a822" />
+<img width="900" alt="Médicos – Inicio" src="https://github.com/user-attachments/assets/c0d241e4-a4cb-4595-9357-402a96336b66" />
 
 
 Descripción:
 
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/6103073c-4e08-4406-90af-3be5dbcab3c8" />
+
+<img width="900" alt="Médicos – Descripción" src="https://github.com/user-attachments/assets/ac37c09c-94e2-40e1-9f9e-8f8952c38e12" />
+
 
 
 Pagos:
 
 
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/b01dfa62-8047-4ee8-b642-b126f6cc40e0" />
+<img width="900"  alt="Médicos – Descripción" src="https://github.com/user-attachments/assets/ea46cfea-5bed-4d89-9744-2c36ae0e6aa8" />
 
 
 - Seguridad:
@@ -361,7 +364,7 @@ Las User Stories seleccionadas permitirán desarrollar vistas iniciales para pro
 
 
  
-<img width="1915" height="903" alt="image" src="https://github.com/user-attachments/assets/8986570f-3ee3-40bf-996e-c3d1be3e6df5" />
+<img width="1915" height="903" alt="trello" src="https://github.com/user-attachments/assets/f64c07ca-875a-44f0-b24a-d4470e29f60a" />
 
 
 
@@ -416,7 +419,7 @@ La interfaz médica permite visualizar el resumen de alertas y pacientes, difere
 
 
 
-<img width="1904" height="954" alt="image" src="https://github.com/user-attachments/assets/f2d1e054-708c-470d-9327-aeac61fce36d" />
+<img width="2530" height="1304" alt="vistaprofe" src="https://github.com/user-attachments/assets/9a4f6089-7201-4681-8c75-5a81b5c72036" />
 
 
 
@@ -428,28 +431,28 @@ La interfaz para familiares permite seleccionar al adulto mayor asociado, visual
 
 
 
-<img width="1904" height="953" alt="image" src="https://github.com/user-attachments/assets/da1a2a67-4c99-44b3-8de0-2570c684c7a9" />
+<img width="1915" height="903" alt="trello" src="https://github.com/user-attachments/assets/afaaac9b-b0cb-47f0-9270-76804dea72a9" />
+<img width="2553" height="1307" alt="visatadefamilia" src="https://github.com/user-attachments/assets/a8297af7-e879-470d-a1f0-d7372d604dfa" />
 
 **Pagina de login**
-![Vitalink_login.png](../../assets/Vitalink_login.png)
+<img width="2549" height="1307" alt="login" src="https://github.com/user-attachments/assets/e02625ce-8efd-4e6a-ab18-963ecd31bf20" />
 
 **Dashboard de usuario y familiar/adulto mayor**
-![Vitalink_user_dashboard.png](../../assets/Vitalink_user_dashboard.png)
+<img width="2532" height="1306" alt="dashboard" src="https://github.com/user-attachments/assets/880dd135-3b7d-44b3-ac99-c5cbf1c9d630" />
 
 **Vista de familia/adulto mayor con alertas pendientes y nivel de urgencia diferenciado*
-![Vitalink_user_family.png](../../assets/Vitalink_user_family.png)
+<img width="2553" height="1307" alt="visatadefamilia" src="https://github.com/user-attachments/assets/ae78a9c6-d2d2-4a8d-be3e-e929700ea69d" />
 
 **Vista del perfil del usuario familiar/adulto mayor**
-![Vitalink_user_profile.png](../../assets/Vitalink_user_profile.png)
+<img width="2556" height="1304" alt="vistadeperfil" src="https://github.com/user-attachments/assets/ab0e37cc-49ff-4634-b0ae-8654c5080094" />
 
 **Dashboard de usuario profesional de salud**
-![Vitalink_doctor_dashboard.png](../../assets/Vitalink_doctor_dashboard.png)
+<img width="2532" height="1305" alt="dashboardusuario" src="https://github.com/user-attachments/assets/d91b91f9-95d2-42a1-9942-c559a1da60bf" />
 
 **Vista de profesional de salud con alertas pendientes y nivel de urgencia diferenciado**
-![Vitalink_doctor_pacients.png](../../assets/Vitalink_doctor_pacients.png)
+<img width="2530" height="1304" alt="vistaprofe" src="https://github.com/user-attachments/assets/22df860b-ac1a-4572-90e3-35b68231aa64" />
 
 **Vista del perfil del usuario profesional de salud** 
-![Vitalink_doctor_profile.png](../../assets/Vitalink_doctor_profile.png)
 
 
 
@@ -461,9 +464,9 @@ La interfaz para familiares permite seleccionar al adulto mayor asociado, visual
 La aplicación permite consultar información de las alertas, visualizar su estado y realizar acciones relacionadas con su atención según el rol correspondiente.
 
 
+<img width="1901" height="947" alt="gestionalertas" src="https://github.com/user-attachments/assets/751dc228-7cf7-4f7a-a206-8f57baf92737" />
 
 
-<img width="1901" height="947" alt="image" src="https://github.com/user-attachments/assets/d580b5f0-0b00-4202-93b1-b5125e6ab6f8" />
 
 
 
@@ -522,13 +525,16 @@ https://vitalink-frontend.vercel.app/
 
 ##### Evidencias
 
-<img width="1899" height="946" alt="image" src="https://github.com/user-attachments/assets/0dd1f0f8-1089-451e-b0e2-89b4f850bece" />
+<img width="2540" height="1302" alt="urldesplega" src="https://github.com/user-attachments/assets/50379e15-56a5-462b-8bd0-cac40d64b0ee" />
 
-<img width="1918" height="950" alt="image" src="https://github.com/user-attachments/assets/273fa275-0886-4c18-8b21-d8b59ac7b37f" />
 
-<img width="1904" height="954" alt="image" src="https://github.com/user-attachments/assets/4be471fa-1cb7-47c8-9790-e76e778a1f1d" />
 
-<img width="1904" height="953" alt="image" src="https://github.com/user-attachments/assets/e4d4d872-ad87-4ab1-a74e-a0103d1c1a77" />
+<img width="1899" height="946" alt="evidenciareport" src="https://github.com/user-attachments/assets/a7d699a0-e6ca-41b1-8c9c-4f6380a0cfc6" />
+
+
+
+<img width="1918" height="950" alt="evidenciainciosesion" src="https://github.com/user-attachments/assets/3226927c-e6aa-4a3a-af91-0d92802c4cb3" />
+
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
@@ -548,18 +554,11 @@ Las funcionalidades serán implementadas mediante ramas feature y posteriormente
 
 Las evidencias de colaboración correspondientes al Sprint 2 incluirán:
 
+<img width="1902" height="949" alt="evidenciacolaboracion" src="https://github.com/user-attachments/assets/eea8213e-c2a2-4569-9d12-03664daa3057" />
 
-<img width="1902" height="949" alt="image" src="https://github.com/user-attachments/assets/e7c3b17d-98da-4611-8561-a8adab48cd35" />
+<img width="1905" height="935" alt="comparingchanges" src="https://github.com/user-attachments/assets/ec861955-e83f-4e15-8579-dbae8aeb23f6" />
 
-
-
-
-<img width="1905" height="935" alt="image" src="https://github.com/user-attachments/assets/511e7a64-2f78-4023-a4ed-0226005de388" />
-
-
-
-<img width="1903" height="949" alt="image" src="https://github.com/user-attachments/assets/c26d8954-7f50-4a5c-949d-d073a4707b2c" />
-
+<img width="1903" height="949" alt="contribuidor" src="https://github.com/user-attachments/assets/f6c51bcf-307b-4d1a-8d20-db2508708f86" />
 
 
 Estas evidencias permitirán identificar los aportes realizados por cada integrante y mantener trazabilidad sobre el trabajo colaborativo desarrollado durante el Sprint 2.
