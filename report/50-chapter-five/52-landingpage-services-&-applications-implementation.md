@@ -308,15 +308,11 @@ Landing page:
 
 ### 5.2.2. Sprint 2
 
-Durante el Sprint 2, el equipo se enfocará en desarrollar y desplegar la primera versión de la **Frontend Web Application de VitaLink utilizando Angular**.
+Durante el Sprint 2, el equipo se enfocó en desarrollar y desplegar la primera versión de la **Frontend Web Application de VitaLink utilizando Angular**.
 
-El alcance estará orientado a implementar las primeras interfaces destinadas a profesionales de salud y familiares/adultos mayores, permitiendo visualizar alertas, identificar su nivel de urgencia, acceder al detalle de pacientes y realizar acciones básicas ante una alerta.
+El alcance estuvo orientado a implementar interfaces destinadas a profesionales de salud y familiares/adultos mayores, permitiendo visualizar alertas, identificar su nivel de urgencia, acceder al detalle de pacientes, visualizar información clínica y realizar acciones básicas ante una alerta.
 
-Asimismo, durante este Sprint se realizará una actualización de la Landing Page desarrollada previamente.
-
-Durante el Sprint Planning 2, el equipo definió como objetivo principal desarrollar la primera versión funcional y desplegable de la Frontend Web Application de VitaLink.
-
-Para ello, se seleccionaron User Stories correspondientes a las épicas **EP-02 Monitoreo Clínico y Gestión de Alertas** y **EP-03 Acompañamiento Familiar y Autocuidado**.
+Asimismo, durante este Sprint se continuó trabajando sobre la Landing Page desarrollada previamente y se realizó el despliegue público de la Frontend Web Application.
 
 | Sprint # | Sprint 2 |
 |---|---|
@@ -350,9 +346,7 @@ Cada aspecto cuenta con un **Leader (L)**, responsable de orientar su desarrollo
 **L:** Leader  
 **C:** Collaborator
 
-La distribución planteada permite relacionar los aspectos del Sprint con las tareas seleccionadas posteriormente en el Sprint Backlog.
-
-Yazid Said liderará principalmente las interfaces dirigidas a profesionales de salud, Fernando Contreras las interfaces dirigidas a familiares y adultos mayores, Pablo Martinez la consistencia UX/UI y accesibilidad, Kirk Quiliano la documentación del Sprint y Deiby Vargas la integración y despliegue.
+La distribución planteada permitió relacionar los aspectos del Sprint con las tareas seleccionadas en el Sprint Backlog. Yazid Said lideró principalmente las interfaces dirigidas a profesionales de salud, Fernando Contreras las interfaces dirigidas a familiares y adultos mayores, Pablo Martinez la consistencia UX/UI y accesibilidad, Kirk Quiliano la documentación y Deiby Vargas la integración y despliegue.
 
 #### 5.2.2.3. Sprint Backlog 2
 
@@ -362,9 +356,15 @@ Las User Stories seleccionadas permitirán desarrollar vistas iniciales para pro
 
 **Sprint Board:** Trello
 
-**URL del Sprint Board:** Pendiente de completar.
+[**URL del Sprint Board:**](https://trello.com/invite/b/6ac828aceaa0c53fc0e4235d/ATTI73a3e020cdfa31f843e5d02719051bfd102F8A9B/sprint-2)
 
-> Insertar aquí screenshot del Board correspondiente al Sprint 2.
+
+
+ 
+<img width="1915" height="903" alt="image" src="https://github.com/user-attachments/assets/8986570f-3ee3-40bf-996e-c3d1be3e6df5" />
+
+
+
 
 | Sprint # | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
 |---|---|---|---|---|---|---:|---|---|
@@ -382,11 +382,15 @@ Las User Stories seleccionadas permitirán desarrollar vistas iniciales para pro
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
-Durante el Sprint 2 se realizará la implementación de la primera versión de la **Frontend Web Application de VitaLink utilizando Angular, TypeScript, HTML y CSS**.
+Durante el Sprint 2 se implementó la primera versión funcional de la **Frontend Web Application de VitaLink utilizando Angular, TypeScript, HTML y CSS**.
 
-El desarrollo se organizará mediante ramas feature creadas a partir de `develop`. Una vez finalizada cada funcionalidad, los cambios serán revisados e integrados mediante Pull Requests.
+El desarrollo fue organizado mediante ramas independientes e integración progresiva utilizando Pull Requests. Las funcionalidades implementadas abarcaron autenticación y control de roles, modelos y servicios asociados al cuidado del paciente, gestión del estado de la aplicación, interfaces de atención y componentes relacionados con pacientes y alertas.
 
-La siguiente tabla será completada utilizando los commits reales realizados durante el Sprint.
+**Repositorio de la Frontend Web Application:**
+
+https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend
+
+**Historial de commits:**
 
 | Repository | Branch | Commit Id | Commit Message  | Committed on |
 |---|---|---|---|---|
@@ -401,9 +405,30 @@ La siguiente tabla será completada utilizando los commits reales realizados dur
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
-Durante el Sprint 2 se validará la ejecución de las principales interfaces desarrolladas para la primera versión de la Frontend Web Application.
+Durante el Sprint 2 se validó la ejecución de las principales interfaces implementadas en la primera versión de la Frontend Web Application de VitaLink.
 
-Las evidencias deberán demostrar el funcionamiento de las User Stories seleccionadas y permitir comprobar que las interfaces implementadas cumplen con los objetivos definidos durante el Sprint Planning.
+La aplicación permite diferenciar la experiencia según el rol del usuario, proporcionando interfaces específicas para profesionales de salud y familiares.
+
+##### Vista para profesionales de salud
+
+La interfaz médica permite visualizar el resumen de alertas y pacientes, diferenciar el nivel de prioridad de las alertas, aplicar filtros, consultar pacientes asignados y acceder al detalle e historial correspondiente.
+
+
+
+
+<img width="1904" height="954" alt="image" src="https://github.com/user-attachments/assets/f2d1e054-708c-470d-9327-aeac61fce36d" />
+
+
+
+
+##### Vista para familiares
+
+La interfaz para familiares permite seleccionar al adulto mayor asociado, visualizar su estado general, consultar mediciones registradas, identificar alertas abiertas y acceder a información relacionada con su cuidado.
+
+
+
+
+<img width="1904" height="953" alt="image" src="https://github.com/user-attachments/assets/da1a2a67-4c99-44b3-8de0-2570c684c7a9" />
 
 **Pagina de login**
 ![Vitalink_login.png](../../assets/Vitalink_login.png)
@@ -428,53 +453,82 @@ Las evidencias deberán demostrar el funcionamiento de las User Stories seleccio
 
 
 
+
+
+
+##### Gestión de alertas
+
+La aplicación permite consultar información de las alertas, visualizar su estado y realizar acciones relacionadas con su atención según el rol correspondiente.
+
+
+
+
+<img width="1901" height="947" alt="image" src="https://github.com/user-attachments/assets/d580b5f0-0b00-4202-93b1-b5125e6ab6f8" />
+
+
+
+
+
+**Frontend Web Application desplegada:**
+
+https://vitalink-frontend.vercel.app/
+
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
-Durante el Sprint 2 no se contempla todavía la implementación de los **RESTful Web Services de VitaLink**.
+Durante el Sprint 2 no se implementaron todavía los **RESTful Web Services definitivos de VitaLink mediante Java y Spring Boot**.
 
-El alcance de este Sprint está enfocado principalmente en la implementación y despliegue de la primera versión de la Frontend Web Application.
+El alcance del Sprint estuvo enfocado principalmente en la implementación y despliegue de la primera versión de la Frontend Web Application.
 
-Las interfaces utilizarán información simulada o datos temporales para representar los diferentes estados y escenarios necesarios para validar la experiencia de usuario.
-
-La implementación de los RESTful Web Services mediante **Java, Spring Boot y Spring Data JPA**, junto con su documentación mediante **OpenAPI y Swagger**, será desarrollada en el siguiente Sprint.
+Para validar los diferentes flujos de la aplicación, el frontend consume una API de demostración configurada mediante `environment.apiUrl`. Esta API permite utilizar información temporal para representar pacientes, alertas, mediciones e intervenciones.
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 2 se realizará el despliegue de una nueva versión de la Landing Page y de la primera versión de la Frontend Web Application de VitaLink.
+Durante el Sprint 2 se realizó el despliegue de la primera versión funcional de la Frontend Web Application de VitaLink, permitiendo acceder públicamente a las interfaces desarrolladas durante el Sprint.
 
-##### Nueva versión de Landing Page
+##### Landing Page
 
-La Landing Page será actualizada considerando los ajustes o mejoras identificados después del Sprint 1.
+La Landing Page continúa disponible públicamente mediante GitHub Pages.
 
-**Repositorio:** [Landing repository](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page)
+**Repositorio:**
 
-**URL desplegada:** [Vitalink LandingPage](https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/)
+https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page
+
+**URL desplegada:**
+
+https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/
 
 ![Vitalink_landing.png](../../assets/Vitalink_landing.png)
 
-##### Primera versión de Frontend Web Application
+##### Frontend Web Application
 
-La Frontend Web Application desarrollada con Angular será publicada para permitir el acceso público a las principales interfaces implementadas durante el Sprint.
+La primera versión de la Frontend Web Application fue desarrollada utilizando Angular y desplegada mediante **Vercel**.
 
-El proceso de despliegue comprenderá:
+El proceso general de despliegue comprendió:
 
-1. Integrar las funcionalidades completadas en la rama correspondiente.
-2. Generar el build de producción de la aplicación Angular.
-3. Configurar el repositorio para el despliegue.
-4. Publicar la aplicación mediante GitHub Pages.
-5. Verificar el funcionamiento de las interfaces desde la URL pública.
+1. Desarrollo de funcionalidades mediante ramas independientes.
+2. Integración y revisión de cambios mediante Pull Requests.
+3. Integración de las funcionalidades desarrolladas.
+4. Generación de la versión de producción de la aplicación Angular.
+5. Despliegue de la aplicación mediante Vercel.
+6. Validación del funcionamiento desde la URL pública.
 
-**Repositorio de Frontend Web Application:** [Frontend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend)
+**Repositorio de Frontend Web Application:**
 
-**URL desplegada:** [Vitalink](https://vitalink-frontend.vercel.app/)
+https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend
+
+**URL desplegada:**
+
+https://vitalink-frontend.vercel.app/
 
 ##### Evidencias
 
-**Repositorio de Frontend Web Application:**
-![Vitalink_front_repo.png](../../assets/Vitalink_front_repo.png)
+<img width="1899" height="946" alt="image" src="https://github.com/user-attachments/assets/0dd1f0f8-1089-451e-b0e2-89b4f850bece" />
 
-**Aplicación desplegada:**
-![Vitalink_deploy.png](../../assets/Vitalink_deploy.png)
+<img width="1918" height="950" alt="image" src="https://github.com/user-attachments/assets/273fa275-0886-4c18-8b21-d8b59ac7b37f" />
+
+<img width="1904" height="954" alt="image" src="https://github.com/user-attachments/assets/4be471fa-1cb7-47c8-9790-e76e778a1f1d" />
+
+<img width="1904" height="953" alt="image" src="https://github.com/user-attachments/assets/e4d4d872-ad87-4ab1-a74e-a0103d1c1a77" />
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
@@ -494,24 +548,18 @@ Las funcionalidades serán implementadas mediante ramas feature y posteriormente
 
 Las evidencias de colaboración correspondientes al Sprint 2 incluirán:
 
-**Evidencia 1: Contributors**
 
-![Vitalink_front_contributors.png](../../assets/Vitalink_front_contributors.png)
+<img width="1902" height="949" alt="image" src="https://github.com/user-attachments/assets/e7c3b17d-98da-4611-8561-a8adab48cd35" />
 
-**Evidencia 2: Commits**
 
-![Vitalink_front_commits.png](../../assets/Vitalink_front_commits.png)
 
-**Evidencia 3: Branches**
 
-![Vitalink_front_branches.png](../../assets/Vitalink_front_branches.png)
+<img width="1905" height="935" alt="image" src="https://github.com/user-attachments/assets/511e7a64-2f78-4023-a4ed-0226005de388" />
 
-**Evidencia 4: Pull Requests**
 
-![Vitalink_front_PR.png](../../assets/Vitalink_front_PR.png)
 
-**Evidencia 5: Network Graph**
+<img width="1903" height="949" alt="image" src="https://github.com/user-attachments/assets/c26d8954-7f50-4a5c-949d-d073a4707b2c" />
 
-![Vitalink_front_network.png](../../assets/Vitalink_front_network.png)
+
 
 Estas evidencias permitirán identificar los aportes realizados por cada integrante y mantener trazabilidad sobre el trabajo colaborativo desarrollado durante el Sprint 2.
