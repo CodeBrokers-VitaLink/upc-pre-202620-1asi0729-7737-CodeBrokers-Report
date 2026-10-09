@@ -160,32 +160,32 @@ Imagenes del landing page:
 -Incios:
 
 
-<img width="900" alt="Médicos – Inicio" src="https://github.com/user-attachments/assets/c0d241e4-a4cb-4595-9357-402a96336b66" />
+<img width="1905" height="708" alt="inicio" src="https://github.com/user-attachments/assets/140f7b6f-18f1-4c2c-8ca6-ecc3e9d2a35b" />
 
 
 Descripción:
 
 
-<img width="900" alt="Médicos – Descripción" src="https://github.com/user-attachments/assets/ac37c09c-94e2-40e1-9f9e-8f8952c38e12" />
+<img width="1872" height="870" alt="descripcion" src="https://github.com/user-attachments/assets/91a4db44-a36b-4cfa-bd5d-666bc6b2b0f6" />
 
 
 
 Pagos:
 
 
-<img width="900"  alt="Médicos – Descripción" src="https://github.com/user-attachments/assets/ea46cfea-5bed-4d89-9744-2c36ae0e6aa8" />
+<img width="1872" height="870" alt="pagos" src="https://github.com/user-attachments/assets/d44c5f89-596f-4c13-bdb6-2b17adbf736d" />
 
 
 - Seguridad:
 
 
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/8d6f8dbd-dc0e-4a51-baaf-72b248f644b3" />
+<img width="1904" height="870" alt="seguridada" src="https://github.com/user-attachments/assets/77aef024-38eb-44ed-986b-b160227a6a05" />
 
 
 - Soporte:
 
 
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/6b69010d-b255-4d6c-9f47-eb413af8d2db" />
+<img width="1905" height="756" alt="soporte" src="https://github.com/user-attachments/assets/42286246-ee52-4fec-a599-964385cc5687" />
 
 
 **Familiares**
@@ -193,31 +193,31 @@ Pagos:
 - Incio:
 
   
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/4ea3b1e8-ebe7-4881-a3d5-1bf56ce99618" />
+<img width="1900" height="798" alt="finciio" src="https://github.com/user-attachments/assets/c8287860-fded-46eb-9b9f-3b31fbc65822" />
 
 
 - Descripción:
 
   
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/ab0f85bc-daef-49ef-8eec-5dd8fe2c7070" />
+<img width="1907" height="605" alt="fdescripicion" src="https://github.com/user-attachments/assets/1c75c42b-7f0f-4349-be9e-3b57a89cdc86" />
 
 
 - Objetivos:
 
   
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/25d63c22-78e4-4871-bdce-049597b8d926" />
+<img width="1899" height="779" alt="fobjetivos" src="https://github.com/user-attachments/assets/0e7907e6-35dd-4df9-b78e-498d168fe5c8" />
 
 
 - Planes:
 
   
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/d638748d-3218-4181-b816-ed2fbb325cc0" />
+<img width="1905" height="942" alt="fplanes" src="https://github.com/user-attachments/assets/5912554a-4e25-4667-b305-5b14c588f99e" />
 
 
 - Soporte:
 
   
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/9c4fdabf-0a1f-4904-be7d-788d2092f61c" />
+<img width="1902" height="949" alt="fsoporte" src="https://github.com/user-attachments/assets/835c3915-06b7-4d85-ba7e-8e00b689f0b1" />
 
 
 
@@ -236,7 +236,9 @@ Durante el Sprint 1 se realizó el despliegue de la primera versión funcional d
 Para el despliegue se utilizará **GitHub Pages**, aprovechando su integración directa con el repositorio de la Landing Page y su capacidad para publicar sitios web estáticos desarrollados con HTML, CSS y JavaScript.
 
 
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/8fc24562-7d9f-4a72-b364-92015514e330" />
+
+<img width="1898" height="949" alt="softwaredeploy" src="https://github.com/user-attachments/assets/66048936-99e4-4fb0-b7d1-c7da2e613892" />
+
 
 
 #### Proceso de despliegue
@@ -292,7 +294,7 @@ Las contribuciones del equipo no se limitan únicamente a los commits visibles e
 Report:
 
 
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/75cb0925-8cb5-488c-a456-901cf1dc6c8d" />
+![Uploading inicio.png…]()
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/f94d5864-7c0a-4518-8b8d-7615390a0d57" />
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/a33fec15-a3ff-4f29-b64d-6818616b9c82" />
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/341dabe8-b61b-4c9d-9592-6e00fb219b7e" />
@@ -522,11 +524,16 @@ https://vitalink-frontend.vercel.app/
 
 ##### Evidencias
 
-<img width="2540" height="1302" alt="urldesplega" src="https://github.com/user-attachments/assets/50379e15-56a5-462b-8bd0-cac40d64b0ee" />
 
 
 
 <img width="1899" height="946" alt="evidenciareport" src="https://github.com/user-attachments/assets/a7d699a0-e6ca-41b1-8c9c-4f6380a0cfc6" />
+
+
+
+
+<img width="2540" height="1302" alt="urldesplega" src="https://github.com/user-attachments/assets/50379e15-56a5-462b-8bd0-cac40d64b0ee" />
+
 
 
 
