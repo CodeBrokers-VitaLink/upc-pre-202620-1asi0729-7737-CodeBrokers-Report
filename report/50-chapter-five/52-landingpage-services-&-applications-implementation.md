@@ -1,4 +1,3 @@
-<img width="1905" height="708" alt="Médicos – Inicio" src="https://github.com/user-attachments/assets/d3afc870-9dca-4be6-881a-826182d462ab" />
 ## 5.2. Landing Page, Services & Applications Implementation
 
 ### 5.2.1. Sprint 1
