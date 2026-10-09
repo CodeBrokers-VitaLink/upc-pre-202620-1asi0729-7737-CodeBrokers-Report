@@ -392,17 +392,16 @@ https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers
 
 **Historial de commits:**
 
-https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend/commits/main
+| Repository | Branch | Commit Id | Commit Message  | Committed on |
+|---|---|---|---|---|
+| vitalink-frontend | main | 7301ab42b3b14be1a0910009cf5eb0fad4cc04e1 | first commit | 07/10/2026 |
+| vitalink-frontend | feature/base-shared | b18ed75a4618864607c8279aee40b67c966e6ae3 | chore(base): actualizar configuracion y traducciones.  | 07/10/2026 |
+| vitalink-frontend | feature/auth-user-management | d2fc8b01a79bd6ecade92cb8d14b3546d95bce82| feat: implement user authentication, role guards and profile management| 08/10/2026 |
+| vitalink-frontend | feature/patient-care-services | 1f747baf1b61b1c36c6b77444989ead57d87bd12 | feat: add patient care models, data mappers and care services| 08/10/2026 |
+| vitalink-frontend | feature/care-workspace | 520e605cb790ddd86203d722a56507864f92d248 | feat: implement care workspace and patient care state management| 08/10/2026 |
+| vitalink-frontend | feature/patient-alert-components | ec7a0249330bf3b721cb18dbf659cbf44fa279d7 | feature(upload)/patient-alert-components| 08/10/2026 |
+| vitalink-frontend | main| a51b67c1d15cbf34c73d83d85e6c1c73675c4b20 | Merge pull request #5 from CodeBrokers-VitaLink/develop| 08/10/2026 |
 
-| Repository | Commit Id | Commit Message | Committed on |
-|---|---|---|---|
-| VitaLink Frontend | a0b8588 | feat: implement user authentication, role guards and profile management | 08/10/2026 |
-| VitaLink Frontend | 1f747ba | feat: add patient care models, data mappers and care services | 08/10/2026 |
-| VitaLink Frontend | c07e641 | Merge pull request #3 | 08/10/2026 |
-| VitaLink Frontend | 520e605 | feat: implement care workspace and patient care state management | 08/10/2026 |
-| VitaLink Frontend | c057461 | Merge pull request #4 from CodeBrokers-VitaLink/feature/care-workspace | 08/10/2026 |
-| VitaLink Frontend | ec7a024 | feature(upload)/patient-alert-components | 08/10/2026 |
-| VitaLink Frontend | a51b67c | Merge pull request #5 from CodeBrokers-VitaLink/develop | 08/10/2026 |
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
@@ -430,6 +429,28 @@ La interfaz para familiares permite seleccionar al adulto mayor asociado, visual
 
 
 <img width="1904" height="953" alt="image" src="https://github.com/user-attachments/assets/da1a2a67-4c99-44b3-8de0-2570c684c7a9" />
+
+**Pagina de login**
+![Vitalink_login.png](../../assets/Vitalink_login.png)
+
+**Dashboard de usuario y familiar/adulto mayor**
+![Vitalink_user_dashboard.png](../../assets/Vitalink_user_dashboard.png)
+
+**Vista de familia/adulto mayor con alertas pendientes y nivel de urgencia diferenciado*
+![Vitalink_user_family.png](../../assets/Vitalink_user_family.png)
+
+**Vista del perfil del usuario familiar/adulto mayor**
+![Vitalink_user_profile.png](../../assets/Vitalink_user_profile.png)
+
+**Dashboard de usuario profesional de salud**
+![Vitalink_doctor_dashboard.png](../../assets/Vitalink_doctor_dashboard.png)
+
+**Vista de profesional de salud con alertas pendientes y nivel de urgencia diferenciado**
+![Vitalink_doctor_pacients.png](../../assets/Vitalink_doctor_pacients.png)
+
+**Vista del perfil del usuario profesional de salud** 
+![Vitalink_doctor_profile.png](../../assets/Vitalink_doctor_profile.png)
+
 
 
 
@@ -476,6 +497,7 @@ https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers
 
 https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/
 
+![Vitalink_landing.png](../../assets/Vitalink_landing.png)
 
 ##### Frontend Web Application
 
@@ -536,10 +558,7 @@ Las evidencias de colaboración correspondientes al Sprint 2 incluirán:
 
 
 
-
-
 <img width="1903" height="949" alt="image" src="https://github.com/user-attachments/assets/c26d8954-7f50-4a5c-949d-d073a4707b2c" />
-
 
 
 
