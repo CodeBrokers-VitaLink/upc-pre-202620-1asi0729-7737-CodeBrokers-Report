@@ -1,0 +1,45 @@
+@startuml
+' VitaLink - C4 Nivel 3: Componentes del contenedor VitaLink WebApp - contexto IAM
+' Referencia en el informe: 4.6.4 Software Architecture Component Diagrams
+' Estado reflejado: componentes realmente implementados en el front-end Angular.
+
+!include <C4/C4_Component>
+skinparam defaultFontSize 18
+
+AddElementTag("implementado", $bgColor="#1168BD", $fontColor="#FFFFFF", $borderColor="#0B4F8A", $legendText="Implementado y desplegado")
+AddRelTag("planificado", $textColor="#7A7A7A", $lineColor="#7A7A7A", $lineStyle=Dashed)
+
+title Componentes (C4 Nivel 3) - Contexto IAM del contenedor VitaLink WebApp
+
+Container_Boundary(spa, "VitaLink WebApp (Angular 22)") {
+
+    Boundary(iam, "Contexto delimitado: IAM") {
+        Component(login, "Login", "Vista", "Inicia la sesión.", $tags="implementado")
+        Component(profile, "Profile", "Vista", "Perfil y cierre de sesión.", $tags="implementado")
+        Component(guard, "roleGuard", "Guard", "Restringe la ruta al rol.", $tags="implementado")
+        Component(authstore, "AuthenticationStore", "Store", "Mantiene la sesión y el rol.", $tags="implementado")
+        Component(userstore, "UserStore", "Store", "Carga el perfil autenticado.", $tags="implementado")
+        Component(authservice, "AuthenticationService", "HttpClient", "Valida credenciales.", $tags="implementado")
+        Component(userservice, "UserService", "HttpClient", "Obtiene el perfil por id.", $tags="implementado")
+    }
+
+    Boundary(shared, "Contexto compartido") {
+        Component(i18n, "LocalizedDateService", "Servicio", "Fechas según el idioma.", $tags="implementado")
+        Component(lang, "LanguageSwitcher", "Componente", "Alterna el idioma.", $tags="implementado")
+    }
+}
+
+Container_Ext(fakeapi, "API simulada", "JSON Server", "Datos de demostración en Render.")
+ContainerDb_Ext(session, "Almacenamiento de sesión", "sessionStorage", "Usuario y rol de la pestaña.")
+
+Rel(login, authstore, "Invoca signIn")
+Rel(profile, userstore, "Solicita el perfil")
+Rel(guard, authstore, "Lee el rol de la sesión")
+Rel(authstore, authservice, "Delega la validación")
+Rel(userstore, userservice, "Solicita el usuario")
+Rel(authservice, fakeapi, "Consulta la colección users", "JSON/HTTPS")
+Rel(authservice, session, "Guarda y restaura la sesión", "Web Storage API")
+Rel(userservice, fakeapi, "Consulta el usuario por id", "JSON/HTTPS")
+
+SHOW_LEGEND()
+@enduml

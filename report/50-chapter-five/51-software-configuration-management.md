@@ -87,7 +87,7 @@ Enlaces:
 
 #### Software Architecture and Database Design
 
-Para la documentación de la arquitectura del software se utilizará Structurizr, permitiendo elaborar los diagramas correspondientes al C4 Model y representar la estructura de los diferentes componentes que conforman VitaLink.
+Para la documentación de la arquitectura del software se utilizará Structurizr como referencia de modelado del C4 Model. Los diagramas de Contexto, Contenedores y Componentes del capítulo 4 se elaboran bajo la modalidad Diagram-as-Code con PlantUML y la biblioteca estándar C4-PlantUML, de modo que cada figura conserva su fuente versionada en el repositorio y puede regenerarse y auditarse.
 
 Para la elaboración de diagramas UML y otros modelos visuales se utilizará Lucidchart, permitiendo representar componentes, relaciones y procesos del sistema.
 

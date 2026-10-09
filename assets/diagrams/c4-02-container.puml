@@ -1,0 +1,48 @@
+@startuml
+' VitaLink - C4 Nivel 2: Diagrama de Contenedores
+' Referencia en el informe: 4.6.3 Software Architecture Container Diagrams
+' Estado reflejado: contenedores desplegados hoy (SPA Angular + API simulada) y contenedores
+' previstos para TB2 (Backend API Spring Boot + base de datos), marcados como planificados.
+
+!include <C4/C4_Container>
+skinparam defaultFontSize 18
+
+AddElementTag("implementado", $bgColor="#1168BD", $fontColor="#FFFFFF", $borderColor="#0B4F8A", $legendText="Implementado y desplegado")
+AddElementTag("planificado",  $bgColor="#B7B7B7", $fontColor="#1A1A1A", $borderColor="#7A7A7A", $borderStyle=Dashed, $legendText="Planificado para TB2")
+AddRelTag("planificado", $textColor="#7A7A7A", $lineColor="#7A7A7A", $lineStyle=Dashed)
+
+title Diagrama de Contenedores (C4 Nivel 2) - VitaLink Platform
+
+Person(family, "Cuidador Familiar", "Consulta el estado del adulto mayor.", $tags="implementado")
+Person(doctor, "Personal Médico", "Supervisa pacientes y gestiona alertas.", $tags="implementado")
+
+System_Boundary(vitalink, "VitaLink Platform") {
+
+    Container(spa, "VitaLink WebApp", "Angular 22, TypeScript, Angular Material", "SPA: acceso, perfil, tablero, alertas y red familiar.", $tags="implementado")
+
+    Container(fakeapi, "API simulada", "JSON Server sobre Node.js", "Datos de demostración en Render.", $tags="implementado")
+
+    ContainerDb(session, "Almacenamiento de sesión", "sessionStorage", "Usuario y rol de la pestaña.", $tags="implementado")
+
+    Container_Boundary(tb2, "Planificado para TB2") {
+        Container(api, "Backend API", "Java 21, Spring Boot", "Reemplazará la API simulada.", $tags="planificado")
+        ContainerDb(db, "Base de datos", "MySQL", "Persistencia relacional.", $tags="planificado")
+    }
+}
+
+System_Ext(iot, "Simulador IoT", "Telemetría del domicilio.", $tags="planificado")
+System_Ext(sms, "Pasarela SMS", "Alertas a la red de apoyo.", $tags="planificado")
+System_Ext(clinic, "Agenda Clínica Externa", "Reserva de citas médicas.", $tags="planificado")
+
+Rel(family, spa, "Usa la aplicación web", "HTTPS")
+Rel(doctor, spa, "Usa la aplicación web", "HTTPS")
+Rel(spa, fakeapi, "Consulta y actualiza el dominio", "JSON/HTTPS")
+Rel(spa, session, "Guarda y restaura la sesión", "Web Storage API")
+Rel(spa, api, "Consumirá los servicios REST", "JSON/HTTPS", $tags="planificado")
+Rel(api, db, "Lee y persiste el dominio", "JDBC / JPA", $tags="planificado")
+Rel(iot, api, "Envía telemetría", "JSON/HTTPS", $tags="planificado")
+Rel(api, sms, "Despacha alertas", "REST/HTTPS", $tags="planificado")
+Rel(api, clinic, "Pre-agenda consultas", "REST/HTTPS", $tags="planificado")
+
+SHOW_LEGEND()
+@enduml
