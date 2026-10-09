@@ -526,12 +526,18 @@ https://vitalink-frontend.vercel.app/
 
 
 
+
+<img width="2540" height="1302" alt="urldesplega" src="https://github.com/user-attachments/assets/50379e15-56a5-462b-8bd0-cac40d64b0ee" />
+
+
+
+
+
 <img width="1899" height="946" alt="evidenciareport" src="https://github.com/user-attachments/assets/a7d699a0-e6ca-41b1-8c9c-4f6380a0cfc6" />
 
 
 
 
-<img width="2540" height="1302" alt="urldesplega" src="https://github.com/user-attachments/assets/50379e15-56a5-462b-8bd0-cac40d64b0ee" />
 
 
 
