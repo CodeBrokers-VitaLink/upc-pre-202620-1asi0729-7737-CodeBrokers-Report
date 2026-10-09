@@ -429,9 +429,6 @@ La interfaz médica permite visualizar el resumen de alertas y pacientes, difere
 La interfaz para familiares permite seleccionar al adulto mayor asociado, visualizar su estado general, consultar mediciones registradas, identificar alertas abiertas y acceder a información relacionada con su cuidado.
 
 
-
-
-<img width="1915" height="903" alt="trello" src="https://github.com/user-attachments/assets/afaaac9b-b0cb-47f0-9270-76804dea72a9" />
 <img width="2553" height="1307" alt="visatadefamilia" src="https://github.com/user-attachments/assets/a8297af7-e879-470d-a1f0-d7372d604dfa" />
 
 **Pagina de login**
