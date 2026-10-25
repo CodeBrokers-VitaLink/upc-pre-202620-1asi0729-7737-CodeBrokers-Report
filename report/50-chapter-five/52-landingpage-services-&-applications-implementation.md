@@ -71,7 +71,7 @@ Las 15 tareas del Sprint 1 (T01 a T15) se encuentran en estado **Done**, complet
 
 
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth,height=0.8\textheight,keepaspectratio]{assets/SprintBoard-Trello-Done.png}
 \caption{Sprint Board 1 en Trello con las tareas T01 a T15 en estado Done}

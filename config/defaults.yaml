@@ -61,10 +61,12 @@ variables:
   mainfont: "Arial"
   colorlinks: true
   header-includes:
-  - \usepackage{multirow}
-  - \usepackage{longtable}
-  - \usepackage{array}
-  - \usepackage{graphicx}
+    - \usepackage{multirow}
+    - \usepackage{longtable}
+    - \usepackage{array}
+    - \usepackage{graphicx}
+    - \usepackage{float}
+    - \usepackage{pdflscape}  
 
 # Salida del archivo respetando la nomenclatura del curso
 output-file: build/upc-pre-202620-1asi0729-7737-CodeBrokers-report-av1.pdf
