@@ -345,7 +345,7 @@ Las User Stories seleccionadas permitirán desarrollar vistas iniciales para pro
 
 
  
-\includegraphics[width=0.7\linewidth]{assets/trello.png}
+\includegraphics[width=\linewidth]{assets/trello.png}
 
 
 
@@ -480,7 +480,7 @@ https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers
 
 https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/
 
-![Vitalink_landing.png](../../assets/Vitalink_landing.png)
+![Vitalink_landing.png](assets/Vitalink_landing.png)
 
 ##### Frontend Web Application
 
