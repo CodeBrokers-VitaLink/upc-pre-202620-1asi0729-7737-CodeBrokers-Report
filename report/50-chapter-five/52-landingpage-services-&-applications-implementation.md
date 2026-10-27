@@ -65,7 +65,13 @@ Las 15 tareas del Sprint 1 (T01 a T15) se encuentran en estado **Done**, complet
 **Sprint Board:** Trello  
 **URL pública:** <https://trello.com/b/uWEShiCR/sprint-codebrokers>
 
-\begin{figure}[H]
+
+
+\includegraphics[width=0.7\linewidth]{assets/sprint1.png}
+
+
+
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth,height=0.8\textheight,keepaspectratio]{assets/SpringTrello.png}
 \caption{Sprint Board 1 en Trello con las tareas T01 a T15 en estado Done}
@@ -153,68 +159,50 @@ Las principales funcionalidades verificadas fueron:
 
 Imagenes del landing page:
 
-**Medicos**
+**Médicos**
 
+- Inicio:
 
--Incios:
+\includegraphics[width=0.7\linewidth]{assets/inicio.png}
 
+- Descripción:
 
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/de26183e-d214-43eb-855c-34bb1142a822" />
+\includegraphics[width=0.7\linewidth]{assets/descripcion.png}
 
+- Pagos:
 
-Descripción:
-
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/6103073c-4e08-4406-90af-3be5dbcab3c8" />
-
-
-Pagos:
-
-
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/b01dfa62-8047-4ee8-b642-b126f6cc40e0" />
-
+\includegraphics[width=0.7\linewidth]{assets/pagos.png}
 
 - Seguridad:
 
-
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/8d6f8dbd-dc0e-4a51-baaf-72b248f644b3" />
-
+\includegraphics[width=0.7\linewidth]{assets/seguridada.png}
 
 - Soporte:
 
-
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/6b69010d-b255-4d6c-9f47-eb413af8d2db" />
+\includegraphics[width=0.7\linewidth]{assets/soporte.png}
 
 
 **Familiares**
 
-- Incio:
+- Inicio:
 
-  
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/4ea3b1e8-ebe7-4881-a3d5-1bf56ce99618" />
-
+\includegraphics[width=0.7\linewidth]{assets/finciio.png}
 
 - Descripción:
 
-  
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/ab0f85bc-daef-49ef-8eec-5dd8fe2c7070" />
-
+\includegraphics[width=0.7\linewidth]{assets/fdescripicion.png}
 
 - Objetivos:
 
-  
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/25d63c22-78e4-4871-bdce-049597b8d926" />
-
+\includegraphics[width=0.7\linewidth]{assets/fobjetivos.png}
 
 - Planes:
 
-  
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/d638748d-3218-4181-b816-ed2fbb325cc0" />
-
+\includegraphics[width=0.7\linewidth]{assets/fplanes.png}
 
 - Soporte:
 
-  
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/9c4fdabf-0a1f-4904-be7d-788d2092f61c" />
+\includegraphics[width=0.7\linewidth]{assets/fsoporte.png}
 
 
 
@@ -233,7 +221,8 @@ Durante el Sprint 1 se realizó el despliegue de la primera versión funcional d
 Para el despliegue se utilizará **GitHub Pages**, aprovechando su integración directa con el repositorio de la Landing Page y su capacidad para publicar sitios web estáticos desarrollados con HTML, CSS y JavaScript.
 
 
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/8fc24562-7d9f-4a72-b364-92015514e330" />
+
+\includegraphics[width=0.7\linewidth]{assets/softwaredeploy.png}
 
 
 #### Proceso de despliegue
@@ -289,23 +278,18 @@ Las contribuciones del equipo no se limitan únicamente a los commits visibles e
 Report:
 
 
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/75cb0925-8cb5-488c-a456-901cf1dc6c8d" />
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/f94d5864-7c0a-4518-8b8d-7615390a0d57" />
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/a33fec15-a3ff-4f29-b64d-6818616b9c82" />
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/341dabe8-b61b-4c9d-9592-6e00fb219b7e" />
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/1388511b-9263-4cbf-8b1b-c824ab8cec1c" />
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/767ba4fc-aee1-492a-af96-2c59a7461318" />
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/bb16ed5d-b23b-40b9-9495-169ee67222b9" />
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/c9ee272f-96e9-4e85-82d4-9ddb3439d4f6" />
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/1c31c7f1-b182-44f6-9bb0-a36f0c1cba17" />
+
+<img width="1902" height="944" alt="commitrepor1" src="https://github.com/user-attachments/assets/d8598c6e-ed64-4820-969b-50886e083cee" />
+<img width="1897" height="941" alt="commitrepor3" src="https://github.com/user-attachments/assets/808a3a26-b034-455b-86cf-4a86e6345715" />
+
 
 
 Landing page:
 
+\includegraphics[width=0.7\linewidth]{assets/commitlanding1.png}
 
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/a7ab456d-0942-413f-8609-8f3e66d9f866" />
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/fed9acec-0dc0-43c3-b1d1-974aa4301178" />
 
+\includegraphics[width=0.7\linewidth]{assets/commitrepor12.png}
 ### 5.2.2. Sprint 2
 
 Durante el Sprint 2, el equipo se enfocó en desarrollar y desplegar la primera versión de la **Frontend Web Application de VitaLink utilizando Angular**.
@@ -418,8 +402,7 @@ La interfaz médica permite visualizar el resumen de alertas y pacientes, difere
 
 
 
-<img width="1904" height="954" alt="image" src="https://github.com/user-attachments/assets/f2d1e054-708c-470d-9327-aeac61fce36d" />
-
+\includegraphics[width=0.7\linewidth]{assets/vistaprofe.png}
 
 
 
@@ -428,31 +411,33 @@ La interfaz médica permite visualizar el resumen de alertas y pacientes, difere
 La interfaz para familiares permite seleccionar al adulto mayor asociado, visualizar su estado general, consultar mediciones registradas, identificar alertas abiertas y acceder a información relacionada con su cuidado.
 
 
+\includegraphics[width=0.7\linewidth]{assets/visatadefamilia.png}
 
+**Página de login**
 
-<img width="1904" height="953" alt="image" src="https://github.com/user-attachments/assets/da1a2a67-4c99-44b3-8de0-2570c684c7a9" />
-
-**Pagina de login**
-![Vitalink_login.png](../../assets/Vitalink_login.png)
+\includegraphics[width=0.7\linewidth]{assets/login.png}
 
 **Dashboard de usuario y familiar/adulto mayor**
-![Vitalink_user_dashboard.png](../../assets/Vitalink_user_dashboard.png)
 
-**Vista de familia/adulto mayor con alertas pendientes y nivel de urgencia diferenciado*
-![Vitalink_user_family.png](../../assets/Vitalink_user_family.png)
+\includegraphics[width=0.7\linewidth]{assets/dashboard.png}
+
+**Vista de familia/adulto mayor con alertas pendientes y nivel de urgencia diferenciado**
+
+\includegraphics[width=0.7\linewidth]{assets/visatadefamilia.png}
 
 **Vista del perfil del usuario familiar/adulto mayor**
-![Vitalink_user_profile.png](../../assets/Vitalink_user_profile.png)
+
+\includegraphics[width=0.7\linewidth]{assets/vistadeperfil.png}
 
 **Dashboard de usuario profesional de salud**
-![Vitalink_doctor_dashboard.png](../../assets/Vitalink_doctor_dashboard.png)
+
+\includegraphics[width=0.7\linewidth]{assets/dashboardusuario.png}
 
 **Vista de profesional de salud con alertas pendientes y nivel de urgencia diferenciado**
-![Vitalink_doctor_pacients.png](../../assets/Vitalink_doctor_pacients.png)
 
-**Vista del perfil del usuario profesional de salud** 
-![Vitalink_doctor_profile.png](../../assets/Vitalink_doctor_profile.png)
+\includegraphics[width=0.7\linewidth]{assets/vistaprofe.png}
 
+**Vista del perfil del usuario profesional de salud**
 
 
 
@@ -463,9 +448,8 @@ La interfaz para familiares permite seleccionar al adulto mayor asociado, visual
 La aplicación permite consultar información de las alertas, visualizar su estado y realizar acciones relacionadas con su atención según el rol correspondiente.
 
 
+\includegraphics[width=0.7\linewidth]{assets/gestionalertas.png}
 
-
-<img width="1901" height="947" alt="image" src="https://github.com/user-attachments/assets/d580b5f0-0b00-4202-93b1-b5125e6ab6f8" />
 
 
 
@@ -499,7 +483,7 @@ https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers
 
 https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/
 
-![Vitalink_landing.png](../../assets/Vitalink_landing.png)
+![Vitalink_landing.png](assets/Vitalink_landing.png)
 
 ##### Frontend Web Application
 
@@ -524,13 +508,17 @@ https://vitalink-frontend.vercel.app/
 
 ##### Evidencias
 
-<img width="1899" height="946" alt="image" src="https://github.com/user-attachments/assets/0dd1f0f8-1089-451e-b0e2-89b4f850bece" />
 
-<img width="1918" height="950" alt="image" src="https://github.com/user-attachments/assets/273fa275-0886-4c18-8b21-d8b59ac7b37f" />
+\includegraphics[width=0.7\linewidth]{assets/evidenciareport.png}
 
-<img width="1904" height="954" alt="image" src="https://github.com/user-attachments/assets/4be471fa-1cb7-47c8-9790-e76e778a1f1d" />
 
-<img width="1904" height="953" alt="image" src="https://github.com/user-attachments/assets/e4d4d872-ad87-4ab1-a74e-a0103d1c1a77" />
+
+\includegraphics[width=0.7\linewidth]{assets/urldesplega.png}
+
+
+
+\includegraphics[width=0.7\linewidth]{assets/evidenciainciosesion.png}
+
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
@@ -551,17 +539,16 @@ Las funcionalidades serán implementadas mediante ramas feature y posteriormente
 Las evidencias de colaboración correspondientes al Sprint 2 incluirán:
 
 
-<img width="1902" height="949" alt="image" src="https://github.com/user-attachments/assets/e7c3b17d-98da-4611-8561-a8adab48cd35" />
+
+\includegraphics[width=0.7\linewidth]{assets/evidenciareport.png}
 
 
 
-
-<img width="1905" height="935" alt="image" src="https://github.com/user-attachments/assets/511e7a64-2f78-4023-a4ed-0226005de388" />
-
+\includegraphics[width=0.7\linewidth]{assets/urldesplega.png}
 
 
-<img width="1903" height="949" alt="image" src="https://github.com/user-attachments/assets/c26d8954-7f50-4a5c-949d-d073a4707b2c" />
 
+\includegraphics[width=0.7\linewidth]{assets/evidenciainciosesion.png}
 
 
 Estas evidencias permitirán identificar los aportes realizados por cada integrante y mantener trazabilidad sobre el trabajo colaborativo desarrollado durante el Sprint 2.
