@@ -1,0 +1,34 @@
+@startuml
+' VitaLink - C4 Nivel 1: Diagrama de Contexto
+' Referencia en el informe: 4.6.2 Software Architecture Context Diagram
+' Estado reflejado: front-end Angular desplegado (contextos care e iam) sobre una API simulada.
+' Los elementos marcados como "Planificado" pertenecen a la evolución TB2 y no están desplegados.
+
+!include <C4/C4_Context>
+skinparam defaultFontSize 18
+
+AddElementTag("implementado", $bgColor="#1168BD", $fontColor="#FFFFFF", $borderColor="#0B4F8A", $legendText="Implementado y desplegado")
+AddElementTag("planificado",  $bgColor="#B7B7B7", $fontColor="#1A1A1A", $borderColor="#7A7A7A", $borderStyle=Dashed, $legendText="Planificado para TB2")
+AddRelTag("planificado", $textColor="#7A7A7A", $lineColor="#7A7A7A", $lineStyle=Dashed)
+
+title Diagrama de Contexto (C4 Nivel 1) - VitaLink Platform
+
+Person(family, "Cuidador Familiar", "Monitorea y atiende las alertas del adulto mayor a su cargo.", $tags="implementado")
+Person(doctor, "Personal Médico", "Supervisa los pacientes que tiene asignados y gestiona sus alertas.", $tags="implementado")
+Person(patient, "Adulto Mayor", "Paciente monitoreado en domicilio. Acceso previsto para una etapa posterior.", $tags="planificado")
+
+System(vitalink, "VitaLink Platform", "Telemonitoreo geriátrico: pacientes, signos vitales, alertas y red de cuidado.", $tags="implementado")
+
+System_Ext(sms, "Pasarela SMS", "Alertas críticas a la red de apoyo familiar.", $tags="planificado")
+System_Ext(clinic, "Agenda Clínica Externa", "Disponibilidad y reserva de citas médicas.", $tags="planificado")
+System_Ext(iot, "Simulador IoT", "Telemetría fisiológica y detección de caídas en el domicilio.", $tags="planificado")
+
+Rel(family, vitalink, "Consulta el tablero, la red familiar y el detalle de alertas", "HTTPS")
+Rel(doctor, vitalink, "Revisa pacientes asignados y registra intervenciones", "HTTPS")
+Rel(vitalink, sms, "Despacha alertas de emergencia", "REST/HTTPS", $tags="planificado")
+Rel(vitalink, clinic, "Pre-agenda consultas de urgencia", "REST/HTTPS", $tags="planificado")
+Rel(iot, vitalink, "Envía telemetría biométrica", "JSON/HTTPS", $tags="planificado")
+Rel(patient, vitalink, "Emite solicitud de auxilio", "HTTPS", $tags="planificado")
+
+SHOW_LEGEND()
+@enduml
