@@ -6,7 +6,7 @@
 
 El envejecimiento de la población representa un desafío cada vez más importante para los sistemas de salud y las familias. La Organización Mundial de la Salud señala que la población mundial de 60 años o más está aumentando rápidamente y estima que para 2030 una de cada seis personas en el mundo tendrá 60 años o más. Este proceso genera nuevos desafíos para los sistemas de salud y asistencia social, especialmente en la atención y cuidado de las personas mayores (Organización Mundial de la Salud [OMS], 2025).
 
-Frente a esta realidad surge **SeniorCare**,  orientada al monitoreo preventivo y acompañamiento de adultos mayores. La plataforma busca centralizar información relevante, identificar posibles situaciones de riesgo y facilitar la comunicación entre el adulto mayor, sus familiares y proveedores de atención.
+Frente a esta realidad surge **VitaLink**,  orientada al monitoreo preventivo y acompañamiento de adultos mayores. La plataforma busca centralizar información relevante, identificar posibles situaciones de riesgo y facilitar la comunicación entre el adulto mayor, sus familiares y proveedores de atención.
 
 ---
 
