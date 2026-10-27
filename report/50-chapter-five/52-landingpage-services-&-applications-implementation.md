@@ -73,7 +73,7 @@ Las 15 tareas del Sprint 1 (T01 a T15) se encuentran en estado **Done**, complet
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\linewidth,height=0.8\textheight,keepaspectratio]{assets/SprintBoard-Trello-Done.png}
+\includegraphics[width=\linewidth,height=0.8\textheight,keepaspectratio]{assets/SpringTrello.png}
 \caption{Sprint Board 1 en Trello con las tareas T01 a T15 en estado Done}
 \end{figure}
 
@@ -310,8 +310,8 @@ Asimismo, durante este Sprint se continuó trabajando sobre la Landing Page desa
 | **Sprint 1 Retrospective Summary** | El equipo identificó la necesidad de mantener una distribución clara de tareas, realizar integraciones progresivas mediante Pull Requests y verificar continuamente la consistencia entre los diseños UX/UI y la implementación. Para el Sprint 2 se priorizará una mejor coordinación entre diseño, desarrollo e integración. |
 | **Sprint Goal & User Stories** | |
 | **Sprint 2 Goal** | Nuestro enfoque está en desarrollar y publicar la primera versión funcional de la Frontend Web Application de VitaLink. Creemos que esto permitirá que profesionales de salud, familiares y adultos mayores puedan visualizar información relevante sobre el estado de salud y las alertas de una manera simple y comprensible. Esto se confirmará cuando las principales interfaces correspondientes a las User Stories seleccionadas puedan ejecutarse correctamente desde la aplicación web desplegada. |
-| **Sprint 2 Velocity** | 18 Story Points |
-| **Sum of Story Points** | 18 Story Points |
+| **Sprint 2 Velocity** | 19 Story Points |
+| **Sum of Story Points** | 19 Story Points |
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
@@ -345,7 +345,8 @@ Las User Stories seleccionadas permitirán desarrollar vistas iniciales para pro
 
 
  
-\includegraphics[width=\linewidth]{assets/trello.png}
+![Tablero del Sprint Backlog 2](<assets/Sprint Backlog 2.png>){width=100%}
+
 
 
 
@@ -359,9 +360,11 @@ Las User Stories seleccionadas permitirán desarrollar vistas iniciales para pro
 | Sprint 2 | US-20 | Confirmar atención con una acción simple | T16 | Implement alert confirmation | Implementar una acción sencilla que permita confirmar la atención de una alerta y reflejar visualmente su nuevo estado. | 3 | Deiby Vargas | To-do |
 | Sprint 2 | US-25 | Modo de uso extremadamente simple | T17 | Simplify primary interactions | Adaptar las principales interacciones de la aplicación para que puedan completarse utilizando un máximo de dos pasos. | 4 | Pablo Martinez | To-do |
 
-**Sprint Velocity:** 18 Story Points
+**Sprint Velocity:** 19 Story Points
 
-**Sum of Story Points:** 18 Story Points
+**Sum of Story Points:** 19 Story Points
+
+**Total Estimated Hours:** 29 hours
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
