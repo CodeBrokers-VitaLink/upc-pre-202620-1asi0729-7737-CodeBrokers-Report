@@ -536,6 +536,61 @@ Los integrantes y sus usuarios de GitHub son:
 
 Las funcionalidades serán implementadas mediante ramas feature y posteriormente integradas hacia `develop` mediante Pull Requests.
 
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 2, el equipo CodeBrokers desarrolló la primera versión de la Frontend Web Application de VitaLink utilizando Angular, TypeScript, HTML y CSS. La organización del trabajo comprendió las interfaces médicas y familiares, la consistencia visual, la documentación del Sprint y la integración y publicación de la aplicación.
+
+La siguiente relación se basa en las responsabilidades registradas en Aspect Leaders and Collaborators, las tareas del Sprint Backlog y las evidencias de ejecución. Las capturas permiten observar resultados del equipo; la atribución individual debe complementarse con los Pull Requests o commits correspondientes.
+
+##### Fernando Contreras — Frontend familiar
+
+Fernando figuró como responsable principal del frontend dirigido a familiares y adultos mayores. El Sprint Backlog le asignó las tareas T14 y T15, relacionadas con la presentación del estado general del adulto mayor y la visualización comprensible de sus alertas.
+
+Estas tareas abordaron la necesidad de facilitar la consulta de información de salud sin exigir la interpretación de valores técnicos aislados. Las capturas muestran un panel familiar con selección del adulto mayor, indicador de estado general, mediciones y cantidad de alertas abiertas.
+
+La evidencia visual respalda la existencia de estas interfaces. El envío de notificaciones permanece pendiente y no forma parte del resultado acreditado para este Sprint.
+
+##### Pablo Martinez — Consistencia visual e interacción
+
+Pablo figuró como responsable principal de UX/UI y accesibilidad. Se le asignaron las tareas T12 y T17, orientadas a diferenciar visualmente la urgencia de las alertas y simplificar las interacciones principales.
+
+Estas responsabilidades abordaron la necesidad de reconocer prioridades y consultar información mediante una interfaz comprensible. Las capturas muestran etiquetas de prioridad, diferencias de color, tarjetas informativas y controles de navegación.
+
+La evidencia presentada permite observar estos elementos visuales. La comprobación del máximo de dos pasos y del cumplimiento de criterios de accesibilidad requiere registrar los recorridos y las verificaciones correspondientes.
+
+##### Yazid Said — Frontend médico
+
+Yazid figuró como responsable principal de las interfaces para profesionales de salud y como preparador del Sprint Planning 2. El Sprint Backlog le asignó las tareas T11 y T13, correspondientes al panel médico de alertas y al acceso al detalle del paciente.
+
+Estas tareas abordaron la necesidad de organizar la información de pacientes y facilitar la identificación de casos que requieren atención. Las capturas muestran indicadores de alertas pendientes y en revisión, pacientes asignados, mediciones e indicadores de prioridad.
+
+También se observan accesos al historial y detalle del paciente. La demostración del recorrido desde una alerta hasta el paciente asociado debe complementar la evidencia visual.
+
+##### Kirk Quiliano — Documentación del Sprint
+
+Kirk figuró como responsable principal de la documentación del Sprint 2 y como colaborador en el frontend familiar y en la integración.
+
+El informe reúne la planificación, la distribución de responsabilidades, el backlog, el historial de commits y las evidencias de ejecución y despliegue. Estos apartados constituyen el resultado documental del Sprint y permiten describir el alcance de la versión desarrollada.
+
+Para sustentar su aporte individual, corresponde relacionar las actualizaciones del reporte con los commits o Pull Requests de documentación. La responsabilidad asignada identifica su ámbito de participación, pero no permite atribuirle por sí sola cada modificación del informe.
+
+##### Deiby Vargas — Integración y despliegue
+
+Deiby figuró como responsable principal de integración y despliegue. Además, el Sprint Backlog le asignó la tarea T16, relacionada con la confirmación de atención de alertas.
+
+La integración y publicación abordaron la necesidad de reunir los componentes desarrollados en una versión accesible para su demostración. El informe registra la integración mediante Pull Requests y la publicación de la aplicación en Vercel.
+
+Respecto a T16, la evidencia disponible muestra la consulta de estados y accesos al seguimiento de alertas, pero no documenta por completo la confirmación de atención. Aunque el equipo confirmó que los cambios se conservan al recargar la página, este comportamiento debe demostrarse específicamente para dicha acción. La notificación al resto de la red de cuidado permanece pendiente.
+
+##### Resultados y alcance del trabajo colaborativo
+
+El resultado conjunto del Sprint fue una aplicación web publicada con interfaces diferenciadas para profesionales de salud y familiares, consulta de pacientes y mediciones, e identificación visual de alertas y prioridades.
+
+La versión utiliza datos de demostración. El equipo confirmó que los cambios se conservan al recargar la página; sin embargo, el envío de notificaciones y la integración con los servicios definitivos corresponden a entregas posteriores.
+
+Para completar la trazabilidad individual, cada aporte debe vincularse con la tarea correspondiente y con un commit o Pull Request que permita comprobar su ejecución. Las responsabilidades asignadas, las evidencias visuales y los cambios del repositorio deben describir un mismo resultado.
+
+
 Las evidencias de colaboración correspondientes al Sprint 2 incluirán:
 
 
