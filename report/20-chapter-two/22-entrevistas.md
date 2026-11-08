@@ -20,7 +20,7 @@
 
 ---
 
-#### Segmento 2: Familiares
+#### Segmento 2 (familias y adultos mayores): familiares
 
 1. ¿Cómo se mantiene informado actualmente sobre el estado de salud o bienestar de su familiar adulto mayor cuando no está con él/ella?
 2. ¿Qué dificultades enfrenta para estar pendiente de su familiar mientras cumple con su trabajo u otras responsabilidades?
@@ -38,7 +38,7 @@
 
 ---
 
-#### Segmento 2: Adultos Mayores
+#### Segmento 2 (familias y adultos mayores): adultos mayores
 
 1. ¿Cómo controla usted actualmente su salud en el día a día (medicinas, presión, actividad, etc.)?
 2. ¿Qué dificultades tiene para recordar tomar sus medicinas o realizar controles de salud?
