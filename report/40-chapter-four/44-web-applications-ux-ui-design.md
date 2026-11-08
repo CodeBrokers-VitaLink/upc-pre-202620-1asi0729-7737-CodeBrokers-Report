@@ -90,7 +90,9 @@ PerfilFamiliar-Wireframe
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
-### 4.4.3 .Web Applications Mock-ups
+Los wireflows de las vistas médica y familiar se presentan en la sección 4.4.4. Se mantienen allí para evitar duplicar las figuras y distinguirlos de los mock-ups de la sección siguiente.
+
+### 4.4.3. Web Applications Mock-ups
 
 Vista- Medico
 
