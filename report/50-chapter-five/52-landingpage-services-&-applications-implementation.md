@@ -616,3 +616,131 @@ La distribución L/C requiere el acta, las tarjetas asignadas o PRs asociados in
 **Trazabilidad para el refinamiento:** [Product Backlog y SP](../30-chapter-three/33-product-backlog.md), [criterios de las historias](../30-chapter-three/31-user-stories.md), [PR de IAM del backend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend/pull/3), [PR de integración de registro del frontend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend/pull/6), [README del backend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend/blob/main/README.md) y [README del frontend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend/blob/main/README.md). Estos recursos demuestran contexto técnico; no acreditan asignación ni aceptación de las tareas propuestas.
 
 **Sprint Board 3:** [PENDIENTE: URL y captura fechada del tablero de Sprint 3]. Los enlaces de Trello del Product Backlog y Sprint 1 se encuentran en 3.3 y 5.2.1.3; no se reutiliza su captura como evidencia del Sprint 3.
+
+#### 5.2.3.4 Development Evidence for Sprint Review
+
+
+#### 5.2.3.5. Execution Evidence for Sprint Review
+Durante el Sprint 3, el equipo avanzó en la integración de la Frontend Web Application de VitaLink con los servicios RESTful desarrollados mediante Java y Spring Boot.
+
+La solución contempla funcionalidades de autenticación, registro de usuarios, consulta de pacientes, visualización de mediciones y gestión de alertas. Para evidenciar su ejecución, se realizarán pruebas de los principales flujos correspondientes a los roles de familiar y profesional de salud, verificando la comunicación entre el Frontend y Backend desplegados.
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Backend_1.png}
+\par
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Backend_2.png}
+\par
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Backend_3.png}
+\par
+
+**Backend RESTful API:** https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/
+
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
+Durante el Sprint 3, VitaLink cuenta con tres productos digitales publicados de manera independiente: Landing Page, Frontend Web Application y Backend RESTful API.
+
+Esta distribución permite separar la presentación pública del producto, la experiencia de los usuarios y el procesamiento de las operaciones del negocio.
+
+##### Landing Page
+
+La Landing Page se encuentra publicada mediante GitHub Pages y presenta la propuesta de valor de VitaLink para sus segmentos objetivo.
+
+Contiene información dirigida a familiares y proveedores de salud, así como enlaces de acceso a la aplicación web.
+
+**URL pública:**
+
+https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/
+
+**Evidencia:**
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/LandingFamilia.png}
+\par
+
+##### Frontend Web Application
+
+La Frontend Web Application fue desarrollada mediante Angular y cuenta con una URL de publicación en Render.
+
+La aplicación se compila para producción y utiliza la dirección HTTPS del Backend para realizar las solicitudes correspondientes a los servicios RESTful.
+
+**URL pública:**
+
+https://vitalink-frontend-963x.onrender.com/
+
+**Evidencias:**
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Frontend_patient_1.png}
+\par
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Frontend_medic_1.png}
+\par
+
+##### Backend RESTful API
+
+El Backend de VitaLink está desarrollado con Java y Spring Boot y cuenta con una URL pública en Render.
+
+Se realizo el despliegue mediante Docker, persistencia utilizando TiDB Cloud y variables de entorno para la conexión a la base de datos y la autorización de solicitudes provenientes del Frontend.
+
+**URL pública:**
+
+https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/
+
+**Repositorio:**
+
+https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend
+
+**Evidencias:** 
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Backend_render.png}
+\par
+
+#### 5.2.3.8. Team Collaboration Insights during Sprint
