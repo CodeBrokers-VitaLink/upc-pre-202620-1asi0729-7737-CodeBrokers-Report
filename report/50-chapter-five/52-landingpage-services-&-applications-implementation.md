@@ -739,6 +739,121 @@ La solución contempla funcionalidades de autenticación, registro de usuarios, 
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
+En el Sprint 3 se documentaron por primera vez los RESTful Web Services de VitaLink con **OpenAPI 3.1**, generado por **springdoc-openapi** a partir de los controladores de Spring Boot.
+
+**Logros del Sprint en documentación:**
+
+- Los 23 endpoints de los cuatro bounded contexts (IAM, Care, Providers y Enrollment) aparecen agrupados por etiqueta en Swagger UI.
+- Cada endpoint muestra los esquemas de request y response.
+- El esquema de seguridad `bearerAuth` permite probar desde el botón *Authorize* los endpoints que requieren sesión.
+- La documentación está desplegada junto con el backend en Render, así que puede consultarse sin ejecutar el proyecto en local.
+
+**Documentación desplegada:**
+
+- Swagger UI: https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/swagger-ui/index.html
+- Especificación OpenAPI (JSON): https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/v3/api-docs
+
+**Repositorio de Web Services:** https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend
+
+**Commits relacionados con la documentación:**
+
+| Commit Id | Commit Message | Aporte a la documentación |
+|---|---|---|
+| 691d3d2 | chore: crear proyecto base Spring Boot con Java y Lombok | Agrega la dependencia de springdoc-openapi en `pom.xml`. |
+| 119f3f1 | chore: agregar configuracion y componentes compartidos | Crea `OpenApiConfiguration`: título, descripción, versión y esquema `bearerAuth`. |
+| b0d0d7b | feat(iam): add authentication REST endpoints | Controlador IAM documentado con la etiqueta *IAM*. |
+| ef9c516 | feat: add clinic care bounded context | Controlador Care documentado con la etiqueta *Care*. |
+| a2932f7 | feat(providers): add clinics and doctors module | Controlador Providers documentado con la etiqueta *Providers*. |
+| de1d76d | feat: agregar modulo registro familiar | Controlador Enrollment documentado con la etiqueta *Enrollment*. |
+
+**Relación de endpoints:**
+
+Todos los endpoints usan la URL base `https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com`. En la columna *Acceso*, **Público** significa que el endpoint no pide token. **Bearer** significa que debe enviarse el encabezado `Authorization: Bearer <token>`, obtenido con `sign-in`; si falta, la API responde `401`.
+
+\begin{landscape}
+\footnotesize
+
+| Bounded context | Verbo | Sintaxis de llamada | Acción | Parámetros | Acceso | Response |
+|---|---|---|---|---|---|---|
+| IAM | POST | /api/v1/auth/sign-up | Registra un usuario que no es familiar (por ejemplo, un médico); los familiares se registran en /api/v1/enrollment/families. | Body `SignUpResource`: name, email, password, role, phone (obligatorios); specialty, professionalLicense, practiceType, clinicId, doctorId, serviceType, age, location y consent según el rol. | Público | `201` con el usuario creado; `400` si role es family; `409` si el email o la colegiatura ya existen. |
+| IAM | POST | /api/v1/auth/sign-in | Inicia sesión. | Body `SignInResource`: email, password. | Público | `200` `SessionResource`: token, tokenType, expiresAt y user. |
+| IAM | POST | /api/v1/auth/sign-out | Cierra la sesión e invalida el token. | Header `Authorization`. | Bearer | `204` sin contenido. |
+| IAM | GET | /api/v1/users/me | Devuelve el usuario de la sesión. | — | Bearer | `200` `UserResource`. |
+| IAM | GET | /api/v1/users/{id} | Consulta un usuario por id. | Path `id`. | Bearer | `200` `UserResource`. |
+| Providers | GET | /api/v1/clinics | Lista las clínicas. | — | Público | `200` lista de `ClinicResource` (id, name). |
+| Providers | GET | /api/v1/doctors | Lista los médicos. | Query opcional `practiceType` y `clinicId`. | Público | `200` lista de `DoctorResource`. |
+| Enrollment | POST | /api/v1/enrollment/families | Registra una familia con su paciente, su médico y sus signos vitales iniciales. | Body `RegisterFamilyResource`: name, email, password, phone y patient (`PatientEnrollmentResource` con initialVitals). | Público | `201` `FamilyEnrollmentResource`: userId, patientId. |
+| Care | GET | /api/v1/patients | Lista los pacientes visibles para el usuario. | — | Bearer | `200` lista de `PatientResource`. |
+| Care | GET | /api/v1/patients/{id} | Consulta un paciente. | Path `id`. | Bearer | `200` `PatientResource`. |
+| Care | POST | /api/v1/patients | Registra un paciente. | Body `CreatePatientResource`: givenName, familyName, location, familyIds; age opcional. | Bearer | `201` `PatientResource`. |
+| Care | GET | /api/v1/records | Lista las mediciones. | — | Bearer | `200` lista de `RecordResource`. |
+| Care | POST | /api/v1/records | Registra una medición de un paciente. | Body `CreateRecordResource`: patientId, type, value; unit y note opcionales. | Bearer | `201` `RecordResource`. |
+| Care | GET | /api/v1/measurementRanges | Lista los rangos de referencia de cada medición. | — | Bearer | `200` lista de `MeasurementRangeResource`. |
+| Care | GET | /api/v1/alerts | Lista las alertas. | — | Bearer | `200` lista de `AlertResource`. |
+| Care | GET | /api/v1/alerts/{id} | Consulta una alerta. | Path `id`. | Bearer | `200` `AlertResource`. |
+| Care | POST | /api/v1/alerts | Crea una alerta de ayuda para un paciente. | Body `CreateHelpAlertResource`: patientId. | Bearer | `201` `AlertResource`. |
+| Care | PATCH | /api/v1/alerts/{id} | Cambia el estado de una alerta y registra la intervención. | Path `id`; body `ChangeAlertStatusResource`: status (`PENDING`, `IN_REVIEW`, `ATTENDED`); note y expectedVersion opcionales. | Bearer | `200` `AlertResource` con la nueva versión. |
+| Care | GET | /api/v1/interventions | Lista el historial de intervenciones sobre las alertas. | — | Bearer | `200` lista de `InterventionResource`. |
+| Care | GET | /api/v1/caregivers | Lista los cuidadores. | — | Bearer | `200` lista de `CaregiverResource`. |
+| Care | GET | /api/v1/care-relationships | Lista las relaciones de cuidado entre médico y paciente. | — | Bearer | `200` lista de `RelationshipResource`. |
+| Care | POST | /api/v1/care-relationships | Invita a un paciente a una relación de cuidado. | Body `InvitePatientResource`: patientId. | Bearer | `201` `RelationshipResource`. |
+| Care | POST | /api/v1/care-relationships/{id}/{decision} | Responde una invitación o termina la relación. | Path `id` y `decision` (`accept`, `reject` o `end`). | Bearer | `200` `RelationshipResource` con el nuevo estado. |
+
+\normalsize
+\end{landscape}
+
+**Ejemplos de request y response:**
+
+*Inicio de sesión.* Se envía el email y la contraseña de una cuenta registrada (en el ejemplo, datos de muestra):
+
+```http
+POST /api/v1/auth/sign-in
+Content-Type: application/json
+
+{ "email": "familiar@ejemplo.com", "password": "********" }
+```
+
+La API responde `200` con un `SessionResource`. `token` es el valor que se envía después en el encabezado `Authorization: Bearer <token>`, `tokenType` indica el tipo de token, `expiresAt` marca el vencimiento de la sesión y `user` trae los datos del usuario autenticado. La API solo guarda en la base de datos el hash SHA-256 del token, no el token. Si las credenciales no son válidas, responde `401`.
+
+*Consulta pública de clínicas.* `GET /api/v1/clinics` no requiere sesión, porque el formulario de registro lo usa para elegir la clínica. La respuesta real de la API desplegada es:
+
+```json
+[{"id":"CL-01","name":"Clínica Central"},
+ {"id":"CL-02","name":"Clínica San José"},
+ {"id":"CL-03","name":"Clínica Vida"}]
+```
+
+*Endpoint protegido sin token.* `GET /api/v1/users/me` sin el encabezado `Authorization` responde `401` con el cuerpo `{"status":401,"detail":"Debes iniciar sesión."}`. Así se comprueba que la seguridad de IAM protege los recursos.
+
+**Capturas de la documentación desplegada:**
+
+Swagger UI de la API desplegada en Render. Muestra los endpoints agrupados por bounded context, el botón *Authorize* y un candado en los endpoints que requieren token:
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Swagger_endpoints_sprint3.png}
+\par
+
+Respuesta de `GET /api/v1/clinics` en la API desplegada, consultada sin sesión:
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[width=\linewidth,keepaspectratio]{assets/Swagger_clinics_response.png}
+\par
+
+Respuesta de `GET /api/v1/users/me` sin token: la API rechaza la solicitud con `401`:
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[width=\linewidth,keepaspectratio]{assets/Swagger_users_me_401.png}
+\par
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 Durante el Sprint 3, VitaLink cuenta con tres productos digitales publicados de manera independiente: Landing Page, Frontend Web Application y Backend RESTful API.
