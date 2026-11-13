@@ -298,6 +298,8 @@ El alcance estuvo orientado a implementar interfaces destinadas a profesionales 
 
 Asimismo, durante este Sprint se continuó trabajando sobre la Landing Page desarrollada previamente y se realizó el despliegue público de la Frontend Web Application.
 
+#### 5.2.2.1. Sprint Planning 2
+
 | Sprint # | Sprint 2 |
 |---|---|
 | **Sprint Planning Background** | |
@@ -310,8 +312,8 @@ Asimismo, durante este Sprint se continuó trabajando sobre la Landing Page desa
 | **Sprint 1 Retrospective Summary** | El equipo identificó la necesidad de mantener una distribución clara de tareas, realizar integraciones progresivas mediante Pull Requests y verificar continuamente la consistencia entre los diseños UX/UI y la implementación. Para el Sprint 2 se priorizará una mejor coordinación entre diseño, desarrollo e integración. |
 | **Sprint Goal & User Stories** | |
 | **Sprint 2 Goal** | Nuestro enfoque está en desarrollar y publicar la primera versión funcional de la Frontend Web Application de VitaLink. Creemos que esto permitirá que profesionales de salud, familiares y adultos mayores puedan visualizar información relevante sobre el estado de salud y las alertas de una manera simple y comprensible. Esto se confirmará cuando las principales interfaces correspondientes a las User Stories seleccionadas puedan ejecutarse correctamente desde la aplicación web desplegada. |
-| **Sprint 2 Velocity** | 19 Story Points |
-| **Sum of Story Points** | 19 Story Points |
+| **Capacidad planificada (compromiso, no velocidad completada)** | 19 Story Points |
+| **Sum of Story Points** | 19 Story Points (US-11, US-12, US-13, US-18, US-19, US-20 y US-25: 3 + 2 + 2 + 2 + 3 + 2 + 5) |
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
@@ -334,7 +336,7 @@ La distribución planteada permitió relacionar los aspectos del Sprint con las 
 
 #### 5.2.2.3. Sprint Backlog 2
 
-Durante el Sprint 2, el equipo se enfocará en implementar las principales interfaces de la primera versión de la Frontend Web Application de VitaLink.
+Durante el Sprint 2, el equipo se enfocó en implementar las principales interfaces de la primera versión de la Frontend Web Application de VitaLink.
 
 Las User Stories seleccionadas permitirán desarrollar vistas iniciales para profesionales de salud, familiares y adultos mayores. Para la gestión de las actividades se utilizará **Trello**, donde cada Work-item/Task será organizado de acuerdo con su estado de avance.
 
@@ -360,11 +362,11 @@ Las User Stories seleccionadas permitirán desarrollar vistas iniciales para pro
 | Sprint 2 | US-20 | Confirmar atención con una acción simple | T16 | Implement alert confirmation | Implementar una acción sencilla que permita confirmar la atención de una alerta y reflejar visualmente su nuevo estado. | 3 | Deiby Vargas | To-do |
 | Sprint 2 | US-25 | Modo de uso extremadamente simple | T17 | Simplify primary interactions | Adaptar las principales interacciones de la aplicación para que puedan completarse utilizando un máximo de dos pasos. | 4 | Pablo Martinez | To-do |
 
-**Sprint Velocity:** 19 Story Points
+**Compromiso planificado:** 19 Story Points. La velocidad efectivamente completada requiere contrastar el estado final de las siete historias con el tablero; los estados To-do de la tabla corresponden a la fotografía de planificación.
 
 **Sum of Story Points:** 19 Story Points
 
-**Total Estimated Hours:** 29 hours
+**Total Estimated Hours:** 29 hours. Los identificadores T11 a T17 son locales al Sprint 2; coinciden numéricamente con T11 a T15 del Sprint 1 y no identifican las mismas tareas.
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
@@ -607,3 +609,65 @@ Las evidencias de colaboración correspondientes al Sprint 2 incluirán:
 
 
 Estas evidencias permitirán identificar los aportes realizados por cada integrante y mantener trazabilidad sobre el trabajo colaborativo desarrollado durante el Sprint 2.
+
+### 5.2.3. Sprint 3
+
+El Product Backlog de la sección 3.3 es la línea base para identificar historias y Story Points. La documentación de Sprint 2 registra siete historias de interfaz y un compromiso de 19 SP; sus evidencias muestran vistas de la aplicación y una API de demostración, pero no acreditan por sí solas la aceptación final de cada historia. Los repositorios de frontend y backend contienen trabajo posterior de integración, por lo que se separa aquí el contexto técnico observable del compromiso del Sprint 3. [PENDIENTE: incorporar el acta o tablero de Sprint 3 que confirme el alcance y su fecha de corte].
+
+#### 5.2.3.1. Sprint Planning 3
+
+La siguiente ficha conserva la estructura de los dos plannings anteriores. Las evidencias de código y PR permiten preparar una propuesta de refinamiento, pero no prueban la celebración de la reunión ni su acuerdo de alcance.
+
+| Sprint # | Sprint 3 |
+|---|---|
+| **Sprint Planning Background** | El Sprint 2 documentó interfaces Angular para profesionales y familiares y consumo de una API de demostración. El repositorio posterior del backend documenta módulos IAM, Providers y Care con persistencia JPA; el frontend posterior declara flujos integrados. Estas fuentes describen evolución técnica, no el compromiso acordado en el planning. |
+| **Date / Time / Location** | [PENDIENTE: confirmar fecha, hora y medio con el acta o el equipo]. |
+| **Prepared By** | [PENDIENTE: confirmar responsable de la reunión o acta]. |
+| **Attendees (to planning meeting)** | [PENDIENTE: confirmar asistencia efectiva]. |
+| **Sprint 2 Review Summary** | El Report aporta capturas de paneles médico y familiar, alertas y URL del frontend desplegado en Vercel. Su sección 5.2.2.6 identifica una API de demostración; no hay en esa revisión evidencia de servicios REST definitivos. La aceptación final de las siete historias sigue pendiente de cotejo con el tablero. |
+| **Sprint 2 Retrospective Summary** | [PENDIENTE: incorporar acuerdos e impedimentos reales de la retrospectiva]. |
+| **Sprint 3 Goal** | [PENDIENTE: confirmar objetivo aprobado por el equipo]. Como propuesta de refinamiento: verificar de extremo a extremo la consulta y atención de alertas entre la aplicación Angular y la API persistente, incluidos permisos por rol y evidencia de pruebas. |
+| **Sprint Goal & User Stories** | [PENDIENTE: confirmar IDs comprometidos]. Candidatas para refinamiento: TS-02, TS-04, TS-05 y TS-11, por su relación con alertas, intervenciones y acceso; véase la sección 3.1 y la matriz de trabajo de 5.2.3.3. No equivalen a selección aprobada. |
+| **Sprint 3 Velocity** | [PENDIENTE: calcular velocidad histórica con historias aceptadas o registrar capacidad prevista acordada; no se infiere de Sprint 2]. |
+| **Sum of Story Points** | [PENDIENTE: sumar únicamente las historias comprometidas]. Las cuatro candidatas sumarían 13 SP según la línea base (3 + 3 + 2 + 5), cifra condicional que no constituye compromiso. |
+
+La propuesta depende de verificar el contrato REST y la persistencia de alertas, la identidad de la sesión y los permisos de médico y familiar. El backend actual documenta sesiones bearer opacas; los criterios de TS-11 en 3.1 todavía describen JWT y deben revisarse con el equipo antes de afirmar que la historia cumple su criterio original.
+
+#### 5.2.3.2. Aspect Leaders and Collaborators
+
+La matriz incluye a los cinco integrantes con los usernames registrados en los Sprints anteriores. **L** indica liderazgo confirmado y **C** colaboración confirmada; las celdas vacías indican asignación pendiente de evidencia para Sprint 3. El encargo de corrección documental identifica a Kirk como responsable de esta actualización del Report, pero no demuestra un acuerdo de liderazgo de Sprint 3.
+
+| Team Member | GitHub Username | Backend & Persistence | WebApp & API Integration | Alert Workflows | QA & Deployment | Sprint Documentation |
+|---|---|---|---|---|---|---|
+| Contreras Panuera, Fernando Fabrizio | FernSkibidi69 |  |  |  |  |  |
+| Martinez Gaona, Pablo | Delzekl |  |  |  |  |  |
+| Quiliano Motta, Kirk Douglas | Kirkcito |  |  |  |  | [PENDIENTE: confirmar L] |
+| Said Conde, Yazid | BL4Z3K4D |  |  |  |  |  |
+| Vargas Manchinelli, Deiby Juan | poluxbinPe |  |  |  |  |  |
+
+La distribución L/C requiere el acta, las tarjetas asignadas o PRs asociados inequívocamente al Sprint 3. Los PRs técnicos consultados identifican módulos y cambios, pero no acreditan por sí solos el reparto de responsabilidades de esta ceremonia. El trabajo documental de Kirk queda identificado como responsabilidad de este encargo, pendiente de ratificación como aspecto del Sprint.
+
+#### 5.2.3.3. Sprint Backlog 3
+
+**Estado del compromiso:** [PENDIENTE: contrastar el Sprint Board 3 o acta]. La tabla siguiente es una **propuesta de refinamiento**, no un backlog comprometido ni una relación de trabajo terminado. Conserva los ID, títulos y SP del Product Backlog; los IDs `S3-P01` a `S3-P08` son referencias locales de esta propuesta y no identificadores de Trello. Las horas, responsables y estados del tablero requieren confirmación. No se asigna `Done` a partir de la existencia de código o de una guía de despliegue.
+
+\begin{landscape}
+\footnotesize
+
+| Sprint # | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
+|---|---|---|---|---|---|---|---|---|
+| Sprint 3 (propuesta) | TS-02 | Listado de alertas | S3-P01 | Verificar contrato de listado | Cotejar filtros, orden, respuesta y permisos del endpoint de alertas con los criterios de 3.1 y las vistas médicas y familiares. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+| Sprint 3 (propuesta) | TS-02 | Listado de alertas | S3-P02 | Probar consulta desde la WebApp | Comprobar solicitudes autenticadas y visualización de alertas en ambas vistas con datos persistidos; adjuntar prueba reproducible. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+| Sprint 3 (propuesta) | TS-04 | Transición de estado de una alerta | S3-P03 | Verificar transición REST | Contrastar estados admitidos, respuesta y marca temporal con el criterio de aceptación de TS-04. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+| Sprint 3 (propuesta) | TS-04 | Transición de estado de una alerta | S3-P04 | Validar persistencia y concurrencia | Probar que el estado queda almacenado y que la WebApp resuelve un conflicto de versión sin perder la intervención. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+| Sprint 3 (propuesta) | TS-05 | Observaciones sobre una alerta | S3-P05 | Verificar registro de observación | Cotejar el endpoint y el registro de notas con el criterio de TS-05 y la intervención del profesional. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+| Sprint 3 (propuesta) | TS-05 | Observaciones sobre una alerta | S3-P06 | Probar trazabilidad de la nota | Comprobar consulta posterior, autor y asociación con la alerta mediante petición y respuesta reproducibles. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+| Sprint 3 (propuesta) | TS-11 | Control de acceso a datos de salud (RBAC) | S3-P07 | Revisar criterio de autenticación | Acordar la actualización del criterio JWT de 3.1 frente a las sesiones bearer opacas del backend antes de evaluar aceptación. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+| Sprint 3 (propuesta) | TS-11 | Control de acceso a datos de salud (RBAC) | S3-P08 | Probar límites de acceso | Verificar 401/403 y acceso a pacientes afiliados y no afiliados con sesiones de roles distintos; conservar evidencia de ejecución. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+
+\normalsize
+\end{landscape}
+
+**Trazabilidad para el refinamiento:** [Product Backlog y SP](../30-chapter-three/33-product-backlog.md), [criterios de las historias](../30-chapter-three/31-user-stories.md), [PR de IAM del backend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend/pull/3), [PR de integración de registro del frontend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend/pull/6), [README del backend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend/blob/main/README.md) y [README del frontend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend/blob/main/README.md). Estos recursos demuestran contexto técnico; no acreditan asignación ni aceptación de las tareas propuestas.
+
+**Sprint Board 3:** [PENDIENTE: URL y captura fechada del tablero de Sprint 3]. Los enlaces de Trello del Product Backlog y Sprint 1 se encuentran en 3.3 y 5.2.1.3; no se reutiliza su captura como evidencia del Sprint 3.

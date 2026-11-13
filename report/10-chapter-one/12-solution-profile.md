@@ -174,10 +174,6 @@ Sabremos que tenemos exito cuando se logre una reduccion del 50% en el tiempo ne
   * **Si** los adultos mayores sin seguro y sus cuidadores
   * **Obtienen** acceso a consultas preventivas a bajo costo y derivacion directa hacia redes comunitarias de salud
   * **Con** un modulo integrado de atencion a tarifa social coordinado junto a organizaciones comunitarias de salud.
-  * **We believe we will achieve** a 35% adoption rate among low-income households without private healthcare coverage
-  * **If** uninsured elderly patients and their caregivers
-  * **Attain** access to low-cost preventive consultations and direct referral to community health networks
-  * **With** an integrated social-rate care module coordinated alongside verified community healthcare organizations.
 
 
 #### 1.2.2.4. Lean UX Canvas
