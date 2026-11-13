@@ -10,6 +10,8 @@ Brown, S. (s.f.). *The C4 model for visualising software architecture*. Recupera
 
 Conventional Commits. (s.f.). *Conventional Commits 1.0.0*. Recuperado el 8 de septiembre de 2026, de https://www.conventionalcommits.org/
 
+Docker. (s.f.). *Docker documentation*. Recuperado el 13 de noviembre de 2026, de https://docs.docker.com/
+
 Driessen, V. (5 de enero de 2010). *A successful Git branching model*. nvie.com. https://nvie.com/posts/a-successful-git-branching-model/
 
 Evans, E. (2003). *Domain-driven design: Tackling complexity in the heart of software*. Addison-Wesley.
@@ -26,13 +28,25 @@ Nielsen, J. (24 de abril de 1994). *10 usability heuristics for user interface d
 
 OpenAPI Initiative. (s.f.). *OpenAPI specification*. Recuperado el 8 de septiembre de 2026, de https://spec.openapis.org/oas/latest.html
 
+PingCAP. (s.f.). *TiDB Cloud documentation*. Recuperado el 13 de noviembre de 2026, de https://docs.pingcap.com/tidbcloud/
+
 Preston-Werner, T. (s.f.). *Semantic Versioning 2.0.0*. Recuperado el 8 de septiembre de 2026, de https://semver.org/
 
+Render. (s.f.). *Render documentation*. Recuperado el 13 de noviembre de 2026, de https://render.com/docs
+
 Schwaber, K., & Sutherland, J. (2020). *The Scrum Guide: The definitive guide to Scrum — The rules of the game*. Scrum.org. https://scrumguides.org/scrum-guide.html
+
+SmartBear. (s.f.). *Swagger UI*. Recuperado el 13 de noviembre de 2026, de https://swagger.io/tools/swagger-ui/
 
 SpecFlow. (s.f.). *Gherkin conventions for readable specifications*. Recuperado el 8 de septiembre de 2026, de https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/
 
 Spring. (s.f.). *Spring Boot reference documentation*. Recuperado el 8 de septiembre de 2026, de https://docs.spring.io/spring-boot/index.html
+
+Spring. (s.f.). *Spring Data JPA reference documentation*. Recuperado el 13 de noviembre de 2026, de https://docs.spring.io/spring-data/jpa/reference/
+
+Spring. (s.f.). *Spring Security reference documentation*. Recuperado el 13 de noviembre de 2026, de https://docs.spring.io/spring-security/reference/
+
+springdoc. (s.f.). *springdoc-openapi*. Recuperado el 13 de noviembre de 2026, de https://springdoc.org/
 
 UXPressia. (s.f.). *Impact mapping guide with UXPressia*. Recuperado el 8 de septiembre de 2026, de https://uxpressia.com/
 
