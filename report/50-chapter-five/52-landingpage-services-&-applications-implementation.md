@@ -617,8 +617,87 @@ La distribución L/C requiere el acta, las tarjetas asignadas o PRs asociados in
 
 **Sprint Board 3:** [PENDIENTE: URL y captura fechada del tablero de Sprint 3]. Los enlaces de Trello del Product Backlog y Sprint 1 se encuentran en 3.3 y 5.2.1.3; no se reutiliza su captura como evidencia del Sprint 3.
 
-#### 5.2.3.4 Development Evidence for Sprint Review
+#### 5.2.3.4. Development Evidence for Sprint Review
 
+Durante el Sprint 3 se construyó la primera versión de los **RESTful Web Services de VitaLink con Java, Spring Boot, Spring Data JPA y Spring Security**, y se integró la Frontend Web Application con esos servicios. El backend se organizó como un monolito modular con cuatro bounded contexts:
+
+- **IAM:** registro, inicio y cierre de sesión, consulta de usuarios y seguridad con contraseñas cifradas con BCrypt y tokens bearer opacos.
+- **Care:** pacientes, mediciones, alertas, intervenciones, cuidadores y relaciones de cuidado.
+- **Providers:** clínicas y médicos.
+- **Enrollment:** registro de una familia junto con su paciente.
+
+El código se integró con GitFlow: cada integrante trabajó en una rama `feature/*` creada desde `develop`, la integró mediante Pull Request y `develop` se publicó en `main` con un Pull Request final. Después de la integración se hicieron mejoras en ramas `improvement/*`:
+
+- validación de rangos de los signos vitales;
+- catálogo de rangos de referencia de las mediciones;
+- selección de clínica durante el registro;
+- colores del estado de los pacientes según la severidad de sus mediciones.
+
+Además, se configuró el despliegue en Render y TiDB Cloud y se actualizaron los enlaces de la Landing Page hacia el frontend desplegado.
+
+**Repositorios:**
+
+- Backend (Web Services): https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend
+- Frontend Web Application: https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend
+- Landing Page: https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page
+
+**Commits del Sprint 3:**
+
+La tabla muestra los commits de implementación de los tres repositorios en el orden en que se hicieron. No incluye los commits de *merge*, que aparecen en la tabla de Pull Requests. Los commits de este Sprint no tienen cuerpo de mensaje; por eso esa columna aparece con un guion.
+
+\begin{landscape}
+\footnotesize
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| CodeBrokers-Landin_Page | feature/vitalink.responsive | 8d7d97a | fix: mejorar responsive y navegación de la landing VitaLink | — | 26/10/2026 |
+| CodeBrokers-Landin_Page | feature/vitalink.responsive | 6feb4c9 | fix: dirigir todos los CTA a la aplicación frontend | — | 26/10/2026 |
+| CodeBrokers-Landin_Page | feature/vitalink.responsive | 8240813 | chore: eliminar comentarios del código de la landing | — | 26/10/2026 |
+| CodeBrokers-Landin_Page | feature/vitalink.responsive | 4bd2b1f | feature/ fix the coments | — | 26/10/2026 |
+| CodeBrokers-Backend | main | 691d3d2 | chore: crear proyecto base Spring Boot con Java y Lombok | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/arquitectura-de-carpetas-base | 119f3f1 | chore: agregar configuracion y componentes compartidos | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/arquitectura-de-carpetas-base | 468fe66 | docs: simplificar instrucciones del README | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/iam-authentication | 8bfd566 | feat(iam): add user and session domain model | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/iam-authentication | 169f003 | feat(iam): add user and session repositories | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/iam-authentication | ae1e520 | feat(iam): add authentication and user query services | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/iam-authentication | 1505a3d | feat(iam): add bearer token security configuration | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/iam-authentication | b0d0d7b | feat(iam): add authentication REST endpoints | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/clinic-care | ef9c516 | feat: add clinic care bounded context | — | 03/11/2026 |
+| CodeBrokers-Backend | feature/providers | a2932f7 | feat(providers): add clinics and doctors module | — | 04/11/2026 |
+| CodeBrokers-Backend | feature/registro-familiar | de1d76d | feat: agregar modulo registro familiar | — | 04/11/2026 |
+| CodeBrokers-Backend | feature/registro-familiar | 0568c7f | fix(docker): corregir nombre del proyecto a vitalink | — | 04/11/2026 |
+| CodeBrokers-Backend | feature/registro-familiar | b2e2327 | refactor: simplify family registration | — | 04/11/2026 |
+| CodeBrokers-Frontend | feature/register-integration | 6be0699 | Integra registro y seguimiento con el backend de VitaLink | — | 04/11/2026 |
+| CodeBrokers-Backend | main | ada664f | Configure deployment for Render and TiDB | — | 08/11/2026 |
+| CodeBrokers-Frontend | main | ccc914f | Configure frontend deployment and production API | — | 08/11/2026 |
+| CodeBrokers-Backend | improvement/clinic-catalog | e8bd635 | Ensure clinic catalog is available for registration | — | 09/11/2026 |
+| CodeBrokers-Frontend | improvement/clinic-registration | b1d0998 | Improve clinic selection during account registration | — | 09/11/2026 |
+| CodeBrokers-Backend | improvement/vital-sign-validation | ef947f4 | Validate supported ranges for initial vital measurements | — | 10/11/2026 |
+| CodeBrokers-Backend | improvement/measurement-status-catalog | 3bb8f77 | Initialize production measurement reference catalog | — | 10/11/2026 |
+| CodeBrokers-Frontend | improvement/vital-sign-guidance | 596530e | Add per-field guidance and limits for vital measurements | — | 10/11/2026 |
+| CodeBrokers-Frontend | improvement/patient-status-colors | 098e3e3 | Color patient summaries using measurement severity | — | 10/11/2026 |
+| CodeBrokers-Landin_Page | main | 2c8bd78 | fix: point CTA buttons to Render frontend | — | 11/11/2026 |
+| CodeBrokers-Landin_Page | main | 01adf18 | fix: refresh cached script for Render CTA links | — | 11/11/2026 |
+
+\normalsize
+\end{landscape}
+
+**Pull Requests integrados en el Sprint 3:**
+
+| Repository | Pull Request | Branch (origen → destino) | Autor (GitHub) | Merged on | Contenido |
+|---|---|---|---|---|---|
+| CodeBrokers-Landin_Page | #8 y #10 | feature/vitalink.responsive → develop | BL4Z3K4D | 26/10/2026 | Diseño responsive, navegación y enlaces CTA hacia el frontend. |
+| CodeBrokers-Landin_Page | #9 y #11 | develop → main | BL4Z3K4D | 26/10/2026 | Publicación de la Landing Page actualizada. |
+| CodeBrokers-Backend | #1 | feature/arquitectura-de-carpetas-base → develop | BL4Z3K4D | 02/11/2026 | Proyecto base, configuración, componentes compartidos y OpenAPI. |
+| CodeBrokers-Backend | #3 | feature/iam-authentication → develop | poluxbinPe | 03/11/2026 | Bounded context IAM: usuarios, sesiones, seguridad y endpoints de autenticación. |
+| CodeBrokers-Backend | #4 | feature/clinic-care → develop | de123kl | 03/11/2026 | Bounded context Care: pacientes, mediciones, alertas e intervenciones. |
+| CodeBrokers-Backend | #5 | feature/providers → develop | FernSkibidi69 | 04/11/2026 | Bounded context Providers: clínicas y médicos. |
+| CodeBrokers-Backend | #6 | feature/registro-familiar → develop | BL4Z3K4D | 04/11/2026 | Bounded context Enrollment: registro de la familia con su paciente. |
+| CodeBrokers-Backend | #7 | develop → main | BL4Z3K4D | 04/11/2026 | Primera versión integrada de los Web Services. |
+| CodeBrokers-Frontend | #6 | feature/register-integration → develop | BL4Z3K4D | 04/11/2026 | Integración del registro y del seguimiento con el backend. |
+| CodeBrokers-Frontend | #7 | develop → main | BL4Z3K4D | 04/11/2026 | Publicación de la integración con los Web Services. |
+
+Las ramas `improvement/*` se integraron a `develop` y luego a `main` con *merges* locales, sin Pull Request; esos *merges* pueden verse en el historial de cada repositorio. Todos los commits y Pull Requests citados pueden verificarse en las secciones *Commits* y *Pull requests* (filtro *Closed*) de cada repositorio.
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 Durante el Sprint 3, el equipo avanzó en la integración de la Frontend Web Application de VitaLink con los servicios RESTful desarrollados mediante Java y Spring Boot.
