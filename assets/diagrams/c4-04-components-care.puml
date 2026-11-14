@@ -1,0 +1,40 @@
+@startuml
+' VitaLink - C4 Nivel 3: Componentes del contenedor VitaLink WebApp - contexto Care
+' Referencia en el informe: 4.6.4 Software Architecture Component Diagrams
+' Estado reflejado: componentes realmente implementados en el front-end Angular.
+
+!include <C4/C4_Component>
+skinparam defaultFontSize 18
+
+AddElementTag("implementado", $bgColor="#1168BD", $fontColor="#FFFFFF", $borderColor="#0B4F8A", $legendText="Implementado y desplegado")
+AddElementTag("dominio", $bgColor="#2E7D32", $fontColor="#FFFFFF", $borderColor="#1B5E20", $legendText="Modelo de dominio y servicio de dominio")
+AddRelTag("planificado", $textColor="#7A7A7A", $lineColor="#7A7A7A", $lineStyle=Dashed)
+
+title Componentes (C4 Nivel 3) - Contexto Care del contenedor VitaLink WebApp
+
+Container_Boundary(spa, "VitaLink WebApp (Angular 22)") {
+
+    Boundary(care, "Contexto delimitado: Care") {
+        Component(workspace, "CareWorkspace", "Vista", "Tablero según rol y vista.", $tags="implementado")
+        Component(alertlist, "AlertList", "Componente", "Alertas por severidad y estado.", $tags="implementado")
+        Component(summary, "PatientSummary", "Componente", "Ficha y última medición.", $tags="implementado")
+        Component(carestore, "CareStore", "Store", "Estado y comandos load y changeStatus.", $tags="implementado")
+        Component(assessment, "MeasurementAssessment", "Servicio de dominio", "Clasifica la medición.", $tags="dominio")
+        Component(model, "Modelo de dominio", "TypeScript", "Patient, CareAlert, CareRecord, Intervention, Caregiver, MeasurementRange y CareSnapshot.", $tags="dominio")
+        Component(careservice, "CareService", "HttpClient", "Consulta, actualiza y traduce el dominio.", $tags="implementado")
+    }
+}
+
+Container_Ext(fakeapi, "API simulada", "JSON Server", "Datos de demostración en Render.")
+
+Rel(workspace, carestore, "Lee el estado y ejecuta changeStatus")
+Rel(workspace, alertlist, "Compone la lista de alertas")
+Rel(workspace, summary, "Compone la ficha del paciente")
+Rel(alertlist, carestore, "Solicita las alertas del paciente")
+Rel(carestore, assessment, "Clasifica cada medición")
+Rel(carestore, model, "Construye entidades del dominio")
+Rel(carestore, careservice, "Ejecuta load y changeStatus")
+Rel(careservice, fakeapi, "Consulta y actualiza el dominio", "JSON/HTTPS")
+
+SHOW_LEGEND()
+@enduml

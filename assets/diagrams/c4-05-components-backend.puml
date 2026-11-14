@@ -1,0 +1,46 @@
+@startuml
+' VitaLink - C4 Nivel 3: Componentes del contenedor Backend API
+' Referencia en el informe: 4.6.4 Software Architecture Component Diagrams
+' Estado reflejado: contenedor PLANIFICADO para TB2. Ninguno de estos componentes está
+' desplegado; se mantienen como diseño objetivo porque la API simulada los reemplazará.
+
+!include <C4/C4_Component>
+skinparam defaultFontSize 18
+
+AddElementTag("planificado", $bgColor="#B7B7B7", $fontColor="#1A1A1A", $borderColor="#7A7A7A", $borderStyle=Dashed, $legendText="Planificado para TB2")
+AddRelTag("planificado", $textColor="#7A7A7A", $lineColor="#7A7A7A", $lineStyle=Dashed)
+
+title Componentes (C4 Nivel 3) - Contenedor Backend API planificado
+
+Container_Boundary(api, "Backend API (Java 21, Spring Boot) - Planificado para TB2") {
+
+    Component(iamc, "IAM", "Spring Security, JWT", "Registro, autenticación y roles.", $tags="planificado")
+    Component(monitoring, "Monitoring", "Spring REST y servicios", "Telemetría y línea base.", $tags="planificado")
+    Component(notification, "Emergency Notification", "Servicios y WebClient", "Cola y despacho de alertas.", $tags="planificado")
+    Component(triage, "Triage & Scheduling", "Servicios y cliente REST", "Severidad y pre-agendamiento.", $tags="planificado")
+    Component(profiles, "Profiles & Affiliations", "Spring Data JPA", "Pacientes, cuidadores y vínculos.", $tags="planificado")
+}
+
+ContainerDb_Ext(db, "Base de datos", "MySQL", "Persistencia relacional.")
+Container_Ext(spa, "VitaLink WebApp", "Angular 22", "Consumirá estos servicios.")
+System_Ext(iot, "Simulador IoT", "Telemetría del domicilio.")
+System_Ext(sms, "Pasarela SMS", "Alertas a la red de apoyo.")
+System_Ext(clinic, "Agenda Clínica Externa", "Reserva de citas médicas.")
+
+Rel(spa, iamc, "Se autentica y consulta su perfil", "JSON/HTTPS", $tags="planificado")
+Rel(spa, monitoring, "Consulta el historial de mediciones", "JSON/HTTPS", $tags="planificado")
+Rel(spa, profiles, "Consulta pacientes y cuidadores", "JSON/HTTPS", $tags="planificado")
+Rel(spa, notification, "Gestiona el estado de las alertas", "JSON/HTTPS", $tags="planificado")
+Rel(iot, monitoring, "Envía telemetría", "JSON/HTTPS", $tags="planificado")
+Rel(monitoring, notification, "Publica eventos de dominio", "Evento interno", $tags="planificado")
+Rel(notification, sms, "Despacha alertas", "REST/HTTPS", $tags="planificado")
+Rel(notification, triage, "Solicita evaluación", "Evento interno", $tags="planificado")
+Rel(triage, clinic, "Consulta cupos y pre-agenda", "REST/HTTPS", $tags="planificado")
+Rel(iamc, db, "Persiste identidades", "JDBC / JPA", $tags="planificado")
+Rel(monitoring, db, "Persiste mediciones", "JDBC / JPA", $tags="planificado")
+Rel(notification, db, "Persiste alertas", "JDBC / JPA", $tags="planificado")
+Rel(triage, db, "Persiste evaluaciones", "JDBC / JPA", $tags="planificado")
+Rel(profiles, db, "Persiste pacientes", "JDBC / JPA", $tags="planificado")
+
+SHOW_LEGEND()
+@enduml

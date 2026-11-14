@@ -1,0 +1,999 @@
+## 5.2. Landing Page, Services & Applications Implementation
+
+### 5.2.1. Sprint 1
+
+Durante el Sprint 1, el equipo CodeBrokers se enfocó en desarrollar la primera versión funcional de la Landing Page de VitaLink y su integración inicial con el frontend en Angular.
+
+El objetivo principal fue comunicar la propuesta de valor del producto, mostrando cómo VitaLink permite realizar un monitoreo preventivo del adulto mayor mediante alertas inteligentes y facilitar la comunicación entre familiares y profesionales de salud.
+
+Durante este Sprint se desarrollaron las primeras secciones visuales del producto, aplicando los criterios definidos durante la etapa de diseño UX/UI y preparando la primera versión desplegada de la Landing Page en un entorno público.
+
+#### 5.2.1.1. Sprint Planning 1
+
+Durante el Sprint Planning 1, el equipo definió como objetivo principal desarrollar y desplegar la primera versión funcional de la Landing Page de VitaLink. Para ello, se seleccionaron las User Stories US-01 a US-10 de la épica EP-01 Captación y Confianza, que suman **10 Story Points**, igual a la velocidad definida para el inicio del proyecto.
+
+*Criterio de estimación.* Las historias de EP-01 son secciones estáticas de la Landing Page, de complejidad y riesgo similares y sin dependencias de backend. Por ello se estimaron de forma relativa con 1 Story Point cada una (aproximadamente 3 horas de trabajo por historia). Las cinco tareas habilitadoras T11 a T15 (diseño responsivo, revisión UX/UI, documentación, integración y despliegue) suman 14 horas adicionales y se ejecutan en apoyo del Sprint Goal. Esta estimación se refinó durante el Sprint Planning y se registra en el historial de versiones del informe.
+
+\begingroup
+\footnotesize
+\begin{longtable}{|p{0.26\textwidth}|p{0.64\textwidth}|}
+\caption{Sprint Planning 1}\\
+\hline
+\textbf{Sprint \#} & \textbf{Sprint 1} \\ \hline
+\endhead
+\textbf{Sprint Planning Background} & \\ \hline
+\textbf{Date} & 2026-09-01 \\ \hline
+\textbf{Time} & 7:00 PM \\ \hline
+\textbf{Location} & Reunión virtual mediante Discord \\ \hline
+\textbf{Prepared By} & Deiby Vargas \\ \hline
+\textbf{Attendees (to planning meeting)} & Fernando Contreras, Pablo Martinez, Yazid Said, Kirk Quiliano, Deiby Vargas \\ \hline
+\textbf{Sprint 0 Review Summary} & Al tratarse del primer Sprint del proyecto, no existe un Sprint anterior para realizar una revisión de resultados. El equipo inicia tomando como base los artefactos desarrollados durante Requirements Elicitation, Requirements Specification y Product Design. \\ \hline
+\textbf{Sprint 0 Retrospective Summary} & Al no existir un Sprint previo, no se cuenta con una retrospectiva anterior. Como punto inicial, el equipo acordó utilizar GitFlow para el trabajo colaborativo, Trello para el seguimiento de tareas y GitHub para el control de versiones y la revisión de cambios. \\ \hline
+\textbf{Sprint Goal \& User Stories} & \\ \hline
+\textbf{Sprint 1 Goal} & Nuestro enfoque está en desarrollar y publicar una primera versión funcional, responsive y accesible de la Landing Page de VitaLink. Creemos que esto permitirá que profesionales de salud, familiares y adultos mayores comprendan la propuesta de valor del producto. Esto se confirmará cuando la Landing Page se encuentre desplegada públicamente e incluya las funcionalidades definidas en las User Stories US-01 a US-10 de la épica EP-01. \\ \hline
+\textbf{Sprint 1 Velocity} & 10 Story Points \\ \hline
+\textbf{Sum of Story Points} & 10 Story Points (US-01 a US-10) \\ \hline
+\end{longtable}
+\endgroup
+
+#### 5.2.1.2. Aspect Leaders and Collaborators
+
+Durante el Sprint 1 se definieron los principales aspectos del desarrollo de la primera versión funcional de la Landing Page de VitaLink. Para cada aspecto se asignó un integrante como **Leader (L)**, responsable principal de dirigir y supervisar su desarrollo, mientras que los demás participaron como **Collaborators (C)**.
+
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{|p{0.15\textwidth}|p{0.13\textwidth}|p{0.13\textwidth}|p{0.14\textwidth}|p{0.11\textwidth}|p{0.12\textwidth}|p{0.13\textwidth}|}
+\caption{Aspect Leaders and Collaborators del Sprint 1}\\
+\hline
+\textbf{Team Member} & \textbf{GitHub Username} & \textbf{Structure \& Hero} & \textbf{Benefits, Alerts \& Privacy} & \textbf{Responsive UI} & \textbf{Sprint Docs} & \textbf{Deployment \& Integration} \\ \hline
+\endhead
+Fernando Contreras & FernSkibidi69 & C & C & C & & C \\ \hline
+Pablo Martinez & Delzekl & C & C & C & C & \\ \hline
+Yazid Said & BL4Z3K4D & L & L & L & & C \\ \hline
+Kirk Quiliano & Kirkcito & & C & & L & C \\ \hline
+Deiby Vargas & poluxbinPe & C & & C & C & L \\ \hline
+\end{longtable}
+\endgroup
+
+**L:** Leader | **C:** Collaborator
+
+#### 5.2.1.3. Sprint Backlog 1
+
+Las 15 tareas del Sprint 1 (T01 a T15) se encuentran en estado **Done**, completadas y desplegadas. Las tareas T01 a T10 desarrollan cada una la User Story indicada. Las tareas T11 a T15 son habilitadoras: apoyan de forma transversal a US-01 a US-10 y al Sprint Goal.
+
+**Sprint Board:** Trello  
+**URL pública:** <https://trello.com/b/uWEShiCR/sprint-codebrokers>
+
+
+
+\includegraphics[width=0.7\linewidth]{assets/sprint1.png}
+
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth,height=0.8\textheight,keepaspectratio]{assets/SpringTrello.png}
+\caption{Sprint Board 1 en Trello con las tareas T01 a T15 en estado Done}
+\end{figure}
+
+\begin{landscape}
+\begingroup
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{|p{0.05\textwidth}|p{0.05\textwidth}|p{0.16\textwidth}|p{0.045\textwidth}|p{0.12\textwidth}|p{0.27\textwidth}|p{0.05\textwidth}|p{0.07\textwidth}|p{0.05\textwidth}|}
+\caption{Sprint Backlog 1}\\
+\hline
+\textbf{Sprint \#} & \textbf{Story Id} & \textbf{Story Title} & \textbf{Task Id} & \textbf{Task Title} & \textbf{Task Description} & \textbf{Est. (h)} & \textbf{Assigned To} & \textbf{Status} \\ \hline
+\endfirsthead
+\hline
+\textbf{Sprint \#} & \textbf{Story Id} & \textbf{Story Title} & \textbf{Task Id} & \textbf{Task Title} & \textbf{Task Description} & \textbf{Est. (h)} & \textbf{Assigned To} & \textbf{Status} \\ \hline
+\endhead
+
+1 & US-01 & Entender la propuesta de valor en segundos & T01 & Implement Hero section & Implementar la sección inicial mostrando la propuesta de valor. & 3 & Yazid Said & \textbf{Done} \\ \hline
+1 & US-02 & Confiar antes de registrar datos de pacientes & T02 & Implement security section & Contenido sobre cifrado y privacidad de datos. & 3 & Pablo Martinez & \textbf{Done} \\ \hline
+1 & US-03 & Solicitar información antes de registrarse & T03 & Implement contact section & Formulario para solicitar información corporativa. & 3 & Fernando Contreras & \textbf{Done} \\ \hline
+1 & US-04 & Unirme como proveedor de salud & T04 & Implement healthcare CTA & Call to Action para el registro clínico de proveedores. & 3 & Yazid Said & \textbf{Done} \\ \hline
+1 & US-05 & Ver un ejemplo de cómo funciona una alerta & T05 & Implement alert example & Diseño visual simulado de una alerta y su paciente. & 3 & Pablo Martinez & \textbf{Done} \\ \hline
+1 & US-06 & Entender el beneficio sin llamadas constantes & T06 & Implement family benefits & Sección sobre el monitoreo remoto automático. & 3 & Fernando Contreras & \textbf{Done} \\ \hline
+1 & US-07 & Confiar en quién ve los datos de salud & T07 & Implement family privacy & Explicación de acceso por roles y visibilidad de los datos de salud. & 3 & Pablo Martinez & \textbf{Done} \\ \hline
+1 & US-08 & Conocer cómo funciona antes de crear cuenta & T08 & Implement how-it-works & Sección explicativa de los pasos de captura de datos. & 3 & Yazid Said & \textbf{Done} \\ \hline
+1 & US-09 & Entender la plataforma sin tecnicismos & T09 & Adapt content & Redacción de textos en lenguaje accesible. & 2 & Kirk Quiliano & \textbf{Done} \\ \hline
+1 & US-10 & Ver qué esperar antes de registrarse & T10 & Implement dashboard preview & Imágenes previas de las interfaces familiares. & 3 & Yazid Said & \textbf{Done} \\ \hline
+1 & US-01 a US-10 (transversal) & Habilitadora & T11 & Responsive design & CSS y Media Queries para dispositivos móviles. & 4 & Fernando Contreras & \textbf{Done} \\ \hline
+1 & US-01 a US-10 (transversal) & Habilitadora & T12 & Review UX/UI consistency & Verificación WCAG y coherencia con Figma. & 3 & Pablo Martinez & \textbf{Done} \\ \hline
+1 & Sprint Goal & Habilitadora & T13 & Review Sprint docs & Actualización del reporte en Markdown. & 2 & Kirk Quiliano & \textbf{Done} \\ \hline
+1 & US-01 a US-10 (transversal) & Habilitadora & T14 & Integrate Landing & Resolución de conflictos de merge en Git e integración de ramas. & 3 & Deiby Vargas & \textbf{Done} \\ \hline
+1 & Sprint Goal & Habilitadora & T15 & Deploy Landing Page & Configuración de GitHub Pages y Actions. & 2 & Deiby Vargas & \textbf{Done} \\ \hline
+
+\end{longtable}
+\endgroup
+\end{landscape}
+
+#### 5.2.1.4. Development Evidence for Sprint Review
+
+La siguiente matriz documenta la cadena completa de ejecución del Sprint con una fila por tarea: integrante, rama (GitFlow), commit y Pull Request, tarea, User Story y resultado.
+
+**Ruta de trazabilidad:** Integrante $\rightarrow$ Branch $\rightarrow$ Commit / Pull Request $\rightarrow$ Task / US $\rightarrow$ Resultado.
+
+\begin{landscape}
+\begingroup
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{|p{0.11\textwidth}|p{0.16\textwidth}|p{0.14\textwidth}|p{0.07\textwidth}|p{0.09\textwidth}|p{0.30\textwidth}|}
+\caption{Matriz de trazabilidad del Sprint 1: integrante, rama, commit/PR, tarea, historia y resultado}\\
+\hline
+\textbf{Integrante} & \textbf{Branch (GitFlow)} & \textbf{Commit / PR} & \textbf{Task} & \textbf{US} & \textbf{Resultado} \\ \hline
+\endfirsthead
+\hline
+\textbf{Integrante} & \textbf{Branch (GitFlow)} & \textbf{Commit / PR} & \textbf{Task} & \textbf{US} & \textbf{Resultado} \\ \hline
+\endhead
+
+Yazid Said & \texttt{develop} & PR \#6 / \texttt{91ffa24} & T01 & US-01 & Integración de componentes y propuesta de valor en la rama develop. \\ \hline
+Yazid Said & \texttt{feature/footer} & PR \#5 / \texttt{abf9be7} & T08 & US-08 & Estructura del footer, enlaces informativos y cómo funciona. \\ \hline
+Yazid Said & \texttt{chore/logo} & Commit \texttt{389e581} & T04 & US-04 & Adición del logotipo oficial y assets base del CTA institucional. \\ \hline
+Pablo Martinez & \texttt{feat/navbar-hero} & PR \#1 / \texttt{db20de2} & T02 \newline T05 & US-02 \newline US-05 & Barra de navegación, Hero section y estructura base de seguridad y alertas. \\ \hline
+Pablo Martinez & \texttt{feat/navbar-hero} & Commit \texttt{d55fc4a} & T07 \newline T12 & US-07 \newline - & Navegación a secciones de privacidad, consistencia UX/UI y accesibilidad. \\ \hline
+Fernando Contreras & \texttt{feat/pricing} & Commit \texttt{baae70f} & T03 \newline T06 & US-03 \newline US-06 & Secciones institucionales, pricing tiers, testimonios y beneficios familiares. \\ \hline
+Fernando Contreras & \texttt{feat/pricing} & Commit \texttt{bcbcc2d} & T11 & - & Ajustes CSS, testimonios y Media Queries para dispositivos móviles. \\ \hline
+Kirk Quiliano & \texttt{docs/report} & Commit \texttt{15b22e8} & T09 \newline T13 & US-09 \newline - & Textos revisados en lenguaje accesible y actualización del repositorio del informe. \\ \hline
+Deiby Vargas & \texttt{main} & PR \#32 / \texttt{f2d7652} & T14 \newline T15 & - & Orquestación de ramas, resolución de conflictos en Git y despliegue final. \\ \hline
+
+\end{longtable}
+\endgroup
+\end{landscape}
+
+Los Pull Requests y commits citados pueden verificarse en el repositorio de la organización. Los mensajes de commit siguen la convención Conventional Commits e incluyen trazabilidad directa hacia la funcionalidad implementada: **[GitHub-Url](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Report)** (sección *Pull requests*, filtro *Merged*). Los mensajes de commit siguen la convención Conventional Commits e incluyen el identificador de la User Story cuando aplica.
+
+#### 5.2.1.5. Execution Evidence for Sprint Review
+
+La ejecución del Sprint fue validada mediante la revisión funcional de la Landing Page implementada.
+
+Las principales funcionalidades verificadas fueron:
+
+- Visualización correcta de la propuesta de valor de VitaLink.
+- Presentación de beneficios para familiares y profesionales de salud.
+- Visualización de la sección de alertas automáticas.
+- Correcto funcionamiento en dispositivos móviles.
+- Navegación entre las diferentes secciones.
+
+Imagenes del landing page:
+
+**Médicos**
+
+- Inicio:
+
+\includegraphics[width=0.7\linewidth]{assets/inicio.png}
+
+- Descripción:
+
+\includegraphics[width=0.7\linewidth]{assets/descripcion.png}
+
+- Pagos:
+
+\includegraphics[width=0.7\linewidth]{assets/pagos.png}
+
+- Seguridad:
+
+\includegraphics[width=0.7\linewidth]{assets/seguridada.png}
+
+- Soporte:
+
+\includegraphics[width=0.7\linewidth]{assets/soporte.png}
+
+
+**Familiares**
+
+- Inicio:
+
+\includegraphics[width=0.7\linewidth]{assets/finciio.png}
+
+- Descripción:
+
+\includegraphics[width=0.7\linewidth]{assets/fdescripicion.png}
+
+- Objetivos:
+
+\includegraphics[width=0.7\linewidth]{assets/fobjetivos.png}
+
+- Planes:
+
+\includegraphics[width=0.7\linewidth]{assets/fplanes.png}
+
+- Soporte:
+
+\includegraphics[width=0.7\linewidth]{assets/fsoporte.png}
+
+
+
+
+#### 5.2.1.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 1 no se implementaron RESTful Web Services debido a que el alcance estuvo enfocado en la construcción inicial de la Landing Page.
+
+La documentación de endpoints, Swagger/OpenAPI y pruebas mediante Postman será desarrollada en los siguientes Sprints cuando se implemente la capa backend de VitaLink.
+
+#### 5.2.1.7. Software Deployment Evidence for Sprint Review
+
+
+Durante el Sprint 1 se realizó el despliegue de la primera versión funcional de la Landing Page de VitaLink. El objetivo de esta actividad fue publicar el sitio web en un entorno accesible públicamente, permitiendo validar su funcionamiento fuera del entorno local de desarrollo.
+
+Para el despliegue se utilizará **GitHub Pages**, aprovechando su integración directa con el repositorio de la Landing Page y su capacidad para publicar sitios web estáticos desarrollados con HTML, CSS y JavaScript.
+
+
+
+\includegraphics[width=0.7\linewidth]{assets/softwaredeploy.png}
+
+
+#### Proceso de despliegue
+
+El proceso de despliegue de la Landing Page se realizará mediante los siguientes pasos:
+
+1. Crear el repositorio correspondiente a la Landing Page de VitaLink dentro de GitHub.
+
+2. Subir e integrar en la rama principal los archivos HTML, CSS, JavaScript y recursos estáticos necesarios para el funcionamiento del sitio.
+
+3. Ingresar a la configuración del repositorio mediante la opción `Settings`.
+
+4. Acceder a la sección `Pages` dentro de la configuración del repositorio.
+
+5. Configurar el origen del despliegue seleccionando la rama `main` y la carpeta raíz `/`.
+
+6. Guardar la configuración para iniciar el proceso de publicación mediante GitHub Pages.
+
+7. Esperar a que GitHub complete el proceso de despliegue y genere la URL pública correspondiente.
+
+8. Acceder a la URL generada y verificar que la Landing Page se visualice correctamente y que sus principales secciones funcionen según lo esperado.
+
+#### 5.2.1.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 1, el equipo trabajó de manera colaborativa utilizando GitHub como plataforma principal para el control de versiones y seguimiento de los aportes realizados durante el desarrollo de la Landing Page de VitaLink.
+
+Cada integrante participó en las actividades asignadas mediante ramas independientes creadas a partir de la rama `develop`. Las funcionalidades desarrolladas fueron posteriormente integradas mediante Pull Requests, permitiendo revisar los cambios antes de incorporarlos al proyecto.
+
+Los integrantes y sus respectivos usuarios de GitHub son:
+
+| Team Member | GitHub Username |
+|---|---|
+| Fernando Contreras | FernSkibidi69 |
+| Pablo Martinez | Delzekl |
+| Yazid Said | BL4Z3K4D |
+| Kirk Quiliano | Kirkcito |
+| Deiby Vargas | poluxbinPe |
+
+Durante el Sprint se utilizó una estrategia basada en GitFlow, manteniendo la rama `develop` como rama de integración y utilizando ramas `feature/*` para las funcionalidades desarrolladas.
+
+Asimismo, los commits realizados durante la implementación siguieron la convención Conventional Commits, facilitando la identificación de cambios relacionados con nuevas funcionalidades, correcciones, documentación y estilos.
+
+La colaboración del equipo será evidenciada mediante las estadísticas y registros disponibles en GitHub.
+
+Link de commits del repositorio del reporte: [https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Report/compare/main...develop]
+
+Link de commits del repositorio del landing page: [https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/compare/main...develop]
+
+Durante el desarrollo del proyecto VitaLink, todos los integrantes del equipo participaron activamente en las diferentes actividades correspondientes al ciclo de desarrollo del producto.
+
+Las contribuciones del equipo no se limitan únicamente a los commits visibles en la sección de Contributors de GitHub, ya que algunos aportes fueron realizados mediante la organización de tareas, revisión de documentación, planificación de Sprints, diseño UX/UI, validación de entregables y coordinación del desarrollo.
+
+Report:
+
+
+
+<img width="1902" height="944" alt="commitrepor1" src="https://github.com/user-attachments/assets/d8598c6e-ed64-4820-969b-50886e083cee" />
+<img width="1897" height="941" alt="commitrepor3" src="https://github.com/user-attachments/assets/808a3a26-b034-455b-86cf-4a86e6345715" />
+
+
+
+Landing page:
+
+\includegraphics[width=0.7\linewidth]{assets/commitlanding1.png}
+
+
+\includegraphics[width=0.7\linewidth]{assets/commitrepor12.png}
+### 5.2.2. Sprint 2
+
+Durante el Sprint 2, el equipo se enfocó en desarrollar y desplegar la primera versión de la **Frontend Web Application de VitaLink utilizando Angular**.
+
+El alcance estuvo orientado a implementar interfaces destinadas a profesionales de salud y familiares/adultos mayores, permitiendo visualizar alertas, identificar su nivel de urgencia, acceder al detalle de pacientes, visualizar información clínica y realizar acciones básicas ante una alerta.
+
+Asimismo, durante este Sprint se continuó trabajando sobre la Landing Page desarrollada previamente y se realizó el despliegue público de la Frontend Web Application.
+
+#### 5.2.2.1. Sprint Planning 2
+
+| Sprint # | Sprint 2 |
+|---|---|
+| **Sprint Planning Background** | |
+| **Date** | 2026-09-15 |
+| **Time** | 7:00 PM |
+| **Location** | Reunión virtual mediante Discord |
+| **Prepared By** | Yazid Said |
+| **Attendees (to planning meeting)** | Fernando Contreras, Pablo Martinez, Yazid Said, Kirk Quiliano, Deiby Vargas |
+| **Sprint 1 Review Summary** | Durante el Sprint 1 se desarrolló la primera versión de la Landing Page de VitaLink, incluyendo las secciones asociadas a la épica EP-01 Captación y Confianza. Asimismo, se realizó su despliegue inicial y se estableció el flujo de trabajo mediante GitHub y Git Flow. |
+| **Sprint 1 Retrospective Summary** | El equipo identificó la necesidad de mantener una distribución clara de tareas, realizar integraciones progresivas mediante Pull Requests y verificar continuamente la consistencia entre los diseños UX/UI y la implementación. Para el Sprint 2 se priorizará una mejor coordinación entre diseño, desarrollo e integración. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 2 Goal** | Nuestro enfoque está en desarrollar y publicar la primera versión funcional de la Frontend Web Application de VitaLink. Creemos que esto permitirá que profesionales de salud, familiares y adultos mayores puedan visualizar información relevante sobre el estado de salud y las alertas de una manera simple y comprensible. Esto se confirmará cuando las principales interfaces correspondientes a las User Stories seleccionadas puedan ejecutarse correctamente desde la aplicación web desplegada. |
+| **Capacidad planificada (compromiso, no velocidad completada)** | 19 Story Points |
+| **Sum of Story Points** | 19 Story Points (US-11, US-12, US-13, US-18, US-19, US-20 y US-25: 3 + 2 + 2 + 2 + 3 + 2 + 5) |
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+Durante el Sprint 2 se identificaron los principales aspectos relacionados con el desarrollo de la primera versión de la Frontend Web Application.
+
+Cada aspecto cuenta con un **Leader (L)**, responsable de orientar su desarrollo, y **Collaborators (C)**, quienes apoyarán las actividades correspondientes.
+
+| Team Member | GitHub Username | Medical Frontend | Family Frontend | UX/UI & Accessibility | Sprint Documentation | Integration & Deployment |
+|---|---|---|---|---|---|---|
+| Fernando Contreras | FernSkibidi69 | C | L | C |  | C |
+| Pablo Martinez | Delzekl | C | C | L | C |  |
+| Yazid Said | BL4Z3K4D | L | C | C | C | C |
+| Kirk Quiliano | Kirkcito |  | C |  | L | C |
+| Deiby Vargas | poluxbinPe | C | C | C | C | L |
+
+**L:** Leader  
+**C:** Collaborator
+
+La distribución planteada permitió relacionar los aspectos del Sprint con las tareas seleccionadas en el Sprint Backlog. Yazid Said lideró principalmente las interfaces dirigidas a profesionales de salud, Fernando Contreras las interfaces dirigidas a familiares y adultos mayores, Pablo Martinez la consistencia UX/UI y accesibilidad, Kirk Quiliano la documentación y Deiby Vargas la integración y despliegue.
+
+#### 5.2.2.3. Sprint Backlog 2
+
+Durante el Sprint 2, el equipo se enfocó en implementar las principales interfaces de la primera versión de la Frontend Web Application de VitaLink.
+
+Las User Stories seleccionadas permitirán desarrollar vistas iniciales para profesionales de salud, familiares y adultos mayores. Para la gestión de las actividades se utilizará **Trello**, donde cada Work-item/Task será organizado de acuerdo con su estado de avance.
+
+**Sprint Board:** Trello
+
+[**URL del Sprint Board:**](https://trello.com/invite/b/6ac828aceaa0c53fc0e4235d/ATTI73a3e020cdfa31f843e5d02719051bfd102F8A9B/sprint-2)
+
+
+
+ 
+![Tablero del Sprint Backlog 2](<assets/Sprint Backlog 2.png>){width=100%}
+
+
+
+
+| Sprint # | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
+|---|---|---|---|---|---|---:|---|---|
+| Sprint 2 | US-11 | Resumen inicial de alertas pendientes | T11 | Implement medical alert dashboard | Desarrollar el panel principal del médico mostrando la cantidad de alertas pendientes agrupadas según su nivel de urgencia. | 5 | Yazid Said | To-do |
+| Sprint 2 | US-12 | Nivel de urgencia diferenciado | T12 | Implement urgency indicators | Implementar elementos visuales que permitan distinguir rápidamente el nivel de urgencia de cada alerta sin abrir su detalle. | 3 | Pablo Martinez | To-do |
+| Sprint 2 | US-13 | Acceder al detalle de un paciente | T13 | Implement patient detail view | Desarrollar la vista que permita acceder al detalle del paciente directamente desde una alerta seleccionada. | 5 | Yazid Said | To-do |
+| Sprint 2 | US-18 | Estado general al abrir la app | T14 | Implement family status dashboard | Desarrollar la pantalla principal para familiares y adultos mayores mostrando un indicador simple del estado general. | 5 | Fernando Contreras | To-do |
+| Sprint 2 | US-19 | Recibir una alerta comprensible | T15 | Implement family alert view | Implementar una alerta que presente de forma clara qué ocurrió, su gravedad y el estado actual de atención. | 4 | Fernando Contreras | To-do |
+| Sprint 2 | US-20 | Confirmar atención con una acción simple | T16 | Implement alert confirmation | Implementar una acción sencilla que permita confirmar la atención de una alerta y reflejar visualmente su nuevo estado. | 3 | Deiby Vargas | To-do |
+| Sprint 2 | US-25 | Modo de uso extremadamente simple | T17 | Simplify primary interactions | Adaptar las principales interacciones de la aplicación para que puedan completarse utilizando un máximo de dos pasos. | 4 | Pablo Martinez | To-do |
+
+**Compromiso planificado:** 19 Story Points. La velocidad efectivamente completada requiere contrastar el estado final de las siete historias con el tablero; los estados To-do de la tabla corresponden a la fotografía de planificación.
+
+**Sum of Story Points:** 19 Story Points
+
+**Total Estimated Hours:** 29 hours. Los identificadores T11 a T17 son locales al Sprint 2; coinciden numéricamente con T11 a T15 del Sprint 1 y no identifican las mismas tareas.
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+Durante el Sprint 2 se implementó la primera versión funcional de la **Frontend Web Application de VitaLink utilizando Angular, TypeScript, HTML y CSS**.
+
+El desarrollo fue organizado mediante ramas independientes e integración progresiva utilizando Pull Requests. Las funcionalidades implementadas abarcaron autenticación y control de roles, modelos y servicios asociados al cuidado del paciente, gestión del estado de la aplicación, interfaces de atención y componentes relacionados con pacientes y alertas.
+
+**Repositorio de la Frontend Web Application:**
+
+https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend
+
+**Historial de commits:**
+
+| Repository | Branch | Commit Id | Commit Message  | Committed on |
+|---|---|---|---|---|
+| vitalink-frontend | main | 7301ab42b3b14be1a0910009cf5eb0fad4cc04e1 | first commit | 07/10/2026 |
+| vitalink-frontend | feature/base-shared | b18ed75a4618864607c8279aee40b67c966e6ae3 | chore(base): actualizar configuracion y traducciones.  | 07/10/2026 |
+| vitalink-frontend | feature/auth-user-management | d2fc8b01a79bd6ecade92cb8d14b3546d95bce82| feat: implement user authentication, role guards and profile management| 08/10/2026 |
+| vitalink-frontend | feature/patient-care-services | 1f747baf1b61b1c36c6b77444989ead57d87bd12 | feat: add patient care models, data mappers and care services| 08/10/2026 |
+| vitalink-frontend | feature/care-workspace | 520e605cb790ddd86203d722a56507864f92d248 | feat: implement care workspace and patient care state management| 08/10/2026 |
+| vitalink-frontend | feature/patient-alert-components | ec7a0249330bf3b721cb18dbf659cbf44fa279d7 | feature(upload)/patient-alert-components| 08/10/2026 |
+| vitalink-frontend | main| a51b67c1d15cbf34c73d83d85e6c1c73675c4b20 | Merge pull request #5 from CodeBrokers-VitaLink/develop| 08/10/2026 |
+
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+Durante el Sprint 2 se validó la ejecución de las principales interfaces implementadas en la primera versión de la Frontend Web Application de VitaLink.
+
+La aplicación permite diferenciar la experiencia según el rol del usuario, proporcionando interfaces específicas para profesionales de salud y familiares.
+
+##### Vista para profesionales de salud
+
+La interfaz médica permite visualizar el resumen de alertas y pacientes, diferenciar el nivel de prioridad de las alertas, aplicar filtros, consultar pacientes asignados y acceder al detalle e historial correspondiente.
+
+
+
+
+\includegraphics[width=0.7\linewidth]{assets/vistaprofe.png}
+
+
+
+##### Vista para familiares
+
+La interfaz para familiares permite seleccionar al adulto mayor asociado, visualizar su estado general, consultar mediciones registradas, identificar alertas abiertas y acceder a información relacionada con su cuidado.
+
+
+\includegraphics[width=0.7\linewidth]{assets/visatadefamilia.png}
+
+**Página de login**
+
+\includegraphics[width=0.7\linewidth]{assets/login.png}
+
+**Dashboard de usuario y familiar/adulto mayor**
+
+\includegraphics[width=0.7\linewidth]{assets/dashboard.png}
+
+**Vista de familia/adulto mayor con alertas pendientes y nivel de urgencia diferenciado**
+
+\includegraphics[width=0.7\linewidth]{assets/visatadefamilia.png}
+
+**Vista del perfil del usuario familiar/adulto mayor**
+
+\includegraphics[width=0.7\linewidth]{assets/vistadeperfil.png}
+
+**Dashboard de usuario profesional de salud**
+
+\includegraphics[width=0.7\linewidth]{assets/dashboardusuario.png}
+
+**Vista de profesional de salud con alertas pendientes y nivel de urgencia diferenciado**
+
+\includegraphics[width=0.7\linewidth]{assets/vistaprofe.png}
+
+**Vista del perfil del usuario profesional de salud**
+
+
+
+
+
+##### Gestión de alertas
+
+La aplicación permite consultar información de las alertas, visualizar su estado y realizar acciones relacionadas con su atención según el rol correspondiente.
+
+
+\includegraphics[width=0.7\linewidth]{assets/gestionalertas.png}
+
+
+
+
+
+
+**Frontend Web Application desplegada:**
+
+https://vitalink-frontend.vercel.app/
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 2 no se implementaron todavía los **RESTful Web Services definitivos de VitaLink mediante Java y Spring Boot**.
+
+El alcance del Sprint estuvo enfocado principalmente en la implementación y despliegue de la primera versión de la Frontend Web Application.
+
+Para validar los diferentes flujos de la aplicación, el frontend consume una API de demostración configurada mediante `environment.apiUrl`. Esta API permite utilizar información temporal para representar pacientes, alertas, mediciones e intervenciones.
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 2 se realizó el despliegue de la primera versión funcional de la Frontend Web Application de VitaLink, permitiendo acceder públicamente a las interfaces desarrolladas durante el Sprint.
+
+##### Landing Page
+
+La Landing Page continúa disponible públicamente mediante GitHub Pages.
+
+**Repositorio:**
+
+https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page
+
+**URL desplegada:**
+
+https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/
+
+![Vitalink_landing.png](assets/Vitalink_landing.png)
+
+##### Frontend Web Application
+
+La primera versión de la Frontend Web Application fue desarrollada utilizando Angular y desplegada mediante **Vercel**.
+
+El proceso general de despliegue comprendió:
+
+1. Desarrollo de funcionalidades mediante ramas independientes.
+2. Integración y revisión de cambios mediante Pull Requests.
+3. Integración de las funcionalidades desarrolladas.
+4. Generación de la versión de producción de la aplicación Angular.
+5. Despliegue de la aplicación mediante Vercel.
+6. Validación del funcionamiento desde la URL pública.
+
+**Repositorio de Frontend Web Application:**
+
+https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend
+
+**URL desplegada:**
+
+https://vitalink-frontend.vercel.app/
+
+##### Evidencias
+
+
+\includegraphics[width=0.7\linewidth]{assets/evidenciareport.png}
+
+
+
+\includegraphics[width=0.7\linewidth]{assets/urldesplega.png}
+
+
+
+\includegraphics[width=0.7\linewidth]{assets/evidenciainciosesion.png}
+
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 2, los integrantes colaborarán en el desarrollo de la primera versión de la Frontend Web Application utilizando GitHub como plataforma de control de versiones y colaboración.
+
+Los integrantes y sus usuarios de GitHub son:
+
+| Team Member | GitHub Username |
+|---|---|
+| Fernando Contreras | FernSkibidi69 |
+| Pablo Martinez | Delzekl |
+| Yazid Said | BL4Z3K4D |
+| Kirk Quiliano | Kirkcito |
+| Deiby Vargas | poluxbinPe |
+
+Las funcionalidades serán implementadas mediante ramas feature y posteriormente integradas hacia `develop` mediante Pull Requests.
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 2, el equipo CodeBrokers desarrolló la primera versión de la Frontend Web Application de VitaLink utilizando Angular, TypeScript, HTML y CSS. La organización del trabajo comprendió las interfaces médicas y familiares, la consistencia visual, la documentación del Sprint y la integración y publicación de la aplicación.
+
+La siguiente relación se basa en las responsabilidades registradas en Aspect Leaders and Collaborators, las tareas del Sprint Backlog y las evidencias de ejecución. Las capturas permiten observar resultados del equipo; la atribución individual debe complementarse con los Pull Requests o commits correspondientes.
+
+##### Fernando Contreras — Frontend familiar
+
+Fernando figuró como responsable principal del frontend dirigido a familiares y adultos mayores. El Sprint Backlog le asignó las tareas T14 y T15, relacionadas con la presentación del estado general del adulto mayor y la visualización comprensible de sus alertas.
+
+Estas tareas abordaron la necesidad de facilitar la consulta de información de salud sin exigir la interpretación de valores técnicos aislados. Las capturas muestran un panel familiar con selección del adulto mayor, indicador de estado general, mediciones y cantidad de alertas abiertas.
+
+La evidencia visual respalda la existencia de estas interfaces. El envío de notificaciones permanece pendiente y no forma parte del resultado acreditado para este Sprint.
+
+##### Pablo Martinez — Consistencia visual e interacción
+
+Pablo figuró como responsable principal de UX/UI y accesibilidad. Se le asignaron las tareas T12 y T17, orientadas a diferenciar visualmente la urgencia de las alertas y simplificar las interacciones principales.
+
+Estas responsabilidades abordaron la necesidad de reconocer prioridades y consultar información mediante una interfaz comprensible. Las capturas muestran etiquetas de prioridad, diferencias de color, tarjetas informativas y controles de navegación.
+
+La evidencia presentada permite observar estos elementos visuales. La comprobación del máximo de dos pasos y del cumplimiento de criterios de accesibilidad requiere registrar los recorridos y las verificaciones correspondientes.
+
+##### Yazid Said — Frontend médico
+
+Yazid figuró como responsable principal de las interfaces para profesionales de salud y como preparador del Sprint Planning 2. El Sprint Backlog le asignó las tareas T11 y T13, correspondientes al panel médico de alertas y al acceso al detalle del paciente.
+
+Estas tareas abordaron la necesidad de organizar la información de pacientes y facilitar la identificación de casos que requieren atención. Las capturas muestran indicadores de alertas pendientes y en revisión, pacientes asignados, mediciones e indicadores de prioridad.
+
+También se observan accesos al historial y detalle del paciente. La demostración del recorrido desde una alerta hasta el paciente asociado debe complementar la evidencia visual.
+
+##### Kirk Quiliano — Documentación del Sprint
+
+Kirk figuró como responsable principal de la documentación del Sprint 2 y como colaborador en el frontend familiar y en la integración.
+
+El informe reúne la planificación, la distribución de responsabilidades, el backlog, el historial de commits y las evidencias de ejecución y despliegue. Estos apartados constituyen el resultado documental del Sprint y permiten describir el alcance de la versión desarrollada.
+
+Para sustentar su aporte individual, corresponde relacionar las actualizaciones del reporte con los commits o Pull Requests de documentación. La responsabilidad asignada identifica su ámbito de participación, pero no permite atribuirle por sí sola cada modificación del informe.
+
+##### Deiby Vargas — Integración y despliegue
+
+Deiby figuró como responsable principal de integración y despliegue. Además, el Sprint Backlog le asignó la tarea T16, relacionada con la confirmación de atención de alertas.
+
+La integración y publicación abordaron la necesidad de reunir los componentes desarrollados en una versión accesible para su demostración. El informe registra la integración mediante Pull Requests y la publicación de la aplicación en Vercel.
+
+Respecto a T16, la evidencia disponible muestra la consulta de estados y accesos al seguimiento de alertas, pero no documenta por completo la confirmación de atención. Aunque el equipo confirmó que los cambios se conservan al recargar la página, este comportamiento debe demostrarse específicamente para dicha acción. La notificación al resto de la red de cuidado permanece pendiente.
+
+##### Resultados y alcance del trabajo colaborativo
+
+El resultado conjunto del Sprint fue una aplicación web publicada con interfaces diferenciadas para profesionales de salud y familiares, consulta de pacientes y mediciones, e identificación visual de alertas y prioridades.
+
+La versión utiliza datos de demostración. El equipo confirmó que los cambios se conservan al recargar la página; sin embargo, el envío de notificaciones y la integración con los servicios definitivos corresponden a entregas posteriores.
+
+Para completar la trazabilidad individual, cada aporte debe vincularse con la tarea correspondiente y con un commit o Pull Request que permita comprobar su ejecución. Las responsabilidades asignadas, las evidencias visuales y los cambios del repositorio deben describir un mismo resultado.
+
+
+Las evidencias de colaboración correspondientes al Sprint 2 incluirán:
+
+
+
+\includegraphics[width=0.7\linewidth]{assets/evidenciareport.png}
+
+
+
+\includegraphics[width=0.7\linewidth]{assets/urldesplega.png}
+
+
+
+\includegraphics[width=0.7\linewidth]{assets/evidenciainciosesion.png}
+
+
+Estas evidencias permitirán identificar los aportes realizados por cada integrante y mantener trazabilidad sobre el trabajo colaborativo desarrollado durante el Sprint 2.
+
+### 5.2.3. Sprint 3
+
+El Product Backlog de la sección 3.3 es la línea base para identificar historias y Story Points. La documentación de Sprint 2 registra siete historias de interfaz y un compromiso de 19 SP; sus evidencias muestran vistas de la aplicación y una API de demostración, pero no acreditan por sí solas la aceptación final de cada historia. Los repositorios de frontend y backend contienen trabajo posterior de integración, por lo que se separa aquí el contexto técnico observable del compromiso del Sprint 3. [PENDIENTE: incorporar el acta o tablero de Sprint 3 que confirme el alcance y su fecha de corte].
+
+#### 5.2.3.1. Sprint Planning 3
+
+La siguiente ficha conserva la estructura de los dos plannings anteriores. Las evidencias de código y PR permiten preparar una propuesta de refinamiento, pero no prueban la celebración de la reunión ni su acuerdo de alcance.
+
+| Sprint # | Sprint 3 |
+|---|---|
+| **Sprint Planning Background** | El Sprint 2 documentó interfaces Angular para profesionales y familiares y consumo de una API de demostración. El repositorio posterior del backend documenta módulos IAM, Providers y Care con persistencia JPA; el frontend posterior declara flujos integrados. Estas fuentes describen evolución técnica, no el compromiso acordado en el planning. |
+| **Date / Time / Location** | [PENDIENTE: confirmar fecha, hora y medio con el acta o el equipo]. |
+| **Prepared By** | [PENDIENTE: confirmar responsable de la reunión o acta]. |
+| **Attendees (to planning meeting)** | [PENDIENTE: confirmar asistencia efectiva]. |
+| **Sprint 2 Review Summary** | El Report aporta capturas de paneles médico y familiar, alertas y URL del frontend desplegado en Vercel. Su sección 5.2.2.6 identifica una API de demostración; no hay en esa revisión evidencia de servicios REST definitivos. La aceptación final de las siete historias sigue pendiente de cotejo con el tablero. |
+| **Sprint 2 Retrospective Summary** | [PENDIENTE: incorporar acuerdos e impedimentos reales de la retrospectiva]. |
+| **Sprint 3 Goal** | [PENDIENTE: confirmar objetivo aprobado por el equipo]. Como propuesta de refinamiento: verificar de extremo a extremo la consulta y atención de alertas entre la aplicación Angular y la API persistente, incluidos permisos por rol y evidencia de pruebas. |
+| **Sprint Goal & User Stories** | [PENDIENTE: confirmar IDs comprometidos]. Candidatas para refinamiento: TS-02, TS-04, TS-05 y TS-11, por su relación con alertas, intervenciones y acceso; véase la sección 3.1 y la matriz de trabajo de 5.2.3.3. No equivalen a selección aprobada. |
+| **Sprint 3 Velocity** | [PENDIENTE: calcular velocidad histórica con historias aceptadas o registrar capacidad prevista acordada; no se infiere de Sprint 2]. |
+| **Sum of Story Points** | [PENDIENTE: sumar únicamente las historias comprometidas]. Las cuatro candidatas sumarían 13 SP según la línea base (3 + 3 + 2 + 5), cifra condicional que no constituye compromiso. |
+
+La propuesta depende de verificar el contrato REST y la persistencia de alertas, la identidad de la sesión y los permisos de médico y familiar. El backend actual documenta sesiones bearer opacas; los criterios de TS-11 en 3.1 todavía describen JWT y deben revisarse con el equipo antes de afirmar que la historia cumple su criterio original.
+
+#### 5.2.3.2. Aspect Leaders and Collaborators
+
+La matriz incluye a los cinco integrantes con los usernames registrados en los Sprints anteriores. **L** indica liderazgo confirmado y **C** colaboración confirmada; las celdas vacías indican asignación pendiente de evidencia para Sprint 3. El encargo de corrección documental identifica a Kirk como responsable de esta actualización del Report, pero no demuestra un acuerdo de liderazgo de Sprint 3.
+
+| Team Member | GitHub Username | Backend & Persistence | WebApp & API Integration | Alert Workflows | QA & Deployment | Sprint Documentation |
+|---|---|---|---|---|---|---|
+| Contreras Panuera, Fernando Fabrizio | FernSkibidi69 |  |  |  |  |  |
+| Martinez Gaona, Pablo | Delzekl |  |  |  |  |  |
+| Quiliano Motta, Kirk Douglas | Kirkcito |  |  |  |  | [PENDIENTE: confirmar L] |
+| Said Conde, Yazid | BL4Z3K4D |  |  |  |  |  |
+| Vargas Manchinelli, Deiby Juan | poluxbinPe |  |  |  |  |  |
+
+La distribución L/C requiere el acta, las tarjetas asignadas o PRs asociados inequívocamente al Sprint 3. Los PRs técnicos consultados identifican módulos y cambios, pero no acreditan por sí solos el reparto de responsabilidades de esta ceremonia. El trabajo documental de Kirk queda identificado como responsabilidad de este encargo, pendiente de ratificación como aspecto del Sprint.
+
+#### 5.2.3.3. Sprint Backlog 3
+
+**Estado del compromiso:** [PENDIENTE: contrastar el Sprint Board 3 o acta]. La tabla siguiente es una **propuesta de refinamiento**, no un backlog comprometido ni una relación de trabajo terminado. Conserva los ID, títulos y SP del Product Backlog; los IDs `S3-P01` a `S3-P08` son referencias locales de esta propuesta y no identificadores de Trello. Las horas, responsables y estados del tablero requieren confirmación. No se asigna `Done` a partir de la existencia de código o de una guía de despliegue.
+
+```{=latex}
+\begin{landscape}
+\footnotesize
+```
+
+| Sprint # | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
+|---|---|---|---|---|---|---|---|---|
+| Sprint 3 (propuesta) | TS-02 | Listado de alertas | S3-P01 | Verificar contrato de listado | Cotejar filtros, orden, respuesta y permisos del endpoint de alertas con los criterios de 3.1 y las vistas médicas y familiares. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+| Sprint 3 (propuesta) | TS-02 | Listado de alertas | S3-P02 | Probar consulta desde la WebApp | Comprobar solicitudes autenticadas y visualización de alertas en ambas vistas con datos persistidos; adjuntar prueba reproducible. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+| Sprint 3 (propuesta) | TS-04 | Transición de estado de una alerta | S3-P03 | Verificar transición REST | Contrastar estados admitidos, respuesta y marca temporal con el criterio de aceptación de TS-04. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+| Sprint 3 (propuesta) | TS-04 | Transición de estado de una alerta | S3-P04 | Validar persistencia y concurrencia | Probar que el estado queda almacenado y que la WebApp resuelve un conflicto de versión sin perder la intervención. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+| Sprint 3 (propuesta) | TS-05 | Observaciones sobre una alerta | S3-P05 | Verificar registro de observación | Cotejar el endpoint y el registro de notas con el criterio de TS-05 y la intervención del profesional. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+| Sprint 3 (propuesta) | TS-05 | Observaciones sobre una alerta | S3-P06 | Probar trazabilidad de la nota | Comprobar consulta posterior, autor y asociación con la alerta mediante petición y respuesta reproducibles. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+| Sprint 3 (propuesta) | TS-11 | Control de acceso a datos de salud (RBAC) | S3-P07 | Revisar criterio de autenticación | Acordar la actualización del criterio JWT de 3.1 frente a las sesiones bearer opacas del backend antes de evaluar aceptación. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+| Sprint 3 (propuesta) | TS-11 | Control de acceso a datos de salud (RBAC) | S3-P08 | Probar límites de acceso | Verificar 401/403 y acceso a pacientes afiliados y no afiliados con sesiones de roles distintos; conservar evidencia de ejecución. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
+
+```{=latex}
+\normalsize
+\end{landscape}
+```
+
+**Trazabilidad para el refinamiento:** [Product Backlog y SP](../30-chapter-three/33-product-backlog.md), [criterios de las historias](../30-chapter-three/31-user-stories.md), [PR de IAM del backend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend/pull/3), [PR de integración de registro del frontend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend/pull/6), [README del backend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend/blob/main/README.md) y [README del frontend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend/blob/main/README.md). Estos recursos demuestran contexto técnico; no acreditan asignación ni aceptación de las tareas propuestas.
+
+**Sprint Board 3:** [PENDIENTE: URL y captura fechada del tablero de Sprint 3]. Los enlaces de Trello del Product Backlog y Sprint 1 se encuentran en 3.3 y 5.2.1.3; no se reutiliza su captura como evidencia del Sprint 3.
+
+#### 5.2.3.4. Development Evidence for Sprint Review
+
+Durante el Sprint 3 se construyó la primera versión de los **RESTful Web Services de VitaLink con Java, Spring Boot, Spring Data JPA y Spring Security**, y se integró la Frontend Web Application con esos servicios. El backend se organizó como un monolito modular con cuatro bounded contexts:
+
+- **IAM:** registro, inicio y cierre de sesión, consulta de usuarios y seguridad con contraseñas cifradas con BCrypt y tokens bearer opacos.
+- **Care:** pacientes, mediciones, alertas, intervenciones, cuidadores y relaciones de cuidado.
+- **Providers:** clínicas y médicos.
+- **Enrollment:** registro de una familia junto con su paciente.
+
+El código se integró con GitFlow: cada integrante trabajó en una rama `feature/*` creada desde `develop`, la integró mediante Pull Request y `develop` se publicó en `main` con un Pull Request final. Después de la integración se hicieron mejoras en ramas `improvement/*`:
+
+- validación de rangos de los signos vitales;
+- catálogo de rangos de referencia de las mediciones;
+- selección de clínica durante el registro;
+- colores del estado de los pacientes según la severidad de sus mediciones.
+
+Además, se configuró el despliegue en Render y TiDB Cloud y se actualizaron los enlaces de la Landing Page hacia el frontend desplegado.
+
+**Repositorios:**
+
+- Backend (Web Services): https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend
+- Frontend Web Application: https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend
+- Landing Page: https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page
+
+**Commits del Sprint 3:**
+
+La tabla muestra los commits de implementación de los tres repositorios en el orden en que se hicieron. No incluye los commits de *merge*, que aparecen en la tabla de Pull Requests. Los commits de este Sprint no tienen cuerpo de mensaje; por eso esa columna aparece con un guion.
+
+\begin{landscape}
+\footnotesize
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| CodeBrokers-Landin_Page | feature/vitalink.responsive | 8d7d97a | fix: mejorar responsive y navegación de la landing VitaLink | — | 26/10/2026 |
+| CodeBrokers-Landin_Page | feature/vitalink.responsive | 6feb4c9 | fix: dirigir todos los CTA a la aplicación frontend | — | 26/10/2026 |
+| CodeBrokers-Landin_Page | feature/vitalink.responsive | 8240813 | chore: eliminar comentarios del código de la landing | — | 26/10/2026 |
+| CodeBrokers-Landin_Page | feature/vitalink.responsive | 4bd2b1f | feature/ fix the coments | — | 26/10/2026 |
+| CodeBrokers-Backend | main | 691d3d2 | chore: crear proyecto base Spring Boot con Java y Lombok | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/arquitectura-de-carpetas-base | 119f3f1 | chore: agregar configuracion y componentes compartidos | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/arquitectura-de-carpetas-base | 468fe66 | docs: simplificar instrucciones del README | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/iam-authentication | 8bfd566 | feat(iam): add user and session domain model | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/iam-authentication | 169f003 | feat(iam): add user and session repositories | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/iam-authentication | ae1e520 | feat(iam): add authentication and user query services | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/iam-authentication | 1505a3d | feat(iam): add bearer token security configuration | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/iam-authentication | b0d0d7b | feat(iam): add authentication REST endpoints | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/clinic-care | ef9c516 | feat: add clinic care bounded context | — | 03/11/2026 |
+| CodeBrokers-Backend | feature/providers | a2932f7 | feat(providers): add clinics and doctors module | — | 04/11/2026 |
+| CodeBrokers-Backend | feature/registro-familiar | de1d76d | feat: agregar modulo registro familiar | — | 04/11/2026 |
+| CodeBrokers-Backend | feature/registro-familiar | 0568c7f | fix(docker): corregir nombre del proyecto a vitalink | — | 04/11/2026 |
+| CodeBrokers-Backend | feature/registro-familiar | b2e2327 | refactor: simplify family registration | — | 04/11/2026 |
+| CodeBrokers-Frontend | feature/register-integration | 6be0699 | Integra registro y seguimiento con el backend de VitaLink | — | 04/11/2026 |
+| CodeBrokers-Backend | main | ada664f | Configure deployment for Render and TiDB | — | 08/11/2026 |
+| CodeBrokers-Frontend | main | ccc914f | Configure frontend deployment and production API | — | 08/11/2026 |
+| CodeBrokers-Backend | improvement/clinic-catalog | e8bd635 | Ensure clinic catalog is available for registration | — | 09/11/2026 |
+| CodeBrokers-Frontend | improvement/clinic-registration | b1d0998 | Improve clinic selection during account registration | — | 09/11/2026 |
+| CodeBrokers-Backend | improvement/vital-sign-validation | ef947f4 | Validate supported ranges for initial vital measurements | — | 10/11/2026 |
+| CodeBrokers-Backend | improvement/measurement-status-catalog | 3bb8f77 | Initialize production measurement reference catalog | — | 10/11/2026 |
+| CodeBrokers-Frontend | improvement/vital-sign-guidance | 596530e | Add per-field guidance and limits for vital measurements | — | 10/11/2026 |
+| CodeBrokers-Frontend | improvement/patient-status-colors | 098e3e3 | Color patient summaries using measurement severity | — | 10/11/2026 |
+| CodeBrokers-Landin_Page | main | 2c8bd78 | fix: point CTA buttons to Render frontend | — | 11/11/2026 |
+| CodeBrokers-Landin_Page | main | 01adf18 | fix: refresh cached script for Render CTA links | — | 11/11/2026 |
+
+\normalsize
+\end{landscape}
+
+**Pull Requests integrados en el Sprint 3:**
+
+| Repository | Pull Request | Branch (origen → destino) | Autor (GitHub) | Merged on | Contenido |
+|---|---|---|---|---|---|
+| CodeBrokers-Landin_Page | #8 y #10 | feature/vitalink.responsive → develop | BL4Z3K4D | 26/10/2026 | Diseño responsive, navegación y enlaces CTA hacia el frontend. |
+| CodeBrokers-Landin_Page | #9 y #11 | develop → main | BL4Z3K4D | 26/10/2026 | Publicación de la Landing Page actualizada. |
+| CodeBrokers-Backend | #1 | feature/arquitectura-de-carpetas-base → develop | BL4Z3K4D | 02/11/2026 | Proyecto base, configuración, componentes compartidos y OpenAPI. |
+| CodeBrokers-Backend | #3 | feature/iam-authentication → develop | poluxbinPe | 03/11/2026 | Bounded context IAM: usuarios, sesiones, seguridad y endpoints de autenticación. |
+| CodeBrokers-Backend | #4 | feature/clinic-care → develop | de123kl | 03/11/2026 | Bounded context Care: pacientes, mediciones, alertas e intervenciones. |
+| CodeBrokers-Backend | #5 | feature/providers → develop | FernSkibidi69 | 04/11/2026 | Bounded context Providers: clínicas y médicos. |
+| CodeBrokers-Backend | #6 | feature/registro-familiar → develop | BL4Z3K4D | 04/11/2026 | Bounded context Enrollment: registro de la familia con su paciente. |
+| CodeBrokers-Backend | #7 | develop → main | BL4Z3K4D | 04/11/2026 | Primera versión integrada de los Web Services. |
+| CodeBrokers-Frontend | #6 | feature/register-integration → develop | BL4Z3K4D | 04/11/2026 | Integración del registro y del seguimiento con el backend. |
+| CodeBrokers-Frontend | #7 | develop → main | BL4Z3K4D | 04/11/2026 | Publicación de la integración con los Web Services. |
+
+Las ramas `improvement/*` se integraron a `develop` y luego a `main` con *merges* locales, sin Pull Request; esos *merges* pueden verse en el historial de cada repositorio. Todos los commits y Pull Requests citados pueden verificarse en las secciones *Commits* y *Pull requests* (filtro *Closed*) de cada repositorio.
+
+#### 5.2.3.5. Execution Evidence for Sprint Review
+Durante el Sprint 3, el equipo avanzó en la integración de la Frontend Web Application de VitaLink con los servicios RESTful desarrollados mediante Java y Spring Boot.
+
+La solución contempla funcionalidades de autenticación, registro de usuarios, consulta de pacientes, visualización de mediciones y gestión de alertas. Para evidenciar su ejecución, se realizarán pruebas de los principales flujos correspondientes a los roles de familiar y profesional de salud, verificando la comunicación entre el Frontend y Backend desplegados.
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Backend_1.png}
+\par
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Backend_2.png}
+\par
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Backend_3.png}
+\par
+
+**Backend RESTful API:** https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/
+
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+En el Sprint 3 se documentaron por primera vez los RESTful Web Services de VitaLink con **OpenAPI 3.1**, generado por **springdoc-openapi** a partir de los controladores de Spring Boot.
+
+**Logros del Sprint en documentación:**
+
+- Los 23 endpoints de los cuatro bounded contexts (IAM, Care, Providers y Enrollment) aparecen agrupados por etiqueta en Swagger UI.
+- Cada endpoint muestra los esquemas de request y response.
+- El esquema de seguridad `bearerAuth` permite probar desde el botón *Authorize* los endpoints que requieren sesión.
+- La documentación está desplegada junto con el backend en Render, así que puede consultarse sin ejecutar el proyecto en local.
+
+**Documentación desplegada:**
+
+- Swagger UI: https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/swagger-ui/index.html
+- Especificación OpenAPI (JSON): https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/v3/api-docs
+
+**Repositorio de Web Services:** https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend
+
+**Commits relacionados con la documentación:**
+
+| Commit Id | Commit Message | Aporte a la documentación |
+|---|---|---|
+| 691d3d2 | chore: crear proyecto base Spring Boot con Java y Lombok | Agrega la dependencia de springdoc-openapi en `pom.xml`. |
+| 119f3f1 | chore: agregar configuracion y componentes compartidos | Crea `OpenApiConfiguration`: título, descripción, versión y esquema `bearerAuth`. |
+| b0d0d7b | feat(iam): add authentication REST endpoints | Controlador IAM documentado con la etiqueta *IAM*. |
+| ef9c516 | feat: add clinic care bounded context | Controlador Care documentado con la etiqueta *Care*. |
+| a2932f7 | feat(providers): add clinics and doctors module | Controlador Providers documentado con la etiqueta *Providers*. |
+| de1d76d | feat: agregar modulo registro familiar | Controlador Enrollment documentado con la etiqueta *Enrollment*. |
+
+**Relación de endpoints:**
+
+Todos los endpoints usan la URL base `https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com`. En la columna *Acceso*, **Público** significa que el endpoint no pide token. **Bearer** significa que debe enviarse el encabezado `Authorization: Bearer <token>`, obtenido con `sign-in`; si falta, la API responde `401`.
+
+\begin{landscape}
+\footnotesize
+
+| Bounded context | Verbo | Sintaxis de llamada | Acción | Parámetros | Acceso | Response |
+|---|---|---|---|---|---|---|
+| IAM | POST | /api/v1/auth/sign-up | Registra un usuario que no es familiar (por ejemplo, un médico); los familiares se registran en /api/v1/enrollment/families. | Body `SignUpResource`: name, email, password, role, phone (obligatorios); specialty, professionalLicense, practiceType, clinicId, doctorId, serviceType, age, location y consent según el rol. | Público | `201` con el usuario creado; `400` si role es family; `409` si el email o la colegiatura ya existen. |
+| IAM | POST | /api/v1/auth/sign-in | Inicia sesión. | Body `SignInResource`: email, password. | Público | `200` `SessionResource`: token, tokenType, expiresAt y user. |
+| IAM | POST | /api/v1/auth/sign-out | Cierra la sesión e invalida el token. | Header `Authorization`. | Bearer | `204` sin contenido. |
+| IAM | GET | /api/v1/users/me | Devuelve el usuario de la sesión. | — | Bearer | `200` `UserResource`. |
+| IAM | GET | /api/v1/users/{id} | Consulta un usuario por id. | Path `id`. | Bearer | `200` `UserResource`. |
+| Providers | GET | /api/v1/clinics | Lista las clínicas. | — | Público | `200` lista de `ClinicResource` (id, name). |
+| Providers | GET | /api/v1/doctors | Lista los médicos. | Query opcional `practiceType` y `clinicId`. | Público | `200` lista de `DoctorResource`. |
+| Enrollment | POST | /api/v1/enrollment/families | Registra una familia con su paciente, su médico y sus signos vitales iniciales. | Body `RegisterFamilyResource`: name, email, password, phone y patient (`PatientEnrollmentResource` con initialVitals). | Público | `201` `FamilyEnrollmentResource`: userId, patientId. |
+| Care | GET | /api/v1/patients | Lista los pacientes visibles para el usuario. | — | Bearer | `200` lista de `PatientResource`. |
+| Care | GET | /api/v1/patients/{id} | Consulta un paciente. | Path `id`. | Bearer | `200` `PatientResource`. |
+| Care | POST | /api/v1/patients | Registra un paciente. | Body `CreatePatientResource`: givenName, familyName, location, familyIds; age opcional. | Bearer | `201` `PatientResource`. |
+| Care | GET | /api/v1/records | Lista las mediciones. | — | Bearer | `200` lista de `RecordResource`. |
+| Care | POST | /api/v1/records | Registra una medición de un paciente. | Body `CreateRecordResource`: patientId, type, value; unit y note opcionales. | Bearer | `201` `RecordResource`. |
+| Care | GET | /api/v1/measurementRanges | Lista los rangos de referencia de cada medición. | — | Bearer | `200` lista de `MeasurementRangeResource`. |
+| Care | GET | /api/v1/alerts | Lista las alertas. | — | Bearer | `200` lista de `AlertResource`. |
+| Care | GET | /api/v1/alerts/{id} | Consulta una alerta. | Path `id`. | Bearer | `200` `AlertResource`. |
+| Care | POST | /api/v1/alerts | Crea una alerta de ayuda para un paciente. | Body `CreateHelpAlertResource`: patientId. | Bearer | `201` `AlertResource`. |
+| Care | PATCH | /api/v1/alerts/{id} | Cambia el estado de una alerta y registra la intervención. | Path `id`; body `ChangeAlertStatusResource`: status (`PENDING`, `IN_REVIEW`, `ATTENDED`); note y expectedVersion opcionales. | Bearer | `200` `AlertResource` con la nueva versión. |
+| Care | GET | /api/v1/interventions | Lista el historial de intervenciones sobre las alertas. | — | Bearer | `200` lista de `InterventionResource`. |
+| Care | GET | /api/v1/caregivers | Lista los cuidadores. | — | Bearer | `200` lista de `CaregiverResource`. |
+| Care | GET | /api/v1/care-relationships | Lista las relaciones de cuidado entre médico y paciente. | — | Bearer | `200` lista de `RelationshipResource`. |
+| Care | POST | /api/v1/care-relationships | Invita a un paciente a una relación de cuidado. | Body `InvitePatientResource`: patientId. | Bearer | `201` `RelationshipResource`. |
+| Care | POST | /api/v1/care-relationships/{id}/{decision} | Responde una invitación o termina la relación. | Path `id` y `decision` (`accept`, `reject` o `end`). | Bearer | `200` `RelationshipResource` con el nuevo estado. |
+
+\normalsize
+\end{landscape}
+
+**Ejemplos de request y response:**
+
+*Inicio de sesión.* Se envía el email y la contraseña de una cuenta registrada (en el ejemplo, datos de muestra):
+
+```http
+POST /api/v1/auth/sign-in
+Content-Type: application/json
+
+{ "email": "familiar@ejemplo.com", "password": "********" }
+```
+
+La API responde `200` con un `SessionResource`. `token` es el valor que se envía después en el encabezado `Authorization: Bearer <token>`, `tokenType` indica el tipo de token, `expiresAt` marca el vencimiento de la sesión y `user` trae los datos del usuario autenticado. La API solo guarda en la base de datos el hash SHA-256 del token, no el token. Si las credenciales no son válidas, responde `401`.
+
+*Consulta pública de clínicas.* `GET /api/v1/clinics` no requiere sesión, porque el formulario de registro lo usa para elegir la clínica. La respuesta real de la API desplegada es:
+
+```json
+[{"id":"CL-01","name":"Clínica Central"},
+ {"id":"CL-02","name":"Clínica San José"},
+ {"id":"CL-03","name":"Clínica Vida"}]
+```
+
+*Endpoint protegido sin token.* `GET /api/v1/users/me` sin el encabezado `Authorization` responde `401` con el cuerpo `{"status":401,"detail":"Debes iniciar sesión."}`. Así se comprueba que la seguridad de IAM protege los recursos.
+
+**Capturas de la documentación desplegada:**
+
+Swagger UI de la API desplegada en Render. Muestra los endpoints agrupados por bounded context, el botón *Authorize* y un candado en los endpoints que requieren token:
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Swagger_endpoints_sprint3.png}
+\par
+
+Respuesta de `GET /api/v1/clinics` en la API desplegada, consultada sin sesión:
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[width=\linewidth,keepaspectratio]{assets/Swagger_clinics_response.png}
+\par
+
+Respuesta de `GET /api/v1/users/me` sin token: la API rechaza la solicitud con `401`:
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[width=\linewidth,keepaspectratio]{assets/Swagger_users_me_401.png}
+\par
+
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
+Durante el Sprint 3, VitaLink cuenta con tres productos digitales publicados de manera independiente: Landing Page, Frontend Web Application y Backend RESTful API.
+
+Esta distribución permite separar la presentación pública del producto, la experiencia de los usuarios y el procesamiento de las operaciones del negocio.
+
+##### Landing Page
+
+La Landing Page se encuentra publicada mediante GitHub Pages y presenta la propuesta de valor de VitaLink para sus segmentos objetivo.
+
+Contiene información dirigida a familiares y proveedores de salud, así como enlaces de acceso a la aplicación web.
+
+**URL pública:**
+
+https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/
+
+**Evidencia:**
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/LandingFamilia.png}
+\par
+
+##### Frontend Web Application
+
+La Frontend Web Application fue desarrollada mediante Angular y cuenta con una URL de publicación en Render.
+
+La aplicación se compila para producción y utiliza la dirección HTTPS del Backend para realizar las solicitudes correspondientes a los servicios RESTful.
+
+**URL pública:**
+
+https://vitalink-frontend-963x.onrender.com/
+
+**Evidencias:**
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Frontend_patient_1.png}
+\par
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Frontend_medic_1.png}
+\par
+
+##### Backend RESTful API
+
+El Backend de VitaLink está desarrollado con Java y Spring Boot y cuenta con una URL pública en Render.
+
+Se realizo el despliegue mediante Docker, persistencia utilizando TiDB Cloud y variables de entorno para la conexión a la base de datos y la autorización de solicitudes provenientes del Frontend.
+
+**URL pública:**
+
+https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/
+
+**Repositorio:**
+
+https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend
+
+**Evidencias:** 
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Backend_render.png}
+\par
+
+#### 5.2.3.8. Team Collaboration Insights during Sprint
