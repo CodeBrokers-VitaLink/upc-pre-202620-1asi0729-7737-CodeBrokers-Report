@@ -675,3 +675,325 @@ La distribución L/C requiere el acta, las tarjetas asignadas o PRs asociados in
 **Trazabilidad para el refinamiento:** [Product Backlog y SP](../30-chapter-three/33-product-backlog.md), [criterios de las historias](../30-chapter-three/31-user-stories.md), [PR de IAM del backend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend/pull/3), [PR de integración de registro del frontend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend/pull/6), [README del backend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend/blob/main/README.md) y [README del frontend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend/blob/main/README.md). Estos recursos demuestran contexto técnico; no acreditan asignación ni aceptación de las tareas propuestas.
 
 **Sprint Board 3:** [PENDIENTE: URL y captura fechada del tablero de Sprint 3]. Los enlaces de Trello del Product Backlog y Sprint 1 se encuentran en 3.3 y 5.2.1.3; no se reutiliza su captura como evidencia del Sprint 3.
+
+#### 5.2.3.4. Development Evidence for Sprint Review
+
+Durante el Sprint 3 se construyó la primera versión de los **RESTful Web Services de VitaLink con Java, Spring Boot, Spring Data JPA y Spring Security**, y se integró la Frontend Web Application con esos servicios. El backend se organizó como un monolito modular con cuatro bounded contexts:
+
+- **IAM:** registro, inicio y cierre de sesión, consulta de usuarios y seguridad con contraseñas cifradas con BCrypt y tokens bearer opacos.
+- **Care:** pacientes, mediciones, alertas, intervenciones, cuidadores y relaciones de cuidado.
+- **Providers:** clínicas y médicos.
+- **Enrollment:** registro de una familia junto con su paciente.
+
+El código se integró con GitFlow: cada integrante trabajó en una rama `feature/*` creada desde `develop`, la integró mediante Pull Request y `develop` se publicó en `main` con un Pull Request final. Después de la integración se hicieron mejoras en ramas `improvement/*`:
+
+- validación de rangos de los signos vitales;
+- catálogo de rangos de referencia de las mediciones;
+- selección de clínica durante el registro;
+- colores del estado de los pacientes según la severidad de sus mediciones.
+
+Además, se configuró el despliegue en Render y TiDB Cloud y se actualizaron los enlaces de la Landing Page hacia el frontend desplegado.
+
+**Repositorios:**
+
+- Backend (Web Services): https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend
+- Frontend Web Application: https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend
+- Landing Page: https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page
+
+**Commits del Sprint 3:**
+
+La tabla muestra los commits de implementación de los tres repositorios en el orden en que se hicieron. No incluye los commits de *merge*, que aparecen en la tabla de Pull Requests. Los commits de este Sprint no tienen cuerpo de mensaje; por eso esa columna aparece con un guion.
+
+\begin{landscape}
+\footnotesize
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|---|---|---|---|---|---|
+| CodeBrokers-Landin_Page | feature/vitalink.responsive | 8d7d97a | fix: mejorar responsive y navegación de la landing VitaLink | — | 26/10/2026 |
+| CodeBrokers-Landin_Page | feature/vitalink.responsive | 6feb4c9 | fix: dirigir todos los CTA a la aplicación frontend | — | 26/10/2026 |
+| CodeBrokers-Landin_Page | feature/vitalink.responsive | 8240813 | chore: eliminar comentarios del código de la landing | — | 26/10/2026 |
+| CodeBrokers-Landin_Page | feature/vitalink.responsive | 4bd2b1f | feature/ fix the coments | — | 26/10/2026 |
+| CodeBrokers-Backend | main | 691d3d2 | chore: crear proyecto base Spring Boot con Java y Lombok | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/arquitectura-de-carpetas-base | 119f3f1 | chore: agregar configuracion y componentes compartidos | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/arquitectura-de-carpetas-base | 468fe66 | docs: simplificar instrucciones del README | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/iam-authentication | 8bfd566 | feat(iam): add user and session domain model | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/iam-authentication | 169f003 | feat(iam): add user and session repositories | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/iam-authentication | ae1e520 | feat(iam): add authentication and user query services | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/iam-authentication | 1505a3d | feat(iam): add bearer token security configuration | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/iam-authentication | b0d0d7b | feat(iam): add authentication REST endpoints | — | 02/11/2026 |
+| CodeBrokers-Backend | feature/clinic-care | ef9c516 | feat: add clinic care bounded context | — | 03/11/2026 |
+| CodeBrokers-Backend | feature/providers | a2932f7 | feat(providers): add clinics and doctors module | — | 04/11/2026 |
+| CodeBrokers-Backend | feature/registro-familiar | de1d76d | feat: agregar modulo registro familiar | — | 04/11/2026 |
+| CodeBrokers-Backend | feature/registro-familiar | 0568c7f | fix(docker): corregir nombre del proyecto a vitalink | — | 04/11/2026 |
+| CodeBrokers-Backend | feature/registro-familiar | b2e2327 | refactor: simplify family registration | — | 04/11/2026 |
+| CodeBrokers-Frontend | feature/register-integration | 6be0699 | Integra registro y seguimiento con el backend de VitaLink | — | 04/11/2026 |
+| CodeBrokers-Backend | main | ada664f | Configure deployment for Render and TiDB | — | 08/11/2026 |
+| CodeBrokers-Frontend | main | ccc914f | Configure frontend deployment and production API | — | 08/11/2026 |
+| CodeBrokers-Backend | improvement/clinic-catalog | e8bd635 | Ensure clinic catalog is available for registration | — | 09/11/2026 |
+| CodeBrokers-Frontend | improvement/clinic-registration | b1d0998 | Improve clinic selection during account registration | — | 09/11/2026 |
+| CodeBrokers-Backend | improvement/vital-sign-validation | ef947f4 | Validate supported ranges for initial vital measurements | — | 10/11/2026 |
+| CodeBrokers-Backend | improvement/measurement-status-catalog | 3bb8f77 | Initialize production measurement reference catalog | — | 10/11/2026 |
+| CodeBrokers-Frontend | improvement/vital-sign-guidance | 596530e | Add per-field guidance and limits for vital measurements | — | 10/11/2026 |
+| CodeBrokers-Frontend | improvement/patient-status-colors | 098e3e3 | Color patient summaries using measurement severity | — | 10/11/2026 |
+| CodeBrokers-Landin_Page | main | 2c8bd78 | fix: point CTA buttons to Render frontend | — | 11/11/2026 |
+| CodeBrokers-Landin_Page | main | 01adf18 | fix: refresh cached script for Render CTA links | — | 11/11/2026 |
+
+\normalsize
+\end{landscape}
+
+**Pull Requests integrados en el Sprint 3:**
+
+| Repository | Pull Request | Branch (origen → destino) | Autor (GitHub) | Merged on | Contenido |
+|---|---|---|---|---|---|
+| CodeBrokers-Landin_Page | #8 y #10 | feature/vitalink.responsive → develop | BL4Z3K4D | 26/10/2026 | Diseño responsive, navegación y enlaces CTA hacia el frontend. |
+| CodeBrokers-Landin_Page | #9 y #11 | develop → main | BL4Z3K4D | 26/10/2026 | Publicación de la Landing Page actualizada. |
+| CodeBrokers-Backend | #1 | feature/arquitectura-de-carpetas-base → develop | BL4Z3K4D | 02/11/2026 | Proyecto base, configuración, componentes compartidos y OpenAPI. |
+| CodeBrokers-Backend | #3 | feature/iam-authentication → develop | poluxbinPe | 03/11/2026 | Bounded context IAM: usuarios, sesiones, seguridad y endpoints de autenticación. |
+| CodeBrokers-Backend | #4 | feature/clinic-care → develop | de123kl | 03/11/2026 | Bounded context Care: pacientes, mediciones, alertas e intervenciones. |
+| CodeBrokers-Backend | #5 | feature/providers → develop | FernSkibidi69 | 04/11/2026 | Bounded context Providers: clínicas y médicos. |
+| CodeBrokers-Backend | #6 | feature/registro-familiar → develop | BL4Z3K4D | 04/11/2026 | Bounded context Enrollment: registro de la familia con su paciente. |
+| CodeBrokers-Backend | #7 | develop → main | BL4Z3K4D | 04/11/2026 | Primera versión integrada de los Web Services. |
+| CodeBrokers-Frontend | #6 | feature/register-integration → develop | BL4Z3K4D | 04/11/2026 | Integración del registro y del seguimiento con el backend. |
+| CodeBrokers-Frontend | #7 | develop → main | BL4Z3K4D | 04/11/2026 | Publicación de la integración con los Web Services. |
+
+Las ramas `improvement/*` se integraron a `develop` y luego a `main` con *merges* locales, sin Pull Request; esos *merges* pueden verse en el historial de cada repositorio. Todos los commits y Pull Requests citados pueden verificarse en las secciones *Commits* y *Pull requests* (filtro *Closed*) de cada repositorio.
+
+#### 5.2.3.5. Execution Evidence for Sprint Review
+Durante el Sprint 3, el equipo avanzó en la integración de la Frontend Web Application de VitaLink con los servicios RESTful desarrollados mediante Java y Spring Boot.
+
+La solución contempla funcionalidades de autenticación, registro de usuarios, consulta de pacientes, visualización de mediciones y gestión de alertas. Para evidenciar su ejecución, se realizarán pruebas de los principales flujos correspondientes a los roles de familiar y profesional de salud, verificando la comunicación entre el Frontend y Backend desplegados.
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Backend_1.png}
+\par
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Backend_2.png}
+\par
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Backend_3.png}
+\par
+
+**Backend RESTful API:** https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/
+
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+
+En el Sprint 3 se documentaron por primera vez los RESTful Web Services de VitaLink con **OpenAPI 3.1**, generado por **springdoc-openapi** a partir de los controladores de Spring Boot.
+
+**Logros del Sprint en documentación:**
+
+- Los 23 endpoints de los cuatro bounded contexts (IAM, Care, Providers y Enrollment) aparecen agrupados por etiqueta en Swagger UI.
+- Cada endpoint muestra los esquemas de request y response.
+- El esquema de seguridad `bearerAuth` permite probar desde el botón *Authorize* los endpoints que requieren sesión.
+- La documentación está desplegada junto con el backend en Render, así que puede consultarse sin ejecutar el proyecto en local.
+
+**Documentación desplegada:**
+
+- Swagger UI: https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/swagger-ui/index.html
+- Especificación OpenAPI (JSON): https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/v3/api-docs
+
+**Repositorio de Web Services:** https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend
+
+**Commits relacionados con la documentación:**
+
+| Commit Id | Commit Message | Aporte a la documentación |
+|---|---|---|
+| 691d3d2 | chore: crear proyecto base Spring Boot con Java y Lombok | Agrega la dependencia de springdoc-openapi en `pom.xml`. |
+| 119f3f1 | chore: agregar configuracion y componentes compartidos | Crea `OpenApiConfiguration`: título, descripción, versión y esquema `bearerAuth`. |
+| b0d0d7b | feat(iam): add authentication REST endpoints | Controlador IAM documentado con la etiqueta *IAM*. |
+| ef9c516 | feat: add clinic care bounded context | Controlador Care documentado con la etiqueta *Care*. |
+| a2932f7 | feat(providers): add clinics and doctors module | Controlador Providers documentado con la etiqueta *Providers*. |
+| de1d76d | feat: agregar modulo registro familiar | Controlador Enrollment documentado con la etiqueta *Enrollment*. |
+
+**Relación de endpoints:**
+
+Todos los endpoints usan la URL base `https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com`. En la columna *Acceso*, **Público** significa que el endpoint no pide token. **Bearer** significa que debe enviarse el encabezado `Authorization: Bearer <token>`, obtenido con `sign-in`; si falta, la API responde `401`.
+
+\begin{landscape}
+\footnotesize
+
+| Bounded context | Verbo | Sintaxis de llamada | Acción | Parámetros | Acceso | Response |
+|---|---|---|---|---|---|---|
+| IAM | POST | /api/v1/auth/sign-up | Registra un usuario que no es familiar (por ejemplo, un médico); los familiares se registran en /api/v1/enrollment/families. | Body `SignUpResource`: name, email, password, role, phone (obligatorios); specialty, professionalLicense, practiceType, clinicId, doctorId, serviceType, age, location y consent según el rol. | Público | `201` con el usuario creado; `400` si role es family; `409` si el email o la colegiatura ya existen. |
+| IAM | POST | /api/v1/auth/sign-in | Inicia sesión. | Body `SignInResource`: email, password. | Público | `200` `SessionResource`: token, tokenType, expiresAt y user. |
+| IAM | POST | /api/v1/auth/sign-out | Cierra la sesión e invalida el token. | Header `Authorization`. | Bearer | `204` sin contenido. |
+| IAM | GET | /api/v1/users/me | Devuelve el usuario de la sesión. | — | Bearer | `200` `UserResource`. |
+| IAM | GET | /api/v1/users/{id} | Consulta un usuario por id. | Path `id`. | Bearer | `200` `UserResource`. |
+| Providers | GET | /api/v1/clinics | Lista las clínicas. | — | Público | `200` lista de `ClinicResource` (id, name). |
+| Providers | GET | /api/v1/doctors | Lista los médicos. | Query opcional `practiceType` y `clinicId`. | Público | `200` lista de `DoctorResource`. |
+| Enrollment | POST | /api/v1/enrollment/families | Registra una familia con su paciente, su médico y sus signos vitales iniciales. | Body `RegisterFamilyResource`: name, email, password, phone y patient (`PatientEnrollmentResource` con initialVitals). | Público | `201` `FamilyEnrollmentResource`: userId, patientId. |
+| Care | GET | /api/v1/patients | Lista los pacientes visibles para el usuario. | — | Bearer | `200` lista de `PatientResource`. |
+| Care | GET | /api/v1/patients/{id} | Consulta un paciente. | Path `id`. | Bearer | `200` `PatientResource`. |
+| Care | POST | /api/v1/patients | Registra un paciente. | Body `CreatePatientResource`: givenName, familyName, location, familyIds; age opcional. | Bearer | `201` `PatientResource`. |
+| Care | GET | /api/v1/records | Lista las mediciones. | — | Bearer | `200` lista de `RecordResource`. |
+| Care | POST | /api/v1/records | Registra una medición de un paciente. | Body `CreateRecordResource`: patientId, type, value; unit y note opcionales. | Bearer | `201` `RecordResource`. |
+| Care | GET | /api/v1/measurementRanges | Lista los rangos de referencia de cada medición. | — | Bearer | `200` lista de `MeasurementRangeResource`. |
+| Care | GET | /api/v1/alerts | Lista las alertas. | — | Bearer | `200` lista de `AlertResource`. |
+| Care | GET | /api/v1/alerts/{id} | Consulta una alerta. | Path `id`. | Bearer | `200` `AlertResource`. |
+| Care | POST | /api/v1/alerts | Crea una alerta de ayuda para un paciente. | Body `CreateHelpAlertResource`: patientId. | Bearer | `201` `AlertResource`. |
+| Care | PATCH | /api/v1/alerts/{id} | Cambia el estado de una alerta y registra la intervención. | Path `id`; body `ChangeAlertStatusResource`: status (`PENDING`, `IN_REVIEW`, `ATTENDED`); note y expectedVersion opcionales. | Bearer | `200` `AlertResource` con la nueva versión. |
+| Care | GET | /api/v1/interventions | Lista el historial de intervenciones sobre las alertas. | — | Bearer | `200` lista de `InterventionResource`. |
+| Care | GET | /api/v1/caregivers | Lista los cuidadores. | — | Bearer | `200` lista de `CaregiverResource`. |
+| Care | GET | /api/v1/care-relationships | Lista las relaciones de cuidado entre médico y paciente. | — | Bearer | `200` lista de `RelationshipResource`. |
+| Care | POST | /api/v1/care-relationships | Invita a un paciente a una relación de cuidado. | Body `InvitePatientResource`: patientId. | Bearer | `201` `RelationshipResource`. |
+| Care | POST | /api/v1/care-relationships/{id}/{decision} | Responde una invitación o termina la relación. | Path `id` y `decision` (`accept`, `reject` o `end`). | Bearer | `200` `RelationshipResource` con el nuevo estado. |
+
+\normalsize
+\end{landscape}
+
+**Ejemplos de request y response:**
+
+*Inicio de sesión.* Se envía el email y la contraseña de una cuenta registrada (en el ejemplo, datos de muestra):
+
+```http
+POST /api/v1/auth/sign-in
+Content-Type: application/json
+
+{ "email": "familiar@ejemplo.com", "password": "********" }
+```
+
+La API responde `200` con un `SessionResource`. `token` es el valor que se envía después en el encabezado `Authorization: Bearer <token>`, `tokenType` indica el tipo de token, `expiresAt` marca el vencimiento de la sesión y `user` trae los datos del usuario autenticado. La API solo guarda en la base de datos el hash SHA-256 del token, no el token. Si las credenciales no son válidas, responde `401`.
+
+*Consulta pública de clínicas.* `GET /api/v1/clinics` no requiere sesión, porque el formulario de registro lo usa para elegir la clínica. La respuesta real de la API desplegada es:
+
+```json
+[{"id":"CL-01","name":"Clínica Central"},
+ {"id":"CL-02","name":"Clínica San José"},
+ {"id":"CL-03","name":"Clínica Vida"}]
+```
+
+*Endpoint protegido sin token.* `GET /api/v1/users/me` sin el encabezado `Authorization` responde `401` con el cuerpo `{"status":401,"detail":"Debes iniciar sesión."}`. Así se comprueba que la seguridad de IAM protege los recursos.
+
+**Capturas de la documentación desplegada:**
+
+Swagger UI de la API desplegada en Render. Muestra los endpoints agrupados por bounded context, el botón *Authorize* y un candado en los endpoints que requieren token:
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Swagger_endpoints_sprint3.png}
+\par
+
+Respuesta de `GET /api/v1/clinics` en la API desplegada, consultada sin sesión:
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[width=\linewidth,keepaspectratio]{assets/Swagger_clinics_response.png}
+\par
+
+Respuesta de `GET /api/v1/users/me` sin token: la API rechaza la solicitud con `401`:
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[width=\linewidth,keepaspectratio]{assets/Swagger_users_me_401.png}
+\par
+
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
+Durante el Sprint 3, VitaLink cuenta con tres productos digitales publicados de manera independiente: Landing Page, Frontend Web Application y Backend RESTful API.
+
+Esta distribución permite separar la presentación pública del producto, la experiencia de los usuarios y el procesamiento de las operaciones del negocio.
+
+##### Landing Page
+
+La Landing Page se encuentra publicada mediante GitHub Pages y presenta la propuesta de valor de VitaLink para sus segmentos objetivo.
+
+Contiene información dirigida a familiares y proveedores de salud, así como enlaces de acceso a la aplicación web.
+
+**URL pública:**
+
+https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/
+
+**Evidencia:**
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/LandingFamilia.png}
+\par
+
+##### Frontend Web Application
+
+La Frontend Web Application fue desarrollada mediante Angular y cuenta con una URL de publicación en Render.
+
+La aplicación se compila para producción y utiliza la dirección HTTPS del Backend para realizar las solicitudes correspondientes a los servicios RESTful.
+
+**URL pública:**
+
+https://vitalink-frontend-963x.onrender.com/
+
+**Evidencias:**
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Frontend_patient_1.png}
+\par
+
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Frontend_medic_1.png}
+\par
+
+##### Backend RESTful API
+
+El Backend de VitaLink está desarrollado con Java y Spring Boot y cuenta con una URL pública en Render.
+
+Se realizo el despliegue mediante Docker, persistencia utilizando TiDB Cloud y variables de entorno para la conexión a la base de datos y la autorización de solicitudes provenientes del Frontend.
+
+**URL pública:**
+
+https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/
+
+**Repositorio:**
+
+https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend
+
+**Evidencias:** 
+\par
+\vspace{0.3cm}
+\noindent
+\includegraphics[
+    width=\linewidth,
+    height=0.75\textheight,
+    keepaspectratio
+]{assets/Sprint3/Backend_render.png}
+\par
+
+#### 5.2.3.8. Team Collaboration Insights during Sprint
