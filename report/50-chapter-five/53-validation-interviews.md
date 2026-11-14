@@ -203,15 +203,19 @@ Las entrevistas permitieron identificar aspectos valorados positivamente por los
 - **Edad:** 22 años
 - **Distrito:** Lince
 - **Perfil:** Familiar cuidador
-- **Timing:** [Completar]
-- **Duración:** [Completar]
+- **Segmento objetivo:** Familiares y adultos mayores
+- **Fecha de entrevista:** 10/11/2026
+- **Entrevistador:** Quiliano Motta, Kirk Douglas
+- **Timing:** 14:45
+- **Duración:** 10:00 minutos
 
 **Evidencia**
 
-![Entrevista de validación - Samir](assets/validation-interview-samir.png)
+![Entrevista de validación - Samir](assets/entrevista_alejo_evidencia.png)
 
-**Video de la entrevista:**  
-[Ver entrevista](ENLACE_DEL_VIDEO)
+**Video de la entrevista:**
+
+[Ver entrevista 1](https://1drv.ms/v/c/9e13d0eade016b07/IQAqH7X7AYghQ47YV-ZZ7aDXAZGFm_isOtLDK3q0cBdUYrs?e=QaZCrS)
 
 **Resumen de la entrevista**
 
@@ -241,15 +245,19 @@ Antes de adoptar la plataforma, indicó que le gustaría conocer qué tan sencil
 - **Edad:** 25 años
 - **Distrito:** Barranco
 - **Perfil:** Familiar cuidador
-- **Timing:** [Completar]
-- **Duración:** [Completar]
+- **Segmento objetivo:** Familiares y adultos mayores
+- **Fecha de entrevista:** 10/11/2026
+- **Entrevistador:** Quiliano Motta, Kirk Douglas
+- **Timing:** 00:00
+- **Duración:** 14:44 minutos
 
 **Evidencia**
 
-![Entrevista de validación - Walter](assets/validation-interview-walter.png)
+![Entrevista de validación - Walter](assets/entrevista_walter_evidencia.png)
 
-**Video de la entrevista:**  
-[Ver entrevista](ENLACE_DEL_VIDEO)
+**Video de la entrevista:**
+
+[Ver entrevista 2](https://1drv.ms/v/c/9e13d0eade016b07/IQAqH7X7AYghQ47YV-ZZ7aDXAZGFm_isOtLDK3q0cBdUYrs?e=QaZCrS)
 
 **Resumen de la entrevista**
 
@@ -276,18 +284,22 @@ Antes de adoptar VitaLink indicó que necesitaría conocer con mayor detalle có
 **Datos del entrevistado**
 
 - **Nombre y apellidos:** Jesus Arrollo
-- **Edad:**  26 años
+- **Edad:** 26 años
 - **Distrito:** Surco
 - **Perfil:** Adulto mayor
-- **Timing:** [Completar]
-- **Duración:** [Completar]
+- **Segmento objetivo:** Familiares y adultos mayores
+- **Fecha de entrevista:** 10/11/2026
+- **Entrevistador:** Quiliano Motta, Kirk Douglas
+- **Timing:** 24:46
+- **Duración:** 09:53 minutos
 
 **Evidencia**
 
-![Entrevista de validación - Jesus](assets/validation-interview-jesus.png)
+![Entrevista de validación - Jesus](assets/entrevista_jesus_evidencia.png)
 
-**Video de la entrevista:**  
-[Ver entrevista](ENLACE_DEL_VIDEO)
+**Video de la entrevista:**
+
+[Ver entrevista 3](https://1drv.ms/v/c/9e13d0eade016b07/IQAqH7X7AYghQ47YV-ZZ7aDXAZGFm_isOtLDK3q0cBdUYrs?e=QaZCrS)
 
 **Resumen de la entrevista**
 
@@ -323,15 +335,16 @@ Antes de adoptar VitaLink indicó que quisiera conocer con mayor claridad cómo 
 - **Edad:** 21 años
 - **Distrito:** Surco
 - **Perfil:** Profesional de salud
-- **Timing:** [Completar]
-- **Duración:** [Completar]
+- **Entrevistador:** Said Conde, Yazid
+- **Timing:** [0:00]
+- **Duración:** [6:35]
 
 **Evidencia**
 
-![Entrevista de validación - Fátima](assets/validation-interview-fatima.png)
+![Entrevista de validación - Fátima](assets/entrevista_fatima_evidencia.png)
 
 **Video de la entrevista:**  
-[Ver entrevista](ENLACE_DEL_VIDEO)
+[Ver entrevista 1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312348_upc_edu_pe/IQAJFavVDORkSraHA3bw9rVTAXQ_TWlbOHQPbGsZiEqWq5s?e=EpfTOw&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 **Resumen de la entrevista**
 

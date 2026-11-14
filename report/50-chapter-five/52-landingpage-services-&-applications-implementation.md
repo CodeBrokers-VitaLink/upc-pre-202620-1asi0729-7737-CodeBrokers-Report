@@ -651,8 +651,10 @@ La distribución L/C requiere el acta, las tarjetas asignadas o PRs asociados in
 
 **Estado del compromiso:** [PENDIENTE: contrastar el Sprint Board 3 o acta]. La tabla siguiente es una **propuesta de refinamiento**, no un backlog comprometido ni una relación de trabajo terminado. Conserva los ID, títulos y SP del Product Backlog; los IDs `S3-P01` a `S3-P08` son referencias locales de esta propuesta y no identificadores de Trello. Las horas, responsables y estados del tablero requieren confirmación. No se asigna `Done` a partir de la existencia de código o de una guía de despliegue.
 
+```{=latex}
 \begin{landscape}
 \footnotesize
+```
 
 | Sprint # | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
 |---|---|---|---|---|---|---|---|---|
@@ -665,8 +667,10 @@ La distribución L/C requiere el acta, las tarjetas asignadas o PRs asociados in
 | Sprint 3 (propuesta) | TS-11 | Control de acceso a datos de salud (RBAC) | S3-P07 | Revisar criterio de autenticación | Acordar la actualización del criterio JWT de 3.1 frente a las sesiones bearer opacas del backend antes de evaluar aceptación. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
 | Sprint 3 (propuesta) | TS-11 | Control de acceso a datos de salud (RBAC) | S3-P08 | Probar límites de acceso | Verificar 401/403 y acceso a pacientes afiliados y no afiliados con sesiones de roles distintos; conservar evidencia de ejecución. | Pendiente | Pendiente | Propuesta; sin estado de tablero |
 
+```{=latex}
 \normalsize
 \end{landscape}
+```
 
 **Trazabilidad para el refinamiento:** [Product Backlog y SP](../30-chapter-three/33-product-backlog.md), [criterios de las historias](../30-chapter-three/31-user-stories.md), [PR de IAM del backend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend/pull/3), [PR de integración de registro del frontend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend/pull/6), [README del backend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend/blob/main/README.md) y [README del frontend](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Frontend/blob/main/README.md). Estos recursos demuestran contexto técnico; no acreditan asignación ni aceptación de las tareas propuestas.
 
