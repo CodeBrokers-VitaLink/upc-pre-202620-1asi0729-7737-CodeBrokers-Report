@@ -704,8 +704,10 @@ Además, se configuró el despliegue en Render y TiDB Cloud y se actualizaron lo
 
 La tabla muestra los commits de implementación de los tres repositorios en el orden en que se hicieron. No incluye los commits de *merge*, que aparecen en la tabla de Pull Requests. Los commits de este Sprint no tienen cuerpo de mensaje; por eso esa columna aparece con un guion.
 
+```{=latex}
 \begin{landscape}
 \footnotesize
+```
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 |---|---|---|---|---|---|
@@ -738,8 +740,10 @@ La tabla muestra los commits de implementación de los tres repositorios en el o
 | CodeBrokers-Landin_Page | main | 2c8bd78 | fix: point CTA buttons to Render frontend | — | 11/11/2026 |
 | CodeBrokers-Landin_Page | main | 01adf18 | fix: refresh cached script for Render CTA links | — | 11/11/2026 |
 
+```{=latex}
 \normalsize
 \end{landscape}
+```
 
 **Pull Requests integrados en el Sprint 3:**
 
@@ -770,7 +774,7 @@ La solución contempla funcionalidades de autenticación, registro de usuarios, 
     width=\linewidth,
     height=0.75\textheight,
     keepaspectratio
-]{assets/Sprint3/Backend_1.png}
+]{assets/Backend_1.png}
 \par
 
 \par
@@ -780,7 +784,7 @@ La solución contempla funcionalidades de autenticación, registro de usuarios, 
     width=\linewidth,
     height=0.75\textheight,
     keepaspectratio
-]{assets/Sprint3/Backend_2.png}
+]{assets/Backend_2.png}
 \par
 
 \par
@@ -790,7 +794,7 @@ La solución contempla funcionalidades de autenticación, registro de usuarios, 
     width=\linewidth,
     height=0.75\textheight,
     keepaspectratio
-]{assets/Sprint3/Backend_3.png}
+]{assets/Backend_3.png}
 \par
 
 **Backend RESTful API:** https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/
@@ -829,8 +833,10 @@ En el Sprint 3 se documentaron por primera vez los RESTful Web Services de VitaL
 
 Todos los endpoints usan la URL base `https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com`. En la columna *Acceso*, **Público** significa que el endpoint no pide token. **Bearer** significa que debe enviarse el encabezado `Authorization: Bearer <token>`, obtenido con `sign-in`; si falta, la API responde `401`.
 
+```{=latex}
 \begin{landscape}
 \footnotesize
+```
 
 | Bounded context | Verbo | Sintaxis de llamada | Acción | Parámetros | Acceso | Response |
 |---|---|---|---|---|---|---|
@@ -858,8 +864,10 @@ Todos los endpoints usan la URL base `https://upc-pre-202620-1asi0729-7737-codeb
 | Care | POST | /api/v1/care-relationships | Invita a un paciente a una relación de cuidado. | Body `InvitePatientResource`: patientId. | Bearer | `201` `RelationshipResource`. |
 | Care | POST | /api/v1/care-relationships/{id}/{decision} | Responde una invitación o termina la relación. | Path `id` y `decision` (`accept`, `reject` o `end`). | Bearer | `200` `RelationshipResource` con el nuevo estado. |
 
+```{=latex}
 \normalsize
 \end{landscape}
+```
 
 **Ejemplos de request y response:**
 
@@ -937,7 +945,7 @@ https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-
     width=\linewidth,
     height=0.75\textheight,
     keepaspectratio
-]{assets/Sprint3/LandingFamilia.png}
+]{assets/LandingFamilia.png}
 \par
 
 ##### Frontend Web Application
@@ -958,7 +966,7 @@ https://vitalink-frontend-963x.onrender.com/
     width=\linewidth,
     height=0.75\textheight,
     keepaspectratio
-]{assets/Sprint3/Frontend_patient_1.png}
+]{assets/Frontend_patient_1.png}
 \par
 
 \par
@@ -968,7 +976,7 @@ https://vitalink-frontend-963x.onrender.com/
     width=\linewidth,
     height=0.75\textheight,
     keepaspectratio
-]{assets/Sprint3/Frontend_medic_1.png}
+]{assets/Frontend_medic_1.png}
 \par
 
 ##### Backend RESTful API
@@ -993,7 +1001,7 @@ https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers
     width=\linewidth,
     height=0.75\textheight,
     keepaspectratio
-]{assets/Sprint3/Backend_render.png}
+]{assets/Backend_render.png}
 \par
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
