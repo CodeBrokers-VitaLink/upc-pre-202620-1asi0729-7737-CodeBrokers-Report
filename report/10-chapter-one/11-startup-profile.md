@@ -6,7 +6,7 @@
 
 Como startup, tenemos el compromiso de contribuir al cuidado y bienestar de los adultos mayores. Por ello, desarrollamos VitaLink, una plataforma digital orientada al monitoreo preventivo y acompañamiento de adultos mayores, cuyo objetivo es conectar, dentro de un mismo ecosistema, a los adultos mayores, sus familiares y diferentes proveedores de servicios de salud.
 
-VitaLink permite centralizar información relacionada con el estado del adulto mayor y generar alertas cuando se identifican valores o combinaciones de datos que podrían representar una situación de riesgo. Estas alertas pueden ser comunicadas a los familiares autorizados y, dependiendo de la situación, a una institución de salud registrada en la plataforma.
+La versión revisada para TB2 reúne mediciones y alertas en paneles diferenciados para familiares, pacientes y médicos. La coordinación parte de la relación entre paciente, familiar y médico responsable. El monitoreo continuo mediante dispositivos y la comunicación externa de alertas forman parte de la visión del producto.
 
 De esta manera, CodeBrokers busca desarrollar tecnología que no solo permita monitorear información, sino que también facilite una respuesta oportuna y coordinada ante posibles situaciones de riesgo, contribuyendo a mejorar el acompañamiento y la seguridad de los adultos mayores.
 

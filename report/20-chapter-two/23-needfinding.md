@@ -1,8 +1,11 @@
 ## 2.3. Needfinding
 
+Las personas, tareas y mapas sintetizan el descubrimiento de la sección 2.2. Elena representa a familiares y adultos mayores (segmento 1), y Valeria a profesionales de salud (segmento 2). Las frecuencias e importancias de la matriz son valoraciones cualitativas del equipo.
+
 ### 2.3.1. User Personas
 
-User Persona del segmento 1:
+User Persona del segmento 2 (profesionales de salud):
+```{=latex}
 \par
 \noindent
 \includegraphics[
@@ -11,10 +14,12 @@ User Persona del segmento 1:
     keepaspectratio
 ]{assets/Valeria_Mendoza.png}
 \par
+```
 
 
-User Persona del segmento 2:
+User Persona del segmento 1 (familias y adultos mayores):
 
+```{=latex}
 \par
 \noindent
 \includegraphics[
@@ -23,6 +28,7 @@ User Persona del segmento 2:
     keepaspectratio
 ]{assets/Elena_Ramírez.png}
 \par
+```
 
 
 
@@ -51,7 +57,8 @@ User Persona del segmento 2:
 
 ### 2.3.3. User Journey Mapping
 
-User Journey Mapping del segmento 1:
+User Journey Mapping del segmento 2 (profesionales de salud):
+```{=latex}
 \par
 \noindent
 \includegraphics[
@@ -60,10 +67,12 @@ User Journey Mapping del segmento 1:
     keepaspectratio
 ]{assets/Valeria_journey_map.png}
 \par
+```
 
 
 
-User Journey Mapping del segmento 2:
+User Journey Mapping del segmento 1 (familias y adultos mayores):
+```{=latex}
 \par
 \noindent
 \includegraphics[
@@ -72,11 +81,13 @@ User Journey Mapping del segmento 2:
     keepaspectratio
 ]{assets/Elena_journey_map.png}
 \par
+```
 
 
 ### 2.3.4. Empathy Mapping
 
-Empathy Mapping del segmento 1:
+Empathy Mapping del segmento 2 (profesionales de salud):
+```{=latex}
 \par
 \noindent
 \includegraphics[
@@ -85,10 +96,12 @@ Empathy Mapping del segmento 1:
     keepaspectratio
 ]{assets/Valeria_empathy_map.png}
 \par
+```
 
 
 
-Empathy Mapping del segmento 2:
+Empathy Mapping del segmento 1 (familias y adultos mayores):
+```{=latex}
 \par
 \noindent
 \includegraphics[
@@ -97,4 +110,5 @@ Empathy Mapping del segmento 2:
     keepaspectratio
 ]{assets/Elena_empathy_map.png}
 \par
+```
 

@@ -6,27 +6,22 @@ Para reflejar la realidad arquitectónica, el lenguaje ubicuo se ha dividido ent
 
 ### Términos Implementados en el Modelo de Dominio Actual
 
-Estos conceptos ya cuentan con representación directa a través de entidades, objetos de valor y módulos dentro de los contextos delimitados (Bounded Contexts) de la aplicación (`care` e `iam`):
+Los siguientes conceptos se reflejan en el contrato de la API y en las vistas revisadas para TB2.
 
-* **Biometric Record / Telemetry (Registro Biométrico / Telemetría):**  
-  Conjunto de lecturas continuas y parametrizadas de signos vitales transmitidas de forma periódica para evaluar el estado fisiológico del paciente.
-* **Health Alert (Alerta de Salud):**  
-  Notificación generada de forma automática cuando se constata un evento o anomalía que compromete la estabilidad física del paciente.
-* **Measurement Range / Vital Signs Baseline (Rango de Medición / Línea Base de Signos Vitales):**  
-  Rango clínico individualizado de referencia que define los valores estables para un paciente determinado, permitiendo reducir falsos positivos en la detección de riesgos.
-* **Family Caregiver (Cuidador Familiar):**  
-  Persona designada responsable directa del acompañamiento, toma de decisiones y respuesta ante contingencias de salud del adulto mayor en el entorno domiciliario.
-* **Healthcare Provider / Professional (Proveedor de Salud / Profesional):**  
-  Institución médica o especialista colegiado afiliado a la red de atención para brindar atención preventiva o de urgencia. Gestionado a través del contexto de Identidad y Acceso mediante perfiles y roles.
-* **Clinical Intervention (Intervención Clínica):**  
-  Acción, decisión o nota de seguimiento registrada por un cuidador o profesional de la salud en respuesta a una alerta o al estado del paciente.
-* **Patient (Paciente / Adulto Mayor):**  
-  Entidad principal alrededor de la cual se agrupan las alertas, intervenciones, cuidadores y registros biométricos.
+- **Paciente (Patient).** Persona a cuyo seguimiento se vinculan las mediciones, alertas y relaciones de cuidado.
+- **Medición (Record).** Registro de un indicador de un paciente, con valor, unidad y fecha. Las mediciones iniciales del alta familiar se usan para demostrar el flujo con datos simulados.
+- **Rango de medición (Measurement Range).** Referencia por tipo de medición que se usa para mostrar su nivel en la interfaz. Una línea base clínica personalizada sigue siendo una propuesta.
+- **Alerta de salud (Alert).** Registro asociado a un paciente que muestra tipo, gravedad y estado de atención. Los estados documentados son pendiente, en revisión y atendida.
+- **Cuidador familiar (Family Caregiver).** Persona vinculada al seguimiento del paciente mediante una relación de cuidado.
+- **Profesional y clínica (Doctor y Clinic).** El profesional puede registrarse como independiente o vinculado a una clínica. El registro del médico y la afiliación comercial de una institución son procesos distintos.
+- **Intervención (Intervention).** Registro del cambio de estado de una alerta que identifica al actor y puede incluir una observación.
+- **Relación de cuidado (Care Relationship).** Vínculo entre médico y paciente que contempla invitación y decisión sobre la relación.
 
 ### Términos Proyectados para la Evolución del Sistema
 
 Estos conceptos forman parte de la visión a futuro del ecosistema VitaLink. Orientarán el desarrollo de nuevos servicios de backend, la integración de hardware IoT y la interconexión con plataformas de terceros:
 
+* **Telemetría biométrica continua:** transmisión periódica de lecturas obtenidas de dispositivos de monitoreo.
 * **Physiological Anomaly (Anomalía Fisiológica):**  
   Desviación temporal o sostenida de una medición biométrica respecto a los parámetros clínicos seguros establecidos para la edad y antecedentes crónicos del adulto mayor.
 * **Triage Assessment (Evaluación de Triaje):**  
