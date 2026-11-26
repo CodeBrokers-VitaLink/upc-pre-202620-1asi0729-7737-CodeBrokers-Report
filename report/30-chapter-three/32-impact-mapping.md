@@ -4,6 +4,8 @@ El Impact Map de VitaLink se elaboró en UXPressia a partir de los User Personas
 
 ### 3.2.1. Business Goals e Impacts
 
+Los indicadores son metas del piloto. BG-03 mide confirmación durante las primeras dos semanas de uso. Medir la reducción del tiempo de respuesta requiere registrar el intervalo entre la emisión y la confirmación de cada alerta y compararlo con una línea base.
+
 | ID | Business Goal / Impact | Actor | Métrica |
 |:------|:-----------------------------------------------------|:------------------|:-----------------------------------------|
 | BG-01 | Validar el canal de afiliación de proveedores de salud | Profesionales de salud | 5 proveedores afiliados en los primeros 3 meses del piloto |
