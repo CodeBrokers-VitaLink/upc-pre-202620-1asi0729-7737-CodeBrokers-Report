@@ -1,12 +1,10 @@
 ## 4.6. Domain-Driven Software Architecture
 
-En esta seccion se formaliza la arquitectura de software de VitaLink bajo los principios de Domain-Driven Design (DDD) y el modelo C4. Se descompone la complejidad del dominio de telemonitoreo geriatrico en limites contextuales claros y se estructuran los niveles de abstraccion del sistema (Contexto, Contenedores y Componentes) para garantizar escalabilidad, mantenibilidad y alta disponibilidad ante incidentes criticos.
-
-Los diagramas C4 de esta seccion distinguen explicitamente dos estados. Los elementos **implementados y desplegados** corresponden al front-end Angular que hoy opera sobre una API simulada, organizado en los contextos delimitados `care` e `iam`. Los elementos **planificados para TB2** corresponden al backend y a los servicios externos que completan la visión del producto y que todavía no se encuentran desplegados; se mantienen en los diagramas porque la evolución del sistema está prevista sobre ellos. Esta convención evita que el lector confunda el diseño objetivo con lo que efectivamente está en operación.
+VitaLink utiliza un monolito modular Java organizado alrededor de IAM, Providers, Enrollment y Care, con infraestructura transversal en Shared. La aplicación Angular y la Landing Page consumen y presentan distintos recorridos. Los siguientes diagramas aplican el modelo C4 (Brown, s. f.) a las revisiones de código del Anexo A. El corte exacto de producción requiere confirmación del equipo.
 
 ### 4.6.1. Design-Level Event Storming
 
-A partir del Big Picture preliminar, se desarrollo la sesion de Design-Level Event Storming para refinar el modelo del dominio. Se definieron cuatro Bounded Contexts principales con sus respectivos comandos, eventos de dominio, agregados y modelos de lectura (queries):
+El Design-Level Event Storming de AV2 desarrolló el Big Picture de 2.4 y propuso cuatro contextos, comandos, eventos, agregados y modelos de lectura. Se conserva como antecedente de diseño. Los nombres y escenarios de este artefacto describen la propuesta de aquella etapa.
 
 \begin{center} \includegraphics[width=\linewidth]{assets/event-brainstorming.png} \end{center}
 
@@ -48,106 +46,68 @@ A partir del Big Picture preliminar, se desarrollo la sesion de Design-Level Eve
 
 ### 4.6.2. Software Architecture Context Diagram
 
-El diagrama de contexto representa el Nivel 1 del modelo C4 para VitaLink Platform. Delimita las fronteras del sistema y muestra como un unico recuadro central a la plataforma, rodeada por los usuarios que interactuan con ella y por los sistemas externos con los que se integrara.
+VitaLink proporciona una experiencia web para el familiar o cuidador, el profesional de salud y el adulto mayor con acceso de autocuidado. El médico consulta casos vinculados y puede registrar intervenciones y observaciones. El familiar y el paciente consultan la información disponible según su vínculo. Resend es el proveedor implementado para el correo de observaciones cuando se configura. El registro de colegiaturas usa un catálogo ficticio incluido en el backend.
 
-\begin{center} \includegraphics[width=\linewidth]{assets/diagrams/c4-01-context.png} \end{center}
-
-#### 1. Elemento Central
-
-* **VitaLink Platform [Software System]:** Telemonitoreo geriatrico. Registra pacientes, lee signos vitales, gestiona alertas de salud y coordina la red de cuidado familiar y profesional. Se encuentra implementado y desplegado.
-
-#### 2. Usuarios (Person)
-
-* **Cuidador Familiar [Person]:** Monitorea y atiende las alertas del adulto mayor a su cargo. Implementado.
-* **Personal Medico [Person]:** Supervisa los pacientes que tiene asignados y gestiona sus alertas. Implementado.
-* **Adulto Mayor [Person]:** Paciente monitoreado en domicilio. Su acceso de consulta esta previsto para una etapa posterior, por lo que se representa como planificado.
-
-#### 3. Sistemas Externos (External Software Systems)
-
-Los tres sistemas externos se representan como planificados para TB2, porque la integracion todavia no esta desplegada:
-
-* **Pasarela SMS [Software System]:** Envio de alertas criticas a la red de apoyo familiar cuando el cuidador no confirma la recepcion.
-* **Agenda Clinica Externa [Software System]:** Disponibilidad y reserva de citas medicas ambulatorias y de urgencia.
-* **Simulador IoT [Software System]:** Emision continua de telemetria fisiologica y deteccion de caidas en el domicilio.
-
-#### 4. Relaciones y Protocolos de Comunicacion
-
-* **Cuidador Familiar -> VitaLink Platform:** Consulta el tablero, la red familiar y el detalle de alertas mediante `HTTPS`.
-* **Personal Medico -> VitaLink Platform:** Revisa los pacientes asignados y registra intervenciones sobre alertas mediante `HTTPS`.
-* **VitaLink Platform -> Pasarela SMS:** Despacha alertas de emergencia mediante servicios web `REST/HTTPS`. Planificado.
-* **VitaLink Platform -> Agenda Clinica Externa:** Pre-agenda consultas de urgencia mediante `REST/HTTPS`. Planificado.
-* **Simulador IoT -> VitaLink Platform:** Envia telemetria biometrica empaquetada en formato estructurado mediante `JSON/HTTPS`. Planificado.
-* **Adulto Mayor -> VitaLink Platform:** Emite solicitud de auxilio mediante `HTTPS`. Planificado.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth,height=0.79\textheight,keepaspectratio]{assets/diagrams/c4-01-context.png}
+\caption{Contexto del sistema VitaLink}
+\end{figure}
 
 ### 4.6.3. Software Architecture Container Diagrams
 
-El diagrama de contenedores describe el Nivel 2 del modelo C4 y detalla las unidades de despliegue que componen VitaLink Platform. Se presenta un unico diagrama porque una sola aplicacion web atiende a ambos roles: la vista que ve el cuidador familiar y la que ve el personal medico se resuelven dentro del mismo contenedor, en funcion del rol de la sesion.
+La Landing Page es un sitio estático de GitHub Pages. La SPA Angular 22.2 se configura como sitio estático en Render y enlaza a la API de Spring Boot 4.0.6 y Java 26 desplegable como servicio Docker en Render. La aplicación accede a la API por HTTPS y JSON. Las rutas privadas requieren una sesión bearer. JDBC y Spring Data JPA gestionan la persistencia. Compose utiliza MySQL y la guía de producción describe TiDB Cloud por JDBC con TLS. El acceso a la API pública se documenta en 5.2.4.6. La base y el servicio de correo se representan según lo configurado en código o en las guías de despliegue.
 
-\begin{center} \includegraphics[width=\linewidth]{assets/diagrams/c4-02-container.png} \end{center}
-
-#### 1. Contenedores Implementados
-
-* **VitaLink WebApp [Container: Angular 22, TypeScript, Angular Material]:** Aplicacion de pagina unica que renderiza el inicio de sesion, el perfil, el tablero de pacientes, el detalle de alertas y la red familiar. Organiza su codigo en los contextos delimitados `care` e `iam`.
-* **API simulada [Container: JSON Server 0.17 sobre Node.js]:** Capa de datos de demostracion desplegada en Render. Expone las colecciones `patients`, `alerts`, `records`, `interventions`, `caregivers`, `measurementRanges` y `users` mediante servicios REST. Ocupa el lugar del backend mientras este no exista.
-* **Almacenamiento de sesion [Container: sessionStorage]:** Conserva el identificador de usuario y su rol mientras la pestana permanece abierta. No almacena credenciales.
-
-#### 2. Contenedores Planificados para TB2
-
-* **Backend API [Container: Java 21, Spring Boot, Spring Data JPA]:** Reemplazara la API simulada y concentrara las reglas de negocio que hoy se resuelven en el cliente, ademas de la autenticacion con tokens.
-* **Base de datos [Container: MySQL]:** Persistencia relacional del dominio: pacientes, registros, alertas, intervenciones, cuidadores y usuarios.
-
-#### 3. Relaciones y Protocolos de Comunicacion
-
-* **Cuidador Familiar / Personal Medico -> VitaLink WebApp:** Uso de la aplicacion web mediante `HTTPS`.
-* **VitaLink WebApp -> API simulada:** Consulta y actualizacion del dominio mediante `JSON/HTTPS`.
-* **VitaLink WebApp -> Almacenamiento de sesion:** Guarda y restaura la sesion mediante `Web Storage API`.
-* **VitaLink WebApp -> Backend API:** Consumira los servicios REST del backend mediante `JSON/HTTPS`. Planificado.
-* **Backend API -> Base de datos:** Lectura y persistencia del dominio mediante `JDBC / JPA`. Planificado.
-* **Simulador IoT -> Backend API:** Envio de telemetria biometrica mediante `JSON/HTTPS`. Planificado.
-* **Backend API -> Pasarela SMS:** Despacho de alertas de emergencia mediante `REST/HTTPS`. Planificado.
-* **Backend API -> Agenda Clinica Externa:** Pre-agendamiento de consultas de urgencia mediante `REST/HTTPS`. Planificado.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth,height=0.79\textheight,keepaspectratio]{assets/diagrams/c4-02-container.png}
+\caption{Contenedores de aplicación y almacenamiento de VitaLink}
+\end{figure}
 
 ### 4.6.4. Software Architecture Component Diagrams
 
-El diagrama de componentes representa el Nivel 3 del modelo C4. Se elabora un diagrama por contenedor y, en el caso del contenedor implementado, uno por cada contexto delimitado, porque la aplicacion web agrupa un numero de componentes que en una sola figura resultaba ilegible. Los dos primeros diagramas describen el contenedor VitaLink WebApp; el tercero describe el contenedor Backend API planificado.
+#### Landing Page
 
-#### 1. Componentes del contexto IAM
+`index.html` organiza el contenido y sus metadatos, `styles.css` aporta el sistema visual y `script.js` controla el selector de audiencia, las traducciones y el menú. Los CTA abren el acceso de la SPA.
 
-\begin{center} \includegraphics[width=\linewidth]{assets/diagrams/c4-03-components-iam.png} \end{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth,height=0.79\textheight,keepaspectratio]{assets/diagrams/c4-06-components-landing.png}
+\caption{Componentes de la Landing Page}
+\end{figure}
 
-Agrupa los componentes que resuelven la identidad y el control de acceso:
+#### Web Application
 
-* **Login [Vista]:** Formulario que inicia la sesion.
-* **Profile [Vista]:** Muestra los datos del usuario autenticado y permite cerrar sesion.
-* **roleGuard [Guard]:** Restringe cada ruta al rol declarado y redirige al inicio del rol cuando no coincide.
-* **AuthenticationStore [Store]:** Mantiene la sesion activa y expone el rol del usuario al resto de la aplicacion.
-* **UserStore [Store]:** Carga el perfil del usuario autenticado por su identificador.
-* **AuthenticationService [HttpClient]:** Valida las credenciales contra la API y persiste o restaura la sesion.
-* **UserService [HttpClient]:** Obtiene el perfil del usuario desde la API.
-* **Contexto compartido:** `LocalizedDateService` y `LanguageSwitcher`, reutilizados por ambas vistas.
+La SPA utiliza rutas protegidas por rol (Angular, s. f.-b), stores de aplicación y servicios HTTP. El contexto IAM mantiene la sesión y los interceptores agregan la cabecera de autorización. Enrollment orquesta el alta por medio de un puerto. Care reúne los paneles, fichas, alertas, observaciones y notificaciones. Los assemblers traducen los recursos JSON a los modelos de interfaz. La localización de la SPA carga diccionarios ES/EN.
 
-#### 2. Componentes del contexto Care
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth,height=0.79\textheight,keepaspectratio]{assets/diagrams/c4-03-components-iam.png}
+\caption{Componentes SPA de IAM y Enrollment}
+\end{figure}
 
-\begin{center} \includegraphics[width=0.70\linewidth]{assets/diagrams/c4-04-components-care.png} \end{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth,height=0.79\textheight,keepaspectratio]{assets/diagrams/c4-04-components-care.png}
+\caption{Componentes SPA de Care}
+\end{figure}
 
-Agrupa los componentes del seguimiento del paciente. El modelo de dominio y el servicio de dominio se destacan en verde porque concentran las reglas del negocio:
+#### Backend REST API
 
-* **CareWorkspace [Vista]:** Tablero unico que adapta su contenido al rol y a la vista solicitada: panel, pacientes, detalle de alerta y red familiar.
-* **AlertList [Componente]:** Lista las alertas de un paciente ordenadas por severidad y permite cambiar su estado.
-* **PatientSummary [Componente]:** Resume la ficha del paciente y su ultima medicion registrada.
-* **CareStore [Store]:** Estado compartido del contexto y unica puerta de entrada a los comandos `load` y `changeStatus`.
-* **MeasurementAssessment [Servicio de dominio]:** Clasifica una medicion en normal, advertencia, peligro o desconocida usando los rangos de referencia del paciente.
-* **Modelo de dominio [TypeScript]:** `Patient`, `CareAlert`, `CareRecord`, `Intervention`, `Caregiver`, `MeasurementRange`, `RecordType` y `CareSnapshot`, con el comportamiento asociado a cada uno.
-* **CareService [HttpClient]:** Consulta y actualiza pacientes, alertas, registros, intervenciones, cuidadores y rangos de medicion, y traduce los objetos de transferencia a entidades del dominio.
+Los controllers delegan en servicios de aplicación. Las escrituras y lecturas tienen responsables diferenciados mediante interfaces de comandos y consultas. Comparten la misma persistencia y forman parte del mismo proceso. Los recursos y assemblers separan el contrato HTTP de las clases de dominio.
 
-#### 3. Componentes del contenedor Backend API planificado
+IAM verifica el hash y vigencia de la sesión bearer y utiliza BCrypt para credenciales. Care verifica acceso por rol y vínculo. Enrollment orquesta el alta mediante puertos de cuenta, catálogo y paciente. Providers ofrece el directorio persistido y un catálogo de colegiaturas ficticio. El worker de Care toma notificaciones pendientes y usa el adaptador Resend (s. f.) si se habilita el correo. La separación de paquetes y casos de uso muestra la aplicación de DDD y una separación lógica de comandos y consultas. Los eventos del Event Storming pertenecen al diseño.
 
-\begin{center} \includegraphics[width=\linewidth]{assets/diagrams/c4-05-components-backend.png} \end{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth,height=0.79\textheight,keepaspectratio]{assets/diagrams/c4-05-components-backend.png}
+\caption{Componentes de la API para IAM, Providers y Enrollment}
+\end{figure}
 
-Este diagrama mantiene el diseno objetivo del backend, que reemplazara a la API simulada. Ninguno de sus componentes esta desplegado:
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth,height=0.79\textheight,keepaspectratio]{assets/diagrams/c4-07-components-backend-care.png}
+\caption{Componentes de la API para Care}
+\end{figure}
 
-* **IAM [Spring Security, JWT]:** Registro, autenticacion y autorizacion por roles.
-* **Monitoring [Spring REST y servicios de aplicacion]:** Recepcion de telemetria biometrica y evaluacion de cada medicion contra la linea base del paciente.
-* **Emergency Notification [Servicios de aplicacion y WebClient]:** Cola de alertas criticas y despacho asincrono hacia la red de apoyo familiar.
-* **Triage & Scheduling [Servicios de aplicacion y cliente REST]:** Clasificacion de severidad clinica y pre-agendamiento asistido de consultas.
-* **Profiles & Affiliations [Spring Data JPA]:** Pacientes, cuidadores y la vinculacion entre ambos, que hoy se resuelve con arreglos de identificadores en el cliente.
+El contenedor de almacenamiento conserva una estructura relacional compartida. La descomposición de sus tablas y sus vínculos se presenta en 4.8.1.
