@@ -26,6 +26,8 @@ Finalmente, se registraron algunos hotspots relacionados con posibles conflictos
 
 El resultado de este análisis proporciona una visión preliminar de las responsabilidades principales del dominio y sirve como base para el posterior desarrollo del Design-Level Event Storming.
 
+El diagrama conserva la visión de dominio de AV2. En el alcance técnico documentado en 5.2, Care agrupa pacientes, mediciones, alertas e intervenciones, IAM gestiona sesiones y Providers aporta el directorio de clínicas y médicos. El alta familiar reúne al paciente, al médico responsable y las mediciones iniciales. La telemetría continua y el escalamiento externo siguen como escenarios de evolución.
+
 #### Diagrama de Big Picture Event Storming
 
 \begin{center}

@@ -1,8 +1,10 @@
 ## 2.2. Entrevistas
 
+Se conservan seis registros de descubrimiento, tres por segmento. Estos registros describen necesidades y prácticas de cuidado. Los recorridos de validación del producto y sus resultados se documentan en la sección 5.3.
+
 ### 2.2.1. Diseño de entrevistas
 
-#### Segmento 1: Clínicas y Hospitales
+#### Segmento 2: Profesionales de salud, clínicas y hospitales
 
 1. ¿Cómo hace usted actualmente el seguimiento de sus pacientes adultos mayores fuera de la consulta?
 2. ¿Qué dificultades enfrenta para mantenerse informado sobre el estado de un paciente entre visita y visita?
@@ -20,7 +22,7 @@
 
 ---
 
-#### Segmento 2 (familias y adultos mayores): familiares
+#### Segmento 1 (familias y adultos mayores): familiares
 
 1. ¿Cómo se mantiene informado actualmente sobre el estado de salud o bienestar de su familiar adulto mayor cuando no está con él/ella?
 2. ¿Qué dificultades enfrenta para estar pendiente de su familiar mientras cumple con su trabajo u otras responsabilidades?
@@ -38,7 +40,7 @@
 
 ---
 
-#### Segmento 2 (familias y adultos mayores): adultos mayores
+#### Segmento 1 (familias y adultos mayores): adultos mayores
 
 1. ¿Cómo controla usted actualmente su salud en el día a día (medicinas, presión, actividad, etc.)?
 2. ¿Qué dificultades tiene para recordar tomar sus medicinas o realizar controles de salud?

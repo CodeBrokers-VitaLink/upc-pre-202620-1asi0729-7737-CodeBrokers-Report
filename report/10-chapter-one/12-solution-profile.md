@@ -72,7 +72,7 @@ Este proceso puede generar retrasos en la comunicación y en la respuesta, espec
 En otros casos, el familiar puede realizar llamadas o comunicarse constantemente con el adulto mayor para verificar que se encuentre bien, lo que genera una dependencia de la supervisión manual.
 
 #### How much? (¿Qué tan severo es el problema?)
-La severidad del problema no se limita a un costo económico directo, sino que está relacionada principalmente con el tiempo de respuesta, la seguridad del adulto mayor y la tranquilidad de sus familiares.
+El análisis de severidad considera el tiempo de respuesta, la seguridad del adulto mayor y la tranquilidad de sus familiares. Las entrevistas de descubrimiento (sección 2.2) aportan evidencia cualitativa. La magnitud económica y los tiempos de respuesta aún requieren una línea base.
 
 Por ello, el impacto del problema puede observarse en tres dimensiones principales:
 
@@ -88,11 +88,11 @@ El estado actual del telemonitoreo y cuidado de adultos mayores se ha centrado p
 
 Lo que los productos y servicios existentes no logran resolver es la falta de integracion en tiempo real entre el monitoreo continuo de signos vitales y la capacidad de agendar consultas medicas de forma inmediata.
 
-Nuestra plataforma resuelve esta brecha mediante un servicio SaaS que procesa telemetria biometrica en tiempo real, evalua anomalias y pre-agenda de forma automatica citas preventivas o prioritarias con centros de salud asociados, derivando reportes de evolucion al instante tanto al cuidador como al especialista.
+La propuesta original de Lean UX plantea un servicio SaaS que procese telemetría biométrica, evalúe anomalías y sugiera o reserve citas con centros asociados. El alcance revisado para TB2 se concentra en el registro vinculado a un paciente, la consulta de mediciones y el seguimiento de alertas (secciones 3.3 y 5.3). La telemetría continua y el agendamiento automático siguen como hipótesis de producto.
 
 El enfoque inicial estara dirigido a cuidadores familiares a cargo de adultos mayores y a centros de salud locales o clinicas ambulatorias.
 
-Sabremos que tenemos exito cuando se logre una reduccion del 50% en el tiempo necesario para coordinar una cita ante una anomalia, una tasa minima del 70% de aceptacion en las citas pre-agendadas y la afiliacion activa de al menos 15 centros de salud a la red.
+Los criterios de éxito originales son reducir en 50 % el tiempo necesario para coordinar una cita ante una anomalía, lograr al menos 70 % de aceptación de citas preagendadas y afiliar a 15 centros de salud. La sección 6.1 contrasta estas metas y los indicadores del piloto con la evidencia disponible.
 
 
 #### 1.2.2.2. Lean UX Assumptions

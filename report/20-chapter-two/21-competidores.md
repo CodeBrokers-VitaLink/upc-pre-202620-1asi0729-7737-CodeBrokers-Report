@@ -33,6 +33,8 @@ Aunque Doctoralia no se encuentra orientada específicamente al monitoreo preven
 
 ### 2.1.1. Análisis competitivo
 
+La matriz conserva el análisis de AV2 e identifica la posición propuesta de VitaLink. La columna de VitaLink se interpreta junto con el alcance técnico de 3.3 y los pendientes de validación de 6.1.
+
 \setlength{\LTleft}{\fill}
 \setlength{\LTright}{\fill}
 \setlength{\LTpre}{4pt}
@@ -263,8 +265,8 @@ profesionales registrados.
 &
 \textbf{Productos \& Servicios}
 &
-Monitoreo de indicadores, alertas, historial del adulto mayor, red familiar
-y solicitudes de atención.
+Consulta de mediciones, alertas y red de cuidado. La gestión integral
+de solicitudes de atención sigue en la propuesta de producto.
 &
 Monitoreo biométrico, telemedicina, SOS, geolocalización, historial y
 acompañamiento remoto.
@@ -281,8 +283,8 @@ pacientes.
 &
 \textbf{Precios \& Costos}
 &
-Modelo de suscripción para familias y membresías o comisiones para
-proveedores de salud.
+Planes propuestos para familias y clínicas, presentados en la Landing Page.
+El cobro y la adopción comercial quedan por validar.
 &
 Suscripción mensual por planes, complementada con venta de dispositivos.
 También ofrece soluciones B2B y B2G.

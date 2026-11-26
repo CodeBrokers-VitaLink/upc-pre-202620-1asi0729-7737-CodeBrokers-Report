@@ -4,7 +4,7 @@
 
 Este segmento está conformado por adultos mayores de 60 años y sus familiares, especialmente aquellos que desean mantener un sistema de acompañamiento y monitoreo preventivo para mejorar la seguridad del adulto mayor.
 
-A diferencia del primer segmento, este grupo puede estar compuesto por familias en las que el propio adulto mayor participa activamente en la decisión de utilizar VitaLink, por ejemplo, porque vive solo, pasa gran parte del día sin compañía o desea que sus familiares puedan conocer su estado sin necesidad de realizar llamadas constantes.
+El propio adulto mayor puede participar en la decisión de utilizar VitaLink. El familiar acompaña y consulta el estado de la persona vinculada. En la aplicación revisada, existen vistas diferenciadas para familiar y paciente.
 
 #### Características principales:
 
@@ -17,7 +17,7 @@ A diferencia del primer segmento, este grupo puede estar compuesto por familias 
 
 ---
 
-#### 2. Clínicas y hospitales
+#### 2. Profesionales de salud y representantes de clínicas u hospitales
 
 Este segmento representa a los proveedores de atención que forman parte del ecosistema de VitaLink.
 
@@ -29,12 +29,10 @@ Este segmento representa a los proveedores de atención que forman parte del eco
 * **Profesionales que ofrecen atención a domicilio.**
 
 #### Necesidad:
-Recibir solicitudes de atención de potenciales pacientes y contar con un canal digital para gestionar dichas solicitudes.
+Consultar la información de pacientes a cargo y dar seguimiento a las alertas. La captación institucional y la gestión de solicitudes forman parte de la propuesta de negocio.
 
 #### Qué les ofrece VitaLink:
 
-* **Acceso a potenciales pacientes.**
-* **Recepción de alertas o solicitudes de atención.**
-* **Mayor visibilidad de las necesidades de los usuarios.**
-* **Gestión de solicitudes desde la plataforma.**
-* **Posibilidad de ampliar sus servicios mediante atención conectada digitalmente.**
+* **Registro para médicos independientes o asociados a una clínica.**
+* **Consulta de pacientes, mediciones y alertas en el panel médico.**
+* **Registro de intervenciones durante el seguimiento de una alerta.**
