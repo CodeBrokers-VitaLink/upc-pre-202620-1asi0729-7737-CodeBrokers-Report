@@ -1,28 +1,26 @@
 # 6. Conclusiones
 
-## 6.1 Conclusiones y recomendaciones
+## 6.1. Conclusiones y recomendaciones
 
+Las entrevistas de descubrimiento identificaron información dispersa, dificultades para entender alertas y necesidad de coordinar el seguimiento entre familias y profesionales. En AV2, tres participantes del segmento familiar y uno del profesional exploraron la propuesta. Sus comentarios dan respaldo cualitativo a la utilidad de una vista centralizada y señalan que el detalle de las alertas, la lectura de mediciones y la visibilidad de los permisos todavía requieren trabajo. La muestra profesional y los registros disponibles limitan el alcance de estas conclusiones.
 
-1. VitaLink aborda la necesidad de mejorar el monitoreo preventivo y el acompañamiento de adultos mayores, facilitando el acceso a información sobre su estado de salud y la coordinación entre familiares y profesionales de salud. El proceso de Needfinding, las entrevistas y el análisis de segmentos permitieron identificar necesidades relacionadas con la comprensión de las alertas, el seguimiento del paciente y la comunicación oportuna ante situaciones de riesgo.
+La revisión técnica para TB2 confirma en código una aplicación Angular conectada a una API REST de Spring Boot, con persistencia JPA, sesiones bearer opacas y acceso a datos según el vínculo con el paciente. El panel familiar reúne estado general, mediciones y alertas. El médico puede consultar pacientes y registrar intervenciones sobre alertas. El código incorpora además observaciones médicas y notificaciones internas asociadas. Se comprobó el acceso público a la Landing Page, la entrada del frontend y el contrato OpenAPI. Quedan por verificar la ejecución autenticada de los flujos, la persistencia en el entorno publicado y los resultados con usuarios de la versión final.
 
-2. La aplicación de Domain-Driven Design permitió organizar las responsabilidades del sistema en ámbitos relacionados con el monitoreo, la gestión de emergencias y notificaciones, y la administración de usuarios y perfiles. Asimismo, la documentación mediante el C4 Model y el diseño de datos establecieron una base para orientar la implementación posterior del backend. La consistencia de esta arquitectura deberá comprobarse conforme se integren los servicios y se validen los flujos completos del producto.
+### Contraste con Lean UX
 
-3. El proceso de diseño UX/UI, apoyado en User Personas, User Journey Maps, Empathy Maps e Impact Mapping, permitió relacionar las necesidades de los usuarios con las historias y las interfaces propuestas. La Landing Page comunica la propuesta de valor de VitaLink, mientras que la primera versión de la aplicación web presenta experiencias diferenciadas para profesionales de salud y familiares. Estas interfaces constituyen una base que todavía requiere pruebas con usuarios para evaluar su claridad, accesibilidad y facilidad de uso.
+| Hipótesis de 1.2.2.3 | Evidencia | Resultado |
+|---|---|---|
+| H1. Aumentar la retención mensual en 30 % mediante un panel familiar | AV2 registra interés en consultar información centralizada. El código muestra estado y mediciones, con datos iniciales simulados. | La utilidad percibida tiene evidencia cualitativa. La retención requiere seguimiento longitudinal. |
+| H2. Reducir en 50 % el tiempo para coordinar una consulta de urgencia | El producto revisado permite seguimiento de alertas. El flujo de reserva automática sigue planteado como hipótesis. | Pendientes una línea base, pruebas de coordinación y datos sobre aceptación de citas preagendadas (meta de 70 %). |
+| H3. Aumentar en 40 % los convenios con clínicas | Hay directorio y registro de médicos independientes o asociados a clínicas. | Pendientes el número base de convenios y el recuento de afiliaciones activas. La meta original de 15 instituciones y la del piloto de 5 proveedores corresponden a alcances distintos. |
+| H4. Confirmar el 75 % de las alertas de emergencia en cinco minutos | El código registra el seguimiento médico y contempla notificaciones sobre observaciones. | Pendientes la confirmación familiar, los canales externos del escenario y la medición de tiempos. La meta del piloto del 70 % en dos semanas mide adopción del flujo. |
+| H5. Alcanzar 35 % de adopción en hogares sin seguro privado | La Landing Page comunica planes para familias y clínicas. | Pendientes el piloto en ese segmento y la validación de los convenios a tarifa social. |
 
-4. Durante los dos primeros sprints se desarrollaron la Landing Page y una primera versión de la aplicación web utilizando Angular, con publicaciones en GitHub Pages y Vercel, respectivamente. El frontend utiliza una API de demostración para representar pacientes, alertas, mediciones e intervenciones; por ello, el avance permite mostrar las interfaces y explorar sus flujos, pero todavía no acredita el funcionamiento integral del sistema con los servicios definitivos.
+El supuesto de que ambos segmentos necesitan consultar información en un solo lugar tiene apoyo cualitativo. Los supuestos sobre disponibilidad de cupos, disposición a pagar, respuesta a avisos externos y accesibilidad para adultos mayores requieren pruebas específicas. La meta BG-02 de confianza (90 % de respuestas de 4 o 5 sobre 5) también sigue pendiente de una medición con usuarios.
 
-5. El uso de GitFlow, ramas de desarrollo y Pull Requests permitió organizar la integración de cambios y registrar evidencias del trabajo colaborativo. Sin embargo, el seguimiento del proyecto requiere mantener una correspondencia más precisa entre el Product Backlog, las tareas del Sprint, sus estados y las evidencias de ejecución, para distinguir el trabajo implementado de las historias completamente aceptadas.
+### Roadmap priorizado
 
-### Recomendaciones
-
-1. Incorporar la integración con dispositivos wearables y sensores para registrar automáticamente los signos vitales de los adultos mayores, indicando la fecha, hora y origen de cada medición. Esta funcionalidad permitiría reducir el registro manual y facilitar el seguimiento continuo.
-
-2. Implementar notificaciones push y SMS diferenciadas para familiares y profesionales de salud. Cada aviso debería comunicar la gravedad de la alerta, la situación detectada y la acción sugerida, evitando incluir información sensible innecesaria.
-
-3. Integrar una red de cuidado que permita asignar cuidadores principales y secundarios, confirmar quién atiende una alerta y escalarla a otro responsable cuando no exista respuesta dentro del tiempo establecido.
-
-4. Incorporar un botón de ayuda de acceso rápido para que el adulto mayor pueda solicitar asistencia. Esta función debería comunicar la solicitud a los contactos autorizados y mostrar si alguno confirmó su recepción.
-
-5. Integrar la programación de citas y el seguimiento posterior a una alerta, permitiendo registrar evaluaciones, recomendaciones del profesional y próximas atenciones. Así se podría dar continuidad al cuidado después de resolver una situación de riesgo.
-
-6. Incorporar recordatorios configurables de medicamentos, controles y actividades de cuidado, con confirmación de cumplimiento y avisos a los cuidadores autorizados cuando una actividad requiera seguimiento.
+1. **Entender y atender una alerta.** Priorizar el hallazgo de severidad 3. Aclarar gravedad, lectura vinculada y acción disponible. Repetir las tareas de 5.3 con ambos segmentos y registrar la comprensión y los bloqueos.
+2. **Confirmar acceso y trazabilidad.** En un entorno autorizado, probar lectura de pacientes por cuenta, transiciones simultáneas y persistencia del estado y la intervención. Verificar con usuarios que puedan identificar quién tiene acceso a sus datos.
+3. **Medir el piloto.** Identificar la versión evaluada, medir confianza y tasa de confirmación, y registrar el intervalo entre emisión y confirmación. Confirmar el canal de afiliación y la disposición a pagar con proveedores y familias.
+4. **Probar funciones que requieren integraciones.** Evaluar por separado la captura desde dispositivos, el escalamiento externo y la coordinación de citas una vez que existan datos del piloto y acuerdos con proveedores.
