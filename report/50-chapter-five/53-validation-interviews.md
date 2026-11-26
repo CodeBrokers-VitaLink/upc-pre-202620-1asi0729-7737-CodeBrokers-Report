@@ -29,7 +29,7 @@ Las sesiones estarán dirigidas a usuarios representativos de los dos segmentos 
 
 Durante las entrevistas se observará la interacción del participante con los principales flujos de VitaLink y posteriormente se recogerán sus apreciaciones acerca de la claridad de la propuesta de valor, facilidad de navegación, comprensión de las alertas, visualización de información de salud, accesibilidad y utilidad general de la solución.
 
-Se considerará un mínimo de **3 entrevistas por cada segmento objetivo**, con el propósito de obtener diferentes perspectivas respecto a la experiencia proporcionada por el producto.
+Para TB2 se planifican **3 a 5 entrevistas por segmento** con la Landing Page y la Web Application de la entrega. La moderación usará cuentas y datos de prueba, una versión identificada y tareas equivalentes para comparar resultados. Se registrará si la persona completó cada tarea de forma autónoma, con ayuda o si quedó bloqueada, junto con su comentario y el momento de la grabación.
 
 ##### Objetivos de las entrevistas de validación
 
@@ -79,22 +79,16 @@ Para este segmento se evaluará principalmente la facilidad con la que un famili
 
 ###### User Flow de validación
 
-El participante realizará el siguiente recorrido:
+El recorrido propuesto parte de la Landing Page y de una cuenta familiar con un paciente asociado, mediciones simuladas y al menos una alerta de prueba.
 
-1. Ingresar a la Landing Page de VitaLink.
-2. Explorar la información orientada a familiares y adultos mayores.
-3. Explicar con sus propias palabras qué entiende que ofrece VitaLink.
-4. Identificar los beneficios relacionados con acompañamiento, monitoreo y alertas.
-5. Acceder a la Frontend Web Application.
-6. Iniciar sesión utilizando un perfil correspondiente al segmento.
-7. Acceder al dashboard familiar.
-8. Seleccionar al adulto mayor asociado.
-9. Identificar el estado general mostrado por la aplicación.
-10. Revisar las últimas mediciones registradas.
-11. Identificar si existen alertas abiertas.
-12. Revisar la información presentada sobre una situación que requiere atención.
-13. Explorar las opciones de red familiar y perfil.
-14. Regresar al dashboard principal.
+1. Elegir la vista de familias y explicar qué ofrece VitaLink tras revisar «Cómo funciona».
+2. Seguir el llamado a la acción hasta la pantalla de acceso. Si se evalúa el alta, abrir «Crear cuenta», elegir el perfil familiar, asociar al paciente y a su médico, revisar el consentimiento e ingresar las mediciones simuladas.
+3. Iniciar sesión y localizar el estado general en el panel familiar (`/family/dashboard`).
+4. Consultar las mediciones, aplicar el filtro por nivel y explicar qué muestra el resumen semanal.
+5. Ubicar una alerta abierta e interpretar su tipo, gravedad y estado. Identificar el valor y la unidad si la alerta tiene una medición vinculada.
+6. Revisar la red de cuidado y el perfil. Una persona mayor con cuenta de paciente puede hacer el recorrido de autocuidado en `/patient/dashboard` con sus propios datos de prueba.
+
+Se observará si cada persona distingue entre el estado de una alerta, el resultado de una medición y una observación del médico. La confirmación familiar de alertas, el SOS multicanal y la entrega de SMS quedan fuera de estas tareas.
 
 ###### Preguntas de validación
 
@@ -125,22 +119,16 @@ Para este segmento se evaluará principalmente la capacidad de la plataforma par
 
 ###### User Flow de validación
 
-El participante realizará el siguiente recorrido:
+El recorrido propuesto parte de la Landing Page y de una cuenta de médico con pacientes vinculados, mediciones y una alerta abierta de prueba.
 
-1. Ingresar a la Landing Page de VitaLink.
-2. Explorar las secciones orientadas a profesionales e instituciones de salud.
-3. Explicar con sus propias palabras la propuesta de valor de VitaLink para el personal médico.
-4. Acceder a la Frontend Web Application.
-5. Iniciar sesión utilizando un perfil de profesional de salud.
-6. Acceder al dashboard médico.
-7. Identificar la cantidad y estado de las alertas disponibles.
-8. Diferenciar las alertas según su nivel de urgencia.
-9. Utilizar las opciones disponibles para revisar o filtrar las alertas.
-10. Seleccionar un paciente relacionado con una alerta.
-11. Acceder al detalle del paciente.
-12. Revisar su información y registros disponibles.
-13. Regresar al dashboard y continuar revisando casos pendientes.
-14. Acceder al perfil del profesional.
+1. Elegir la vista profesional y localizar las secciones de alertas y seguridad. Explicar qué información necesita antes de registrar datos.
+2. Seguir «Unirme como proveedor» hasta el acceso. Si se evalúa el alta, abrir «Crear cuenta» y elegir médico independiente o asociado a una clínica.
+3. Iniciar sesión, revisar los conteos del panel médico (`/doctor/dashboard`) y filtrar alertas por estado.
+4. Abrir una alerta, localizar al paciente y revisar la medición relacionada y el historial de intervenciones.
+5. Buscar al paciente en `/doctor/patients`, abrir su ficha y localizar los registros previos.
+6. En el entorno de prueba, actualizar el estado de la alerta; para marcarla como atendida, ingresar una nota. Volver al historial y localizar autor, hora y observación.
+
+Los representantes sin función clínica pueden evaluar la Landing Page y comentar la pertinencia del recorrido profesional sobre una demostración con datos simulados. Se registrará qué tareas ejecutó cada participante.
 
 ###### Preguntas de validación
 
@@ -183,15 +171,11 @@ Además de las respuestas proporcionadas por los participantes, durante la inter
 
 Los resultados obtenidos durante estas sesiones servirán posteriormente como base para el **Registro de Entrevistas** y para la **Evaluación de User Experience según heurísticas de usabilidad, arquitectura de información e Inclusive Design**.
 
- #### 5.3.2. Registro de Entrevistas
+#### 5.3.2. Registro de Entrevistas
 
-En esta sección se presentan los resultados obtenidos durante las entrevistas de validación realizadas a participantes representativos de los segmentos objetivo de **VitaLink**.
+Se conservan cuatro registros de AV2. La ronda histórica reúne tres sesiones del segmento familiar y una del profesional. Para completar la cuota del segmento profesional hacen falta al menos dos sesiones adicionales, siempre que se confirme la reutilización de la sesión registrada. Para acreditar la versión TB2 se requiere confirmar el entorno de cada sesión y si los recorridos se ejecutaron sobre esa versión.
 
-Durante las sesiones, los participantes interactuaron con la Landing Page y con la Frontend Web Application siguiendo los flujos definidos previamente. Posteriormente, brindaron sus apreciaciones respecto a la propuesta de valor, facilidad de navegación, comprensión de las alertas, visualización de información clínica, accesibilidad y utilidad general de la plataforma.
-
-Las entrevistas permitieron identificar aspectos valorados positivamente por los usuarios y oportunidades de mejora que serán consideradas para futuras iteraciones del producto.
-
----
+Las capturas, enlaces y marcas de tiempo siguientes proceden del registro histórico. Los tres registros familiares remiten al mismo enlace de OneDrive y el segmento profesional tiene un enlace separado de SharePoint. Queda pendiente comprobar el acceso institucional en Stream, cotejar las marcas con las grabaciones y preparar el video consolidado del Anexo C.
 
 ##### Segmento 1: Adultos mayores y sus familias que requieren acompañamiento preventivo
 
@@ -373,7 +357,12 @@ Fátima calificó su experiencia general con VitaLink con una puntuación de **5
 
 #### 5.3.3. Evaluaciones según heurísticas
 
-A partir de las sesiones de validación realizadas con participantes de los segmentos objetivo de VitaLink, se desarrolló una evaluación de la experiencia de usuario considerando principios de **Usability, Inclusive Design e Information Architecture**.
+```{=latex}
+\begingroup
+\color{blue}
+```
+
+La evaluación histórica de AV2 aplica criterios de **Usability, Inclusive Design e Information Architecture**. Se conserva su escala y la severidad asignada en esa ronda. Al final se contrasta cada hallazgo con el código disponible para TB2.
 
 Los problemas identificados se obtuvieron a partir de las dificultades, dudas y sugerencias manifestadas por los participantes durante la interacción con la Landing Page y la Frontend Web Application.
 
@@ -384,16 +373,17 @@ Los problemas identificados se obtuvieron a partir de las dificultades, dudas y 
 | Campo | Información |
 |---|---|
 | **Carrera** | Ingeniería de Software |
-| **Curso** | Desarrollo de Aplicaciones Open Source |
-| **Sección** | 7737 |
+| **Curso** | 1ASI0729 Desarrollo de Aplicaciones Open Source |
+| **Sección** | NRC 7737 |
+| **Docente** | Ivan Robles Fernández |
 | **Auditor** | CodeBrokers |
 | **Cliente(s)** | Samir, Walter, Jesus y Fátima |
 | **Producto evaluado** | VitaLink |
 
-**Landing Page:**  
+**Landing Page de referencia en AV2:**
 https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-Landin_Page/
 
-**Frontend Web Application:**  
+**Frontend Web Application de referencia en AV2:**
 https://vitalink-frontend.vercel.app/
 
 ---
@@ -636,7 +626,7 @@ La evaluación realizada permitió identificar que la experiencia general de Vit
 
 En el segmento familiar, los participantes valoraron especialmente la posibilidad de consultar el estado de un adulto mayor desde una interfaz centralizada, así como la organización y claridad visual de la información.
 
-En el segmento profesional, se destacó la capacidad de concentrar pacientes y alertas en un mismo espacio, permitiendo priorizar casos y reducir el tiempo necesario para revisar información clínica.
+En el registro del segmento profesional se valoró disponer de pacientes y alertas en un mismo lugar para priorizar casos y consultar información clínica. Quedó pendiente medir el tiempo empleado en esas tareas.
 
 Las principales oportunidades de mejora identificadas se concentran en proporcionar mayor detalle sobre las alertas, incorporar visualizaciones de evolución de las mediciones, reforzar algunos elementos de accesibilidad y comunicar de forma más visible los mecanismos de privacidad y control de acceso.
 
@@ -644,3 +634,18 @@ No se identificaron problemas de severidad **4**, debido a que ninguno de los pa
 
 Los resultados obtenidos servirán como referencia para futuras iteraciones de VitaLink, permitiendo mejorar la experiencia de familiares, adultos mayores y profesionales de salud.
 
+##### Seguimiento técnico de hallazgos para TB2
+
+El seguimiento se realizó mediante inspección de las revisiones de código citadas en 3.3 y comprobación de acceso a las páginas públicas de entrada. Se mantienen las severidades históricas hasta repetir las tareas con usuarios. Quedan por incorporar capturas autorizadas de cada problema en la versión evaluada.
+
+| Hallazgo AV2 | Evidencia técnica y seguimiento | Recomendación para la ronda TB2 |
+|---|---|---|
+| 1. Origen de la alerta (2) | `alert-list` puede mostrar valor y unidad al familiar cuando existe una lectura vinculada. El detalle médico intenta localizar una lectura del mismo tipo cuando falta el vínculo. Sigue pendiente la claridad del motivo y del origen del dato. | Distinguir lectura vinculada y lectura de contexto. Pedir al participante que explique por qué aparece una alerta de prueba. |
+| 2. Detalle en el listado (3) | Las filas muestran tipo, fecha, gravedad y estado. Solo el médico tiene enlace al detalle. El valor familiar depende del vínculo con la lectura. Cobertura parcial. | Validar primero el contexto y la acción disponible desde ambos paneles, con y sin lectura vinculada. |
+| 3. Evolución de mediciones (2) | El panel familiar muestra un resumen semanal por nivel y un filtro para las lecturas recientes. Sigue pendiente comprobar la interpretación de tendencias y unidades. | Pedir que se compare una lectura reciente con el patrón de la semana y registrar las dudas. |
+| 4. Apoyo visual (2) | El resumen semanal incluye etiquetas accesibles y combina símbolos con texto traducido en partes del panel. Quedan por revisar contraste, teclado, foco, tamaño y lectura de símbolos. | Verificar con personas mayores y repetir el recorrido con teclado y ampliación. |
+| 5. Privacidad y autorización (2) | La Landing Page tiene sección de seguridad, el alta solicita consentimiento y el backend limita datos por vínculo. El alcance de acceso debe resultar comprensible también dentro de los paneles. | Pedir a cada participante que identifique quién puede ver los datos, con qué alcance y dónde consultarlo. |
+
+```{=latex}
+\endgroup
+```
