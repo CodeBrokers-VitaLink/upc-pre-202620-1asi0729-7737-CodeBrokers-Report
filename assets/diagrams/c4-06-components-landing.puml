@@ -1,0 +1,13 @@
+@startuml
+!include <C4/C4_Component>
+title C4 · Landing Page
+caption HTML, CSS y JavaScript · GitHub Pages
+skinparam shadowing false
+Component(content, "index.html", "HTML", "Secciones, metadatos, selector de audiencia y CTA.")
+Component(style, "styles.css", "CSS", "Paleta, layout y adaptación responsiva.")
+Component(behavior, "script.js", "JavaScript", "Alterna audiencia/idioma y controla el menú.")
+System_Ext(spa, "Web Application", "Abre la pantalla de acceso en Render.")
+Rel(content, style, "Carga hoja de estilos.")
+Rel(content, behavior, "Enlaza interacciones y traducciones.")
+Rel(behavior, spa, "Los CTA conservan el destino de acceso.")
+@enduml

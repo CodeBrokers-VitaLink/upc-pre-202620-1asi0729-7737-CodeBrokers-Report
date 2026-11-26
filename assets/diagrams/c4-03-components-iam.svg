@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 1024" width="1050" height="1024" role="img">
+<title>C4 · SPA / IAM y Enrollment</title><desc>Web Application Angular · acceso y alta</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="9" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#4a5b6d"/></marker></defs>
+<rect width="1050" height="1024" fill="#ffffff"/>
+<text x="28" y="39" font-family="DejaVu Sans" font-size="29" font-weight="700" fill="#17324a">C4 · SPA / IAM y Enrollment</text>
+<text x="28" y="70" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Web Application Angular · acceso y alta</text>
+<polyline points="257,238 257,272 257,272 257,306" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="257.0" cy="272" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="252.0" y="277" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">1</text>
+<polyline points="792,238 792,272 792,272 792,306" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="792.0" cy="272" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="787.0" y="277" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">2</text>
+<polyline points="257,434 257,468 257,468 257,502" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="257.0" cy="468" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="252.0" y="473" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">3</text>
+<polyline points="792,434 792,468 792,468 792,502" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="792.0" cy="468" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="787.0" y="473" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">4</text>
+<polyline points="257,653 257,687 257,687 257,721" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="257.0" cy="687" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="252.0" y="692" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">5</text>
+<polyline points="792,653 792,687 792,687 792,721" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="792.0" cy="687" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="787.0" y="692" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">6</text>
+<rect x="28" y="110" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="110" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="42" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Login / Profile</text>
+<text x="42" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Angular</text>
+<text x="42" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Acceso y perfil de la sesión.</text>
+<rect x="563" y="110" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="110" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="577" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Register</text>
+<text x="577" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Angular</text>
+<text x="577" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Alta de médico o familiar con paciente.</text>
+<rect x="28" y="306" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="306" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="328" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="42" y="354" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">AuthenticationStore</text>
+<text x="42" y="396" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Signals y RxJS</text>
+<text x="42" y="419" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Sesión, usuario actual y cierre de sesión.</text>
+<rect x="563" y="306" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="306" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="328" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="577" y="354" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">EnrollmentStore</text>
+<text x="577" y="396" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Signals y RxJS</text>
+<text x="577" y="419" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Coordina alta y catálogo por ENROLLMENT_PORT.</text>
+<rect x="28" y="502" width="459" height="151" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="502" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="524" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="42" y="550" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Servicios IAM</text>
+<text x="42" y="592" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">HttpClient</text>
+<text x="42" y="615" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">AuthenticationService, UserService e interceptor</text>
+<text x="42" y="638" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">bearer.</text>
+<rect x="563" y="502" width="459" height="151" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="502" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="524" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="577" y="550" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">EnrollmentHttpService</text>
+<text x="577" y="592" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">HttpClient</text>
+<text x="577" y="615" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Implementa el puerto y adapta registros y</text>
+<text x="577" y="638" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">catálogos.</text>
+<rect x="28" y="721" width="459" height="105" rx="9" fill="#f4f8fb" stroke="#545d6e" stroke-width="1.5"/>
+<rect x="28" y="721" width="459" height="67" rx="9" fill="#545d6e"/>
+<text x="42" y="743" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">SERVICIO EXTERNO</text>
+<text x="42" y="769" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">REST API / IAM</text>
+<text x="42" y="811" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">/auth y /users.</text>
+<rect x="563" y="721" width="459" height="105" rx="9" fill="#f4f8fb" stroke="#545d6e" stroke-width="1.5"/>
+<rect x="563" y="721" width="459" height="67" rx="9" fill="#545d6e"/>
+<text x="577" y="743" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">SERVICIO EXTERNO</text>
+<text x="577" y="769" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">REST API / Enrollment</text>
+<text x="577" y="811" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">/enrollment/families, /clinics y /doctors.</text>
+<text x="28" y="872" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">1. Las vistas consultan o actualizan la sesión.</text>
+<text x="28" y="894" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">2. El formulario invoca alta y consulta de catálogos.</text>
+<text x="28" y="916" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">3. Los servicios conectan IAM con el backend; roleGuard consulta la sesión.</text>
+<text x="28" y="938" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">4. Inyección del adaptador por puerto.</text>
+<text x="28" y="960" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">5. HTTPS / JSON.</text>
+<text x="28" y="982" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">6. HTTPS / JSON.</text>
+</svg>

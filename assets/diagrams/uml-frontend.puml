@@ -1,0 +1,32 @@
+@startuml
+title UML · Frontend Angular
+caption Clases de presentación, estado, servicios y puertos
+skinparam shadowing false
+class "Login" as login {
+  + submit(form): void
+  Formulario de ingreso.
+}
+class "CareWorkspace" as workspace {
+  + status(to): void
+  + related(alert): CareRecord | undefined
+}
+class "AuthenticationStore" as auth {
+  Estado del usuario y control de la sesión.
+}
+class "CareStore" as care {
+  Estado de pacientes, mediciones, alertas e intervenciones.
+}
+class "Register" as register {
+  + changeMode(mode): void
+  Registro médico o familiar.
+}
+class "EnrollmentStore" as enrollment {
+  Orquesta catálogos y solicitudes de alta por EnrollmentPort.
+}
+login ..> auth : Login usa el estado y los comandos de sesión.
+workspace ..> care : CareWorkspace consulta el estado y cambia alertas mediante el store.
+register ..> enrollment : El formulario usa el store de alta.
+legend bottom
+Los servicios HTTP adaptan DTO REST a modelos Angular. La Landing Page usa funciones JavaScript, sin modelo de clases propio.
+endlegend
+@enduml

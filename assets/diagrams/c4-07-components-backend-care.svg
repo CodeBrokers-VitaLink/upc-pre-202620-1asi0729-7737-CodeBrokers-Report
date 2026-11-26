@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 1096" width="1050" height="1096" role="img">
+<title>C4 · Backend / Care</title><desc>Spring Boot · cuidado, observaciones y notificaciones</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="9" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#4a5b6d"/></marker></defs>
+<rect width="1050" height="1096" fill="#ffffff"/>
+<text x="28" y="39" font-family="DejaVu Sans" font-size="29" font-weight="700" fill="#17324a">C4 · Backend / Care</text>
+<text x="28" y="70" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Spring Boot · cuidado, observaciones y notificaciones</text>
+<polyline points="257,238 257,296 257,296 257,354" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="257.0" cy="296" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="252.0" y="301" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">1</text>
+<polyline points="792,286 792,320 792,320 792,354" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="792.0" cy="320" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="787.0" y="325" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">2</text>
+<polyline points="257,505 257,539 257,539 257,573" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="257.0" cy="539" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="252.0" y="544" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">3</text>
+<polyline points="792,505 792,539 792,539 792,573" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="792.0" cy="539" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="787.0" y="544" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">4</text>
+<polyline points="792,769 792,735 792,735 792,701" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="792.0" cy="735" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="787.0" y="740" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">5</text>
+<rect x="28" y="110" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="110" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="42" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">CareController</text>
+<text x="42" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Spring MVC</text>
+<text x="42" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Pacientes, mediciones, alertas y relaciones.</text>
+<rect x="563" y="110" width="459" height="176" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="110" width="459" height="92" rx="9" fill="#235b82"/>
+<text x="577" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="577" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">ObservationsController /</text>
+<text x="577" y="183" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">NotificationsController</text>
+<text x="577" y="225" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Spring MVC</text>
+<text x="577" y="248" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Observaciones y notificaciones vinculadas a la</text>
+<text x="577" y="271" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">sesión.</text>
+<rect x="28" y="354" width="459" height="151" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="354" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="376" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="42" y="402" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Servicios Care</text>
+<text x="42" y="444" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Aplicación y dominio</text>
+<text x="42" y="467" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">CareCommandService, CareQueryService y</text>
+<text x="42" y="490" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">CareAccessService.</text>
+<rect x="563" y="354" width="459" height="151" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="354" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="376" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="577" y="402" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Servicios de observación</text>
+<text x="577" y="444" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Aplicación y dominio</text>
+<text x="577" y="467" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">ObservationCommandService / QueryService;</text>
+<text x="577" y="490" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">genera avisos internos.</text>
+<rect x="28" y="573" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="573" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="595" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="42" y="621" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Repositorios Care</text>
+<text x="42" y="663" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Spring Data JPA</text>
+<text x="42" y="686" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Pacientes, mediciones, alertas e intervenciones.</text>
+<rect x="563" y="573" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="573" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="595" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="577" y="621" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Persistencia de observaciones</text>
+<text x="577" y="663" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Adaptadores JPA</text>
+<text x="577" y="686" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">DoctorObservation y ObservationNotification.</text>
+<rect x="563" y="769" width="459" height="151" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="769" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="791" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="577" y="817" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">ObservationEmailWorker</text>
+<text x="577" y="859" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Spring Scheduling y RestClient</text>
+<text x="577" y="882" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Procesa avisos pendientes mediante el adaptador</text>
+<text x="577" y="905" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">de Resend.</text>
+<text x="28" y="966" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">1. Traduce recursos y aplica casos de uso de cuidado.</text>
+<text x="28" y="988" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">2. Invoca consultas, registro, atención y lectura.</text>
+<text x="28" y="1010" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">3. Verifica rol y relación con paciente antes de operar.</text>
+<text x="28" y="1032" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">4. Guarda observaciones y notificaciones por destinatario.</text>
+<text x="28" y="1054" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">5. Lee pendientes y actualiza estado de envío.</text>
+</svg>

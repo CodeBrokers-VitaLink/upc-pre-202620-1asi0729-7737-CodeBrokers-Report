@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 1048" width="1050" height="1048" role="img">
+<title>C4 · SPA / Care</title><desc>Web Application Angular · paneles y seguimiento</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="9" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#4a5b6d"/></marker></defs>
+<rect width="1050" height="1048" fill="#ffffff"/>
+<text x="28" y="39" font-family="DejaVu Sans" font-size="29" font-weight="700" fill="#17324a">C4 · SPA / Care</text>
+<text x="28" y="70" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Web Application Angular · paneles y seguimiento</text>
+<polyline points="257,238 257,283 257,283 257,329" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="257.0" cy="283" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="252.0" y="288" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">1</text>
+<polyline points="792,261 792,295 792,295 792,329" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="792.0" cy="295" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="787.0" y="300" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">2</text>
+<polyline points="257,457 257,502 257,502 257,548" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="257.0" cy="502" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="252.0" y="507" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">3</text>
+<polyline points="792,480 792,514 792,514 792,548" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="792.0" cy="514" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="787.0" y="519" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">4</text>
+<polyline points="257,699 257,733 257,733 257,767" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="257.0" cy="733" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="252.0" y="738" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">5</text>
+<rect x="28" y="110" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="110" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="42" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">CareWorkspace</text>
+<text x="42" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Angular</text>
+<text x="42" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Paneles, fichas, listas de alertas y resumen.</text>
+<rect x="563" y="110" width="459" height="151" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="110" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="577" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Observations / Notifications</text>
+<text x="577" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Angular</text>
+<text x="577" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Registro, lectura y seguimiento de observaciones</text>
+<text x="577" y="246" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">y avisos.</text>
+<rect x="28" y="329" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="329" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="351" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="42" y="377" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">CareStore</text>
+<text x="42" y="419" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Signals y RxJS</text>
+<text x="42" y="442" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Carga datos, filtra y coordina las transiciones.</text>
+<rect x="563" y="329" width="459" height="151" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="329" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="351" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="577" y="377" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">ObservationsHttpService</text>
+<text x="577" y="419" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">HttpClient</text>
+<text x="577" y="442" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Realiza consultas y comandos por</text>
+<text x="577" y="465" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">OBSERVATIONS_PORT.</text>
+<rect x="28" y="548" width="459" height="151" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="548" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="570" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="42" y="596" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">CareService</text>
+<text x="42" y="638" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">HttpClient</text>
+<text x="42" y="661" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Adapta pacientes, mediciones y alertas al modelo</text>
+<text x="42" y="684" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">de UI.</text>
+<rect x="563" y="548" width="459" height="105" rx="9" fill="#f4f8fb" stroke="#545d6e" stroke-width="1.5"/>
+<rect x="563" y="548" width="459" height="67" rx="9" fill="#545d6e"/>
+<text x="577" y="570" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">SERVICIO EXTERNO</text>
+<text x="577" y="596" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">REST API / Observations</text>
+<text x="577" y="638" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">/patients/{id}/observations y /notifications.</text>
+<rect x="28" y="767" width="459" height="105" rx="9" fill="#f4f8fb" stroke="#545d6e" stroke-width="1.5"/>
+<rect x="28" y="767" width="459" height="67" rx="9" fill="#545d6e"/>
+<text x="42" y="789" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">SERVICIO EXTERNO</text>
+<text x="42" y="815" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">REST API / Care</text>
+<text x="42" y="857" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Recursos de cuidado y transiciones de alerta.</text>
+<text x="28" y="918" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">1. Las vistas se suscriben al estado de cuidado.</text>
+<text x="28" y="940" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">2. Las vistas usan el puerto de observaciones.</text>
+<text x="28" y="962" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">3. Envía operaciones y usa los assemblers de infraestructura.</text>
+<text x="28" y="984" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">4. HTTPS / JSON y bearer.</text>
+<text x="28" y="1006" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">5. HTTPS / JSON y bearer.</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 589" width="1050" height="589" role="img">
+<title>C4 · Landing Page</title><desc>HTML, CSS y JavaScript · GitHub Pages</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="9" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#4a5b6d"/></marker></defs>
+<rect width="1050" height="589" fill="#ffffff"/>
+<text x="28" y="39" font-family="DejaVu Sans" font-size="29" font-weight="700" fill="#17324a">C4 · Landing Page</text>
+<text x="28" y="70" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">HTML, CSS y JavaScript · GitHub Pages</text>
+<polyline points="487,164 563,164" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="525.0" cy="164" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="520.0" y="169" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">1</text>
+<polyline points="257,261 257,295 257,295 257,329" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="257.0" cy="295" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="252.0" y="300" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">2</text>
+<polyline points="487,383 563,383" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="525.0" cy="383" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="520.0" y="388" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">3</text>
+<rect x="28" y="110" width="459" height="151" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="110" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="42" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">index.html</text>
+<text x="42" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">HTML</text>
+<text x="42" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Secciones, metadatos, selector de audiencia y</text>
+<text x="42" y="246" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">CTA.</text>
+<rect x="563" y="110" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="110" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="577" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">styles.css</text>
+<text x="577" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">CSS</text>
+<text x="577" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Paleta, layout y adaptación responsiva.</text>
+<rect x="28" y="329" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="329" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="351" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="42" y="377" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">script.js</text>
+<text x="42" y="419" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">JavaScript</text>
+<text x="42" y="442" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Alterna audiencia/idioma y controla el menú.</text>
+<rect x="563" y="329" width="459" height="105" rx="9" fill="#f4f8fb" stroke="#545d6e" stroke-width="1.5"/>
+<rect x="563" y="329" width="459" height="67" rx="9" fill="#545d6e"/>
+<text x="577" y="351" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">SERVICIO EXTERNO</text>
+<text x="577" y="377" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Web Application</text>
+<text x="577" y="419" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Abre la pantalla de acceso en Render.</text>
+<text x="28" y="503" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">1. Carga hoja de estilos.</text>
+<text x="28" y="525" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">2. Enlaza interacciones y traducciones.</text>
+<text x="28" y="547" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">3. Los CTA conservan el destino de acceso.</text>
+</svg>

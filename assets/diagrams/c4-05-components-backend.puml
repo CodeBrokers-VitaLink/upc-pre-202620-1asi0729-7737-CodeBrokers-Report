@@ -1,0 +1,21 @@
+@startuml
+!include <C4/C4_Component>
+title C4 · Backend / IAM, Providers y Enrollment
+caption Spring Boot · interfaces, aplicación e infraestructura
+skinparam shadowing false
+Component(iam, "AuthenticationController", "Spring MVC", "Autenticación, sesión y recursos de usuario.")
+Component(providers, "ProvidersController", "Spring MVC", "Clínicas, médicos y catálogo ficticio con FakeMedicalRegistryController.")
+Component(enrollment, "FamilyEnrollmentController", "Spring MVC", "Recibe el alta familiar, paciente y mediciones.")
+Component(auth, "Servicios IAM", "Spring Security y aplicación", "AuthenticationCommandService y UserQueryService.")
+Component(catalog, "Consultas de Providers", "Aplicación", "ProviderQueryService y MedicalRegistryQueryService.")
+Component(register, "FamilyEnrollmentCommandService", "Aplicación", "Orquesta puertos de cuentas, catálogo y persistencia de paciente.")
+Component(users, "User / AuthSession / LoginAlias", "Spring Data JPA", "Repositorios de cuentas y sesiones.")
+Component(registry, "Doctor / Clinic / catálogo", "JPA y JSON", "Catálogos persistidos y fixture local.")
+Component(ports, "Adaptadores de Enrollment", "ACL y JPA", "Conectan alta con IAM, Providers y Care.")
+Rel(iam, auth, "Valida solicitudes; el filtro bearer protege recursos privados.")
+Rel(providers, catalog, "Consulta recursos de proveedores.")
+Rel(enrollment, register, "Transforma el resource en un comando.")
+Rel(auth, users, "Lee y escribe identidades y sesiones; aplica BCrypt.")
+Rel(catalog, registry, "Consulta repositorios y el registro ficticio.")
+Rel(register, ports, "Invoca FamilyAccountRegistration, EnrollmentCatalog y FamilyPatientRepository.")
+@enduml

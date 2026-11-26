@@ -1,0 +1,19 @@
+@startuml
+!include <C4/C4_Container>
+title C4 · Container
+caption VitaLink · unidades de aplicación y almacenamiento
+skinparam shadowing false
+Person(visitor, "Usuario", "Navegador web.")
+System_Ext(resend, "Resend", "Proveedor condicional de correo.")
+System_Boundary(vitalink, "VitaLink") {
+Container(landing, "Landing Page", "HTML, CSS y JavaScript · GitHub Pages", "Información pública, audiencias y CTA.")
+Container(spa, "Web Application", "Angular 22.2 · Render Static Site", "Registro, sesión y paneles por rol.")
+Container(api, "Backend REST API", "Java 26 y Spring Boot 4.0.6 · Render", "IAM, Providers, Enrollment, Care y Shared.")
+ContainerDb(db, "Base de datos relacional", "MySQL en Compose; TiDB Cloud según guía de producción", "Usuarios, sesiones, pacientes y seguimiento.")
+}
+Rel(visitor, landing, "Consulta contenido por HTTPS.")
+Rel(landing, spa, "Enlace al acceso de la SPA por HTTPS.")
+Rel(spa, api, "HTTPS / JSON; bearer opaco para rutas protegidas.")
+Rel(api, db, "Spring Data JPA / JDBC; TLS en la configuración de producción.")
+Rel(api, resend, "HTTPS / JSON para correo, integración condicional.")
+@enduml

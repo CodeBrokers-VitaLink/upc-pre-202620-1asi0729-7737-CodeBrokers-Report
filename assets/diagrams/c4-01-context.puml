@@ -1,0 +1,15 @@
+@startuml
+!include <C4/C4_Context>
+title C4 · System Context
+caption VitaLink · actores y dependencias verificadas en el código
+skinparam shadowing false
+Person(family, "Familiar / cuidador", "Consulta mediciones y observaciones.")
+Person(doctor, "Profesional de salud", "Consulta pacientes y registra intervenciones.")
+Person(patient, "Adulto mayor", "Accede a su vista de autocuidado.")
+System(vitalink, "VitaLink", "Presenta el producto, registra perfiles y coordina el seguimiento.")
+System_Ext(resend, "Resend", "Entrega de correo de observaciones si se configura.")
+Rel(family, vitalink, "Consulta el seguimiento del paciente vinculado.")
+Rel(doctor, vitalink, "Gestiona alertas y observaciones de sus pacientes.")
+Rel(patient, vitalink, "Consulta sus propios datos.")
+Rel(vitalink, resend, "Solicita el envío de correo vía HTTPS, si está configurado.")
+@enduml

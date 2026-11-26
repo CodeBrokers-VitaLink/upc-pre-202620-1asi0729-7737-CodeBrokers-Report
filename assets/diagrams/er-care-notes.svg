@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 728" width="1050" height="728" role="img">
+<title>ER · Care / coordinación</title><desc>Persistencia inferida de vínculos, observaciones y notificaciones</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="9" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#4a5b6d"/></marker></defs>
+<rect width="1050" height="728" fill="#ffffff"/>
+<text x="28" y="39" font-family="DejaVu Sans" font-size="29" font-weight="700" fill="#17324a">ER · Care / coordinación</text>
+<text x="28" y="70" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Persistencia inferida de vínculos, observaciones y notificaciones</text>
+<polyline points="487,452 563,452" fill="none" stroke="#4a5b6d" stroke-width="2.1" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<circle cx="525.0" cy="452" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="520.0" y="457" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">1</text>
+<rect x="28" y="110" width="459" height="220" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="110" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">TABLA INFERIDA</text>
+<text x="42" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">care_relationships</text>
+<text x="42" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">PK id VARCHAR(255)</text>
+<text x="42" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">patient_id, doctor_id, status,</text>
+<text x="42" y="246" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">authorized_by_user_id</text>
+<text x="42" y="269" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">invited_at, expires_at, accepted_at, ended_at:</text>
+<text x="42" y="292" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">temporal</text>
+<text x="42" y="315" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">version BIGINT</text>
+<rect x="563" y="110" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="110" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">TABLA INFERIDA</text>
+<text x="577" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">caregiver_profiles</text>
+<text x="577" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">PK id VARCHAR(255)</text>
+<text x="577" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">name, phone y email VARCHAR(255)</text>
+<rect x="28" y="398" width="459" height="174" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="398" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="420" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">TABLA INFERIDA</text>
+<text x="42" y="446" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">doctor_observations</text>
+<text x="42" y="488" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">PK id VARCHAR(255)</text>
+<text x="42" y="511" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">patient_id, doctor_id, doctor_name</text>
+<text x="42" y="534" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">text VARCHAR(2000) NOT NULL</text>
+<text x="42" y="557" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">created_at, attended_at: temporal</text>
+<rect x="563" y="398" width="459" height="220" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="398" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="420" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">TABLA INFERIDA</text>
+<text x="577" y="446" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">observation_notifications</text>
+<text x="577" y="488" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">PK id VARCHAR(255)</text>
+<text x="577" y="511" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">recipient_id, observation_id, patient_id,</text>
+<text x="577" y="534" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">doctor_name</text>
+<text x="577" y="557" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">created_at, read_at: temporal</text>
+<text x="577" y="580" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">email_status VARCHAR(255); email_attempts</text>
+<text x="577" y="603" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">INTEGER</text>
+<text x="28" y="664" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">1. observation_id lógico: una observación puede producir 0..* avisos.</text>
+<text x="28" y="686" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">Repositorios gestionan referencias por ID; la inspección no acredita restricciones físicas de producción.</text>
+</svg>

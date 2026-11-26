@@ -1,0 +1,35 @@
+@startuml
+title ER · IAM y Providers
+caption Tablas inferidas a partir de JPA y de la estrategia de nombres
+skinparam shadowing false
+entity "users" as users {
+  PK id VARCHAR(255)
+  email VARCHAR(255) NN UQ
+  name, password_hash NN; role NN
+  phone VARCHAR(255)
+}
+entity "auth_sessions" as sessions {
+  PK id VARCHAR(64)
+  user_id VARCHAR(255) NN
+  expires_at temporal NN
+}
+entity "login_aliases" as aliases {
+  PK id VARCHAR(255)
+  user_id, password_hash VARCHAR(255) NN
+}
+entity "doctors" as doctors {
+  PK id VARCHAR(255)
+  professional_license VARCHAR(255) NN UQ
+  name, specialty, practice_type, clinic_id, verification_status
+}
+entity "clinics" as clinics {
+  PK id VARCHAR(255)
+  name VARCHAR(255) NN
+}
+users ..> sessions : Referencia lógica: users 1 a 0..* auth_sessions.
+aliases ..> users : Referencia lógica: 0..* alias para un usuario.
+doctors ..> clinics : clinic_id lógico: 0..1 clínica por médico.
+legend bottom
+NN = NOT NULL. UQ = UNIQUE. Las líneas discontinuas indican identificadores, no claves foráneas JPA.
+endlegend
+@enduml

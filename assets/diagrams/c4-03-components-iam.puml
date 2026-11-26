@@ -1,0 +1,20 @@
+@startuml
+!include <C4/C4_Component>
+title C4 · SPA / IAM y Enrollment
+caption Web Application Angular · acceso y alta
+skinparam shadowing false
+Component(views, "Login / Profile", "Angular", "Acceso y perfil de la sesión.")
+Component(register, "Register", "Angular", "Alta de médico o familiar con paciente.")
+Component(store, "AuthenticationStore", "Signals y RxJS", "Sesión, usuario actual y cierre de sesión.")
+Component(enrollment, "EnrollmentStore", "Signals y RxJS", "Coordina alta y catálogo por ENROLLMENT_PORT.")
+Component(http, "Servicios IAM", "HttpClient", "AuthenticationService, UserService e interceptor bearer.")
+Component(adapter, "EnrollmentHttpService", "HttpClient", "Implementa el puerto y adapta registros y catálogos.")
+System_Ext(api, "REST API / IAM", "/auth y /users.")
+System_Ext(catalog, "REST API / Enrollment", "/enrollment/families, /clinics y /doctors.")
+Rel(views, store, "Las vistas consultan o actualizan la sesión.")
+Rel(register, enrollment, "El formulario invoca alta y consulta de catálogos.")
+Rel(store, http, "Los servicios conectan IAM con el backend; roleGuard consulta la sesión.")
+Rel(enrollment, adapter, "Inyección del adaptador por puerto.")
+Rel(http, api, "HTTPS / JSON.")
+Rel(adapter, catalog, "HTTPS / JSON.")
+@enduml

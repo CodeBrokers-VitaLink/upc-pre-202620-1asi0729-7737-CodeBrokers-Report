@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 1016" width="1050" height="1016" role="img">
+<title>C4 · Backend / IAM, Providers y Enrollment</title><desc>Spring Boot · interfaces, aplicación e infraestructura</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="9" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#4a5b6d"/></marker></defs>
+<rect width="1050" height="1016" fill="#ffffff"/>
+<text x="28" y="39" font-family="DejaVu Sans" font-size="29" font-weight="700" fill="#17324a">C4 · Backend / IAM, Providers y Enrollment</text>
+<text x="28" y="70" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Spring Boot · interfaces, aplicación e infraestructura</text>
+<polyline points="168,286 168,330 168,330 168,375" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="168.0" cy="330" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="163.0" y="335" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">1</text>
+<polyline points="524,307 524,341 524,341 524,375" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="524.0" cy="341" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="519.0" y="346" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">2</text>
+<polyline points="880,286 880,330 880,330 880,375" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="880.0" cy="330" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="875.0" y="335" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">3</text>
+<polyline points="168,526 168,584 168,584 168,642" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="168.0" cy="584" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="163.0" y="589" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">4</text>
+<polyline points="524,574 524,608 524,608 524,642" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="524.0" cy="608" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="519.0" y="613" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">5</text>
+<polyline points="880,574 880,608 880,608 880,642" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="880.0" cy="608" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="875.0" y="613" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">6</text>
+<rect x="28" y="110" width="280" height="176" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="110" width="280" height="92" rx="9" fill="#235b82"/>
+<text x="42" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="42" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Authentication</text>
+<text x="42" y="183" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Controller</text>
+<text x="42" y="225" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Spring MVC</text>
+<text x="42" y="248" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Autenticación, sesión y</text>
+<text x="42" y="271" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">recursos de usuario.</text>
+<rect x="384" y="110" width="280" height="197" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="384" y="110" width="280" height="67" rx="9" fill="#235b82"/>
+<text x="398" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="398" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">ProvidersController</text>
+<text x="398" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Spring MVC</text>
+<text x="398" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Clínicas, médicos y catálogo</text>
+<text x="398" y="246" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">ficticio con</text>
+<text x="398" y="269" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">FakeMedicalRegistry</text>
+<text x="398" y="292" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Controller.</text>
+<rect x="740" y="110" width="280" height="176" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="740" y="110" width="280" height="92" rx="9" fill="#235b82"/>
+<text x="754" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="754" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">FamilyEnrollment</text>
+<text x="754" y="183" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Controller</text>
+<text x="754" y="225" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Spring MVC</text>
+<text x="754" y="248" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Recibe el alta familiar,</text>
+<text x="754" y="271" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">paciente y mediciones.</text>
+<rect x="28" y="375" width="280" height="151" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="375" width="280" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="397" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="42" y="423" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Servicios IAM</text>
+<text x="42" y="465" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Spring Security y aplicación</text>
+<text x="42" y="488" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">AuthenticationCommand</text>
+<text x="42" y="511" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Service y UserQueryService.</text>
+<rect x="384" y="375" width="280" height="199" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="384" y="375" width="280" height="92" rx="9" fill="#235b82"/>
+<text x="398" y="397" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="398" y="423" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Consultas de</text>
+<text x="398" y="448" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Providers</text>
+<text x="398" y="490" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Aplicación</text>
+<text x="398" y="513" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">ProviderQueryService y</text>
+<text x="398" y="536" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">MedicalRegistryQuery</text>
+<text x="398" y="559" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Service.</text>
+<rect x="740" y="375" width="280" height="199" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="740" y="375" width="280" height="92" rx="9" fill="#235b82"/>
+<text x="754" y="397" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="754" y="423" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">FamilyEnrollment</text>
+<text x="754" y="448" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">CommandService</text>
+<text x="754" y="490" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Aplicación</text>
+<text x="754" y="513" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Orquesta puertos de</text>
+<text x="754" y="536" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">cuentas, catálogo y</text>
+<text x="754" y="559" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">persistencia de paciente.</text>
+<rect x="28" y="642" width="280" height="176" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="642" width="280" height="92" rx="9" fill="#235b82"/>
+<text x="42" y="664" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="42" y="690" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">User / AuthSession /</text>
+<text x="42" y="715" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">LoginAlias</text>
+<text x="42" y="757" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Spring Data JPA</text>
+<text x="42" y="780" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Repositorios de cuentas y</text>
+<text x="42" y="803" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">sesiones.</text>
+<rect x="384" y="642" width="280" height="176" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="384" y="642" width="280" height="92" rx="9" fill="#235b82"/>
+<text x="398" y="664" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="398" y="690" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Doctor / Clinic /</text>
+<text x="398" y="715" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">catálogo</text>
+<text x="398" y="757" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">JPA y JSON</text>
+<text x="398" y="780" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Catálogos persistidos y</text>
+<text x="398" y="803" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">fixture local.</text>
+<rect x="740" y="642" width="280" height="176" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="740" y="642" width="280" height="92" rx="9" fill="#235b82"/>
+<text x="754" y="664" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">COMPONENTE</text>
+<text x="754" y="690" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Adaptadores de</text>
+<text x="754" y="715" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Enrollment</text>
+<text x="754" y="757" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">ACL y JPA</text>
+<text x="754" y="780" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Conectan alta con IAM,</text>
+<text x="754" y="803" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Providers y Care.</text>
+<text x="28" y="864" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">1. Valida solicitudes; el filtro bearer protege recursos privados.</text>
+<text x="28" y="886" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">2. Consulta recursos de proveedores.</text>
+<text x="28" y="908" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">3. Transforma el resource en un comando.</text>
+<text x="28" y="930" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">4. Lee y escribe identidades y sesiones; aplica BCrypt.</text>
+<text x="28" y="952" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">5. Consulta repositorios y el registro ficticio.</text>
+<text x="28" y="974" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">6. Invoca FamilyAccountRegistration, EnrollmentCatalog y FamilyPatientRepository.</text>
+</svg>

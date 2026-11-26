@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 967" width="1050" height="967" role="img">
+<title>ER · Care / seguimiento</title><desc>Persistencia inferida del paciente, mediciones, alertas e intervenciones</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="9" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#4a5b6d"/></marker></defs>
+<rect width="1050" height="967" fill="#ffffff"/>
+<text x="28" y="39" font-family="DejaVu Sans" font-size="29" font-weight="700" fill="#17324a">ER · Care / seguimiento</text>
+<text x="28" y="70" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Persistencia inferida del paciente, mediciones, alertas e intervenciones</text>
+<polyline points="487,164 563,164" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="525.0" cy="164" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="520.0" y="169" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">1</text>
+<polyline points="257,284 257,318 257,318 257,352" fill="none" stroke="#4a5b6d" stroke-width="2.1" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<circle cx="257.0" cy="318" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="252.0" y="323" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">2</text>
+<polyline points="487,406 563,406" fill="none" stroke="#4a5b6d" stroke-width="2.1" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<circle cx="525.0" cy="406" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="520.0" y="411" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">3</text>
+<polyline points="257,526 257,560 257,560 257,594" fill="none" stroke="#4a5b6d" stroke-width="2.1" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<circle cx="257.0" cy="560" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="252.0" y="565" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">4</text>
+<rect x="28" y="110" width="459" height="174" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="110" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">TABLA INFERIDA</text>
+<text x="42" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">patients</text>
+<text x="42" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">PK id VARCHAR(255)</text>
+<text x="42" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">given_name, family_name, family_display_name</text>
+<text x="42" y="246" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">age INTEGER; version BIGINT</text>
+<text x="42" y="269" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">location, provider_id, user_id</text>
+<rect x="563" y="110" width="459" height="151" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="110" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">TABLA INFERIDA</text>
+<text x="577" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">patient_family_ids</text>
+<text x="577" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">FK patient_id → patients.id</text>
+<text x="577" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">family_ids VARCHAR(255)</text>
+<text x="577" y="246" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Tabla implícita de @ElementCollection.</text>
+<rect x="28" y="352" width="459" height="174" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="352" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="374" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">TABLA INFERIDA</text>
+<text x="42" y="400" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">care_alerts</text>
+<text x="42" y="442" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">PK id VARCHAR(255)</text>
+<text x="42" y="465" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">patient_id, record_id, type</text>
+<text x="42" y="488" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">severity y status: enum por nombre</text>
+<text x="42" y="511" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">raised_at temporal; version BIGINT</text>
+<rect x="563" y="352" width="459" height="174" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="352" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="374" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">TABLA INFERIDA</text>
+<text x="577" y="400" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">interventions</text>
+<text x="577" y="442" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">PK id VARCHAR(255)</text>
+<text x="577" y="465" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">alert_id, actor_id, actor, role</text>
+<text x="577" y="488" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">from_status / to_status: enum por nombre</text>
+<text x="577" y="511" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">intervened_at temporal; note VARCHAR(2000)</text>
+<rect x="28" y="594" width="459" height="197" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="594" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="616" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">TABLA INFERIDA</text>
+<text x="42" y="642" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">clinical_records</text>
+<text x="42" y="684" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">PK id VARCHAR(255)</text>
+<text x="42" y="707" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">patient_id, type, unit, origin</text>
+<text x="42" y="730" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">value_text, note VARCHAR(2000)</text>
+<text x="42" y="753" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">numeric_value BOOLEAN; recorded_at temporal</text>
+<text x="42" y="776" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">provider_id, provider_name</text>
+<rect x="563" y="594" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="594" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="616" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">TABLA INFERIDA</text>
+<text x="577" y="642" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">measurement_ranges</text>
+<text x="577" y="684" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">PK id VARCHAR(255); unit VARCHAR(255)</text>
+<text x="577" y="707" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Rangos normales, críticos y de presión: DOUBLE</text>
+<text x="28" y="837" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">1. Colección JPA, paciente 1 a 0..* identificadores familiares.</text>
+<text x="28" y="859" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">2. patient_id lógico: paciente 1 a 0..* alertas.</text>
+<text x="28" y="881" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">3. alert_id lógico: alerta 1 a 0..* intervenciones.</text>
+<text x="28" y="903" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">4. record_id lógico: alerta con 0..1 medición asociada.</text>
+<text x="28" y="925" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">La colección tiene un vínculo ORM con patients; sus valores de texto no referencian físicamente a users.</text>
+</svg>

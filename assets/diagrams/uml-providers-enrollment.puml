@@ -1,0 +1,37 @@
+@startuml
+title UML · Providers y Enrollment
+caption Catálogo persistido y alta familiar con mediciones iniciales
+skinparam shadowing false
+class "Doctor" as doctor {
+  - id: String
+  - professionalLicense: String
+  - clinicId: String
+  - verificationStatus: String
+}
+class "Clinic" as clinic {
+  - id: String
+  - name: String
+}
+class "PatientEnrollment" as enroll {
+  givenName / familyName: String
+  doctorId / clinicId: String
+  consent: boolean
+  initialVitals: InitialVitalSigns
+}
+class "InitialVitalSigns" as vitals <<value object>> {
+  heartRate / oxygen / glucose: Double
+  systolic / diastolic: Double
+  + bloodPressure(): String
+}
+interface "FamilyPatientRepository" as repository {
+  Puerto que delega en Care el alta persistente.
+}
+interface "EnrollmentCatalog" as catalog {
+  Puerto de lectura de los proveedores.
+}
+doctor ..> clinic : clinicId lógico; un médico tiene 0..1 clínica.
+enroll --> vitals : La solicitud de alta incluye una captura de signos simulados.
+legend bottom
+Enrollment también utiliza FamilyAccountRegistration para registrar la cuenta IAM.
+endlegend
+@enduml

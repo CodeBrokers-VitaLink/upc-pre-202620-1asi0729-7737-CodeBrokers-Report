@@ -1,0 +1,18 @@
+@startuml
+!include <C4/C4_Component>
+title C4 · Backend / Care
+caption Spring Boot · cuidado, observaciones y notificaciones
+skinparam shadowing false
+Component(care, "CareController", "Spring MVC", "Pacientes, mediciones, alertas y relaciones.")
+Component(obs, "ObservationsController / NotificationsController", "Spring MVC", "Observaciones y notificaciones vinculadas a la sesión.")
+Component(service, "Servicios Care", "Aplicación y dominio", "CareCommandService, CareQueryService y CareAccessService.")
+Component(notes, "Servicios de observación", "Aplicación y dominio", "ObservationCommandService / QueryService; genera avisos internos.")
+Component(repository, "Repositorios Care", "Spring Data JPA", "Pacientes, mediciones, alertas e intervenciones.")
+Component(queue, "Persistencia de observaciones", "Adaptadores JPA", "DoctorObservation y ObservationNotification.")
+Component(worker, "ObservationEmailWorker", "Spring Scheduling y RestClient", "Procesa avisos pendientes mediante el adaptador de Resend.")
+Rel(care, service, "Traduce recursos y aplica casos de uso de cuidado.")
+Rel(obs, notes, "Invoca consultas, registro, atención y lectura.")
+Rel(service, repository, "Verifica rol y relación con paciente antes de operar.")
+Rel(notes, queue, "Guarda observaciones y notificaciones por destinatario.")
+Rel(worker, queue, "Lee pendientes y actualiza estado de envío.")
+@enduml

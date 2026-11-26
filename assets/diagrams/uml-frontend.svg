@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 806" width="1050" height="806" role="img">
+<title>UML · Frontend Angular</title><desc>Clases de presentación, estado, servicios y puertos</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="9" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#4a5b6d"/></marker></defs>
+<rect width="1050" height="806" fill="#ffffff"/>
+<text x="28" y="39" font-family="DejaVu Sans" font-size="29" font-weight="700" fill="#17324a">UML · Frontend Angular</text>
+<text x="28" y="70" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Clases de presentación, estado, servicios y puertos</text>
+<polyline points="257,238 257,272 257,272 257,306" fill="none" stroke="#4a5b6d" stroke-width="2.1" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<circle cx="257.0" cy="272" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="252.0" y="277" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">1</text>
+<polyline points="792,238 792,272 792,272 792,306" fill="none" stroke="#4a5b6d" stroke-width="2.1" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<circle cx="792.0" cy="272" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="787.0" y="277" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">2</text>
+<polyline points="487,556 563,556" fill="none" stroke="#4a5b6d" stroke-width="2.1" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<circle cx="525.0" cy="556" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="520.0" y="561" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">3</text>
+<rect x="28" y="110" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#276653" stroke-width="1.5"/>
+<rect x="28" y="110" width="459" height="67" rx="9" fill="#276653"/>
+<text x="42" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">CLASE DE DOMINIO</text>
+<text x="42" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Login</text>
+<text x="42" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ submit(form): void</text>
+<text x="42" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Formulario de ingreso.</text>
+<rect x="563" y="110" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#276653" stroke-width="1.5"/>
+<rect x="563" y="110" width="459" height="67" rx="9" fill="#276653"/>
+<text x="577" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">CLASE DE DOMINIO</text>
+<text x="577" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">CareWorkspace</text>
+<text x="577" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ status(to): void</text>
+<text x="577" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ related(alert): CareRecord | undefined</text>
+<rect x="28" y="306" width="459" height="105" rx="9" fill="#f4f8fb" stroke="#276653" stroke-width="1.5"/>
+<rect x="28" y="306" width="459" height="67" rx="9" fill="#276653"/>
+<text x="42" y="328" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">CLASE DE DOMINIO</text>
+<text x="42" y="354" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">AuthenticationStore</text>
+<text x="42" y="396" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Estado del usuario y control de la sesión.</text>
+<rect x="563" y="306" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#276653" stroke-width="1.5"/>
+<rect x="563" y="306" width="459" height="67" rx="9" fill="#276653"/>
+<text x="577" y="328" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">CLASE DE DOMINIO</text>
+<text x="577" y="354" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">CareStore</text>
+<text x="577" y="396" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Estado de pacientes, mediciones, alertas e</text>
+<text x="577" y="419" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">intervenciones.</text>
+<rect x="28" y="502" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#276653" stroke-width="1.5"/>
+<rect x="28" y="502" width="459" height="67" rx="9" fill="#276653"/>
+<text x="42" y="524" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">CLASE DE DOMINIO</text>
+<text x="42" y="550" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Register</text>
+<text x="42" y="592" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ changeMode(mode): void</text>
+<text x="42" y="615" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Registro médico o familiar.</text>
+<rect x="563" y="502" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#276653" stroke-width="1.5"/>
+<rect x="563" y="502" width="459" height="67" rx="9" fill="#276653"/>
+<text x="577" y="524" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">CLASE DE DOMINIO</text>
+<text x="577" y="550" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">EnrollmentStore</text>
+<text x="577" y="592" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Orquesta catálogos y solicitudes de alta por</text>
+<text x="577" y="615" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">EnrollmentPort.</text>
+<text x="28" y="676" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">1. Login usa el estado y los comandos de sesión.</text>
+<text x="28" y="698" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">2. CareWorkspace consulta el estado y cambia alertas mediante el store.</text>
+<text x="28" y="720" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">3. El formulario usa el store de alta.</text>
+<text x="28" y="742" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">Los servicios HTTP adaptan DTO REST a modelos Angular. La Landing Page usa funciones JavaScript, sin modelo de clases</text>
+<text x="28" y="764" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">propio.</text>
+</svg>
