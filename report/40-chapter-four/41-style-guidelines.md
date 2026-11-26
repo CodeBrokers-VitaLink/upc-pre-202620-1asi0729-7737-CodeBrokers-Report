@@ -22,9 +22,7 @@ La identidad visual incorpora un ícono minimalista que combina elementos relaci
 
 **Typography**
 
-Para garantizar consistencia en toda la plataforma (Landing Page y aplicación), la única familia tipográfica empleada es **Arial**, en sus variantes Regular (400) y Bold (700).
-
-Arial se elige por su alta legibilidad, su simplicidad geométrica y su disponibilidad nativa en ordenadores clínicos, tabletas hospitalarias y teléfonos móviles antiguos. Esto es especialmente importante en VitaLink: los adultos mayores no deben depender de la descarga de web fonts, y los familiares y médicos deben leer datos vitales sin márgenes de error. En el informe técnico, los fragmentos de código se muestran con una fuente monoespaciada; la interfaz de usuario utiliza exclusivamente Arial.
+Arial forma parte de la guía visual inicial y de la plantilla académica. En el código revisado de la Landing Page se declara Inter con fuentes de respaldo del sistema. La Web Application hereda la tipografía del tema Angular Material mediante `--app-font-family`.
 
 El tamaño de letra de la aplicación sigue esta distribución:
 
@@ -34,7 +32,7 @@ El tamaño de letra de la aplicación sigue esta distribución:
 * **Cuerpo del texto:** 1rem (16 px), con interlineado de 1.5 a 1.6.
 * **Información auxiliar:** 0.875rem (14 px), para marcas de tiempo, etiquetas de UI y datos complementarios.
 
-La tipografía y los colores mantienen un contraste mínimo de 4.5:1 para texto normal, en cumplimiento de las recomendaciones de accesibilidad WCAG 2.1 AA.
+La guía toma 4,5:1 como contraste mínimo para texto normal, según WCAG 2.1 AA. El cumplimiento requiere comprobar las combinaciones y estados de cada pantalla.
 
 **Paleta de colores y jerarquía visual**
 
@@ -76,30 +74,6 @@ La comunicación de VitaLink busca transmitir profesionalismo clínico, confianz
 
 ### 4.1.2. Web Style Guidelines
 
-Esta sección describe cómo los lineamientos generales se implementan en el código web de la plataforma, unificando la Landing Page estática y la Single Page Application (SPA) en Angular. El diseño web es responsivo con enfoque *Mobile First*.
+La Landing Page utiliza variables CSS para la paleta, Inter para el texto y Material Symbols Outlined para la iconografía. Los botones y tarjetas usan clases propias. El menú incorpora un control móvil que conserva el estado expandido mediante `aria-expanded`.
 
-**Tipografía web unificada**
-
-* Toda la plataforma declara `font-family: Arial, Helvetica, sans-serif;` en el `body`, de modo que no existan discrepancias tipográficas entre la Landing Page y la aplicación. No se cargan fuentes externas, lo que reduce los tiempos de carga.
-* Los pesos permitidos en CSS son `400` (Regular) y `700` (Bold).
-
-**Botones y elementos de acción**
-
-* **Botones primarios (Call to Action):** `background-color: #00694C` (verde médico) y `color: #FFFFFF`, con `border-radius: 12px`. En la SPA, el tema de Angular Material 3 define su color primario con `#00694C`, de modo que `<button mat-flat-button>` hereda este estilo.
-* **Tono de los botones:** textos cortos con verbos de acción ("Iniciar sesión", "Registrar paciente").
-
-**Tarjetas y contenedores**
-
-* Las tarjetas (cards) son el componente base para presentar pacientes y alertas.
-* **CSS base:** `background: #FFFFFF; border: 1px solid #E1E3E4; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);`.
-* En la SPA se renderizan con `MatCardModule`.
-
-**Iconografía y estado de componentes**
-
-* Se emplea la iconografía Google Material Symbols (variante Outlined), mediante `<mat-icon>` en la SPA y clases de ícono en la Landing Page.
-* Los estados de alerta cambian el contenedor completo del componente. Por ejemplo, `<div class="alert-critical">` aplica `background: #FFDAD6; color: #BA1A1A;`.
-
-**Diseño responsivo**
-
-* **Escritorio (>1024 px):** layout de varias columnas con CSS Grid (`grid-template-columns`) y menú lateral fijo (Sidebar).
-* **Móviles (<768 px):** Grid y Flexbox pasan a `flex-direction: column`, las tarjetas ocupan el 100 % del ancho y la navegación lateral colapsa en un menú hamburguesa.
+La SPA combina componentes Angular Material con estilos de las vistas. En los paneles se usan tarjetas y grillas CSS, junto con distintivos textuales de estado y severidad en la lista de alertas. La calidad de la navegación por teclado, el foco y la lectura de estados se comprueba mediante las tareas y heurísticas de 5.3.

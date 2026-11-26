@@ -538,7 +538,7 @@ Los integrantes y sus usuarios de GitHub son:
 
 Las funcionalidades serán implementadas mediante ramas feature y posteriormente integradas hacia `develop` mediante Pull Requests.
 
-#### 5.2.2.8. Team Collaboration Insights during Sprint
+##### Evidencia de contribuciones del Sprint 2
 
 Durante el Sprint 2, el equipo CodeBrokers desarrolló la primera versión de la Frontend Web Application de VitaLink utilizando Angular, TypeScript, HTML y CSS. La organización del trabajo comprendió las interfaces médicas y familiares, la consistencia visual, la documentación del Sprint y la integración y publicación de la aplicación.
 
@@ -770,31 +770,19 @@ La solución contempla funcionalidades de autenticación, registro de usuarios, 
 \par
 \vspace{0.3cm}
 \noindent
-\includegraphics[
-    width=\linewidth,
-    height=0.75\textheight,
-    keepaspectratio
-]{assets/Backend_1.png}
+\includegraphics[width=\linewidth, height=0.75\textheight, keepaspectratio]{assets/Backend_1.png}
 \par
 
 \par
 \vspace{0.3cm}
 \noindent
-\includegraphics[
-    width=\linewidth,
-    height=0.75\textheight,
-    keepaspectratio
-]{assets/Backend_2.png}
+\includegraphics[width=\linewidth, height=0.75\textheight, keepaspectratio]{assets/Backend_2.png}
 \par
 
 \par
 \vspace{0.3cm}
 \noindent
-\includegraphics[
-    width=\linewidth,
-    height=0.75\textheight,
-    keepaspectratio
-]{assets/Backend_3.png}
+\includegraphics[width=\linewidth, height=0.75\textheight, keepaspectratio]{assets/Backend_3.png}
 \par
 
 **Backend RESTful API:** https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/
@@ -899,11 +887,7 @@ Swagger UI de la API desplegada en Render. Muestra los endpoints agrupados por b
 \par
 \vspace{0.3cm}
 \noindent
-\includegraphics[
-    width=\linewidth,
-    height=0.75\textheight,
-    keepaspectratio
-]{assets/Swagger_endpoints_sprint3.png}
+\includegraphics[width=\linewidth, height=0.75\textheight, keepaspectratio]{assets/Swagger_endpoints_sprint3.png}
 \par
 
 Respuesta de `GET /api/v1/clinics` en la API desplegada, consultada sin sesión:
@@ -941,11 +925,7 @@ https://codebrokers-vitalink.github.io/upc-pre-202620-1asi0729-7737-CodeBrokers-
 \par
 \vspace{0.3cm}
 \noindent
-\includegraphics[
-    width=\linewidth,
-    height=0.75\textheight,
-    keepaspectratio
-]{assets/LandingFamilia.png}
+\includegraphics[width=\linewidth, height=0.75\textheight, keepaspectratio]{assets/LandingFamilia.png}
 \par
 
 ##### Frontend Web Application
@@ -962,21 +942,13 @@ https://vitalink-frontend-963x.onrender.com/
 \par
 \vspace{0.3cm}
 \noindent
-\includegraphics[
-    width=\linewidth,
-    height=0.75\textheight,
-    keepaspectratio
-]{assets/Frontend_patient_1.png}
+\includegraphics[width=\linewidth, height=0.75\textheight, keepaspectratio]{assets/Frontend_patient_1.png}
 \par
 
 \par
 \vspace{0.3cm}
 \noindent
-\includegraphics[
-    width=\linewidth,
-    height=0.75\textheight,
-    keepaspectratio
-]{assets/Frontend_medic_1.png}
+\includegraphics[width=\linewidth, height=0.75\textheight, keepaspectratio]{assets/Frontend_medic_1.png}
 \par
 
 ##### Backend RESTful API
@@ -997,11 +969,99 @@ https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers
 \par
 \vspace{0.3cm}
 \noindent
-\includegraphics[
-    width=\linewidth,
-    height=0.75\textheight,
-    keepaspectratio
-]{assets/Backend_render.png}
+\includegraphics[width=\linewidth, height=0.75\textheight, keepaspectratio]{assets/Backend_render.png}
 \par
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
+
+### 5.2.4. Sprint 4
+
+#### 5.2.4.6. Services Documentation Evidence for Sprint Review
+
+El contrato de la API de VitaLink incorpora el registro de observaciones médicas, las notificaciones por destinatario y el catálogo ficticio de colegiaturas. La revisión cotejó los controllers, resources, servicios y configuración de seguridad del Backend. La integración de estas funciones se identifica en los commits [7d77b42](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend/commit/7d77b42) y [a99d9a4](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend/commit/a99d9a4), incluidos mediante el [PR 8](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend/pull/8). El Anexo A identifica la revisión completa.
+
+**Base URL:** `https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/api/v1`
+
+**Versión de la documentación:** 1.0.0, definida en `OpenApiConfiguration`.
+
+**Referencias:** [Swagger UI](https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/swagger-ui/index.html), [OpenAPI JSON](https://upc-pre-202620-1asi0729-7737-codebrokers.onrender.com/v3/api-docs) y [repositorio de Web Services](https://github.com/CodeBrokers-VitaLink/upc-pre-202620-1asi0729-7737-CodeBrokers-Backend).
+
+En las tablas, todas las rutas son relativas a la base indicada. Las operaciones privadas usan `Authorization: Bearer <token>` con token opaco y sin sesión válida devuelven 401. Los códigos y estructuras corresponden al comportamiento deducido del código. La evidencia de ejecución histórica está identificada por separado.
+
+```{=latex}
+\begin{landscape}
+\footnotesize
+```
+
+##### IAM
+
+| Método y ruta | Acción y entrada | Permiso | Respuesta del contrato |
+|---|---|---|---|
+| `POST /auth/sign-up` | Alta con nombre, email, contraseña, teléfono y rol. Médico: colegiatura, especialidad y tipo de práctica; clínica si corresponde. | Público. Familiares usan Enrollment. | 201 `UserResource`; 400 entrada no válida, 409 duplicado. |
+| `POST /auth/sign-in` | Email y contraseña. | Público. | 200 `SessionResource` con token, tipo, vencimiento y usuario; 400/401. |
+| `POST /auth/sign-out` | Invalida la sesión indicada en la cabecera. | Sesión. | 204 sin cuerpo. |
+| `GET /users/me` | Devuelve el perfil de la sesión. | Titular. | 200 `UserResource` con ID, nombre, rol y datos del perfil. |
+| `GET /users/{id}` | Consulta por ID de usuario. | Titular. | 200 `UserResource`; 404 si el ID no corresponde al titular. |
+
+##### Providers y Enrollment
+
+| Método y ruta | Acción y entrada | Permiso | Respuesta del contrato |
+|---|---|---|---|
+| `GET /clinics` | Lista clínicas. Sin parámetros. | Público. | 200 lista `ClinicResource` con ID y nombre. |
+| `GET /doctors` | Lista médicos. Query opcional `practiceType` y `clinicId`. | Público. | 200 lista `DoctorResource` con ID, nombre, especialidad, práctica, clínica y estado de verificación. |
+| `GET /medical-registry` | Lista el catálogo ficticio de colegiaturas. | Público. | 200 lista `RegisteredDoctorResource` con colegiatura y nombre. |
+| `GET /medical-registry/{license}` | Busca una colegiatura en el catálogo por número. | Público. | 200 `RegisteredDoctorResource`; 400 si el número no se encuentra. |
+| `POST /enrollment/families` | Registra cuenta y paciente con médico, consentimiento y valores simulados iniciales. | Público. | 201 `FamilyEnrollmentResource` con IDs de cuenta y paciente; 400/409. |
+
+##### Care · pacientes, mediciones y alertas
+
+| Método y ruta | Acción y entrada | Permiso | Respuesta del contrato |
+|---|---|---|---|
+| `GET /patients` | Lista los pacientes visibles. | Sesión; filtrado por vínculo. | 200 lista `PatientResource` con ficha, IDs relacionados y última medición. |
+| `GET /patients/{id}` | Lee la ficha por ID de paciente. | Sesión; paciente visible. | 200 `PatientResource`; 404 si no existe o no es visible. |
+| `POST /patients` | Crea ficha con nombres, ubicación, edad y `familyIds`. | Médico. | 201 `PatientResource`; 400/403. |
+| `GET /records` | Lista mediciones de los pacientes visibles. | Sesión; filtrado por vínculo. | 200 lista `RecordResource` con tipo, valor, unidad, fecha y origen. |
+| `POST /records` | Crea medición con `patientId`, `type`, `value` y opcionalmente `unit` y `note`. | Médico con acceso al paciente. | 201 `RecordResource`; 400/403/404. |
+| `GET /measurementRanges` | Lista el catálogo de rangos por tipo. | Sesión. | 200 lista `MeasurementRangeResource` con rangos y unidades. |
+| `GET /alerts` | Lista alertas de los pacientes visibles. | Sesión; filtrado por vínculo. | 200 lista `AlertResource` con gravedad, estado, lectura vinculada y versión. |
+| `GET /alerts/{id}` | Consulta alerta por ID. | Sesión; paciente visible. | 200 `AlertResource`; 404 si no se encuentra o no hay vínculo válido. |
+| `POST /alerts` | Crea solicitud de ayuda con `patientId`. | Sesión; paciente visible. | 201 `AlertResource`; 400/404/409. |
+| `PATCH /alerts/{id}` | Envía `status`, `note` y `expectedVersion`; atención exige nota y registra intervención. | Médico con vínculo. | 200 `AlertResource` actualizado; 400/403/404/409. |
+| `GET /interventions` | Lista cambios vinculados a alertas visibles. | Sesión; filtrado por vínculo. | 200 lista `InterventionResource` con autor, transición, fecha y nota. |
+
+##### Care · relaciones, observaciones y avisos
+
+| Método y ruta | Acción y entrada | Permiso | Respuesta del contrato |
+|---|---|---|---|
+| `GET /caregivers` | Lista cuidadores en la vista autorizada. | Sesión; pacientes visibles. | 200 lista `CaregiverResource`, con nombre, contacto e IDs relacionados. |
+| `GET /care-relationships` | Lista las relaciones de cuidado. | Sesión; filtrado por rol y vínculo. | 200 lista `RelationshipResource` con IDs, estado y fechas. |
+| `POST /care-relationships` | Invita a vincular un paciente; cuerpo con `patientId`. | Médico. | 201 `RelationshipResource`; 400/403/404/409. |
+| `POST /care-relationships/`\allowbreak{}`{id}/{decision}` | Cambia el vínculo; decisión `accept`, `reject` o `end`. | Familiar vinculado o titular; el médico vinculado puede terminar. | 200 `RelationshipResource`; 400/403/404/409. |
+| `GET /patients/{id}/`\allowbreak{}`observations` | Lista observaciones por paciente. | Sesión; paciente visible. | 200 lista `ObservationResource` con autor, texto y fechas; 404. |
+| `POST /patients/{id}/`\allowbreak{}`observations` | Registra observación; cuerpo con `text` de hasta 2000 caracteres. | Médico responsable. | 201 `ObservationResource`; 400/403/404. |
+| `POST /patients/`\allowbreak{}`{id}/observations/`\allowbreak{}`{observationId}/attend` | Registra la atención de la observación más reciente y las alertas cubiertas. Sin cuerpo. | Médico responsable y autor. | 200 `ObservationResource` con `attendedAt`; 403/404/409. |
+| `GET /notifications` | Lista avisos del destinatario de la sesión. | Titular. | 200 lista `NotificationResource` con referencia a observación, lectura y estado de correo. |
+| `PATCH /notifications/{id}/read` | Marca como leído el aviso del ID. Sin cuerpo. | Destinatario del aviso. | 200 `NotificationResource` con `readAt`; 404 si el aviso no es visible. |
+
+```{=latex}
+\normalsize
+\end{landscape}
+```
+
+##### Evidencia e interpretación
+
+La sección 5.2.3.6 conserva capturas reales de Swagger UI para el corte previo. La consulta pública de clínicas muestra el arreglo de objetos `id` y `name`; la consulta sin sesión a `/users/me` muestra el problema 401. Ambas ilustran los contratos de Providers e IAM que se conservaron en el código revisado.
+
+egin{figure}[H]
+centering
+includegraphics[width=0.84linewidth]{assets/Swagger_clinics_response.png}
+caption{Consulta pública de clínicas, evidencia histórica de 5.2.3.6}
+end{figure}
+
+egin{figure}[H]
+centering
+includegraphics[width=0.84linewidth]{assets/Swagger_users_me_401.png}
+caption{Respuesta sin sesión para el perfil IAM, evidencia histórica de 5.2.3.6}
+end{figure}
+
+Como ejemplo de forma del contrato para Care, un `GET /notifications` autenticado sin avisos devuelve el arreglo vacío `[]`. Cada elemento, cuando existe, referencia una observación e indica `readAt` y `emailStatus`. Este ejemplo se deduce del tipo de retorno del controller y no es una respuesta capturada. La vigencia de la documentación publicada para el release y las capturas de las operaciones nuevas quedan por confirmar.

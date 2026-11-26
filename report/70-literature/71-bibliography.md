@@ -1,55 +1,65 @@
-# Bibliografía
-
-Referencias en formato APA utilizadas como base para el desarrollo del trabajo o referenciadas en las secciones del informe. La relación se amplía en cada entrega, conforme se incorporan nuevas secciones al informe.
+# 7. Bibliografía
 
 Adzic, G. (2012). *Impact mapping: Making a big impact with software products and projects*. Provoking Thoughts.
 
-Angular. (s.f.). *Angular coding style guide*. Recuperado el 8 de septiembre de 2026, de https://angular.dev/style-guide
+Angular. (s. f.-a). *Angular coding style guide*. Recuperado el 8 de septiembre de 2026, de <https://angular.dev/style-guide>
 
-Brown, S. (s.f.). *The C4 model for visualising software architecture*. Recuperado el 8 de septiembre de 2026, de https://c4model.com/
+Angular. (s. f.-b). *Routing*. Recuperado el 26 de noviembre de 2026, de <https://angular.dev/guide/routing>
 
-Conventional Commits. (s.f.). *Conventional Commits 1.0.0*. Recuperado el 8 de septiembre de 2026, de https://www.conventionalcommits.org/
+Brown, S. (s. f.). *The C4 model for visualising software architecture*. Recuperado el 8 de septiembre de 2026, de <https://c4model.com/>
 
-Docker. (s.f.). *Docker documentation*. Recuperado el 13 de noviembre de 2026, de https://docs.docker.com/
+CarePredict. (s. f.). *CarePredict for senior living*. Recuperado el 26 de noviembre de 2026, de <https://www.carepredict.com/>
 
-Driessen, V. (5 de enero de 2010). *A successful Git branching model*. nvie.com. https://nvie.com/posts/a-successful-git-branching-model/
+Conventional Commits. (s. f.). *Conventional Commits 1.0.0*. Recuperado el 8 de septiembre de 2026, de <https://www.conventionalcommits.org/en/v1.0.0/>
+
+Cucumber. (s. f.). *Gherkin reference*. <https://cucumber.io/docs/gherkin/reference/>
+
+Docker. (s. f.). *Docker documentation*. Recuperado el 13 de noviembre de 2026, de <https://docs.docker.com/>
+
+Doctoralia Perú. (s. f.). *Encuentra tu especialista y agenda cita*. Recuperado el 26 de noviembre de 2026, de <https://www.doctoralia.pe/>
+
+Driessen, V. (5 de enero de 2010). *A successful Git branching model*. nvie.com. <https://nvie.com/posts/a-successful-git-branching-model/>
 
 Evans, E. (2003). *Domain-driven design: Tackling complexity in the heart of software*. Addison-Wesley.
 
-Google. (s.f.). *Google Java style guide*. Recuperado el 8 de septiembre de 2026, de https://google.github.io/styleguide/javaguide.html
+Google. (s. f.-a). *Google Java style guide*. Recuperado el 8 de septiembre de 2026, de <https://google.github.io/styleguide/javaguide.html>
 
-Google. (s.f.). *Google TypeScript style guide*. Recuperado el 8 de septiembre de 2026, de https://google.github.io/styleguide/tsguide.html
+Google. (s. f.-b). *Google TypeScript style guide*. Recuperado el 8 de septiembre de 2026, de <https://google.github.io/styleguide/tsguide.html>
 
-Google. (s.f.). *Material Design 3*. Recuperado el 8 de septiembre de 2026, de https://m3.material.io/
+Google. (s. f.-c). *Material Design 3*. Recuperado el 8 de septiembre de 2026, de <https://m3.material.io/>
 
 Gothelf, J., & Seiden, J. (2021). *Lean UX: Creating great products with agile teams* (3.ª ed.). O'Reilly Media.
 
-Nielsen, J. (24 de abril de 1994). *10 usability heuristics for user interface design*. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/
+Naturalphone. (s. f.). *iDUAM: Sistema integral de telemedicina, monitoreo biométrico y hospitalización domiciliaria*. Recuperado el 26 de noviembre de 2026, de <https://www.iduam.com/>
 
-OpenAPI Initiative. (s.f.). *OpenAPI specification*. Recuperado el 8 de septiembre de 2026, de https://spec.openapis.org/oas/latest.html
+Nielsen, J. (24 de abril de 1994). *10 usability heuristics for user interface design*. Nielsen Norman Group. <https://www.nngroup.com/articles/ten-usability-heuristics/>
 
-PingCAP. (s.f.). *TiDB Cloud documentation*. Recuperado el 13 de noviembre de 2026, de https://docs.pingcap.com/tidbcloud/
+Object Management Group. (2017). *Unified Modeling Language* (versión 2.5.1). <https://www.omg.org/spec/UML/2.5.1/>
 
-Preston-Werner, T. (s.f.). *Semantic Versioning 2.0.0*. Recuperado el 8 de septiembre de 2026, de https://semver.org/
+OpenAPI Initiative. (s. f.). *OpenAPI specification*. Recuperado el 8 de septiembre de 2026, de <https://spec.openapis.org/oas/latest.html>
 
-Render. (s.f.). *Render documentation*. Recuperado el 13 de noviembre de 2026, de https://render.com/docs
+Organización Mundial de la Salud. (1 de octubre de 2025). *Ageing and health*. <https://www.who.int/news-room/fact-sheets/detail/ageing-and-health>
 
-Schwaber, K., & Sutherland, J. (2020). *The Scrum Guide: The definitive guide to Scrum — The rules of the game*. Scrum.org. https://scrumguides.org/scrum-guide.html
+PingCAP. (s. f.). *TiDB Cloud documentation*. Recuperado el 13 de noviembre de 2026, de <https://docs.pingcap.com/tidbcloud/>
 
-SmartBear. (s.f.). *Swagger UI*. Recuperado el 13 de noviembre de 2026, de https://swagger.io/tools/swagger-ui/
+Preston-Werner, T. (s. f.). *Semantic Versioning 2.0.0*. Recuperado el 8 de septiembre de 2026, de <https://semver.org/>
 
-SpecFlow. (s.f.). *Gherkin conventions for readable specifications*. Recuperado el 8 de septiembre de 2026, de https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/
+Render. (s. f.). *Render documentation*. Recuperado el 13 de noviembre de 2026, de <https://render.com/docs>
 
-Spring. (s.f.). *Spring Boot reference documentation*. Recuperado el 8 de septiembre de 2026, de https://docs.spring.io/spring-boot/index.html
+Resend. (s. f.). *Send email*. <https://resend.com/docs/api-reference/emails/send-email>
 
-Spring. (s.f.). *Spring Data JPA reference documentation*. Recuperado el 13 de noviembre de 2026, de https://docs.spring.io/spring-data/jpa/reference/
+Schwaber, K., & Sutherland, J. (2020). *The Scrum Guide: The definitive guide to Scrum — The rules of the game*. Scrum.org. <https://scrumguides.org/scrum-guide.html>
 
-Spring. (s.f.). *Spring Security reference documentation*. Recuperado el 13 de noviembre de 2026, de https://docs.spring.io/spring-security/reference/
+SmartBear. (s. f.). *Swagger UI*. Recuperado el 13 de noviembre de 2026, de <https://swagger.io/tools/swagger-ui/>
 
-springdoc. (s.f.). *springdoc-openapi*. Recuperado el 13 de noviembre de 2026, de https://springdoc.org/
+Spring. (s. f.-a). *Spring Boot reference documentation*. Recuperado el 8 de septiembre de 2026, de <https://docs.spring.io/spring-boot/index.html>
 
-UXPressia. (s.f.). *Impact mapping guide with UXPressia*. Recuperado el 8 de septiembre de 2026, de https://uxpressia.com/
+Spring. (s. f.-b). *Spring Data JPA reference documentation*. Recuperado el 13 de noviembre de 2026, de <https://docs.spring.io/spring-data/jpa/reference/>
 
-UXPressia. (s.f.). *Persona creation guide with UXPressia*. Recuperado el 8 de septiembre de 2026, de https://uxpressia.com/
+Spring. (s. f.-c). *Spring Security reference documentation*. Recuperado el 13 de noviembre de 2026, de <https://docs.spring.io/spring-security/reference/>
 
-World Wide Web Consortium. (5 de junio de 2018). *Web Content Accessibility Guidelines (WCAG) 2.1*. https://www.w3.org/TR/WCAG21/
+springdoc. (s. f.). *springdoc-openapi*. Recuperado el 13 de noviembre de 2026, de <https://springdoc.org/>
+
+UXPressia. (s. f.). *Customer experience management and customer journey mapping platform*. Recuperado el 26 de noviembre de 2026, de <https://uxpressia.com/>
+
+World Wide Web Consortium. (5 de junio de 2018). *Web Content Accessibility Guidelines (WCAG) 2.1*. <https://www.w3.org/TR/2018/REC-WCAG21-20180605/>

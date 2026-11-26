@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 854" width="1050" height="854" role="img">
+<title>UML · IAM</title><desc>Entidades, objeto de valor y rol de la sesión</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="9" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#4a5b6d"/></marker></defs>
+<rect width="1050" height="854" fill="#ffffff"/>
+<text x="28" y="39" font-family="DejaVu Sans" font-size="29" font-weight="700" fill="#17324a">UML · IAM</text>
+<text x="28" y="70" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Entidades, objeto de valor y rol de la sesión</text>
+<polyline points="257,261 257,306 257,306 257,352" fill="none" stroke="#4a5b6d" stroke-width="2.1" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<circle cx="257.0" cy="306" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="252.0" y="311" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">1</text>
+<polyline points="792,284 792,314 257,314 257,352" fill="none" stroke="#4a5b6d" stroke-width="2.1" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<circle cx="524.5" cy="314" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="519.5" y="319" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">2</text>
+<polyline points="487,406 563,406" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="525.0" cy="406" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="520.0" y="411" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">3</text>
+<rect x="28" y="110" width="459" height="151" rx="9" fill="#f4f8fb" stroke="#276653" stroke-width="1.5"/>
+<rect x="28" y="110" width="459" height="67" rx="9" fill="#276653"/>
+<text x="42" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">CLASE DE DOMINIO</text>
+<text x="42" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">LoginAlias</text>
+<text x="42" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- id: String</text>
+<text x="42" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- userId: String</text>
+<text x="42" y="246" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- passwordHash: String</text>
+<rect x="563" y="110" width="459" height="174" rx="9" fill="#f4f8fb" stroke="#276653" stroke-width="1.5"/>
+<rect x="563" y="110" width="459" height="67" rx="9" fill="#276653"/>
+<text x="577" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">CLASE DE DOMINIO</text>
+<text x="577" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">AuthSession</text>
+<text x="577" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- id: String</text>
+<text x="577" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- userId: String</text>
+<text x="577" y="246" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- expiresAt: Instant</text>
+<text x="577" y="269" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ expired(): boolean</text>
+<rect x="28" y="352" width="459" height="197" rx="9" fill="#f4f8fb" stroke="#276653" stroke-width="1.5"/>
+<rect x="28" y="352" width="459" height="67" rx="9" fill="#276653"/>
+<text x="42" y="374" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">CLASE DE DOMINIO</text>
+<text x="42" y="400" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">User</text>
+<text x="42" y="442" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- id: String</text>
+<text x="42" y="465" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- email: String</text>
+<text x="42" y="488" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- role: Role</text>
+<text x="42" y="511" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- name: String</text>
+<text x="42" y="534" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ User(id, name, email, hash, role, phone)</text>
+<rect x="563" y="352" width="459" height="197" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="352" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="374" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">ENUMERACIÓN</text>
+<text x="577" y="400" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Role</text>
+<text x="577" y="442" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">DOCTOR</text>
+<text x="577" y="465" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">FAMILY</text>
+<text x="577" y="488" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">PATIENT</text>
+<text x="577" y="511" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ code(): String</text>
+<text x="577" y="534" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ from(value): Role</text>
+<rect x="28" y="617" width="459" height="105" rx="9" fill="#f4f8fb" stroke="#795632" stroke-width="1.5"/>
+<rect x="28" y="617" width="459" height="67" rx="9" fill="#795632"/>
+<text x="42" y="639" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">OBJETO DE VALOR</text>
+<text x="42" y="665" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Email</text>
+<text x="42" y="707" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">value: String</text>
+<text x="28" y="768" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">1. Referencia lógica userId; un usuario puede tener varios alias.</text>
+<text x="28" y="790" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">2. Referencia lógica userId; un usuario puede tener varias sesiones.</text>
+<text x="28" y="812" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">3. Cada cuenta tiene un Role.</text>
+</svg>

@@ -1,0 +1,36 @@
+@startuml
+title UML · IAM
+caption Entidades, objeto de valor y rol de la sesión
+skinparam shadowing false
+class "LoginAlias" as alias {
+  - id: String
+  - userId: String
+  - passwordHash: String
+}
+class "AuthSession" as session {
+  - id: String
+  - userId: String
+  - expiresAt: Instant
+  + expired(): boolean
+}
+class "User" as user {
+  - id: String
+  - email: String
+  - role: Role
+  - name: String
+  + User(id, name, email, hash, role, phone)
+}
+enum "Role" as role {
+  DOCTOR
+  FAMILY
+  PATIENT
+  + code(): String
+  + from(value): Role
+}
+class "Email" as email <<value object>> {
+  value: String
+}
+alias ..> user : Referencia lógica userId; un usuario puede tener varios alias.
+session ..> user : Referencia lógica userId; un usuario puede tener varias sesiones.
+user --> role : Cada cuenta tiene un Role.
+@enduml

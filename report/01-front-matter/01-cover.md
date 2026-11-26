@@ -9,7 +9,7 @@
 {\large \textbf{Desarrollo de Aplicaciones Open Source}} \\[0.5cm]
 {\large NRC} \\[0.5cm]
 {\large \textbf{7737}} \\[0.5cm]
-{\large \textbf{Informe del Trabajo}} \\[0.5cm]
+{\large \textbf{TB2 -- Release Review}} \\[0.5cm]
 {\large Docente} \\[0.5cm]
 {\large \textbf{Ivan Robles Fernández}} \\[0.5cm]
 {\large Equipo} \\[0.5cm]
@@ -25,7 +25,7 @@
 {\large U20211F962 - Vargas Manchinelli, Deiby Juan} \\[0.5cm]
 
 {\large \textbf{Período 202620}} \\[1cm]
-{\large \textbf{septiembre 2026}}
+{\large \textbf{noviembre 2026}}
 
 \end{center}
 \end{titlepage}

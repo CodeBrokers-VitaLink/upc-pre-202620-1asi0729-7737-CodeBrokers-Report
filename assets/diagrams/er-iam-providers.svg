@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 876" width="1050" height="876" role="img">
+<title>ER · IAM y Providers</title><desc>Tablas inferidas a partir de JPA y de la estrategia de nombres</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="9" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#4a5b6d"/></marker></defs>
+<rect width="1050" height="876" fill="#ffffff"/>
+<text x="28" y="39" font-family="DejaVu Sans" font-size="29" font-weight="700" fill="#17324a">ER · IAM y Providers</text>
+<text x="28" y="70" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Tablas inferidas a partir de JPA y de la estrategia de nombres</text>
+<polyline points="487,164 563,164" fill="none" stroke="#4a5b6d" stroke-width="2.1" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<circle cx="525.0" cy="164" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="520.0" y="169" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">1</text>
+<polyline points="257,352 257,318 257,318 257,284" fill="none" stroke="#4a5b6d" stroke-width="2.1" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<circle cx="257.0" cy="318" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="252.0" y="323" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">2</text>
+<polyline points="792,526 792,560 792,560 792,594" fill="none" stroke="#4a5b6d" stroke-width="2.1" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<circle cx="792.0" cy="560" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="787.0" y="565" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">3</text>
+<rect x="28" y="110" width="459" height="174" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="110" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">TABLA INFERIDA</text>
+<text x="42" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">users</text>
+<text x="42" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">PK id VARCHAR(255)</text>
+<text x="42" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">email VARCHAR(255) NN UQ</text>
+<text x="42" y="246" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">name, password_hash NN; role NN</text>
+<text x="42" y="269" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">phone VARCHAR(255)</text>
+<rect x="563" y="110" width="459" height="151" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="110" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">TABLA INFERIDA</text>
+<text x="577" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">auth_sessions</text>
+<text x="577" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">PK id VARCHAR(64)</text>
+<text x="577" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">user_id VARCHAR(255) NN</text>
+<text x="577" y="246" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">expires_at temporal NN</text>
+<rect x="28" y="352" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="28" y="352" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="42" y="374" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">TABLA INFERIDA</text>
+<text x="42" y="400" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">login_aliases</text>
+<text x="42" y="442" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">PK id VARCHAR(255)</text>
+<text x="42" y="465" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">user_id, password_hash VARCHAR(255) NN</text>
+<rect x="563" y="352" width="459" height="174" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="352" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="374" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">TABLA INFERIDA</text>
+<text x="577" y="400" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">doctors</text>
+<text x="577" y="442" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">PK id VARCHAR(255)</text>
+<text x="577" y="465" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">professional_license VARCHAR(255) NN UQ</text>
+<text x="577" y="488" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">name, specialty, practice_type, clinic_id,</text>
+<text x="577" y="511" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">verification_status</text>
+<rect x="563" y="594" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#235b82" stroke-width="1.5"/>
+<rect x="563" y="594" width="459" height="67" rx="9" fill="#235b82"/>
+<text x="577" y="616" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">TABLA INFERIDA</text>
+<text x="577" y="642" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">clinics</text>
+<text x="577" y="684" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">PK id VARCHAR(255)</text>
+<text x="577" y="707" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">name VARCHAR(255) NN</text>
+<text x="28" y="768" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">1. Referencia lógica: users 1 a 0..* auth_sessions.</text>
+<text x="28" y="790" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">2. Referencia lógica: 0..* alias para un usuario.</text>
+<text x="28" y="812" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">3. clinic_id lógico: 0..1 clínica por médico.</text>
+<text x="28" y="834" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">NN = NOT NULL. UQ = UNIQUE. Las líneas discontinuas indican identificadores, no claves foráneas JPA.</text>
+</svg>
