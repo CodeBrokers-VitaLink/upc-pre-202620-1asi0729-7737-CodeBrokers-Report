@@ -1,0 +1,51 @@
+@startuml
+title UML · Care / seguimiento
+caption Entidades y reglas del historial y las alertas
+skinparam shadowing false
+class "Patient" as patient {
+  - id: String
+  - familyIds: Set<String>
+  - providerId: String
+  - version: long
+  + assign(doctorId): void
+}
+class "ClinicalRecord" as records {
+  - patientId: String
+  - valueText: String
+  - origin: String
+  + value(): Object
+}
+class "CareAlert" as alert {
+  - patientId: String
+  - recordId: String
+  - severity: Severity
+  - status: AlertStatus
+  + transition(next, note): AlertStatus
+}
+class "Intervention" as intervention {
+  - alertId: String
+  - actorId: String
+  - from / to: AlertStatus
+  - at: Instant
+  - note: String
+}
+enum "AlertStatus" as state {
+  PENDING
+  IN_REVIEW
+  ATTENDED
+}
+class "MeasurementRange" as range {
+  - normalMin / normalMax: Double
+  - dangerBelow / dangerFrom: Double
+  + adultReferenceCatalog(): List
+}
+enum "Severity" as severity {
+  HIGH
+  MEDIUM
+  LOW
+}
+patient ..> records : patientId lógico; un paciente puede tener 0..* mediciones.
+patient ..> alert : patientId lógico; un paciente puede tener 0..* alertas.
+alert ..> intervention : alertId lógico; una alerta tiene 0..* intervenciones.
+alert --> state : Cada alerta tiene un estado. Severity clasifica las alertas en su propio enum.
+@enduml

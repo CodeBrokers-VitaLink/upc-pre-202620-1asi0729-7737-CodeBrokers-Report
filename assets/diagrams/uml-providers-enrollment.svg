@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 831" width="1050" height="831" role="img">
+<title>UML · Providers y Enrollment</title><desc>Catálogo persistido y alta familiar con mediciones iniciales</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="9" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#4a5b6d"/></marker></defs>
+<rect width="1050" height="831" fill="#ffffff"/>
+<text x="28" y="39" font-family="DejaVu Sans" font-size="29" font-weight="700" fill="#17324a">UML · Providers y Enrollment</text>
+<text x="28" y="70" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Catálogo persistido y alta familiar con mediciones iniciales</text>
+<polyline points="487,164 563,164" fill="none" stroke="#4a5b6d" stroke-width="2.1" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<circle cx="525.0" cy="164" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="520.0" y="169" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">1</text>
+<polyline points="487,406 563,406" fill="none" stroke="#4a5b6d" stroke-width="2.1" marker-end="url(#arrow)"/>
+<circle cx="525.0" cy="406" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="520.0" y="411" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">2</text>
+<rect x="28" y="110" width="459" height="174" rx="9" fill="#f4f8fb" stroke="#276653" stroke-width="1.5"/>
+<rect x="28" y="110" width="459" height="67" rx="9" fill="#276653"/>
+<text x="42" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">CLASE DE DOMINIO</text>
+<text x="42" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Doctor</text>
+<text x="42" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- id: String</text>
+<text x="42" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- professionalLicense: String</text>
+<text x="42" y="246" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- clinicId: String</text>
+<text x="42" y="269" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- verificationStatus: String</text>
+<rect x="563" y="110" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#276653" stroke-width="1.5"/>
+<rect x="563" y="110" width="459" height="67" rx="9" fill="#276653"/>
+<text x="577" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">CLASE DE DOMINIO</text>
+<text x="577" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">Clinic</text>
+<text x="577" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- id: String</text>
+<text x="577" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- name: String</text>
+<rect x="28" y="352" width="459" height="174" rx="9" fill="#f4f8fb" stroke="#276653" stroke-width="1.5"/>
+<rect x="28" y="352" width="459" height="67" rx="9" fill="#276653"/>
+<text x="42" y="374" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">CLASE DE DOMINIO</text>
+<text x="42" y="400" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">PatientEnrollment</text>
+<text x="42" y="442" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">givenName / familyName: String</text>
+<text x="42" y="465" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">doctorId / clinicId: String</text>
+<text x="42" y="488" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">consent: boolean</text>
+<text x="42" y="511" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">initialVitals: InitialVitalSigns</text>
+<rect x="563" y="352" width="459" height="151" rx="9" fill="#f4f8fb" stroke="#795632" stroke-width="1.5"/>
+<rect x="563" y="352" width="459" height="67" rx="9" fill="#795632"/>
+<text x="577" y="374" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">OBJETO DE VALOR</text>
+<text x="577" y="400" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">InitialVitalSigns</text>
+<text x="577" y="442" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">heartRate / oxygen / glucose: Double</text>
+<text x="577" y="465" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">systolic / diastolic: Double</text>
+<text x="577" y="488" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ bloodPressure(): String</text>
+<rect x="28" y="594" width="459" height="105" rx="9" fill="#f4f8fb" stroke="#544981" stroke-width="1.5"/>
+<rect x="28" y="594" width="459" height="67" rx="9" fill="#544981"/>
+<text x="42" y="616" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">INTERFAZ</text>
+<text x="42" y="642" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">FamilyPatientRepository</text>
+<text x="42" y="684" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Puerto que delega en Care el alta persistente.</text>
+<rect x="563" y="594" width="459" height="105" rx="9" fill="#f4f8fb" stroke="#544981" stroke-width="1.5"/>
+<rect x="563" y="594" width="459" height="67" rx="9" fill="#544981"/>
+<text x="577" y="616" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">INTERFAZ</text>
+<text x="577" y="642" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">EnrollmentCatalog</text>
+<text x="577" y="684" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Puerto de lectura de los proveedores.</text>
+<text x="28" y="745" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">1. clinicId lógico; un médico tiene 0..1 clínica.</text>
+<text x="28" y="767" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">2. La solicitud de alta incluye una captura de signos simulados.</text>
+<text x="28" y="789" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">Enrollment también utiliza FamilyAccountRegistration para registrar la cuenta IAM.</text>
+</svg>

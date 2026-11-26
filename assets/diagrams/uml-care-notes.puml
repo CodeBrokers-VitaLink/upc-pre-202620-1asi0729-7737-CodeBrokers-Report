@@ -1,0 +1,34 @@
+@startuml
+title UML · Care / coordinación
+caption Reglas de vínculo, observaciones y notificaciones
+skinparam shadowing false
+class "CareRelationship" as relation {
+  - patientId / doctorId: String
+  - status: String
+  - version: long
+  + respond(decision, userId): void
+  + effectiveStatus(): String
+}
+class "DoctorObservation" as obs {
+  - patientId / doctorId: String
+  - text: String
+  - attendedAt: Instant
+  + requireCoveredAlert(alert): void
+  + attend(): void
+}
+interface "ObservationEmailSender" as port {
+  + isConfigured(): boolean
+  + send(email: ObservationEmail): void
+}
+class "ObservationNotification" as note {
+  - observationId / recipientId: String
+  - emailAttempts: int
+  + belongsTo(userId): boolean
+  + read(): void
+  + emailAttempt(success): void
+}
+obs ..> note : Una observación origina 0..* avisos según los destinatarios.
+legend bottom
+CareRelationship vincula a paciente y médico por identificadores. ObservationEmailSender se implementa mediante Resend.
+endlegend
+@enduml

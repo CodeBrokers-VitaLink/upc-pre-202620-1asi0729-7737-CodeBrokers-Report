@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 704" width="1050" height="704" role="img">
+<title>UML · Care / coordinación</title><desc>Reglas de vínculo, observaciones y notificaciones</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="9" refX="9" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 z" fill="#4a5b6d"/></marker></defs>
+<rect width="1050" height="704" fill="#ffffff"/>
+<text x="28" y="39" font-family="DejaVu Sans" font-size="29" font-weight="700" fill="#17324a">UML · Care / coordinación</text>
+<text x="28" y="70" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">Reglas de vínculo, observaciones y notificaciones</text>
+<polyline points="792,307 792,341 792,341 792,375" fill="none" stroke="#4a5b6d" stroke-width="2.1" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<circle cx="792.0" cy="341" r="12" fill="#fff" stroke="#4a5b6d"/>
+<text x="787.0" y="346" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="#17324a">1</text>
+<rect x="28" y="110" width="459" height="197" rx="9" fill="#f4f8fb" stroke="#276653" stroke-width="1.5"/>
+<rect x="28" y="110" width="459" height="67" rx="9" fill="#276653"/>
+<text x="42" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">CLASE DE DOMINIO</text>
+<text x="42" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">CareRelationship</text>
+<text x="42" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- patientId / doctorId: String</text>
+<text x="42" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- status: String</text>
+<text x="42" y="246" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- version: long</text>
+<text x="42" y="269" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ respond(decision, userId): void</text>
+<text x="42" y="292" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ effectiveStatus(): String</text>
+<rect x="563" y="110" width="459" height="197" rx="9" fill="#f4f8fb" stroke="#276653" stroke-width="1.5"/>
+<rect x="563" y="110" width="459" height="67" rx="9" fill="#276653"/>
+<text x="577" y="132" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">CLASE DE DOMINIO</text>
+<text x="577" y="158" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">DoctorObservation</text>
+<text x="577" y="200" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- patientId / doctorId: String</text>
+<text x="577" y="223" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- text: String</text>
+<text x="577" y="246" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- attendedAt: Instant</text>
+<text x="577" y="269" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ requireCoveredAlert(alert): void</text>
+<text x="577" y="292" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ attend(): void</text>
+<rect x="28" y="375" width="459" height="128" rx="9" fill="#f4f8fb" stroke="#544981" stroke-width="1.5"/>
+<rect x="28" y="375" width="459" height="67" rx="9" fill="#544981"/>
+<text x="42" y="397" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">INTERFAZ</text>
+<text x="42" y="423" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">ObservationEmailSender</text>
+<text x="42" y="465" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ isConfigured(): boolean</text>
+<text x="42" y="488" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ send(email: ObservationEmail): void</text>
+<rect x="563" y="375" width="459" height="197" rx="9" fill="#f4f8fb" stroke="#276653" stroke-width="1.5"/>
+<rect x="563" y="375" width="459" height="67" rx="9" fill="#276653"/>
+<text x="577" y="397" font-family="DejaVu Sans" font-size="14" font-weight="700" fill="#e8f2fb">CLASE DE DOMINIO</text>
+<text x="577" y="423" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="#ffffff">ObservationNotification</text>
+<text x="577" y="465" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- observationId / recipientId: String</text>
+<text x="577" y="488" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">- emailAttempts: int</text>
+<text x="577" y="511" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ belongsTo(userId): boolean</text>
+<text x="577" y="534" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ read(): void</text>
+<text x="577" y="557" font-family="DejaVu Sans" font-size="17" font-weight="400" fill="#17324a">+ emailAttempt(success): void</text>
+<text x="28" y="618" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">1. Una observación origina 0..* avisos según los destinatarios.</text>
+<text x="28" y="640" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">CareRelationship vincula a paciente y médico por identificadores. ObservationEmailSender se implementa mediante</text>
+<text x="28" y="662" font-family="DejaVu Sans" font-size="16" font-weight="400" fill="#17324a">Resend.</text>
+</svg>
