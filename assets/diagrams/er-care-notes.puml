@@ -1,0 +1,31 @@
+@startuml
+title ER · Care / coordinación
+caption Persistencia inferida de vínculos, observaciones y notificaciones
+skinparam shadowing false
+entity "care_relationships" as relationships {
+  PK id VARCHAR(255)
+  patient_id, doctor_id, status, authorized_by_user_id
+  invited_at, expires_at, accepted_at, ended_at: temporal
+  version BIGINT
+}
+entity "caregiver_profiles" as caregivers {
+  PK id VARCHAR(255)
+  name, phone y email VARCHAR(255)
+}
+entity "doctor_observations" as observations {
+  PK id VARCHAR(255)
+  patient_id, doctor_id, doctor_name
+  text VARCHAR(2000) NOT NULL
+  created_at, attended_at: temporal
+}
+entity "observation_notifications" as notices {
+  PK id VARCHAR(255)
+  recipient_id, observation_id, patient_id, doctor_name
+  created_at, read_at: temporal
+  email_status VARCHAR(255); email_attempts INTEGER
+}
+observations ..> notices : observation_id lógico: una observación puede producir 0..* avisos.
+legend bottom
+Repositorios gestionan referencias por ID; la inspección no acredita restricciones físicas de producción.
+endlegend
+@enduml
